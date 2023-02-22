@@ -1,0 +1,15 @@
+masked_autoregressive_flow
+permute
+masked_autoregressive_flow
+permute
+masked_autoregressive_flow
+permute
+masked_autoregressive_flow
+permute
+masked_autoregressive_flow
+permute
+masked_autoregressive_flow
+permute
+masked_autoregressive_flow
+permute
+masked_autoregressive_flow
