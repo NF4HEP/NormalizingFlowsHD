@@ -13,3 +13,7 @@ permute
 real_nvp
 permute
 real_nvp
+permute
+real_nvp
+permute
+real_nvp

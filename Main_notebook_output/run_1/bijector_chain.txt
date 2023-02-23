@@ -1,3 +1,0 @@
-real_nvp
-permute
-real_nvp
