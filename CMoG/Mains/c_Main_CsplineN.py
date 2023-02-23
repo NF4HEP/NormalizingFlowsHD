@@ -3,7 +3,6 @@ import sys
 import numpy as np
 import tensorflow as tf
 import tensorflow_probability as tfp
-import numpy as np
 tfd = tfp.distributions
 tfb = tfp.bijectors
 import pandas as pd
@@ -14,10 +13,6 @@ from typing import Dict, Any
 
 sys.path.append('../../code')
 import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils
-
-
-## Execute with
-# nohup python "Main_CsplineN.py" 2> error_CsplineN.txt > output_CsplineN.txt &
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
@@ -31,8 +26,7 @@ def MixtureGaussian(ncomp,ndims,seed=0):
 ncomp=3
 
 ### Initialize hyperparameters lists ###
-ndims_list=[4,8,16,32,64,100,200,400]
-#ndims_list=[4]
+ndims_list=[4,8,16,32,64,100,200,400,1000]
 corr_uncorr_list=["corr"]
 regulariser_list=[None]
 eps_regularisers=[0]

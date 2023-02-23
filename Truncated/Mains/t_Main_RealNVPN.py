@@ -15,11 +15,7 @@ from typing import Dict, Any
 sys.path.append('../../code')
 import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils,SpecialDistributions
 
-
-## Execute with
-# nohup python "Main_CsplineN.py" 2> error_CsplineN.txt > output_CsplineN.txt &
-
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
 
@@ -31,7 +27,7 @@ def MixtureGaussian(ncomp,ndims,seed=0):
 ncomp=3
 
 ### Initialize hyperparameters lists ###
-ndims_list=[4,8,16,32,64,100]
+ndims_list=[4,8,16,32,64,100,200,400,1000]
 corr_uncorr_list=["corr"]
 regulariser_list=[None]
 eps_regularisers=[0]
@@ -45,13 +41,12 @@ seeds_list = [0]
 n_displays=1
 
 ### Initialize variables for the neural splines ###
-range_min_list=[-16]
+range_min_list=[-5]
 spline_knots_list=[8]
 
 ### Initialize train hyerparameters ###
 ntest_samples=100000
 epochs=1000
-#epochs=10
 lr_orig=.001
 patience=50
 min_delta_patience=.0001

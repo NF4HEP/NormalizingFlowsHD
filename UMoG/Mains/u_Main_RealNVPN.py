@@ -15,10 +15,6 @@ from typing import Dict, Any
 sys.path.append('../../code')
 import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils
 
-
-## Execute with
-# nohup python "Main_CsplineN.py" 2> error_CsplineN.txt > output_CsplineN.txt &
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
@@ -32,22 +28,21 @@ ncomp=3
 
 ### Initialize hyperparameters lists ###
 ndims_list=[4,8,16,32,64,100,200,400,1000]
-#ndims_list=[4]
 corr_uncorr_list=["corr"]
 regulariser_list=[None]
 eps_regularisers=[0]
 nsamples_list=[100000]
-batch_size_list=[512]
-bijectors_list=['CsplineN']
+batch_size_list=[256]
+bijectors_list=['RealNVPN']
 activation_list=['relu']
 nbijectors_list=[5,10]
-hidden_layers_list=[[128,128,128],[256,256,256],[512,512,512]]
+hidden_layers_list=[[128,128,128],[256,256,256]]
 seeds_list = [0]
 n_displays=1
 
 ### Initialize variables for the neural splines ###
-range_min_list=[-16]
-spline_knots_list=[8,12]
+range_min_list=[-5]
+spline_knots_list=[8]
 
 ### Initialize train hyerparameters ###
 ntest_samples=100000
@@ -60,7 +55,7 @@ seed_dist = 0
 seed_test = 0
 
 ### Initialize output dir ###
-mother_output_dir='../results/CsplineN/'
+mother_output_dir='../results/RealNVPN/'
 try:
     os.mkdir(mother_output_dir)
 except:

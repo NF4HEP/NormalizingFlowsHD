@@ -15,49 +15,38 @@ from typing import Dict, Any
 sys.path.append('../../code')
 import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils
 
-
-## Execute with
-# nohup python "Main_CsplineN.py" 2> error_CsplineN.txt > output_CsplineN.txt &
-
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
 
 def MixtureGaussian(ncomp,ndims,seed=0):
-    targ_dist = MixtureDistributions.MixNormal1(ncomp,ndims,seed=seed)
+    targ_dist = MixtureDistributions.MixMultiNormal1(ncomp,ndims,seed=seed)
     return targ_dist
 
 ### Initialize number of components ###
-ncomp=3
+ncomp=10
 
 ### Initialize hyperparameters lists ###
 ndims_list=[4,8,16,32,64,100,200,400,1000]
-#ndims_list=[100]
-#ndims_list=[4]
 corr_uncorr_list=["corr"]
 regulariser_list=[None]
 eps_regularisers=[0]
 nsamples_list=[100000]
-#nsamples_list=[20000]
-batch_size_list=[256]
-bijectors_list=['RealNVPN']
+batch_size_list=[512]
+bijectors_list=['CsplineN']
 activation_list=['relu']
 nbijectors_list=[5,10]
-#nbijectors_list=[5]
-hidden_layers_list=[[128,128,128],[256,256,256]]
-#hidden_layers_list=[[128,128,128]]
+hidden_layers_list=[[128,128,128],[256,256,256],[512,512,512]]
 seeds_list = [0]
 n_displays=1
 
 ### Initialize variables for the neural splines ###
-range_min_list=[-5]
-spline_knots_list=[8]
+range_min_list=[-16]
+spline_knots_list=[8,12]
 
 ### Initialize train hyerparameters ###
 ntest_samples=100000
-#ntest_samples=20000
 epochs=1000
-#epochs=10
 lr_orig=.001
 patience=50
 min_delta_patience=.0001
@@ -66,7 +55,7 @@ seed_dist = 0
 seed_test = 0
 
 ### Initialize output dir ###
-mother_output_dir='../results/RealNVPN/'
+mother_output_dir='../results/CsplineN/'
 try:
     os.mkdir(mother_output_dir)
 except:
@@ -80,7 +69,7 @@ hyperparams_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamp
 log_file_name = Utils.create_log_file(mother_output_dir,results_dict)
 
 ### Run loop  ###
-run_number = 0
+run_number = 6
 n_runs = len(ndims_list)*len(seeds_list)*len(nsamples_list)*len(corr_uncorr_list)*len(activation_list)*len(eps_regularisers)*len(regulariser_list)*len(bijectors_list)*len(nbijectors_list)*len(spline_knots_list)*len(range_min_list)*len(batch_size_list)*len(hidden_layers_list)
 for ndims in ndims_list:
     print("===========\nGenerating test data for ndims=",ndims,".\n")

@@ -15,10 +15,6 @@ from typing import Dict, Any
 sys.path.append('../../code')
 import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils,SpecialDistributions
 
-
-## Execute with
-# nohup python "Main_CsplineN.py" 2> error_CsplineN.txt > output_CsplineN.txt &
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
@@ -51,7 +47,6 @@ spline_knots_list=[8,12]
 ### Initialize train hyerparameters ###
 ntest_samples=100000
 epochs=1000
-#epochs=10
 lr_orig=.001
 patience=50
 min_delta_patience=.0001
