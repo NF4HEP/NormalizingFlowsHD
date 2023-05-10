@@ -404,6 +404,7 @@ def MAFNspline(ndims,spline_knots,num_bijectors,range_min,n_hidden=[128,128,128]
        
             bijectors.append(mafspline)
             bijectors.append(tfb.Permute(permutation=permutation))
+            flow_bijector=tfb.Chain(list(reversed(bijectors[:-1])))
     if shuffle=='RandomShuffle':
         bijectors=[]
         for _ in range(num_bijectors):
@@ -504,7 +505,7 @@ def MAFNsplineClip(ndims,spline_knots,num_bijectors,range_min,n_hidden=[128,128,
     return flow_bijector
 
 
-def ChooseBijector(bijector_name,ndims,spline_knots,nbijectors,range_min,hidden_layers,activation,regulariser,eps_regulariser,perm_style='by-partition',shuffle='Noshuffle'):
+def ChooseBijector(bijector_name,ndims,spline_knots,nbijectors,range_min,hidden_layers,activation,regulariser,eps_regulariser,perm_style='bi-partition',shuffle='Noshuffle'):
     if regulariser=='l1':
         regulariser=tf.keras.regularizers.l1(eps_regulariser)
     if regulariser=='l2':
