@@ -14,3 +14,4 @@ UMoG/Outputs
 *.npy
 *weights*
 *checkpoin*
+code/__pycache__/
