@@ -9,4 +9,7 @@ CMoG_em/Outputs
 Truncated/Outputs
 UMoG/Outputs
 *.pdf
+*.pcl
 *.npy
+*weights*
+*checkpoin*
