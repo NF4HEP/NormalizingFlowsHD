@@ -1,0 +1,4 @@
+run_n,run_seed,ndims,nsamples,correlation,nbijectors,bijector,spline_knots,range_min,hidden_layers,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed
+1,0,64,100000,corr,2,MsplineN,8,-16,128-128-128,512,relu,0,,0,0
+2,187,64,100000,corr,2,MsplineN,8,-16,128-128-128,512,relu,0,,0,0
+3,377,64,100000,corr,2,MsplineN,8,-16,128-128-128,512,relu,0,,0,0

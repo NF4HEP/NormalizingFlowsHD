@@ -31,7 +31,6 @@ def KL_divergence(target_test_data,nf_dist,test_log_prob):
     
     return KL_estimate
     
-
 def Wasserstein_distance(target_test_data,nf_dist,norm=True):
 
     ##create data sample from trained normising flow
@@ -49,7 +48,37 @@ def Wasserstein_distance(target_test_data,nf_dist,norm=True):
         wasserstein_distances.append(ws_distance)
         
     return wasserstein_distances
-    
+
+def sliced_Wasserstein_distance(target_test_data, nf_dist, norm=True, n_slices=None, seed=None):
+    """
+    Compute the sliced Wasserstein distance between two sets of points
+    using n_slices random directions and the p-th Wasserstein distance.
+    """
+    if seed is None:
+        np.random.seed(np.random.randint(10e6))
+    else:
+        np.random.seed(int(seed))
+    if n_slices is None:
+        n_slices = target_test_data.shape[1]
+    else:
+        n_slices = int(n_slices)
+    if norm==False:
+        x_estimated=nf_dist.sample(target_test_data.shape[0])
+        x_estimated=np.reshape(x_estimated,newshape=target_test_data.shape)
+    else:
+        x_estimated=nf_dist
+    # Generate random directions
+    directions = np.random.randn(n_slices, target_test_data.shape[1])
+    directions /= np.linalg.norm(directions, axis=1)[:, None]
+    # Compute sliced Wasserstein distance
+    ws_distances = []
+    for direction in directions:
+        target_proj = target_test_data @ direction
+        estimated_proj = x_estimated @ direction
+        ws_distances.append(wasserstein_distance(target_proj, estimated_proj))
+    mean = np.mean(ws_distances)
+    std = np.std(ws_distances)
+    return [mean,std]
 
 def KS_test(target_test_data,nf_dist,n_iter=100,norm=True):
     
@@ -88,8 +117,6 @@ def KS_test(target_test_data,nf_dist,n_iter=100,norm=True):
         
     return ks_test_all
     
-
-
 
 def correlation_from_covariance(covariance):
    
