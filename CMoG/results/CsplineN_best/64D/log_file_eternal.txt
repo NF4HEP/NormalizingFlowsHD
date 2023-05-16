@@ -1,0 +1,1 @@
+run_n,run_seed,ndims,nsamples,correlation,nbijectors,bijector,activation,spline_knots,range_min,eps_regulariser,regulariser,kl_divergence,ks_test_mean,ks_test_median,ad_test_mean,ad_test_median,Wasserstein_median,Wasserstein_mean,sliced_Wasserstein_mean,sliced_Wasserstein_std,frob_norm,hidden_layers,batch_size,epochs_input,epochs_output,time

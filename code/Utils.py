@@ -20,7 +20,7 @@ def reset_random_seeds(seed):
     np.random.seed(seed)
     random.seed(seed)
 
-def ResultsToDict(results_dict,run_n,run_seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,kl_divergence,ks_mean,ks_median,ad_mean,ad_median,w_distance_median,w_distance_mean,frob_norm,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time):
+def ResultsToDict(results_dict,run_n,run_seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,kl_divergence,ks_mean,ks_median,ad_mean,ad_median,w_distance_median,w_distance_mean,swd_mean,swd_std,frob_norm,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time):
     """
     Function that writes results to the a dictionary.
     """
@@ -41,6 +41,8 @@ def ResultsToDict(results_dict,run_n,run_seed,ndims,nsamples,corr,bijector_name,
     results_dict.get('ad_test_median').append(ad_median)
     results_dict.get('Wasserstein_median').append(w_distance_median)
     results_dict.get('Wasserstein_mean').append(w_distance_mean)
+    results_dict.get('sliced_Wasserstein_mean').append(swd_mean)
+    results_dict.get('sliced_Wasserstein_std').append(swd_std)
     results_dict.get('frob_norm').append(frob_norm)
     results_dict.get('epochs_input').append(epochs_input)
     results_dict.get('epochs_output').append(epochs_output)
@@ -178,7 +180,7 @@ def nf_sample_iter(nf_dist,iter_size,n_iters,seed=0):
         #tf.keras.backend.clear_session()
     return sample_all
 
-def nf_sample_save(nf_dist,path_to_results,sample_size=100000,iter_size=10000,rot=None,seed=0):
+def sample_save(test_dist,nf_dist,path_to_results,sample_size=100000,iter_size=10000,rot=None,seed=0):
     """
     Function that saves the samples.
     """
@@ -197,6 +199,8 @@ def nf_sample_save(nf_dist,path_to_results,sample_size=100000,iter_size=10000,ro
         sample_all = MixtureDistributions.inverse_transform_data(sample_all,rot)
     with open(path_to_results+'nf_sample.npy', 'wb') as f:
         np.save(f, sample_all, allow_pickle=True)
+    #with open(path_to_results+'test_sample.npy', 'wb') as f:
+    #    np.save(f, test_dist, allow_pickle=True)
     print('samples saved')
     return sample_all
 

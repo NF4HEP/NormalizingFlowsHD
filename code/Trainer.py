@@ -129,7 +129,7 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
                         validation_split=0.3,
                         shuffle=True,
                         verbose=2,
-                        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint])
+                        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint,StopOnNAN])
     return history
 
 #######custom training

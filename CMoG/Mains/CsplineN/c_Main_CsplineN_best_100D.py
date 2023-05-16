@@ -14,7 +14,7 @@ from typing import Dict, Any
 sys.path.append('../../../code')
 import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
 
@@ -61,7 +61,7 @@ except:
     print('file exists')
 
 ### Initialize dictionaries ###
-results_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'kl_divergence':[],'ks_test_mean':[],'ks_test_median':[],'ad_test_mean':[],'ad_test_median':[],'Wasserstein_median':[],'Wasserstein_mean':[],'frob_norm':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}
+results_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'kl_divergence':[],'ks_test_mean':[],'ks_test_median':[],'ad_test_mean':[],'ad_test_median':[],'Wasserstein_median':[],'Wasserstein_mean':[],'sliced_Wasserstein_mean':[],'sliced_Wasserstein_std':[],'frob_norm':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}
 hyperparams_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'spline_knots':[],'range_min':[],'hidden_layers':[],'batch_size':[],'activation':[],'eps_regulariser':[],'regulariser':[],'dist_seed':[],'test_seed':[]}
 
 ### Create 'log' file ####
@@ -91,7 +91,6 @@ for ndims in ndims_list:
                                         for batch_size in batch_size_list:
                                             for hidden_layers in hidden_layers_list:
                                                 for corr in corr_uncorr_list:
-                                                    Utils.reset_random_seeds(seed)
                                                     run_number = run_number + 1
                                                     results_dict_saved=False
                                                     logger_saved=False
@@ -111,53 +110,61 @@ for ndims in ndims_list:
                                                                 os.mkdir(path_to_weights)
                                                             except:
                                                                 print(path_to_weights+' file exists')
-                                                            print("===========\nGenerating train data for run",run_number,".\n")
-                                                            print("===========\n")
-                                                            start=timer()
-                                                            X_data_train=targ_dist.sample(nsamples,seed=seed).numpy()
-                                                            if corr == "corr":
-                                                                V = None
-                                                            elif corr == "uncorr":
-                                                                V = MixtureDistributions.rot_matrix(X_data_train)
-                                                                X_data_train = MixtureDistributions.transform_data(X_data_train,V)
-                                                                X_data_test = MixtureDistributions.transform_data(X_data_test,V)
-                                                            else:
-                                                                V = None
-                                                            end=timer()
-                                                            train_data_time=end-start
-                                                            print("Train data generated in",train_data_time,"s.\n")       
-                                                            hllabel='-'.join(str(e) for e in hidden_layers)
-                                                            Utils.save_hyperparams(path_to_results,hyperparams_dict,run_number,seed,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,seed_dist,seed_test)
-                                                            print("===========\nRunning",run_number,"/",n_runs,"with hyperparameters:\n",
-                                                                  "ndims=",ndims,"\n",
-                                                                  "seed=",seed,"\n",
-                                                                  "nsamples=",nsamples,"\n",
-                                                                  "correlation=",corr,"\n",
-                                                                  "activation=",activation,"\n",
-                                                                  "eps_regulariser=",eps_regulariser,"\n",
-                                                                  "regulariser=",regulariser,"\n",
-                                                                  "bijector=",bijector_name,"\n",
-                                                                  "nbijectors=",nbijectors,"\n",
-                                                                  "spline_knots=",spline_knots,"\n",
-                                                                  "range_min=",range_min,"\n",
-                                                                  "batch_size=",batch_size,"\n",
-                                                                  "hidden_layers=",hidden_layers,
-                                                                  "epocs_input=",epochs,
-                                                                  "\n===========\n")
-                                                            bijector=Bijectors.ChooseBijector(bijector_name,ndims,spline_knots,nbijectors,range_min,hidden_layers,activation,regulariser,eps_regulariser)
-                                                            Utils.save_bijector_info(bijector,path_to_results)
-                                                            base_dist=Distributions.gaussians(ndims)
-                                                            nf_dist=tfd.TransformedDistribution(base_dist,bijector)
-                                                            start=timer()
-                                                            print("Training model.\n")
-                                                            epochs_input = epochs
-                                                            lr=lr_orig
-                                                            n_displays=1
-                                                            print("Train first sample:",X_data_train[0])
-                                                            history=Trainer.graph_execution(ndims,nf_dist, X_data_train,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed)
-                                                            t_losses_all=list(history.history['loss'])
-                                                            v_losses_all=list(history.history['val_loss'])
-                                                            end=timer()
+                                                            succeded=False
+                                                            while not succeded:
+                                                                Utils.reset_random_seeds(seed)
+                                                                print("===========\nGenerating train data for run",run_number,".\n")
+                                                                print("===========\n")
+                                                                start=timer()
+                                                                X_data_train=targ_dist.sample(nsamples,seed=seed).numpy()
+                                                                if corr == "corr":
+                                                                    V = None
+                                                                elif corr == "uncorr":
+                                                                    V = MixtureDistributions.rot_matrix(X_data_train)
+                                                                    X_data_train = MixtureDistributions.transform_data(X_data_train,V)
+                                                                    X_data_test = MixtureDistributions.transform_data(X_data_test,V)
+                                                                else:
+                                                                    V = None
+                                                                end=timer()
+                                                                train_data_time=end-start
+                                                                print("Train data generated in",train_data_time,"s.\n")       
+                                                                hllabel='-'.join(str(e) for e in hidden_layers)
+                                                                Utils.save_hyperparams(path_to_results,hyperparams_dict,run_number,seed,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,seed_dist,seed_test)
+                                                                print("===========\nRunning",run_number,"/",n_runs,"with hyperparameters:\n",
+                                                                      "ndims=",ndims,"\n",
+                                                                      "seed=",seed,"\n",
+                                                                      "nsamples=",nsamples,"\n",
+                                                                      "correlation=",corr,"\n",
+                                                                      "activation=",activation,"\n",
+                                                                      "eps_regulariser=",eps_regulariser,"\n",
+                                                                      "regulariser=",regulariser,"\n",
+                                                                      "bijector=",bijector_name,"\n",
+                                                                      "nbijectors=",nbijectors,"\n",
+                                                                      "spline_knots=",spline_knots,"\n",
+                                                                      "range_min=",range_min,"\n",
+                                                                      "batch_size=",batch_size,"\n",
+                                                                      "hidden_layers=",hidden_layers,
+                                                                      "epocs_input=",epochs,
+                                                                      "\n===========\n")
+                                                                bijector=Bijectors.ChooseBijector(bijector_name,ndims,spline_knots,nbijectors,range_min,hidden_layers,activation,regulariser,eps_regulariser)
+                                                                Utils.save_bijector_info(bijector,path_to_results)
+                                                                base_dist=Distributions.gaussians(ndims)
+                                                                nf_dist=tfd.TransformedDistribution(base_dist,bijector)
+                                                                start=timer()
+                                                                print("Training model.\n")
+                                                                epochs_input = epochs
+                                                                lr=lr_orig
+                                                                n_displays=1
+                                                                print("Train first sample:",X_data_train[0])
+                                                                history=Trainer.graph_execution(ndims,nf_dist, X_data_train,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed)
+                                                                t_losses_all=list(history.history['loss'])
+                                                                v_losses_all=list(history.history['val_loss'])
+                                                                if len(t_losses_all) > 10:
+                                                                    succeded=True
+                                                                    end=timer()
+                                                                else:
+                                                                    print("Training failed: trying again with different seed.")
+                                                                    seed = np.random.seed(np.random.randint(1000000))
                                                             epochs_output = len(t_losses_all)
                                                             training_time=end-start
                                                             print("Model trained in",training_time,"s.\n")
@@ -174,11 +181,11 @@ for ndims in ndims_list:
                                                                 pickle_logprob_nf=open(path_to_results+'logprob_nf.pcl', 'wb')
                                                                 pickle.dump(logprob_nf, pickle_logprob_nf, protocol=4)
                                                                 pickle_logprob_nf.close()
-                                                                X_data_nf=Utils.nf_sample_save(nf_dist,path_to_results,sample_size=ntest_samples,rot=V,iter_size=10000,seed=seed)
+                                                                [X_data_test, X_data_nf]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,rot=V,iter_size=10000,seed=seed)
                                                                 print("Test first sample:",X_data_test[0])
                                                                 print("NF first sample:",X_data_nf[0])
-                                                                kl_divergence,ks_median,ks_mean,ad_mean,ad_median,w_distance_median,w_distance_mean,frob_norm,nf_corr,target_corr=Metrics.ComputeMetrics(X_data_test,X_data_nf)
-                                                                results_dict=Utils.ResultsToDict(results_dict,run_number,seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,kl_divergence,ks_mean,ks_median,ad_mean,ad_median,w_distance_median,w_distance_mean,frob_norm,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time)
+                                                                kl_divergence,ks_median,ks_mean,ad_mean,ad_median,w_distance_median,w_distance_mean,swd_mean,swd_std,frob_norm,nf_corr,target_corr=Metrics.ComputeMetrics(X_data_test,X_data_nf)
+                                                                results_dict=Utils.ResultsToDict(results_dict,run_number,seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,kl_divergence,ks_mean,ks_median,ad_mean,ad_median,w_distance_median,w_distance_mean,swd_mean,swd_std,frob_norm,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time)
                                                                 results_dict_saved=True
                                                                 print("Results dict saved")
                                                                 Utils.logger(log_file_name,results_dict)
@@ -211,7 +218,7 @@ for ndims in ndims_list:
                                                         for trace in trace_back:
                                                             stack_trace.append("File : %s , Line : %d, Func.Name : %s, Message : %s" % (trace[0], trace[1], trace[2], trace[3]))
                                                         if not results_dict_saved:
-                                                            results_dict=Utils.ResultsToDict(results_dict,run_number,seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,"nan","nan","nan","nan","nan","nan","nan","nan",hllabel,batch_size,eps_regulariser,regulariser,epochs_input,"nan","nan")
+                                                            results_dict=Utils.ResultsToDict(results_dict,run_number,seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,"nan","nan","nan","nan","nan","nan","nan","nan","nan","nan",hllabel,batch_size,eps_regulariser,regulariser,epochs_input,"nan","nan")
                                                         if not logger_saved:
                                                             Utils.logger(log_file_name,results_dict)
                                                         if not results_current_saved:
@@ -225,7 +232,7 @@ for ndims in ndims_list:
                                                         print("Exception type : %s " % ex_type.__name__)
                                                         print("Exception message : %s" %ex_value)
                                                         print("Stack trace : %s" %stack_trace)
-                                                        print("===========\n")   
+                                                        print("===========\n")
 results_frame=pd.DataFrame(results_dict)
 results_frame.to_csv(mother_output_dir+'results_last_run.txt',index=False)
 print("Everything done.")

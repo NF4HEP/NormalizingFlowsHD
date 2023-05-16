@@ -49,17 +49,17 @@ def Wasserstein_distance(target_test_data,nf_dist,norm=True):
         
     return wasserstein_distances
 
-def sliced_Wasserstein_distance(target_test_data, nf_dist, norm=True, n_slices=None, seed=None):
+def sliced_Wasserstein_distance(target_test_data, nf_dist, norm=True, n_slices=100, seed=None):
     """
     Compute the sliced Wasserstein distance between two sets of points
     using n_slices random directions and the p-th Wasserstein distance.
     """
     if seed is None:
-        np.random.seed(np.random.randint(10e6))
+        np.random.seed(np.random.randint(1000000))
     else:
         np.random.seed(int(seed))
     if n_slices is None:
-        n_slices = target_test_data.shape[1]
+        n_slices = np.max([100,target_test_data.shape[1]])
     else:
         n_slices = int(n_slices)
     if norm==False:
@@ -195,7 +195,7 @@ def AD_test(target_test_data,nf_dist,n_iter=100,norm=True):
 
     return AD_test_all
 
-def ComputeMetrics(X_data_test,nf_dist):
+def ComputeMetrics(X_data_test,nf_dist,seed=None):
     """
     Function that computes the metrics. The following metrics are implemented:
     
@@ -215,8 +215,9 @@ def ComputeMetrics(X_data_test,nf_dist):
     w_distance_list=Wasserstein_distance(X_data_test,nf_dist)
     w_distance_median=median(w_distance_list)
     w_distance_mean=median(w_distance_list)
+    [swd_mean,swd_std]=sliced_Wasserstein_distance(X_data_test,nf_dist,seed=seed)
     frob_norm,nf_corr,target_corr=FrobNorm(X_data_test,nf_dist)
-    return kl_divergence,ks_median,ks_mean,ad_median,ad_mean,w_distance_median,w_distance_mean,frob_norm,nf_corr,target_corr
+    return kl_divergence,ks_median,ks_mean,ad_median,ad_mean,w_distance_median,w_distance_mean,swd_mean,swd_std,frob_norm,nf_corr,target_corr
 
 '''
 def JS_distance(target_test_data,nf_dist,test_log_prob):
