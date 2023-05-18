@@ -62,7 +62,7 @@ except:
     print('file exists')
 
 ### Initialize dictionaries ###
-results_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'kl_divergence':[],'ks_test_mean':[],'ks_test_median':[],'ad_test_mean':[],'ad_test_median':[],'Wasserstein_median':[],'Wasserstein_mean':[],'sliced_Wasserstein_mean':[],'sliced_Wasserstein_std':[],'frob_norm':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}
+results_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ad_mean':[],'ad_std':[],'wd_mean':[],'wd_std':[],'swd_mean':[],'swd_std':[],'fn_mean':[],'fn_std':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}
 hyperparams_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'spline_knots':[],'range_min':[],'hidden_layers':[],'batch_size':[],'activation':[],'eps_regulariser':[],'regulariser':[],'dist_seed':[],'test_seed':[]}
 
 ### Create 'log' file ####
@@ -192,8 +192,8 @@ for ndims in ndims_list:
                                                             [X_data_test, X_data_nf]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,rot=V,iter_size=10000,seed=seed)
                                                             print("Test first sample:",X_data_test[0])
                                                             print("NF first sample:",X_data_nf[0])
-                                                            kl_divergence,ks_median,ks_mean,ad_mean,ad_median,w_distance_median,w_distance_mean,swd_mean,swd_std,frob_norm,nf_corr,target_corr=Metrics.ComputeMetrics(X_data_test,X_data_nf)
-                                                            results_dict=Utils.ResultsToDict(results_dict,run_number,seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,kl_divergence,ks_mean,ks_median,ad_mean,ad_median,w_distance_median,w_distance_mean,swd_mean,swd_std,frob_norm,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time)
+                                                            ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std=Metrics.ComputeMetrics(X_data_test,X_data_nf)
+                                                            results_dict=Utils.ResultsToDict(results_dict,run_number,seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time)
                                                             results_dict_saved=True
                                                             print("Results dict saved")
                                                             Utils.logger(log_file_name,results_dict)

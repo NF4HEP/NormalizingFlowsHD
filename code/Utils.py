@@ -20,7 +20,7 @@ def reset_random_seeds(seed):
     np.random.seed(seed)
     random.seed(seed)
 
-def ResultsToDict(results_dict,run_n,run_seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,kl_divergence,ks_mean,ks_median,ad_mean,ad_median,w_distance_median,w_distance_mean,swd_mean,swd_std,frob_norm,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time):
+def ResultsToDict(results_dict,run_n,run_seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time):
     """
     Function that writes results to the a dictionary.
     """
@@ -34,16 +34,16 @@ def ResultsToDict(results_dict,run_n,run_seed,ndims,nsamples,corr,bijector_name,
     results_dict.get('activation').append(activation)
     results_dict.get('spline_knots').append(spline_knots)
     results_dict.get('range_min').append(range_min)
-    results_dict.get('kl_divergence').append(kl_divergence)
-    results_dict.get('ks_test_mean').append(ks_mean)
-    results_dict.get('ks_test_median').append(ks_median)
-    results_dict.get('ad_test_mean').append(ad_mean)
-    results_dict.get('ad_test_median').append(ad_median)
-    results_dict.get('Wasserstein_median').append(w_distance_median)
-    results_dict.get('Wasserstein_mean').append(w_distance_mean)
-    results_dict.get('sliced_Wasserstein_mean').append(swd_mean)
-    results_dict.get('sliced_Wasserstein_std').append(swd_std)
-    results_dict.get('frob_norm').append(frob_norm)
+    results_dict.get('ks_mean').append(ks_mean)
+    results_dict.get('ks_std').append(ks_std)
+    results_dict.get('ad_mean').append(ad_mean)
+    results_dict.get('ad_std').append(ad_std)
+    results_dict.get('wd_mean').append(wd_mean)
+    results_dict.get('wd_std').append(wd_std)
+    results_dict.get('swd_mean').append(swd_mean)
+    results_dict.get('swd_std').append(swd_std)
+    results_dict.get('fn_mean').append(fn_mean)
+    results_dict.get('fn_std').append(fn_std)
     results_dict.get('epochs_input').append(epochs_input)
     results_dict.get('epochs_output').append(epochs_output)
     results_dict.get('time').append(training_time)
@@ -202,7 +202,7 @@ def sample_save(test_dist,nf_dist,path_to_results,sample_size=100000,iter_size=1
     #with open(path_to_results+'test_sample.npy', 'wb') as f:
     #    np.save(f, test_dist, allow_pickle=True)
     print('samples saved')
-    return sample_all
+    return [test_dist,sample_all]
 
 def flatten_list(lst):
     out = []

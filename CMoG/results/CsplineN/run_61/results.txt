@@ -1,2 +1,2 @@
-run_n,run_seed,ndims,nsamples,correlation,nbijectors,bijector,activation,spline_knots,range_min,eps_regulariser,regulariser,kl_divergence,ks_test_mean,ks_test_median,ad_test_mean,ad_test_median,Wasserstein_median,Wasserstein_mean,sliced_Wasserstein_mean,sliced_Wasserstein_std,frob_norm,hidden_layers,batch_size,epochs_input,epochs_output,time
-61,0,100,100000,corr,5,CsplineN,relu,8,-16,0,None,-1,0.0,0.0,0.0010000000000000002,0.0010000000000000002,nan,nan,nan,nan,nan,128-128-128,512,1000,1,48.4089177865535
+run_n,run_seed,ndims,nsamples,correlation,nbijectors,bijector,activation,spline_knots,range_min,eps_regulariser,regulariser,ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std,hidden_layers,batch_size,epochs_input,epochs_output,time
+61,0,100,100000,corr,5,CsplineN,relu,8,-16,0,None,0.0,0.0,0.0010000000000000005,4.336808689942018e-19,nan,nan,nan,nan,nan,nan,128-128-128,512,1000,1,48.4089177865535
