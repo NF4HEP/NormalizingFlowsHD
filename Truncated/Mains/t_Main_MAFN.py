@@ -62,7 +62,7 @@ except:
     print('file exists')
 
 ### Initialize dictionaries ###
-results_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ad_mean':[],'ad_std':[],'wd_mean':[],'wd_std':[],'swd_mean':[],'swd_std':[],'fn_mean':[],'fn_std':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}
+results_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ad_mean':[],'ad_std':[],'wd_mean':[],'wd_std':[],'swd_mean':[],'swd_std':[],'fn_mean':[],'fn_std':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}
 hyperparams_dict: Dict[str,Any] = {'run_n': [],'run_seed': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'spline_knots':[],'range_min':[],'hidden_layers':[],'batch_size':[],'activation':[],'eps_regulariser':[],'regulariser':[],'dist_seed':[],'test_seed':[]}
 
 ### Create 'log' file ####
