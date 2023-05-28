@@ -12,6 +12,7 @@ UMoG/Outputs
 *.pdf
 *.pcl
 *.npy
+*.h5
 *weights*
 *checkpoin*
 code/__pycache__/
