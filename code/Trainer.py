@@ -30,6 +30,7 @@ import math
 import pickle
 from sklearn.model_selection import train_test_split
 import Utils
+import json
 
 def loader(nf_dist,path_to_weights):
 
@@ -80,10 +81,22 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
     
         try:
            model.load_weights(path_to_results+'/model_checkpoint/weights')
+           print('Found and loaded existing weights.')
            #nf_dist=loader(nf_dist,load_weights_path)      
         except:
-            print('Not weights found. Training from scratch')
-  
+            print('Not weights found. Training from scratch.')
+            
+        try:
+            with open(path_to_results+'/details.json', 'r') as f:
+                # Load JSON data from file
+                json_file = json.load(f)
+                train_loss = json_file['train_loss_history']
+                val_loss = json_file['val_loss_history']
+                print('Found and loaded existing history.')
+        except:
+            print('No history found. Generating new history.')
+            train_loss=[]
+            val_loss=[]
 
     ns = X_data.shape[0]
     if batch_size is None:
@@ -129,7 +142,11 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
                         validation_split=0.3,
                         shuffle=True,
                         verbose=2,
-                        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint])
+                        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint,StopOnNAN])
+    
+    history.history['loss']=train_loss+history.history['loss']
+    history.history['val_loss']=val_loss+history.history['val_loss']
+    
     return history
 
 #######custom training

@@ -20,47 +20,59 @@ def reset_random_seeds(seed):
     np.random.seed(seed)
     random.seed(seed)
 
-def ResultsToDict(results_dict,run_n,run_seed,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time):
+def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time):
     """
     Function that writes results to the a dictionary.
     """
-    results_dict.get('run_n').append(run_n)
-    results_dict.get('run_seed').append(run_seed)
+    results_dict.get('run_n').append(run_number)
+    results_dict.get('seed_train').append(seed_train)
+    results_dict.get('seed_test').append(seed_test)
     results_dict.get('ndims').append(ndims)
     results_dict.get('nsamples').append(nsamples)
     results_dict.get('correlation').append(corr)
-    results_dict.get('bijector').append(bijector_name)
     results_dict.get('nbijectors').append(nbijectors)
+    results_dict.get('bijector').append(bijector_name)
     results_dict.get('activation').append(activation)
     results_dict.get('spline_knots').append(spline_knots)
     results_dict.get('range_min').append(range_min)
+    results_dict.get('eps_regulariser').append(eps_regulariser)
+    results_dict.get('regulariser').append(regulariser)
     results_dict.get('ks_mean').append(ks_mean)
     results_dict.get('ks_std').append(ks_std)
+    results_dict.get('ks_list').append(ks_list)
     results_dict.get('ad_mean').append(ad_mean)
     results_dict.get('ad_std').append(ad_std)
+    results_dict.get('ad_list').append(ad_list)
     results_dict.get('wd_mean').append(wd_mean)
     results_dict.get('wd_std').append(wd_std)
+    results_dict.get('wd_list').append(wd_list)
     results_dict.get('swd_mean').append(swd_mean)
     results_dict.get('swd_std').append(swd_std)
+    results_dict.get('swd_list').append(swd_list)
     results_dict.get('fn_mean').append(fn_mean)
     results_dict.get('fn_std').append(fn_std)
+    results_dict.get('fn_list').append(fn_list)
     results_dict.get('epochs_input').append(epochs_input)
     results_dict.get('epochs_output').append(epochs_output)
     results_dict.get('time').append(training_time)
     results_dict.get('hidden_layers').append(hidden_layers)
     results_dict.get('batch_size').append(batch_size)
-    results_dict.get('eps_regulariser').append(eps_regulariser)
-    results_dict.get('regulariser').append(regulariser)
     return results_dict
 
 def logger(log_file_name,results_dict):
     """
     Logger that writes results of each run to a common log file.
     """
+    dict_copy = results_dict.copy()
+    dict_copy.pop('ks_list')
+    dict_copy.pop('ad_list')
+    dict_copy.pop('wd_list')
+    dict_copy.pop('swd_list')
+    dict_copy.pop('fn_list')
     log_file=open(log_file_name,'a')
     string_list=[]
-    for key in results_dict.keys():
-        string_list.append(str(results_dict.get(key)[-1]))
+    for key in dict_copy.keys():
+        string_list.append(str(dict_copy.get(key)[-1]))
     string=','.join(string_list)
     log_file.write(string)
     log_file.write('\n')
@@ -81,25 +93,32 @@ def results_current(path_to_results,results_dict):
     """
     Function that writes results of the current run to the results.txt file.
     """
+    dict_copy = results_dict.copy()
+    dict_copy.pop('ks_list')
+    dict_copy.pop('ad_list')
+    dict_copy.pop('wd_list')
+    dict_copy.pop('swd_list')
+    dict_copy.pop('fn_list')
     currrent_results_file=open(path_to_results+'results.txt','w')
-    header=','.join(list(results_dict.keys()))
+    header=','.join(list(dict_copy.keys()))
     currrent_results_file.write(header)
     currrent_results_file.write('\n')
     string_list=[]
-    for key in results_dict.keys():
-        string_list.append(str(results_dict.get(key)[-1]))
+    for key in dict_copy.keys():
+        string_list.append(str(dict_copy.get(key)[-1]))
     string=','.join(string_list)
     currrent_results_file.write(string)
     currrent_results_file.write('\n')
     currrent_results_file.close()
     return
 
-def save_hyperparams(path_to_results,hyperparams_dict,run_n,run_seed,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed):
+def save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed):
     """
     Function that writes hyperparameters values to a dictionary and saves it to the hyperparam.txt file.
     """
-    hyperparams_dict.get('run_n').append(run_n)
-    hyperparams_dict.get('run_seed').append(run_seed)
+    hyperparams_dict.get('run_n').append(run_number)
+    hyperparams_dict.get('seed_train').append(seed_train)
+    hyperparams_dict.get('seed_test').append(seed_test)
     hyperparams_dict.get('ndims').append(ndims)
     hyperparams_dict.get('nsamples').append(nsamples)
     hyperparams_dict.get('correlation').append(corr)
@@ -272,10 +291,16 @@ def save_details_json(hyperparams_dict,results_dict,train_loss_history,val_loss_
         json.dump(dictionary, f, separators=(",", ":"), indent=4)
 
 def create_log_file(mother_output_dir,results_dict):
+    dict_copy = results_dict.copy()
+    dict_copy.pop('ks_list')
+    dict_copy.pop('ad_list')
+    dict_copy.pop('wd_list')
+    dict_copy.pop('swd_list')
+    dict_copy.pop('fn_list')
     log_file_name=mother_output_dir+'log_file_eternal.txt'
     if os.path.isfile(log_file_name)==False:
         log_file=open(log_file_name,'w')
-        header=','.join(list(results_dict.keys()))
+        header=','.join(list(dict_copy.keys()))
         print(header)
         log_file.write(header)
         log_file.write('\n')

@@ -99,7 +99,7 @@ def KS_test_1(dist_1,dist_2,n_iter=10,batch_size=100000):
     ks_mean = np.mean(ks_list)
     ks_std = np.std(ks_list)
     # Return the mean and std of the p-values
-    return [ks_mean,ks_std]
+    return [ks_mean,ks_std,ks_list]
 
 
 def KS_test_2(dist_1,dist_2,n_iter=100,batch_size=100000):
@@ -153,7 +153,7 @@ def KS_test_2(dist_1,dist_2,n_iter=100,batch_size=100000):
     ks_mean = np.mean(ks_list)
     ks_std = np.std(ks_list)
     # Return the mean and std of the p-values
-    return [ks_mean,ks_std]
+    return [ks_mean,ks_std,ks_list]
 
 
 def KS_test_old(target_test_data,nf_dist,n_iter=100,norm=True):
@@ -244,7 +244,7 @@ def AD_test_1(dist_1,dist_2,n_iter=10,batch_size=100000):
     ad_mean = np.mean(ad_list)
     ad_std = np.std(ad_list)
     # Return the mean and std of the p-values
-    return [ad_mean,ad_std]
+    return [ad_mean,ad_std,ad_list]
 
 
 def AD_test_2(dist_1,dist_2,n_iter=100,batch_size=100000):
@@ -298,7 +298,7 @@ def AD_test_2(dist_1,dist_2,n_iter=100,batch_size=100000):
     ad_mean = np.mean(ad_list)
     ad_std = np.std(ad_list)
     # Return the mean and std of the p-values
-    return [ad_mean,ad_std]
+    return [ad_mean,ad_std,ad_list]
 
 
 def AD_test_old(target_test_data,nf_dist,n_iter=100,norm=True):
@@ -393,7 +393,7 @@ def FN_1(dist_1,dist_2,n_iter=10,batch_size=100000):
     FN_mean = np.mean(FN_list)
     FN_std = np.std(FN_list)
     # Return the mean and std of the p-values
-    return [FN_mean,FN_std]
+    return [FN_mean,FN_std, FN_list]
 
 
 def FN_2(dist_1,dist_2,n_iter=100,batch_size=100000):
@@ -451,7 +451,7 @@ def FN_2(dist_1,dist_2,n_iter=100,batch_size=100000):
     FN_mean = np.mean(FN_list)
     FN_std = np.std(FN_list)
     # Return the mean and std of the p-values
-    return [FN_mean,FN_std]
+    return [FN_mean,FN_std, FN_list]
 
 
 def FrobNorm_old(target_test_data,nf_dist,norm=True):
@@ -526,7 +526,7 @@ def WD_1(dist_1,dist_2,n_iter=10,batch_size=100000):
     wd_mean = np.mean(wd_list)
     wd_std = np.std(wd_list)
     # Return the mean and std of the p-values
-    return [wd_mean,wd_std]
+    return [wd_mean,wd_std, wd_list]
 
 
 def WD_2(dist_1,dist_2,n_iter=100,batch_size=100000):
@@ -581,7 +581,7 @@ def WD_2(dist_1,dist_2,n_iter=100,batch_size=100000):
     wd_mean = np.mean(wd_list)
     wd_std = np.std(wd_list)
     # Return the mean and std of the p-values
-    return [wd_mean,wd_std]
+    return [wd_mean,wd_std, wd_list]
 
 
 def Wasserstein_distance_old(target_test_data,nf_dist,norm=True):
@@ -662,7 +662,7 @@ def SWD_1(dist_1,dist_2,n_iter=10,batch_size=100000,n_slices=100,seed=None):
     # Compute the mean and std of the p-values
     swd_mean = np.mean(swd_list)
     swd_std = np.std(swd_list)
-    return [swd_mean,swd_std]
+    return [swd_mean,swd_std,swd_list]
 
 
 def SWD_2(dist_1,dist_2,n_iter=100,batch_size=100000,n_slices=100,seed=None):
@@ -727,7 +727,7 @@ def SWD_2(dist_1,dist_2,n_iter=100,batch_size=100000,n_slices=100,seed=None):
     # Compute the mean and std of the p-values
     swd_mean = np.mean(swd_list)
     swd_std = np.std(swd_list)
-    return [swd_mean,swd_std]
+    return [swd_mean,swd_std,swd_list]
 
 
 def sliced_Wasserstein_distance_old(target_test_data, nf_dist, norm=True, n_slices=None, seed=None):
@@ -772,12 +772,12 @@ def ComputeMetrics(dist_1,dist_2,n_iter=10,batch_size=100000,n_slices=100,seed=N
         - Mean and median of Wasserstein distance
         - Frobenius norm
     """
-    [ks_mean,ks_std]=KS_test_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
-    [ad_mean,ad_std]=AD_test_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
-    [fn_mean,fn_std]=FN_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
-    [wd_mean,wd_std]=WD_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
-    [swd_mean,swd_std]=SWD_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size,n_slices=n_slices,seed=seed)
-    return ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std
+    [ks_mean,ks_std,ks_list]=KS_test_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
+    [ad_mean,ad_std,ad_list]=AD_test_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
+    [fn_mean,fn_std,fn_list]=FN_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
+    [wd_mean,wd_std,wd_list]=WD_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
+    [swd_mean,swd_std,swd_list]=SWD_1(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size,n_slices=n_slices,seed=seed)
+    return ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list
 
 
 '''

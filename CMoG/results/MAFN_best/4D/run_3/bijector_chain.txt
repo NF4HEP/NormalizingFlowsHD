@@ -1,9 +1,9 @@
-masked_autoregressive_flow
+cspline
 permute
-masked_autoregressive_flow
+cspline
 permute
-masked_autoregressive_flow
+cspline
 permute
-masked_autoregressive_flow
+cspline
 permute
-masked_autoregressive_flow
+cspline
