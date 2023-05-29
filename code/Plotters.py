@@ -1,4 +1,5 @@
 
+import os
 from sklearn import datasets
 from sklearn.preprocessing import StandardScaler
 import numpy as np
@@ -17,12 +18,25 @@ from tensorflow.keras import Model
 from tensorflow.keras.callbacks import LambdaCallback
 import matplotlib.pyplot as plt
 import pandas as pd
+from fpdf import FPDF
+from PIL import Image
 import Distributions,Bijectors
 #import Trainer_2 as Trainer
 #import Metrics_old as Metrics
 from statistics import mean,median
 import matplotlib.lines as mlines
 import corner
+
+def make_pdf_from_img(img):
+    """Make pdf from image
+    Used to circumvent bud in plot_model which does not allow to export pdf"""
+    img_pdf = os.path.splitext(img)[0]+".pdf"
+    cover = Image.open(img)
+    width, height = cover.size
+    pdf = FPDF(unit = "pt", format = [width, height])
+    pdf.add_page()
+    pdf.image(img, 0, 0)
+    pdf.output(img_pdf, "F")
 
 def sample_plotter(target_test_data,nf_dist,path_to_plots):
 
@@ -142,7 +156,11 @@ def cornerplotter(target_test_data,nf_dist,path_to_plots,ndims,rot=None,norm=Fal
     figure=corner.corner(target_samples,color='red',bins=n_bins,labels=[r"%s" % s for s in labels])
     corner.corner(nf_samples,color='blue',bins=n_bins,fig=figure)
     plt.legend(handles=[blue_line,red_line], bbox_to_anchor=(-ndims+1.8, ndims+.3, 1., 0.) ,fontsize='xx-large')
-    plt.savefig(path_to_plots+'/corner_plot.pdf',pil_kwargs={'quality':50})#dpi=300)#
+    plt.savefig(path_to_plots+'/corner_plot.png',pil_kwargs={'quality':50})
+    #try:
+    #    make_pdf_from_img(path_to_plots+'/corner_plot.png')
+    #except:
+    #    pass
     plt.close()
     return
 

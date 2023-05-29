@@ -87,7 +87,7 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
            print('Found and loaded existing weights.')
            #nf_dist=loader(nf_dist,load_weights_path)      
         except:
-            print('Not weights found. Training from scratch.')
+            print('No weights found. Training from scratch.')
             
         try:
             with open(path_to_results+'/details.json', 'r') as f:

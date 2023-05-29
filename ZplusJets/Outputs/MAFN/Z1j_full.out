@@ -25,7 +25,7 @@ Train first sample: [-0.5894242   1.0665622  -0.23791106 -0.08094089 -0.50117004
 KerasTensor(type_spec=TensorSpec(shape=(None, 12), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'")
 ####### log_prob####
 KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_77/AddV2:0', description="created by layer 'tf.__operators__.add_77'")
-Not weights found. Training from scratch.
+No weights found. Training from scratch.
 No history found. Generating new history.
 Epoch 1/1000
 137/137 - 14s - loss: 14.3645 - val_loss: 12.2713

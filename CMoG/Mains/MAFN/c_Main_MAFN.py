@@ -15,14 +15,26 @@ from typing import Dict, Any
 sys.path.append('../../../code')
 import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
-from tensorflow.python.client import device_lib
-local_device_protos = device_lib.list_local_devices()
-available_gpus = [[x.name, x.physical_device_desc] for x in local_device_protos if x.device_type == 'GPU'] # type: ignore
-training_device = str(available_gpus[0])
 
+import subprocess
+def get_gpu_info():
+    try:
+        gpu_info = subprocess.check_output(["nvidia-smi", "--query-gpu=gpu_name", "--format=csv,noheader"]).decode('utf-8')
+        return gpu_info.strip().split('\n')
+    except Exception as e:
+        print(e)
+        return None
+gpu_models = get_gpu_info()
+if gpu_models:
+    training_device = gpu_models[eval(os.environ["CUDA_VISIBLE_DEVICES"])]
+    print("Successfully loaded GPU model: {}".format(training_device))
+else:
+    training_device = 'undetermined'
+    print("Failed to load GPU model. Defaulting to 'undetermined'.")
+        
 def MixtureGaussian(ncomp,ndims,seed=0):
     targ_dist = MixtureDistributions.MixMultiNormal1(ncomp,ndims,seed=seed)
     return targ_dist
@@ -45,7 +57,7 @@ spline_knots_list=[8]
 
 ### Initialize train hyerparameters ###
 ntest_samples=100000
-epochs=1000
+epochs=12
 lr_orig=.001
 patience=50
 min_delta_patience=.0001
@@ -97,7 +109,7 @@ for ndims in ndims_list:
                                 except:
                                     print(path_to_results+' file exists')
                                     #to_run=False
-                                    epochs=2
+                                    epochs=10
                                 try:
                                     if to_run:
                                         path_to_weights=path_to_results+'weights/'
@@ -228,6 +240,7 @@ for ndims in ndims_list:
                                             Plotters.cornerplotter(X_data_test,X_data_nf,path_to_results,ndims,norm=True)
                                             Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)
                                             #Plotters.sample_plotter(X_data_test,nf_dist,path_to_results)
+                                            print("Plots saved")
                                         except:
                                             print("===========\nFailed to plot\n===========\n")
                                         end=timer()

@@ -124,3 +124,80 @@ WARNING:root:Too few points to create valid contours
 WARNING:root:Too few points to create valid contours
 WARNING:root:Too few points to create valid contours
 WARNING:root:Too few points to create valid contours
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+../../../code/Metrics.py:241: UserWarning: p-value floored: true value smaller than 0.001
+  p_val=anderson_ksamp([dist_1_k[:,dim], dist_2_k[:,dim]])[2]
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+../../../code/Metrics.py:241: UserWarning: p-value floored: true value smaller than 0.001
+  p_val=anderson_ksamp([dist_1_k[:,dim], dist_2_k[:,dim]])[2]
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+../../../code/Metrics.py:241: UserWarning: p-value floored: true value smaller than 0.001
+  p_val=anderson_ksamp([dist_1_k[:,dim], dist_2_k[:,dim]])[2]
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
