@@ -60,7 +60,7 @@ except:
     print('file exists')
 
 ### Initialize dictionaries ###
-results_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ks_list':[],'ad_mean':[],'ad_std':[],'ad_list':[],'wd_mean':[],'wd_std':[],'wd_list':[],'swd_mean':[],'swd_std':[],'swd_list':[],'fn_mean':[],'fn_std':[],'fn_list':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[],'training_device':[]}
+results_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ks_list':[],'ad_mean':[],'ad_std':[],'ad_list':[],'wd_mean':[],'wd_std':[],'wd_list':[],'swd_mean':[],'swd_std':[],'swd_list':[],'fn_mean':[],'fn_std':[],'fn_list':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'training_time':[],'prediction_time':[],'training_device':[]}
 hyperparams_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'spline_knots':[],'range_min':[],'hidden_layers':[],'batch_size':[],'activation':[],'eps_regulariser':[],'regulariser':[],'dist_seed':[],'test_seed':[],'training_device':[]} 
 
 ### Create 'log' file ####
@@ -138,49 +138,75 @@ for seed_train in seeds_list:
                                         Utils.save_bijector_info(bijector,path_to_results)
                                         base_dist=Distributions.gaussians(ndims)
                                         nf_dist=tfd.TransformedDistribution(base_dist,bijector)
-                                        start=timer()
                                         print("Training model.\n")
                                         epochs_input = epochs
                                         lr=lr_orig
                                         n_displays=1
                                         print("Train first sample:",X_data_train[0])
-                                        history=Trainer.graph_execution(ndims,nf_dist, X_data_train,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed_train)
+                                        history, training_time = Trainer.graph_execution(ndims,nf_dist, X_data_train,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed_train)
                                         t_losses_all=list(history.history['loss'])
                                         v_losses_all=list(history.history['val_loss'])
+                                        lr_all=list(history.history['lr'])
                                         if len(t_losses_all) > 10:
                                             succeded=True
-                                            end=timer()
                                         else:
                                             seed_train = np.random.randint(1000000)
                                             print("Training failed: trying again with seed",seed_train,".")
                                     epochs_output = len(t_losses_all)
-                                    training_time=end-start
                                     print("Model trained in",training_time,"s.\n")
                                     #continue
-                                    start=timer()
-                                    print("===========\nComputing predictions\n===========\n")
-                                    with tf.device('/device:CPU:0'):
-                                        Utils.reset_random_seeds(seed=seed_test)
-                                        print("===========\nGenerating test data for ndims=",ndims,".\n")
-                                        print("===========\n")
                                         start=timer()
-                                        X_data_test=targ_dist.sample(ntest_samples,seed=seed_test).numpy()
-                                        end=timer()
-                                        test_data_time=end-start
-                                        print("Test data generated in",test_data_time,"s.\n")
-                                        #if V is not None:
-                                        #    X_data_train = MixtureDistributions.inverse_transform_data(X_data_train,V)
-                                        #reload_best
-                                        nf_dist,_=Utils.load_model(nf_dist,path_to_results,ndims,lr=.000001)
-                                        logprob_nf=nf_dist.log_prob(X_data_test).numpy()
-                                        pickle_logprob_nf=open(path_to_results+'logprob_nf.pcl', 'wb')
-                                        pickle.dump(logprob_nf, pickle_logprob_nf, protocol=4)
-                                        pickle_logprob_nf.close()
-                                        [X_data_test, X_data_nf]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,iter_size=10000,seed=seed_test)
-                                        print("Test first sample:",X_data_test[0])
-                                        print("NF first sample:",X_data_nf[0])
-                                        ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list=Metrics.ComputeMetrics(X_data_test,X_data_nf)
-                                        results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,training_device)
+                                        try:
+                                            print("===========\nComputing predictions\n===========\n")
+                                            print("===========\nTrying on GPU\n===========\n")
+                                            Utils.reset_random_seeds(seed=seed_test)
+                                            print("===========\nGenerating test data for ndims=",ndims,".\n")
+                                            print("===========\n")
+                                            start=timer()
+                                            X_data_test=targ_dist.sample(ntest_samples,seed=seed_test).numpy()
+                                            end=timer()
+                                            test_data_time=end-start
+                                            print("Test data generated in",test_data_time,"s.\n")
+                                            #if V is not None:
+                                            #    X_data_train = MixtureDistributions.inverse_transform_data(X_data_train,V)
+                                            #reload_best
+                                            nf_dist,_=Utils.load_model(nf_dist,path_to_results,ndims,lr=.000001)
+                                            logprob_nf=nf_dist.log_prob(X_data_test).numpy()
+                                            pickle_logprob_nf=open(path_to_results+'logprob_nf.pcl', 'wb')
+                                            pickle.dump(logprob_nf, pickle_logprob_nf, protocol=4)
+                                            pickle_logprob_nf.close()
+                                            [X_data_test, X_data_nf]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,iter_size=10000,seed=seed_test)
+                                            print("Test first sample:",X_data_test[0])
+                                            print("NF first sample:",X_data_nf[0])
+                                            start_pred=timer()
+                                            ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list=Metrics.ComputeMetrics(X_data_test,X_data_nf)
+                                        except:
+                                            print("===========\nFailed on GPU, re-trying on CPU\n===========\n")
+                                            with tf.device('/device:CPU:0'):
+                                                Utils.reset_random_seeds(seed=seed_test)
+                                                print("===========\nGenerating test data for ndims=",ndims,".\n")
+                                                print("===========\n")
+                                                start=timer()
+                                                X_data_test=targ_dist.sample(ntest_samples,seed=seed_test).numpy()
+                                                end=timer()
+                                                test_data_time=end-start
+                                                print("Test data generated in",test_data_time,"s.\n")
+                                                #if V is not None:
+                                                #    X_data_train = MixtureDistributions.inverse_transform_data(X_data_train,V)
+                                                #reload_best
+                                                nf_dist,_=Utils.load_model(nf_dist,path_to_results,ndims,lr=.000001)
+                                                logprob_nf=nf_dist.log_prob(X_data_test).numpy()
+                                                pickle_logprob_nf=open(path_to_results+'logprob_nf.pcl', 'wb')
+                                                pickle.dump(logprob_nf, pickle_logprob_nf, protocol=4)
+                                                pickle_logprob_nf.close()
+                                                [X_data_test, X_data_nf]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,iter_size=10000,seed=seed_test)
+                                                print("Test first sample:",X_data_test[0])
+                                                print("NF first sample:",X_data_nf[0])
+                                                start_pred=timer()
+                                                ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list=Metrics.ComputeMetrics(X_data_test,X_data_nf)
+                                        end_pred=timer()
+                                        prediction_time=end_pred-start_pred
+                                        results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,prediction_time,training_device)
                                         results_dict_saved=True
                                         print("Results dict saved")
                                         Utils.logger(log_file_name,results_dict)
@@ -189,14 +215,16 @@ for seed_train in seeds_list:
                                         Utils.results_current(path_to_results,results_dict)
                                         results_current_saved=True
                                         print("Results saved")
-                                        Utils.save_details_json(hyperparams_dict,results_dict,t_losses_all,v_losses_all,path_to_results)
+                                        Utils.save_details_json(hyperparams_dict,results_dict,t_losses_all,v_losses_all,lr_all,path_to_results)
                                         details_saved=True
                                         print("Details saved")
-                                        #Plotters.train_plotter(t_losses_all,v_losses_all,path_to_results)
-                                        #corner_start=timer()
-                                        #Plotters.cornerplotter(X_data_test,X_data_nf,path_to_results,ndims,norm=True)
-                                        #Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)
-                                        #Plotters.sample_plotter(X_data_test,nf_dist,path_to_results)
+                                        try:
+                                            Plotters.train_plotter(t_losses_all,v_losses_all,path_to_results)
+                                            Plotters.cornerplotter(X_data_test,X_data_nf,path_to_results,ndims,norm=True)
+                                            Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)
+                                            #Plotters.sample_plotter(X_data_test,nf_dist,path_to_results)
+                                        except:
+                                            print("===========\nFailed to plot\n===========\n")
                                         end=timer()
                                         predictions_time=end-start
                                         print("Model predictions computed in",predictions_time,"s.\n")
@@ -213,16 +241,16 @@ for seed_train in seeds_list:
                                 for trace in trace_back:
                                     stack_trace.append("File : %s , Line : %d, Func.Name : %s, Message : %s" % (trace[0], trace[1], trace[2], trace[3]))
                                 if not results_dict_saved:
-                                    results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,"nan","nan","nan","nan","nan","nan","nan","nan","nan","nan",hllabel,batch_size,eps_regulariser,regulariser,epochs,"nan","nan")
+                                    results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,"nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan",hllabel,batch_size,eps_regulariser,regulariser,epochs_input,"nan","nan","nan","nan")
                                 if not logger_saved:
                                     Utils.logger(log_file_name,results_dict)
                                 if not results_current_saved:
                                     Utils.results_current(path_to_results,results_dict)
                                 if not details_saved:
                                     try:
-                                        Utils.save_details_json(hyperparams_dict,results_dict,t_losses_all,v_losses_all,path_to_results)
+                                        Utils.save_details_json(hyperparams_dict,results_dict,t_losses_all,v_losses_all,lr_all,path_to_results)
                                     except:
-                                        Utils.save_details_json(hyperparams_dict,results_dict,None,None,path_to_results)
+                                        Utils.save_details_json(hyperparams_dict,results_dict,None,None,None,path_to_results)
                                 print("===========\nRun failed\n")
                                 print("Exception type : %s " % ex_type.__name__)
                                 print("Exception message : %s" %ex_value)

@@ -1,8 +1,8 @@
 Loading events dataset...
-Events dataset loaded in 0.4934465792030096 seconds. Shape: (3987098, 12)
-run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,activation,spline_knots,range_min,eps_regulariser,regulariser,ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std,hidden_layers,batch_size,epochs_input,epochs_output,time
+Events dataset loaded in 0.23202426172792912 seconds. Shape: (3987098, 12)
+run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,activation,spline_knots,range_min,eps_regulariser,regulariser,ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std,hidden_layers,batch_size,epochs_input,epochs_output,time,training_device
 ===========
-Running 1 / 8 with hyperparameters:
+Running 1 / 24 with hyperparameters:
  ndims= 9 
  seed_train= 0 
  nsamples= 100000 
@@ -15,7 +15,7 @@ Running 1 / 8 with hyperparameters:
  spline_knots= 8 
  range_min= -5 
  batch_size= 512 
- hidden_layers= [128, 128, 128] epocs_input= 100 
+ hidden_layers= [128, 128, 128] epocs_input= 1000 
 ===========
 
 Training model.
@@ -27,3236 +27,2658 @@ KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_
 KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_217/AddV2:0', description="created by layer 'tf.__operators__.add_217'")
 Not weights found. Training from scratch.
 No history found. Generating new history.
-Epoch 1/100
-137/137 - 57s - loss: 11.0183 - val_loss: 9.8182
+Epoch 1/1000
+137/137 - 54s - loss: 11.0114 - val_loss: 9.8253
 
- Epoch 1/100 
-	 loss: 11.0183, val_loss: 9.8182
+ Epoch 1/1000 
+	 loss: 11.0114, val_loss: 9.8253
 
-Epoch 00001: val_loss improved from inf to 9.81823, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 2/100
-137/137 - 17s - loss: 9.5657 - val_loss: 9.4225
+Epoch 00001: val_loss improved from inf to 9.82528, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 2/1000
+137/137 - 17s - loss: 9.5548 - val_loss: 9.3966
 
- Epoch 2/100 
-	 loss: 9.5657, val_loss: 9.4225
+ Epoch 2/1000 
+	 loss: 9.5548, val_loss: 9.3966
 
-Epoch 00002: val_loss improved from 9.81823 to 9.42252, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 3/100
-137/137 - 17s - loss: 9.2475 - val_loss: 9.1416
+Epoch 00002: val_loss improved from 9.82528 to 9.39661, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 3/1000
+137/137 - 17s - loss: 9.2472 - val_loss: 9.1444
 
- Epoch 3/100 
-	 loss: 9.2475, val_loss: 9.1416
+ Epoch 3/1000 
+	 loss: 9.2472, val_loss: 9.1444
 
-Epoch 00003: val_loss improved from 9.42252 to 9.14159, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 4/100
-137/137 - 17s - loss: 9.0785 - val_loss: 9.0814
+Epoch 00003: val_loss improved from 9.39661 to 9.14437, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 4/1000
+137/137 - 17s - loss: 9.0717 - val_loss: 9.0643
 
- Epoch 4/100 
-	 loss: 9.0785, val_loss: 9.0814
+ Epoch 4/1000 
+	 loss: 9.0717, val_loss: 9.0643
 
-Epoch 00004: val_loss improved from 9.14159 to 9.08140, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 5/100
-137/137 - 17s - loss: 8.9398 - val_loss: 9.0156
+Epoch 00004: val_loss improved from 9.14437 to 9.06434, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 5/1000
+137/137 - 17s - loss: 8.9558 - val_loss: 8.9399
 
- Epoch 5/100 
-	 loss: 8.9398, val_loss: 9.0156
+ Epoch 5/1000 
+	 loss: 8.9558, val_loss: 8.9399
 
-Epoch 00005: val_loss improved from 9.08140 to 9.01564, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 6/100
-137/137 - 17s - loss: 8.8464 - val_loss: 8.8458
+Epoch 00005: val_loss improved from 9.06434 to 8.93992, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 6/1000
+137/137 - 17s - loss: 8.8543 - val_loss: 8.8986
 
- Epoch 6/100 
-	 loss: 8.8464, val_loss: 8.8458
+ Epoch 6/1000 
+	 loss: 8.8543, val_loss: 8.8986
 
-Epoch 00006: val_loss improved from 9.01564 to 8.84578, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 7/100
-137/137 - 16s - loss: 8.7790 - val_loss: 8.8109
+Epoch 00006: val_loss improved from 8.93992 to 8.89862, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 7/1000
+137/137 - 17s - loss: 8.7795 - val_loss: 8.7706
 
- Epoch 7/100 
-	 loss: 8.7790, val_loss: 8.8109
+ Epoch 7/1000 
+	 loss: 8.7795, val_loss: 8.7706
 
-Epoch 00007: val_loss improved from 8.84578 to 8.81091, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 8/100
-137/137 - 15s - loss: 8.7294 - val_loss: 8.7316
+Epoch 00007: val_loss improved from 8.89862 to 8.77061, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 8/1000
+137/137 - 17s - loss: 8.7196 - val_loss: 8.7262
 
- Epoch 8/100 
-	 loss: 8.7294, val_loss: 8.7316
+ Epoch 8/1000 
+	 loss: 8.7196, val_loss: 8.7262
 
-Epoch 00008: val_loss improved from 8.81091 to 8.73161, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 9/100
-137/137 - 16s - loss: 8.6821 - val_loss: 8.7016
+Epoch 00008: val_loss improved from 8.77061 to 8.72625, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 9/1000
+137/137 - 17s - loss: 8.6695 - val_loss: 8.7009
 
- Epoch 9/100 
-	 loss: 8.6821, val_loss: 8.7016
+ Epoch 9/1000 
+	 loss: 8.6695, val_loss: 8.7009
 
-Epoch 00009: val_loss improved from 8.73161 to 8.70162, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 10/100
-137/137 - 16s - loss: 8.6365 - val_loss: 8.6603
+Epoch 00009: val_loss improved from 8.72625 to 8.70094, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 10/1000
+137/137 - 17s - loss: 8.6259 - val_loss: 8.7158
 
- Epoch 10/100 
-	 loss: 8.6365, val_loss: 8.6603
+ Epoch 10/1000 
+	 loss: 8.6259, val_loss: 8.7158
 
-Epoch 00010: val_loss improved from 8.70162 to 8.66027, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 11/100
-137/137 - 16s - loss: 8.6028 - val_loss: 8.6356
+Epoch 00010: val_loss did not improve from 8.70094
+Epoch 11/1000
+137/137 - 16s - loss: 8.5904 - val_loss: 8.6141
 
- Epoch 11/100 
-	 loss: 8.6028, val_loss: 8.6356
+ Epoch 11/1000 
+	 loss: 8.5904, val_loss: 8.6141
 
-Epoch 00011: val_loss improved from 8.66027 to 8.63560, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 12/100
-137/137 - 16s - loss: 8.5577 - val_loss: 8.7716
+Epoch 00011: val_loss improved from 8.70094 to 8.61410, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 12/1000
+137/137 - 16s - loss: 8.5397 - val_loss: 8.5605
 
- Epoch 12/100 
-	 loss: 8.5577, val_loss: 8.7716
+ Epoch 12/1000 
+	 loss: 8.5397, val_loss: 8.5605
 
-Epoch 00012: val_loss did not improve from 8.63560
-Epoch 13/100
-137/137 - 17s - loss: 8.5660 - val_loss: 8.6274
+Epoch 00012: val_loss improved from 8.61410 to 8.56053, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 13/1000
+137/137 - 16s - loss: 8.4906 - val_loss: 8.5875
 
- Epoch 13/100 
-	 loss: 8.5660, val_loss: 8.6274
+ Epoch 13/1000 
+	 loss: 8.4906, val_loss: 8.5875
 
-Epoch 00013: val_loss improved from 8.63560 to 8.62741, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 14/100
-137/137 - 16s - loss: 8.4999 - val_loss: 8.5755
+Epoch 00013: val_loss did not improve from 8.56053
+Epoch 14/1000
+137/137 - 16s - loss: 8.4585 - val_loss: 8.4930
 
- Epoch 14/100 
-	 loss: 8.4999, val_loss: 8.5755
+ Epoch 14/1000 
+	 loss: 8.4585, val_loss: 8.4930
 
-Epoch 00014: val_loss improved from 8.62741 to 8.57552, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 15/100
-137/137 - 16s - loss: 8.4636 - val_loss: 8.5411
+Epoch 00014: val_loss improved from 8.56053 to 8.49296, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 15/1000
+137/137 - 16s - loss: 8.4288 - val_loss: 8.5122
 
- Epoch 15/100 
-	 loss: 8.4636, val_loss: 8.5411
+ Epoch 15/1000 
+	 loss: 8.4288, val_loss: 8.5122
 
-Epoch 00015: val_loss improved from 8.57552 to 8.54106, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 16/100
-137/137 - 16s - loss: 8.5264 - val_loss: 8.9565
+Epoch 00015: val_loss did not improve from 8.49296
+Epoch 16/1000
+137/137 - 17s - loss: 8.3974 - val_loss: 8.5366
 
- Epoch 16/100 
-	 loss: 8.5264, val_loss: 8.9565
+ Epoch 16/1000 
+	 loss: 8.3974, val_loss: 8.5366
 
-Epoch 00016: val_loss did not improve from 8.54106
-Epoch 17/100
-137/137 - 16s - loss: 8.5155 - val_loss: 8.5187
+Epoch 00016: val_loss did not improve from 8.49296
+Epoch 17/1000
+137/137 - 16s - loss: 8.3794 - val_loss: 8.4377
 
- Epoch 17/100 
-	 loss: 8.5155, val_loss: 8.5187
+ Epoch 17/1000 
+	 loss: 8.3794, val_loss: 8.4377
 
-Epoch 00017: val_loss improved from 8.54106 to 8.51871, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 18/100
-137/137 - 17s - loss: 8.4140 - val_loss: 8.4690
+Epoch 00017: val_loss improved from 8.49296 to 8.43769, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 18/1000
+137/137 - 16s - loss: 8.3411 - val_loss: 8.4085
 
- Epoch 18/100 
-	 loss: 8.4140, val_loss: 8.4690
+ Epoch 18/1000 
+	 loss: 8.3411, val_loss: 8.4085
 
-Epoch 00018: val_loss improved from 8.51871 to 8.46896, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 19/100
-137/137 - 17s - loss: 8.3897 - val_loss: 8.4634
+Epoch 00018: val_loss improved from 8.43769 to 8.40850, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 19/1000
+137/137 - 16s - loss: 8.3312 - val_loss: 8.3564
 
- Epoch 19/100 
-	 loss: 8.3897, val_loss: 8.4634
+ Epoch 19/1000 
+	 loss: 8.3312, val_loss: 8.3564
 
-Epoch 00019: val_loss improved from 8.46896 to 8.46341, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 20/100
-137/137 - 17s - loss: 8.3501 - val_loss: 8.3984
+Epoch 00019: val_loss improved from 8.40850 to 8.35638, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 20/1000
+137/137 - 16s - loss: 8.3044 - val_loss: 8.3744
 
- Epoch 20/100 
-	 loss: 8.3501, val_loss: 8.3984
+ Epoch 20/1000 
+	 loss: 8.3044, val_loss: 8.3744
 
-Epoch 00020: val_loss improved from 8.46341 to 8.39841, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 21/100
-137/137 - 15s - loss: 8.3167 - val_loss: 8.3601
+Epoch 00020: val_loss did not improve from 8.35638
+Epoch 21/1000
+137/137 - 16s - loss: 8.2815 - val_loss: 8.3422
 
- Epoch 21/100 
-	 loss: 8.3167, val_loss: 8.3601
+ Epoch 21/1000 
+	 loss: 8.2815, val_loss: 8.3422
 
-Epoch 00021: val_loss improved from 8.39841 to 8.36012, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 22/100
-137/137 - 16s - loss: 8.3068 - val_loss: 8.4899
+Epoch 00021: val_loss improved from 8.35638 to 8.34218, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 22/1000
+137/137 - 16s - loss: 8.2655 - val_loss: 8.3348
 
- Epoch 22/100 
-	 loss: 8.3068, val_loss: 8.4899
+ Epoch 22/1000 
+	 loss: 8.2655, val_loss: 8.3348
 
-Epoch 00022: val_loss did not improve from 8.36012
-Epoch 23/100
-137/137 - 16s - loss: 8.2705 - val_loss: 8.3599
+Epoch 00022: val_loss improved from 8.34218 to 8.33479, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 23/1000
+137/137 - 16s - loss: 8.2321 - val_loss: 8.3146
 
- Epoch 23/100 
-	 loss: 8.2705, val_loss: 8.3599
+ Epoch 23/1000 
+	 loss: 8.2321, val_loss: 8.3146
 
-Epoch 00023: val_loss improved from 8.36012 to 8.35993, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 24/100
-137/137 - 25s - loss: 8.2545 - val_loss: 8.3126
+Epoch 00023: val_loss improved from 8.33479 to 8.31464, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 24/1000
+137/137 - 16s - loss: 8.2214 - val_loss: 8.3398
 
- Epoch 24/100 
-	 loss: 8.2545, val_loss: 8.3126
+ Epoch 24/1000 
+	 loss: 8.2214, val_loss: 8.3398
 
-Epoch 00024: val_loss improved from 8.35993 to 8.31256, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 25/100
-137/137 - 16s - loss: 8.2431 - val_loss: 8.2837
+Epoch 00024: val_loss did not improve from 8.31464
+Epoch 25/1000
+137/137 - 16s - loss: 8.2136 - val_loss: 8.2394
 
- Epoch 25/100 
-	 loss: 8.2431, val_loss: 8.2837
+ Epoch 25/1000 
+	 loss: 8.2136, val_loss: 8.2394
 
-Epoch 00025: val_loss improved from 8.31256 to 8.28372, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 26/100
-137/137 - 16s - loss: 8.2077 - val_loss: 8.2708
+Epoch 00025: val_loss improved from 8.31464 to 8.23937, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 26/1000
+137/137 - 16s - loss: 8.1763 - val_loss: 8.2136
 
- Epoch 26/100 
-	 loss: 8.2077, val_loss: 8.2708
+ Epoch 26/1000 
+	 loss: 8.1763, val_loss: 8.2136
 
-Epoch 00026: val_loss improved from 8.28372 to 8.27085, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 27/100
-137/137 - 19s - loss: 8.1899 - val_loss: 8.2546
+Epoch 00026: val_loss improved from 8.23937 to 8.21360, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 27/1000
+137/137 - 16s - loss: 8.1561 - val_loss: 8.2185
 
- Epoch 27/100 
-	 loss: 8.1899, val_loss: 8.2546
+ Epoch 27/1000 
+	 loss: 8.1561, val_loss: 8.2185
 
-Epoch 00027: val_loss improved from 8.27085 to 8.25459, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 28/100
-137/137 - 25s - loss: 8.1786 - val_loss: 8.2719
+Epoch 00027: val_loss did not improve from 8.21360
+Epoch 28/1000
+137/137 - 16s - loss: 8.1537 - val_loss: 8.1872
 
- Epoch 28/100 
-	 loss: 8.1786, val_loss: 8.2719
+ Epoch 28/1000 
+	 loss: 8.1537, val_loss: 8.1872
 
-Epoch 00028: val_loss did not improve from 8.25459
-Epoch 29/100
-137/137 - 24s - loss: 8.1398 - val_loss: 8.2056
+Epoch 00028: val_loss improved from 8.21360 to 8.18716, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 29/1000
+137/137 - 16s - loss: 8.1330 - val_loss: 8.2308
 
- Epoch 29/100 
-	 loss: 8.1398, val_loss: 8.2056
+ Epoch 29/1000 
+	 loss: 8.1330, val_loss: 8.2308
 
-Epoch 00029: val_loss improved from 8.25459 to 8.20561, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 30/100
-137/137 - 20s - loss: 8.1237 - val_loss: 8.2512
+Epoch 00029: val_loss did not improve from 8.18716
+Epoch 30/1000
+137/137 - 16s - loss: 8.1162 - val_loss: 8.2128
 
- Epoch 30/100 
-	 loss: 8.1237, val_loss: 8.2512
+ Epoch 30/1000 
+	 loss: 8.1162, val_loss: 8.2128
 
-Epoch 00030: val_loss did not improve from 8.20561
-Epoch 31/100
-137/137 - 15s - loss: 8.1239 - val_loss: 8.2621
+Epoch 00030: val_loss did not improve from 8.18716
+Epoch 31/1000
+137/137 - 16s - loss: 8.0838 - val_loss: 8.1866
 
- Epoch 31/100 
-	 loss: 8.1239, val_loss: 8.2621
+ Epoch 31/1000 
+	 loss: 8.0838, val_loss: 8.1866
 
-Epoch 00031: val_loss did not improve from 8.20561
-Epoch 32/100
-137/137 - 15s - loss: 8.1221 - val_loss: 8.1607
+Epoch 00031: val_loss improved from 8.18716 to 8.18662, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 32/1000
+137/137 - 16s - loss: 8.0861 - val_loss: 8.1692
 
- Epoch 32/100 
-	 loss: 8.1221, val_loss: 8.1607
+ Epoch 32/1000 
+	 loss: 8.0861, val_loss: 8.1692
 
-Epoch 00032: val_loss improved from 8.20561 to 8.16068, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 33/100
-137/137 - 16s - loss: 8.0714 - val_loss: 8.1781
+Epoch 00032: val_loss improved from 8.18662 to 8.16916, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 33/1000
+137/137 - 17s - loss: 8.0659 - val_loss: 8.2116
 
- Epoch 33/100 
-	 loss: 8.0714, val_loss: 8.1781
+ Epoch 33/1000 
+	 loss: 8.0659, val_loss: 8.2116
 
-Epoch 00033: val_loss did not improve from 8.16068
-Epoch 34/100
-137/137 - 16s - loss: 8.0808 - val_loss: 8.1215
+Epoch 00033: val_loss did not improve from 8.16916
+Epoch 34/1000
+137/137 - 16s - loss: 8.0642 - val_loss: 8.1371
 
- Epoch 34/100 
-	 loss: 8.0808, val_loss: 8.1215
+ Epoch 34/1000 
+	 loss: 8.0642, val_loss: 8.1371
 
-Epoch 00034: val_loss improved from 8.16068 to 8.12146, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 35/100
-137/137 - 16s - loss: 8.0383 - val_loss: 8.1120
+Epoch 00034: val_loss improved from 8.16916 to 8.13715, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 35/1000
+137/137 - 16s - loss: 8.0318 - val_loss: 8.1586
 
- Epoch 35/100 
-	 loss: 8.0383, val_loss: 8.1120
+ Epoch 35/1000 
+	 loss: 8.0318, val_loss: 8.1586
 
-Epoch 00035: val_loss improved from 8.12146 to 8.11200, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 36/100
-137/137 - 16s - loss: 8.0294 - val_loss: 8.0830
+Epoch 00035: val_loss did not improve from 8.13715
+Epoch 36/1000
+137/137 - 16s - loss: 8.0350 - val_loss: 8.0989
 
- Epoch 36/100 
-	 loss: 8.0294, val_loss: 8.0830
+ Epoch 36/1000 
+	 loss: 8.0350, val_loss: 8.0989
 
-Epoch 00036: val_loss improved from 8.11200 to 8.08299, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 37/100
-137/137 - 17s - loss: 8.0327 - val_loss: 8.1098
+Epoch 00036: val_loss improved from 8.13715 to 8.09889, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 37/1000
+137/137 - 16s - loss: 8.0014 - val_loss: 8.0813
 
- Epoch 37/100 
-	 loss: 8.0327, val_loss: 8.1098
+ Epoch 37/1000 
+	 loss: 8.0014, val_loss: 8.0813
 
-Epoch 00037: val_loss did not improve from 8.08299
-Epoch 38/100
-137/137 - 16s - loss: 7.9841 - val_loss: 8.0751
+Epoch 00037: val_loss improved from 8.09889 to 8.08126, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 38/1000
+137/137 - 17s - loss: 7.9904 - val_loss: 8.0812
 
- Epoch 38/100 
-	 loss: 7.9841, val_loss: 8.0751
+ Epoch 38/1000 
+	 loss: 7.9904, val_loss: 8.0812
 
-Epoch 00038: val_loss improved from 8.08299 to 8.07515, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 39/100
-137/137 - 16s - loss: 7.9802 - val_loss: 8.0631
+Epoch 00038: val_loss improved from 8.08126 to 8.08124, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 39/1000
+137/137 - 16s - loss: 7.9894 - val_loss: 8.0549
 
- Epoch 39/100 
-	 loss: 7.9802, val_loss: 8.0631
+ Epoch 39/1000 
+	 loss: 7.9894, val_loss: 8.0549
 
-Epoch 00039: val_loss improved from 8.07515 to 8.06314, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 40/100
-137/137 - 16s - loss: 7.9683 - val_loss: 8.0755
+Epoch 00039: val_loss improved from 8.08124 to 8.05489, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 40/1000
+137/137 - 16s - loss: 7.9695 - val_loss: 8.1067
 
- Epoch 40/100 
-	 loss: 7.9683, val_loss: 8.0755
+ Epoch 40/1000 
+	 loss: 7.9695, val_loss: 8.1067
 
-Epoch 00040: val_loss did not improve from 8.06314
-Epoch 41/100
-137/137 - 16s - loss: 7.9824 - val_loss: 8.0699
+Epoch 00040: val_loss did not improve from 8.05489
+Epoch 41/1000
+137/137 - 16s - loss: 7.9907 - val_loss: 8.0752
 
- Epoch 41/100 
-	 loss: 7.9824, val_loss: 8.0699
+ Epoch 41/1000 
+	 loss: 7.9907, val_loss: 8.0752
 
-Epoch 00041: val_loss did not improve from 8.06314
-Epoch 42/100
-137/137 - 16s - loss: 7.9326 - val_loss: 8.0412
+Epoch 00041: val_loss did not improve from 8.05489
+Epoch 42/1000
+137/137 - 16s - loss: 7.9527 - val_loss: 8.0544
 
- Epoch 42/100 
-	 loss: 7.9326, val_loss: 8.0412
+ Epoch 42/1000 
+	 loss: 7.9527, val_loss: 8.0544
 
-Epoch 00042: val_loss improved from 8.06314 to 8.04115, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 43/100
-137/137 - 17s - loss: 7.9239 - val_loss: 8.0160
+Epoch 00042: val_loss improved from 8.05489 to 8.05438, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 43/1000
+137/137 - 16s - loss: 7.9438 - val_loss: 8.0545
 
- Epoch 43/100 
-	 loss: 7.9239, val_loss: 8.0160
+ Epoch 43/1000 
+	 loss: 7.9438, val_loss: 8.0545
 
-Epoch 00043: val_loss improved from 8.04115 to 8.01601, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 44/100
-137/137 - 16s - loss: 7.9141 - val_loss: 7.9862
+Epoch 00043: val_loss did not improve from 8.05438
+Epoch 44/1000
+137/137 - 16s - loss: 7.9303 - val_loss: 8.0233
 
- Epoch 44/100 
-	 loss: 7.9141, val_loss: 7.9862
+ Epoch 44/1000 
+	 loss: 7.9303, val_loss: 8.0233
 
-Epoch 00044: val_loss improved from 8.01601 to 7.98615, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 45/100
-137/137 - 14s - loss: 7.8968 - val_loss: 7.9929
+Epoch 00044: val_loss improved from 8.05438 to 8.02326, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 45/1000
+137/137 - 16s - loss: 7.9240 - val_loss: 8.0135
 
- Epoch 45/100 
-	 loss: 7.8968, val_loss: 7.9929
+ Epoch 45/1000 
+	 loss: 7.9240, val_loss: 8.0135
 
-Epoch 00045: val_loss did not improve from 7.98615
-Epoch 46/100
-137/137 - 16s - loss: 7.8942 - val_loss: 8.0175
+Epoch 00045: val_loss improved from 8.02326 to 8.01355, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 46/1000
+137/137 - 16s - loss: 7.9039 - val_loss: 7.9998
 
- Epoch 46/100 
-	 loss: 7.8942, val_loss: 8.0175
+ Epoch 46/1000 
+	 loss: 7.9039, val_loss: 7.9998
 
-Epoch 00046: val_loss did not improve from 7.98615
-Epoch 47/100
-137/137 - 16s - loss: 7.8758 - val_loss: 8.0139
+Epoch 00046: val_loss improved from 8.01355 to 7.99977, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 47/1000
+137/137 - 16s - loss: 7.8990 - val_loss: 8.0050
 
- Epoch 47/100 
-	 loss: 7.8758, val_loss: 8.0139
+ Epoch 47/1000 
+	 loss: 7.8990, val_loss: 8.0050
 
-Epoch 00047: val_loss did not improve from 7.98615
-Epoch 48/100
-137/137 - 16s - loss: 7.8691 - val_loss: 7.9136
+Epoch 00047: val_loss did not improve from 7.99977
+Epoch 48/1000
+137/137 - 16s - loss: 7.9325 - val_loss: 8.0058
 
- Epoch 48/100 
-	 loss: 7.8691, val_loss: 7.9136
+ Epoch 48/1000 
+	 loss: 7.9325, val_loss: 8.0058
 
-Epoch 00048: val_loss improved from 7.98615 to 7.91359, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 49/100
-137/137 - 16s - loss: 7.8536 - val_loss: 7.9786
+Epoch 00048: val_loss did not improve from 7.99977
+Epoch 49/1000
+137/137 - 17s - loss: 7.8918 - val_loss: 7.9826
 
- Epoch 49/100 
-	 loss: 7.8536, val_loss: 7.9786
+ Epoch 49/1000 
+	 loss: 7.8918, val_loss: 7.9826
 
-Epoch 00049: val_loss did not improve from 7.91359
-Epoch 50/100
-137/137 - 16s - loss: 7.8353 - val_loss: 8.0393
+Epoch 00049: val_loss improved from 7.99977 to 7.98260, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 50/1000
+137/137 - 16s - loss: 7.8717 - val_loss: 8.0635
 
- Epoch 50/100 
-	 loss: 7.8353, val_loss: 8.0393
+ Epoch 50/1000 
+	 loss: 7.8717, val_loss: 8.0635
 
-Epoch 00050: val_loss did not improve from 7.91359
-Epoch 51/100
-137/137 - 16s - loss: 7.8395 - val_loss: 7.9086
+Epoch 00050: val_loss did not improve from 7.98260
+Epoch 51/1000
+137/137 - 16s - loss: 7.8527 - val_loss: 7.9186
 
- Epoch 51/100 
-	 loss: 7.8395, val_loss: 7.9086
+ Epoch 51/1000 
+	 loss: 7.8527, val_loss: 7.9186
 
-Epoch 00051: val_loss improved from 7.91359 to 7.90864, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 52/100
-137/137 - 16s - loss: 7.8235 - val_loss: 7.9163
+Epoch 00051: val_loss improved from 7.98260 to 7.91864, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 52/1000
+137/137 - 16s - loss: 7.8336 - val_loss: 7.9464
 
- Epoch 52/100 
-	 loss: 7.8235, val_loss: 7.9163
+ Epoch 52/1000 
+	 loss: 7.8336, val_loss: 7.9464
 
-Epoch 00052: val_loss did not improve from 7.90864
-Epoch 53/100
-137/137 - 16s - loss: 7.8072 - val_loss: 8.0097
+Epoch 00052: val_loss did not improve from 7.91864
+Epoch 53/1000
+137/137 - 17s - loss: 7.8444 - val_loss: 8.0272
 
- Epoch 53/100 
-	 loss: 7.8072, val_loss: 8.0097
+ Epoch 53/1000 
+	 loss: 7.8444, val_loss: 8.0272
 
-Epoch 00053: val_loss did not improve from 7.90864
-Epoch 54/100
-137/137 - 16s - loss: 7.7903 - val_loss: 7.8789
+Epoch 00053: val_loss did not improve from 7.91864
+Epoch 54/1000
+137/137 - 16s - loss: 7.8279 - val_loss: 7.9498
 
- Epoch 54/100 
-	 loss: 7.7903, val_loss: 7.8789
+ Epoch 54/1000 
+	 loss: 7.8279, val_loss: 7.9498
 
-Epoch 00054: val_loss improved from 7.90864 to 7.87895, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 55/100
-137/137 - 16s - loss: 7.7994 - val_loss: 7.9375
+Epoch 00054: val_loss did not improve from 7.91864
+Epoch 55/1000
+137/137 - 16s - loss: 7.8189 - val_loss: 7.9185
 
- Epoch 55/100 
-	 loss: 7.7994, val_loss: 7.9375
+ Epoch 55/1000 
+	 loss: 7.8189, val_loss: 7.9185
 
-Epoch 00055: val_loss did not improve from 7.87895
-Epoch 56/100
-137/137 - 16s - loss: 7.7956 - val_loss: 7.8752
+Epoch 00055: val_loss improved from 7.91864 to 7.91852, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 56/1000
+137/137 - 16s - loss: 7.8281 - val_loss: 7.9172
 
- Epoch 56/100 
-	 loss: 7.7956, val_loss: 7.8752
+ Epoch 56/1000 
+	 loss: 7.8281, val_loss: 7.9172
 
-Epoch 00056: val_loss improved from 7.87895 to 7.87519, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 57/100
-137/137 - 16s - loss: 7.7716 - val_loss: 7.8567
+Epoch 00056: val_loss improved from 7.91852 to 7.91723, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 57/1000
+137/137 - 16s - loss: 7.8087 - val_loss: 7.9988
 
- Epoch 57/100 
-	 loss: 7.7716, val_loss: 7.8567
+ Epoch 57/1000 
+	 loss: 7.8087, val_loss: 7.9988
 
-Epoch 00057: val_loss improved from 7.87519 to 7.85666, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 58/100
-137/137 - 16s - loss: 7.7679 - val_loss: 7.8560
+Epoch 00057: val_loss did not improve from 7.91723
+Epoch 58/1000
+137/137 - 16s - loss: 7.8118 - val_loss: 7.9570
 
- Epoch 58/100 
-	 loss: 7.7679, val_loss: 7.8560
+ Epoch 58/1000 
+	 loss: 7.8118, val_loss: 7.9570
 
-Epoch 00058: val_loss improved from 7.85666 to 7.85598, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 59/100
-137/137 - 16s - loss: 7.7742 - val_loss: 7.9758
+Epoch 00058: val_loss did not improve from 7.91723
+Epoch 59/1000
+137/137 - 16s - loss: 7.7972 - val_loss: 7.9906
 
- Epoch 59/100 
-	 loss: 7.7742, val_loss: 7.9758
+ Epoch 59/1000 
+	 loss: 7.7972, val_loss: 7.9906
 
-Epoch 00059: val_loss did not improve from 7.85598
-Epoch 60/100
-137/137 - 16s - loss: 7.7427 - val_loss: 7.8414
+Epoch 00059: val_loss did not improve from 7.91723
+Epoch 60/1000
+137/137 - 16s - loss: 7.7794 - val_loss: 7.8999
 
- Epoch 60/100 
-	 loss: 7.7427, val_loss: 7.8414
+ Epoch 60/1000 
+	 loss: 7.7794, val_loss: 7.8999
 
-Epoch 00060: val_loss improved from 7.85598 to 7.84135, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 61/100
-137/137 - 16s - loss: 7.7436 - val_loss: 7.8385
+Epoch 00060: val_loss improved from 7.91723 to 7.89988, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 61/1000
+137/137 - 16s - loss: 7.7682 - val_loss: 7.8694
 
- Epoch 61/100 
-	 loss: 7.7436, val_loss: 7.8385
+ Epoch 61/1000 
+	 loss: 7.7682, val_loss: 7.8694
 
-Epoch 00061: val_loss improved from 7.84135 to 7.83850, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 62/100
-137/137 - 16s - loss: 7.7476 - val_loss: 7.8586
+Epoch 00061: val_loss improved from 7.89988 to 7.86940, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 62/1000
+137/137 - 16s - loss: 7.7810 - val_loss: 7.8827
 
- Epoch 62/100 
-	 loss: 7.7476, val_loss: 7.8586
+ Epoch 62/1000 
+	 loss: 7.7810, val_loss: 7.8827
 
-Epoch 00062: val_loss did not improve from 7.83850
-Epoch 63/100
-137/137 - 16s - loss: 7.7447 - val_loss: 7.8661
+Epoch 00062: val_loss did not improve from 7.86940
+Epoch 63/1000
+137/137 - 16s - loss: 7.7653 - val_loss: 7.9197
 
- Epoch 63/100 
-	 loss: 7.7447, val_loss: 7.8661
+ Epoch 63/1000 
+	 loss: 7.7653, val_loss: 7.9197
 
-Epoch 00063: val_loss did not improve from 7.83850
-Epoch 64/100
-137/137 - 16s - loss: 7.7263 - val_loss: 7.9155
+Epoch 00063: val_loss did not improve from 7.86940
+Epoch 64/1000
+137/137 - 16s - loss: 7.7557 - val_loss: 7.8589
 
- Epoch 64/100 
-	 loss: 7.7263, val_loss: 7.9155
+ Epoch 64/1000 
+	 loss: 7.7557, val_loss: 7.8589
 
-Epoch 00064: val_loss did not improve from 7.83850
-Epoch 65/100
-137/137 - 24s - loss: 7.7084 - val_loss: 7.8435
+Epoch 00064: val_loss improved from 7.86940 to 7.85891, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 65/1000
+137/137 - 16s - loss: 7.7321 - val_loss: 7.8399
 
- Epoch 65/100 
-	 loss: 7.7084, val_loss: 7.8435
+ Epoch 65/1000 
+	 loss: 7.7321, val_loss: 7.8399
 
-Epoch 00065: val_loss did not improve from 7.83850
-Epoch 66/100
-137/137 - 44s - loss: 7.6976 - val_loss: 7.8313
+Epoch 00065: val_loss improved from 7.85891 to 7.83985, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 66/1000
+137/137 - 16s - loss: 7.7309 - val_loss: 7.9033
 
- Epoch 66/100 
-	 loss: 7.6976, val_loss: 7.8313
+ Epoch 66/1000 
+	 loss: 7.7309, val_loss: 7.9033
 
-Epoch 00066: val_loss improved from 7.83850 to 7.83132, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 67/100
-137/137 - 28s - loss: 7.6921 - val_loss: 7.9005
+Epoch 00066: val_loss did not improve from 7.83985
+Epoch 67/1000
+137/137 - 16s - loss: 7.7269 - val_loss: 7.9716
 
- Epoch 67/100 
-	 loss: 7.6921, val_loss: 7.9005
+ Epoch 67/1000 
+	 loss: 7.7269, val_loss: 7.9716
 
-Epoch 00067: val_loss did not improve from 7.83132
-Epoch 68/100
-137/137 - 16s - loss: 7.6860 - val_loss: 7.7936
+Epoch 00067: val_loss did not improve from 7.83985
+Epoch 68/1000
+137/137 - 16s - loss: 8.0253 - val_loss: 9.8149
 
- Epoch 68/100 
-	 loss: 7.6860, val_loss: 7.7936
+ Epoch 68/1000 
+	 loss: 8.0253, val_loss: 9.8149
 
-Epoch 00068: val_loss improved from 7.83132 to 7.79360, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 69/100
-137/137 - 32s - loss: 7.6863 - val_loss: 7.7870
+Epoch 00068: val_loss did not improve from 7.83985
+Epoch 69/1000
+137/137 - 16s - loss: 8.1903 - val_loss: 7.8982
 
- Epoch 69/100 
-	 loss: 7.6863, val_loss: 7.7870
+ Epoch 69/1000 
+	 loss: 8.1903, val_loss: 7.8982
 
-Epoch 00069: val_loss improved from 7.79360 to 7.78696, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 70/100
-137/137 - 57s - loss: 7.6766 - val_loss: 7.7958
+Epoch 00069: val_loss did not improve from 7.83985
+Epoch 70/1000
+137/137 - 17s - loss: 7.7636 - val_loss: 7.8525
 
- Epoch 70/100 
-	 loss: 7.6766, val_loss: 7.7958
+ Epoch 70/1000 
+	 loss: 7.7636, val_loss: 7.8525
 
-Epoch 00070: val_loss did not improve from 7.78696
-Epoch 71/100
-137/137 - 17s - loss: 7.6726 - val_loss: 7.8874
+Epoch 00070: val_loss did not improve from 7.83985
+Epoch 71/1000
+137/137 - 16s - loss: 7.7358 - val_loss: 7.9606
 
- Epoch 71/100 
-	 loss: 7.6726, val_loss: 7.8874
+ Epoch 71/1000 
+	 loss: 7.7358, val_loss: 7.9606
 
-Epoch 00071: val_loss did not improve from 7.78696
-Epoch 72/100
-137/137 - 16s - loss: 7.6664 - val_loss: 7.8099
+Epoch 00071: val_loss did not improve from 7.83985
+Epoch 72/1000
+137/137 - 16s - loss: 7.7063 - val_loss: 7.8429
 
- Epoch 72/100 
-	 loss: 7.6664, val_loss: 7.8099
+ Epoch 72/1000 
+	 loss: 7.7063, val_loss: 7.8429
 
-Epoch 00072: val_loss did not improve from 7.78696
-Epoch 73/100
-137/137 - 15s - loss: 7.6610 - val_loss: 7.8315
+Epoch 00072: val_loss did not improve from 7.83985
+Epoch 73/1000
+137/137 - 16s - loss: 7.7026 - val_loss: 7.8189
 
- Epoch 73/100 
-	 loss: 7.6610, val_loss: 7.8315
+ Epoch 73/1000 
+	 loss: 7.7026, val_loss: 7.8189
 
-Epoch 00073: val_loss did not improve from 7.78696
-Epoch 74/100
-137/137 - 15s - loss: 7.6518 - val_loss: 7.9001
+Epoch 00073: val_loss improved from 7.83985 to 7.81891, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 74/1000
+137/137 - 16s - loss: 7.6851 - val_loss: 7.8133
 
- Epoch 74/100 
-	 loss: 7.6518, val_loss: 7.9001
+ Epoch 74/1000 
+	 loss: 7.6851, val_loss: 7.8133
 
-Epoch 00074: val_loss did not improve from 7.78696
-Epoch 75/100
-137/137 - 16s - loss: 7.6590 - val_loss: 7.8096
+Epoch 00074: val_loss improved from 7.81891 to 7.81330, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 75/1000
+137/137 - 17s - loss: 7.6766 - val_loss: 7.7677
 
- Epoch 75/100 
-	 loss: 7.6590, val_loss: 7.8096
+ Epoch 75/1000 
+	 loss: 7.6766, val_loss: 7.7677
 
-Epoch 00075: val_loss did not improve from 7.78696
-Epoch 76/100
-137/137 - 16s - loss: 7.6383 - val_loss: 7.7815
+Epoch 00075: val_loss improved from 7.81330 to 7.76772, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 76/1000
+137/137 - 16s - loss: 7.6652 - val_loss: 7.8375
 
- Epoch 76/100 
-	 loss: 7.6383, val_loss: 7.7815
+ Epoch 76/1000 
+	 loss: 7.6652, val_loss: 7.8375
 
-Epoch 00076: val_loss improved from 7.78696 to 7.78152, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 77/100
-137/137 - 16s - loss: 7.6580 - val_loss: 7.7958
+Epoch 00076: val_loss did not improve from 7.76772
+Epoch 77/1000
+137/137 - 16s - loss: 7.7092 - val_loss: 7.9126
 
- Epoch 77/100 
-	 loss: 7.6580, val_loss: 7.7958
+ Epoch 77/1000 
+	 loss: 7.7092, val_loss: 7.9126
 
-Epoch 00077: val_loss did not improve from 7.78152
-Epoch 78/100
-137/137 - 16s - loss: 7.6327 - val_loss: 7.7560
+Epoch 00077: val_loss did not improve from 7.76772
+Epoch 78/1000
+137/137 - 16s - loss: 7.6741 - val_loss: 7.8174
 
- Epoch 78/100 
-	 loss: 7.6327, val_loss: 7.7560
+ Epoch 78/1000 
+	 loss: 7.6741, val_loss: 7.8174
 
-Epoch 00078: val_loss improved from 7.78152 to 7.75598, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 79/100
-137/137 - 16s - loss: 7.5982 - val_loss: 7.7394
+Epoch 00078: val_loss did not improve from 7.76772
+Epoch 79/1000
+137/137 - 16s - loss: 7.6461 - val_loss: 7.8254
 
- Epoch 79/100 
-	 loss: 7.5982, val_loss: 7.7394
+ Epoch 79/1000 
+	 loss: 7.6461, val_loss: 7.8254
 
-Epoch 00079: val_loss improved from 7.75598 to 7.73936, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 80/100
-137/137 - 16s - loss: 7.6117 - val_loss: 7.8085
+Epoch 00079: val_loss did not improve from 7.76772
+Epoch 80/1000
+137/137 - 16s - loss: 7.6572 - val_loss: 7.8147
 
- Epoch 80/100 
-	 loss: 7.6117, val_loss: 7.8085
+ Epoch 80/1000 
+	 loss: 7.6572, val_loss: 7.8147
 
-Epoch 00080: val_loss did not improve from 7.73936
-Epoch 81/100
-137/137 - 16s - loss: 7.6142 - val_loss: 7.7840
+Epoch 00080: val_loss did not improve from 7.76772
+Epoch 81/1000
+137/137 - 17s - loss: 7.6500 - val_loss: 7.7762
 
- Epoch 81/100 
-	 loss: 7.6142, val_loss: 7.7840
+ Epoch 81/1000 
+	 loss: 7.6500, val_loss: 7.7762
 
-Epoch 00081: val_loss did not improve from 7.73936
-Epoch 82/100
-137/137 - 16s - loss: 7.6077 - val_loss: 7.7337
+Epoch 00081: val_loss did not improve from 7.76772
+Epoch 82/1000
+137/137 - 17s - loss: 7.6640 - val_loss: 7.7872
 
- Epoch 82/100 
-	 loss: 7.6077, val_loss: 7.7337
+ Epoch 82/1000 
+	 loss: 7.6640, val_loss: 7.7872
 
-Epoch 00082: val_loss improved from 7.73936 to 7.73365, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 83/100
-137/137 - 16s - loss: 7.5992 - val_loss: 7.7236
+Epoch 00082: val_loss did not improve from 7.76772
+Epoch 83/1000
+137/137 - 16s - loss: 7.6297 - val_loss: 7.7573
 
- Epoch 83/100 
-	 loss: 7.5992, val_loss: 7.7236
+ Epoch 83/1000 
+	 loss: 7.6297, val_loss: 7.7573
 
-Epoch 00083: val_loss improved from 7.73365 to 7.72358, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 84/100
-137/137 - 16s - loss: 7.6090 - val_loss: 7.7461
+Epoch 00083: val_loss improved from 7.76772 to 7.75729, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 84/1000
+137/137 - 16s - loss: 7.6356 - val_loss: 7.7572
 
- Epoch 84/100 
-	 loss: 7.6090, val_loss: 7.7461
+ Epoch 84/1000 
+	 loss: 7.6356, val_loss: 7.7572
 
-Epoch 00084: val_loss did not improve from 7.72358
-Epoch 85/100
-137/137 - 16s - loss: 7.5974 - val_loss: 7.7068
+Epoch 00084: val_loss improved from 7.75729 to 7.75717, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 85/1000
+137/137 - 16s - loss: 7.6139 - val_loss: 7.7337
 
- Epoch 85/100 
-	 loss: 7.5974, val_loss: 7.7068
+ Epoch 85/1000 
+	 loss: 7.6139, val_loss: 7.7337
 
-Epoch 00085: val_loss improved from 7.72358 to 7.70681, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 86/100
-137/137 - 16s - loss: 7.5896 - val_loss: 7.7357
+Epoch 00085: val_loss improved from 7.75717 to 7.73373, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 86/1000
+137/137 - 17s - loss: 7.6201 - val_loss: 7.7908
 
- Epoch 86/100 
-	 loss: 7.5896, val_loss: 7.7357
+ Epoch 86/1000 
+	 loss: 7.6201, val_loss: 7.7908
 
-Epoch 00086: val_loss did not improve from 7.70681
-Epoch 87/100
-137/137 - 16s - loss: 7.5818 - val_loss: 7.7257
+Epoch 00086: val_loss did not improve from 7.73373
+Epoch 87/1000
+137/137 - 16s - loss: 7.6114 - val_loss: 7.7767
 
- Epoch 87/100 
-	 loss: 7.5818, val_loss: 7.7257
+ Epoch 87/1000 
+	 loss: 7.6114, val_loss: 7.7767
 
-Epoch 00087: val_loss did not improve from 7.70681
-Epoch 88/100
-137/137 - 16s - loss: 7.5811 - val_loss: 7.7085
+Epoch 00087: val_loss did not improve from 7.73373
+Epoch 88/1000
+137/137 - 16s - loss: 7.5969 - val_loss: 7.7126
 
- Epoch 88/100 
-	 loss: 7.5811, val_loss: 7.7085
+ Epoch 88/1000 
+	 loss: 7.5969, val_loss: 7.7126
 
-Epoch 00088: val_loss did not improve from 7.70681
-Epoch 89/100
-137/137 - 16s - loss: 7.5864 - val_loss: 7.7521
+Epoch 00088: val_loss improved from 7.73373 to 7.71258, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 89/1000
+137/137 - 16s - loss: 7.5926 - val_loss: 7.8042
 
- Epoch 89/100 
-	 loss: 7.5864, val_loss: 7.7521
+ Epoch 89/1000 
+	 loss: 7.5926, val_loss: 7.8042
 
-Epoch 00089: val_loss did not improve from 7.70681
-Epoch 90/100
-137/137 - 16s - loss: 7.5690 - val_loss: 7.7115
+Epoch 00089: val_loss did not improve from 7.71258
+Epoch 90/1000
+137/137 - 15s - loss: 7.6130 - val_loss: 7.7064
 
- Epoch 90/100 
-	 loss: 7.5690, val_loss: 7.7115
+ Epoch 90/1000 
+	 loss: 7.6130, val_loss: 7.7064
 
-Epoch 00090: val_loss did not improve from 7.70681
-Epoch 91/100
-137/137 - 16s - loss: 7.5622 - val_loss: 7.6909
+Epoch 00090: val_loss improved from 7.71258 to 7.70638, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 91/1000
+137/137 - 13s - loss: 7.5899 - val_loss: 7.7210
 
- Epoch 91/100 
-	 loss: 7.5622, val_loss: 7.6909
+ Epoch 91/1000 
+	 loss: 7.5899, val_loss: 7.7210
 
-Epoch 00091: val_loss improved from 7.70681 to 7.69092, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 92/100
-137/137 - 16s - loss: 7.5593 - val_loss: 7.6674
+Epoch 00091: val_loss did not improve from 7.70638
+Epoch 92/1000
+137/137 - 16s - loss: 7.5916 - val_loss: 7.7204
 
- Epoch 92/100 
-	 loss: 7.5593, val_loss: 7.6674
+ Epoch 92/1000 
+	 loss: 7.5916, val_loss: 7.7204
 
-Epoch 00092: val_loss improved from 7.69092 to 7.66739, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 93/100
-137/137 - 16s - loss: 7.5605 - val_loss: 7.6588
+Epoch 00092: val_loss did not improve from 7.70638
+Epoch 93/1000
+137/137 - 16s - loss: 7.5770 - val_loss: 7.7173
 
- Epoch 93/100 
-	 loss: 7.5605, val_loss: 7.6588
+ Epoch 93/1000 
+	 loss: 7.5770, val_loss: 7.7173
 
-Epoch 00093: val_loss improved from 7.66739 to 7.65880, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 94/100
-137/137 - 16s - loss: 7.5414 - val_loss: 7.7013
+Epoch 00093: val_loss did not improve from 7.70638
+Epoch 94/1000
+137/137 - 16s - loss: 7.5751 - val_loss: 7.7032
 
- Epoch 94/100 
-	 loss: 7.5414, val_loss: 7.7013
+ Epoch 94/1000 
+	 loss: 7.5751, val_loss: 7.7032
 
-Epoch 00094: val_loss did not improve from 7.65880
-Epoch 95/100
-137/137 - 16s - loss: 7.5462 - val_loss: 7.6495
+Epoch 00094: val_loss improved from 7.70638 to 7.70316, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 95/1000
+137/137 - 16s - loss: 7.5728 - val_loss: 7.7734
 
- Epoch 95/100 
-	 loss: 7.5462, val_loss: 7.6495
+ Epoch 95/1000 
+	 loss: 7.5728, val_loss: 7.7734
 
-Epoch 00095: val_loss improved from 7.65880 to 7.64950, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Epoch 96/100
-137/137 - 17s - loss: 7.5317 - val_loss: 7.6601
+Epoch 00095: val_loss did not improve from 7.70316
+Epoch 96/1000
+137/137 - 17s - loss: 7.5542 - val_loss: 7.7072
 
- Epoch 96/100 
-	 loss: 7.5317, val_loss: 7.6601
+ Epoch 96/1000 
+	 loss: 7.5542, val_loss: 7.7072
 
-Epoch 00096: val_loss did not improve from 7.64950
-Epoch 97/100
-137/137 - 16s - loss: 7.5245 - val_loss: 7.7778
+Epoch 00096: val_loss did not improve from 7.70316
+Epoch 97/1000
+137/137 - 16s - loss: 7.5603 - val_loss: 7.7858
 
- Epoch 97/100 
-	 loss: 7.5245, val_loss: 7.7778
+ Epoch 97/1000 
+	 loss: 7.5603, val_loss: 7.7858
 
-Epoch 00097: val_loss did not improve from 7.64950
-Epoch 98/100
-137/137 - 16s - loss: 7.5345 - val_loss: 7.6731
+Epoch 00097: val_loss did not improve from 7.70316
+Epoch 98/1000
+137/137 - 16s - loss: 7.5513 - val_loss: 7.7202
 
- Epoch 98/100 
-	 loss: 7.5345, val_loss: 7.6731
+ Epoch 98/1000 
+	 loss: 7.5513, val_loss: 7.7202
 
-Epoch 00098: val_loss did not improve from 7.64950
-Epoch 99/100
-137/137 - 16s - loss: 7.5438 - val_loss: 7.6804
+Epoch 00098: val_loss did not improve from 7.70316
+Epoch 99/1000
+137/137 - 16s - loss: 7.5447 - val_loss: 7.7091
 
- Epoch 99/100 
-	 loss: 7.5438, val_loss: 7.6804
+ Epoch 99/1000 
+	 loss: 7.5447, val_loss: 7.7091
 
-Epoch 00099: val_loss did not improve from 7.64950
-Epoch 100/100
-137/137 - 16s - loss: 7.5219 - val_loss: 7.6439
+Epoch 00099: val_loss did not improve from 7.70316
+Epoch 100/1000
+137/137 - 16s - loss: 7.5409 - val_loss: 7.7346
 
- Epoch 100/100 
-	 loss: 7.5219, val_loss: 7.6439
+ Epoch 100/1000 
+	 loss: 7.5409, val_loss: 7.7346
 
-Epoch 00100: val_loss improved from 7.64950 to 7.64387, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
-Model trained in 1829.1556065762416 s.
+Epoch 00100: val_loss did not improve from 7.70316
+Epoch 101/1000
+137/137 - 16s - loss: 7.5363 - val_loss: 7.7524
 
-===========
-Computing predictions
-===========
+ Epoch 101/1000 
+	 loss: 7.5363, val_loss: 7.7524
 
-saving samples...
-samples saved
-Test first sample: [-41.082973   65.6094    273.34494   -37.479523  -20.647364   70.64896
-  71.96081   -40.31492     2.8742433]
-NF first sample: [-50.380024  -40.318962  114.46372    57.961754  -39.078228   82.67165
-  -0.6627478  49.054493   20.167313 ]
-Results dict saved
-Logger saved
-Results saved
-Details saved
-===========
-Run failed
+Epoch 00101: val_loss did not improve from 7.70316
+Epoch 102/1000
+137/137 - 17s - loss: 7.5392 - val_loss: 7.7331
 
-Exception type : IndexError 
-Exception message : index 2 is out of bounds for axis 0 with size 2
-Stack trace : ['File : c_Main_MsplineN_Z1j.py , Line : 185, Func.Name : <module>, Message : Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)', "File : ../../../code/Plotters.py , Line : 206, Func.Name : marginal_plot, Message : axs[row,column].hist(target_test_data[:,dim], bins=n_bins,density=True,histtype='step',color='red')"]
-===========
+ Epoch 102/1000 
+	 loss: 7.5392, val_loss: 7.7331
 
-===========
-Running 2 / 8 with hyperparameters:
- ndims= 9 
- seed_train= 0 
- nsamples= 100000 
- correlation= None 
- activation= relu 
- eps_regulariser= 0 
- regulariser= None 
- bijector= MsplineN 
- nbijectors= 5 
- spline_knots= 8 
- range_min= -5 
- batch_size= 512 
- hidden_layers= [256, 256, 256] epocs_input= 100 
-===========
+Epoch 00102: val_loss did not improve from 7.70316
+Epoch 103/1000
+137/137 - 16s - loss: 7.5252 - val_loss: 7.6721
 
-Training model.
+ Epoch 103/1000 
+	 loss: 7.5252, val_loss: 7.6721
 
-Train first sample: [ 1.0665622  -0.23791106 -0.08094089 -0.9928192  -0.42125896  0.08020908
- -0.64648056  0.92785245  1.1443974 ]
-KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_4'), name='input_4', description="created by layer 'input_4'")
-####### log_prob####
-KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_653/AddV2:0', description="created by layer 'tf.__operators__.add_653'")
-Not weights found. Training from scratch.
-No history found. Generating new history.
-Epoch 1/100
-137/137 - 50s - loss: 10.6300 - val_loss: 9.5571
+Epoch 00103: val_loss improved from 7.70316 to 7.67213, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 104/1000
+137/137 - 16s - loss: 7.5358 - val_loss: 7.6523
 
- Epoch 1/100 
-	 loss: 10.6300, val_loss: 9.5571
+ Epoch 104/1000 
+	 loss: 7.5358, val_loss: 7.6523
 
-Epoch 00001: val_loss improved from inf to 9.55713, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 2/100
-137/137 - 17s - loss: 9.3038 - val_loss: 9.1584
+Epoch 00104: val_loss improved from 7.67213 to 7.65234, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 105/1000
+137/137 - 16s - loss: 7.5161 - val_loss: 7.6627
 
- Epoch 2/100 
-	 loss: 9.3038, val_loss: 9.1584
+ Epoch 105/1000 
+	 loss: 7.5161, val_loss: 7.6627
 
-Epoch 00002: val_loss improved from 9.55713 to 9.15843, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 3/100
-137/137 - 17s - loss: 8.9795 - val_loss: 9.0975
+Epoch 00105: val_loss did not improve from 7.65234
+Epoch 106/1000
+137/137 - 17s - loss: 7.5084 - val_loss: 7.6672
 
- Epoch 3/100 
-	 loss: 8.9795, val_loss: 9.0975
+ Epoch 106/1000 
+	 loss: 7.5084, val_loss: 7.6672
 
-Epoch 00003: val_loss improved from 9.15843 to 9.09746, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 4/100
-137/137 - 17s - loss: 8.8184 - val_loss: 8.7903
+Epoch 00106: val_loss did not improve from 7.65234
+Epoch 107/1000
+137/137 - 17s - loss: 7.5046 - val_loss: 7.7199
 
- Epoch 4/100 
-	 loss: 8.8184, val_loss: 8.7903
+ Epoch 107/1000 
+	 loss: 7.5046, val_loss: 7.7199
 
-Epoch 00004: val_loss improved from 9.09746 to 8.79035, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 5/100
-137/137 - 16s - loss: 8.6946 - val_loss: 8.6492
+Epoch 00107: val_loss did not improve from 7.65234
+Epoch 108/1000
+137/137 - 16s - loss: 7.4912 - val_loss: 7.6838
 
- Epoch 5/100 
-	 loss: 8.6946, val_loss: 8.6492
+ Epoch 108/1000 
+	 loss: 7.4912, val_loss: 7.6838
 
-Epoch 00005: val_loss improved from 8.79035 to 8.64924, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 6/100
-137/137 - 19s - loss: 8.5696 - val_loss: 8.5873
+Epoch 00108: val_loss did not improve from 7.65234
+Epoch 109/1000
+137/137 - 17s - loss: 7.5100 - val_loss: 7.6673
 
- Epoch 6/100 
-	 loss: 8.5696, val_loss: 8.5873
+ Epoch 109/1000 
+	 loss: 7.5100, val_loss: 7.6673
 
-Epoch 00006: val_loss improved from 8.64924 to 8.58731, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 7/100
-137/137 - 15s - loss: 8.5025 - val_loss: 8.5057
+Epoch 00109: val_loss did not improve from 7.65234
+Epoch 110/1000
+137/137 - 17s - loss: 7.5101 - val_loss: 7.6714
 
- Epoch 7/100 
-	 loss: 8.5025, val_loss: 8.5057
+ Epoch 110/1000 
+	 loss: 7.5101, val_loss: 7.6714
 
-Epoch 00007: val_loss improved from 8.58731 to 8.50566, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 8/100
-137/137 - 17s - loss: 8.4305 - val_loss: 8.5370
+Epoch 00110: val_loss did not improve from 7.65234
+Epoch 111/1000
+137/137 - 16s - loss: 7.5083 - val_loss: 7.6395
 
- Epoch 8/100 
-	 loss: 8.4305, val_loss: 8.5370
+ Epoch 111/1000 
+	 loss: 7.5083, val_loss: 7.6395
 
-Epoch 00008: val_loss did not improve from 8.50566
-Epoch 9/100
-137/137 - 16s - loss: 8.3569 - val_loss: 8.3862
+Epoch 00111: val_loss improved from 7.65234 to 7.63946, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 112/1000
+137/137 - 17s - loss: 7.4838 - val_loss: 7.6545
 
- Epoch 9/100 
-	 loss: 8.3569, val_loss: 8.3862
+ Epoch 112/1000 
+	 loss: 7.4838, val_loss: 7.6545
 
-Epoch 00009: val_loss improved from 8.50566 to 8.38621, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 10/100
-137/137 - 17s - loss: 8.2926 - val_loss: 8.3833
+Epoch 00112: val_loss did not improve from 7.63946
+Epoch 113/1000
+137/137 - 17s - loss: 7.4778 - val_loss: 7.6363
 
- Epoch 10/100 
-	 loss: 8.2926, val_loss: 8.3833
+ Epoch 113/1000 
+	 loss: 7.4778, val_loss: 7.6363
 
-Epoch 00010: val_loss improved from 8.38621 to 8.38325, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 11/100
-137/137 - 17s - loss: 8.2548 - val_loss: 8.2806
+Epoch 00113: val_loss improved from 7.63946 to 7.63632, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 114/1000
+137/137 - 16s - loss: 7.4793 - val_loss: 7.6226
 
- Epoch 11/100 
-	 loss: 8.2548, val_loss: 8.2806
+ Epoch 114/1000 
+	 loss: 7.4793, val_loss: 7.6226
 
-Epoch 00011: val_loss improved from 8.38325 to 8.28058, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 12/100
-137/137 - 17s - loss: 8.1943 - val_loss: 8.3904
+Epoch 00114: val_loss improved from 7.63632 to 7.62264, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 115/1000
+137/137 - 17s - loss: 7.4656 - val_loss: 7.6605
 
- Epoch 12/100 
-	 loss: 8.1943, val_loss: 8.3904
+ Epoch 115/1000 
+	 loss: 7.4656, val_loss: 7.6605
 
-Epoch 00012: val_loss did not improve from 8.28058
-Epoch 13/100
-137/137 - 17s - loss: 8.1608 - val_loss: 8.3077
+Epoch 00115: val_loss did not improve from 7.62264
+Epoch 116/1000
+137/137 - 17s - loss: 7.4800 - val_loss: 7.6575
 
- Epoch 13/100 
-	 loss: 8.1608, val_loss: 8.3077
+ Epoch 116/1000 
+	 loss: 7.4800, val_loss: 7.6575
 
-Epoch 00013: val_loss did not improve from 8.28058
-Epoch 14/100
-137/137 - 17s - loss: 8.1191 - val_loss: 8.1832
+Epoch 00116: val_loss did not improve from 7.62264
+Epoch 117/1000
+137/137 - 16s - loss: 7.4724 - val_loss: 7.6446
 
- Epoch 14/100 
-	 loss: 8.1191, val_loss: 8.1832
+ Epoch 117/1000 
+	 loss: 7.4724, val_loss: 7.6446
 
-Epoch 00014: val_loss improved from 8.28058 to 8.18319, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 15/100
-137/137 - 17s - loss: 8.0787 - val_loss: 8.1667
+Epoch 00117: val_loss did not improve from 7.62264
+Epoch 118/1000
+137/137 - 16s - loss: 7.4693 - val_loss: 7.6502
 
- Epoch 15/100 
-	 loss: 8.0787, val_loss: 8.1667
+ Epoch 118/1000 
+	 loss: 7.4693, val_loss: 7.6502
 
-Epoch 00015: val_loss improved from 8.18319 to 8.16670, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 16/100
-137/137 - 17s - loss: 8.0366 - val_loss: 8.1394
+Epoch 00118: val_loss did not improve from 7.62264
+Epoch 119/1000
+137/137 - 16s - loss: 7.4619 - val_loss: 7.6827
 
- Epoch 16/100 
-	 loss: 8.0366, val_loss: 8.1394
+ Epoch 119/1000 
+	 loss: 7.4619, val_loss: 7.6827
 
-Epoch 00016: val_loss improved from 8.16670 to 8.13941, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 17/100
-137/137 - 17s - loss: 8.0208 - val_loss: 8.1385
+Epoch 00119: val_loss did not improve from 7.62264
+Epoch 120/1000
+137/137 - 16s - loss: 7.4509 - val_loss: 7.6166
 
- Epoch 17/100 
-	 loss: 8.0208, val_loss: 8.1385
+ Epoch 120/1000 
+	 loss: 7.4509, val_loss: 7.6166
 
-Epoch 00017: val_loss improved from 8.13941 to 8.13848, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 18/100
-137/137 - 17s - loss: 7.9869 - val_loss: 8.1127
+Epoch 00120: val_loss improved from 7.62264 to 7.61661, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 121/1000
+137/137 - 16s - loss: 7.4415 - val_loss: 7.6180
 
- Epoch 18/100 
-	 loss: 7.9869, val_loss: 8.1127
+ Epoch 121/1000 
+	 loss: 7.4415, val_loss: 7.6180
 
-Epoch 00018: val_loss improved from 8.13848 to 8.11270, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 19/100
-137/137 - 17s - loss: 7.9577 - val_loss: 8.0155
+Epoch 00121: val_loss did not improve from 7.61661
+Epoch 122/1000
+137/137 - 16s - loss: 7.4632 - val_loss: 7.5938
 
- Epoch 19/100 
-	 loss: 7.9577, val_loss: 8.0155
+ Epoch 122/1000 
+	 loss: 7.4632, val_loss: 7.5938
 
-Epoch 00019: val_loss improved from 8.11270 to 8.01546, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 20/100
-137/137 - 17s - loss: 7.9341 - val_loss: 8.0956
+Epoch 00122: val_loss improved from 7.61661 to 7.59379, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 123/1000
+137/137 - 17s - loss: 7.4541 - val_loss: 7.6577
 
- Epoch 20/100 
-	 loss: 7.9341, val_loss: 8.0956
+ Epoch 123/1000 
+	 loss: 7.4541, val_loss: 7.6577
 
-Epoch 00020: val_loss did not improve from 8.01546
-Epoch 21/100
-137/137 - 17s - loss: 7.9004 - val_loss: 8.0448
+Epoch 00123: val_loss did not improve from 7.59379
+Epoch 124/1000
+137/137 - 17s - loss: 7.4471 - val_loss: 7.6610
 
- Epoch 21/100 
-	 loss: 7.9004, val_loss: 8.0448
+ Epoch 124/1000 
+	 loss: 7.4471, val_loss: 7.6610
 
-Epoch 00021: val_loss did not improve from 8.01546
-Epoch 22/100
-137/137 - 17s - loss: 7.8695 - val_loss: 7.9618
+Epoch 00124: val_loss did not improve from 7.59379
+Epoch 125/1000
+137/137 - 17s - loss: 7.4323 - val_loss: 7.6199
 
- Epoch 22/100 
-	 loss: 7.8695, val_loss: 7.9618
+ Epoch 125/1000 
+	 loss: 7.4323, val_loss: 7.6199
 
-Epoch 00022: val_loss improved from 8.01546 to 7.96185, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 23/100
-137/137 - 16s - loss: 7.8579 - val_loss: 8.0728
+Epoch 00125: val_loss did not improve from 7.59379
+Epoch 126/1000
+137/137 - 16s - loss: 7.4420 - val_loss: 7.6849
 
- Epoch 23/100 
-	 loss: 7.8579, val_loss: 8.0728
+ Epoch 126/1000 
+	 loss: 7.4420, val_loss: 7.6849
 
-Epoch 00023: val_loss did not improve from 7.96185
-Epoch 24/100
-137/137 - 17s - loss: 7.8504 - val_loss: 7.9161
+Epoch 00126: val_loss did not improve from 7.59379
+Epoch 127/1000
+137/137 - 16s - loss: 7.4336 - val_loss: 7.6479
 
- Epoch 24/100 
-	 loss: 7.8504, val_loss: 7.9161
+ Epoch 127/1000 
+	 loss: 7.4336, val_loss: 7.6479
 
-Epoch 00024: val_loss improved from 7.96185 to 7.91615, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 25/100
-137/137 - 17s - loss: 7.8218 - val_loss: 7.9135
+Epoch 00127: val_loss did not improve from 7.59379
+Epoch 128/1000
+137/137 - 16s - loss: 7.4502 - val_loss: 7.6162
 
- Epoch 25/100 
-	 loss: 7.8218, val_loss: 7.9135
+ Epoch 128/1000 
+	 loss: 7.4502, val_loss: 7.6162
 
-Epoch 00025: val_loss improved from 7.91615 to 7.91348, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 26/100
-137/137 - 17s - loss: 7.7859 - val_loss: 7.8855
+Epoch 00128: val_loss did not improve from 7.59379
+Epoch 129/1000
+137/137 - 16s - loss: 7.4046 - val_loss: 7.5829
 
- Epoch 26/100 
-	 loss: 7.7859, val_loss: 7.8855
+ Epoch 129/1000 
+	 loss: 7.4046, val_loss: 7.5829
 
-Epoch 00026: val_loss improved from 7.91348 to 7.88547, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 27/100
-137/137 - 17s - loss: 7.7585 - val_loss: 7.9150
+Epoch 00129: val_loss improved from 7.59379 to 7.58291, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 130/1000
+137/137 - 17s - loss: 7.4314 - val_loss: 7.6333
 
- Epoch 27/100 
-	 loss: 7.7585, val_loss: 7.9150
+ Epoch 130/1000 
+	 loss: 7.4314, val_loss: 7.6333
 
-Epoch 00027: val_loss did not improve from 7.88547
-Epoch 28/100
-137/137 - 17s - loss: 7.7567 - val_loss: 7.8868
+Epoch 00130: val_loss did not improve from 7.58291
+Epoch 131/1000
+137/137 - 16s - loss: 7.4049 - val_loss: 7.6304
 
- Epoch 28/100 
-	 loss: 7.7567, val_loss: 7.8868
+ Epoch 131/1000 
+	 loss: 7.4049, val_loss: 7.6304
 
-Epoch 00028: val_loss did not improve from 7.88547
-Epoch 29/100
-137/137 - 17s - loss: 7.7429 - val_loss: 7.8269
+Epoch 00131: val_loss did not improve from 7.58291
+Epoch 132/1000
+137/137 - 16s - loss: 7.4090 - val_loss: 7.5861
 
- Epoch 29/100 
-	 loss: 7.7429, val_loss: 7.8269
+ Epoch 132/1000 
+	 loss: 7.4090, val_loss: 7.5861
 
-Epoch 00029: val_loss improved from 7.88547 to 7.82687, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 30/100
-137/137 - 16s - loss: 7.7269 - val_loss: 7.8750
+Epoch 00132: val_loss did not improve from 7.58291
+Epoch 133/1000
+137/137 - 16s - loss: 7.4148 - val_loss: 7.6049
 
- Epoch 30/100 
-	 loss: 7.7269, val_loss: 7.8750
+ Epoch 133/1000 
+	 loss: 7.4148, val_loss: 7.6049
 
-Epoch 00030: val_loss did not improve from 7.82687
-Epoch 31/100
-137/137 - 17s - loss: 7.7204 - val_loss: 7.9165
+Epoch 00133: val_loss did not improve from 7.58291
+Epoch 134/1000
+137/137 - 16s - loss: 7.4355 - val_loss: 7.5848
 
- Epoch 31/100 
-	 loss: 7.7204, val_loss: 7.9165
+ Epoch 134/1000 
+	 loss: 7.4355, val_loss: 7.5848
 
-Epoch 00031: val_loss did not improve from 7.82687
-Epoch 32/100
-137/137 - 17s - loss: 7.6748 - val_loss: 7.7990
+Epoch 00134: val_loss did not improve from 7.58291
+Epoch 135/1000
+137/137 - 16s - loss: 7.4034 - val_loss: 7.5844
 
- Epoch 32/100 
-	 loss: 7.6748, val_loss: 7.7990
+ Epoch 135/1000 
+	 loss: 7.4034, val_loss: 7.5844
 
-Epoch 00032: val_loss improved from 7.82687 to 7.79902, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 33/100
-137/137 - 17s - loss: 7.6601 - val_loss: 7.8207
+Epoch 00135: val_loss did not improve from 7.58291
+Epoch 136/1000
+137/137 - 16s - loss: 7.4117 - val_loss: 7.5838
 
- Epoch 33/100 
-	 loss: 7.6601, val_loss: 7.8207
+ Epoch 136/1000 
+	 loss: 7.4117, val_loss: 7.5838
 
-Epoch 00033: val_loss did not improve from 7.79902
-Epoch 34/100
-137/137 - 17s - loss: 7.6605 - val_loss: 7.7781
+Epoch 00136: val_loss did not improve from 7.58291
+Epoch 137/1000
+137/137 - 16s - loss: 7.4050 - val_loss: 7.5771
 
- Epoch 34/100 
-	 loss: 7.6605, val_loss: 7.7781
+ Epoch 137/1000 
+	 loss: 7.4050, val_loss: 7.5771
 
-Epoch 00034: val_loss improved from 7.79902 to 7.77807, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 35/100
-137/137 - 17s - loss: 7.6372 - val_loss: 7.8305
+Epoch 00137: val_loss improved from 7.58291 to 7.57708, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 138/1000
+137/137 - 16s - loss: 7.3849 - val_loss: 7.5546
 
- Epoch 35/100 
-	 loss: 7.6372, val_loss: 7.8305
+ Epoch 138/1000 
+	 loss: 7.3849, val_loss: 7.5546
 
-Epoch 00035: val_loss did not improve from 7.77807
-Epoch 36/100
-137/137 - 17s - loss: 7.6333 - val_loss: 7.7899
+Epoch 00138: val_loss improved from 7.57708 to 7.55463, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 139/1000
+137/137 - 16s - loss: 7.3878 - val_loss: 7.5835
 
- Epoch 36/100 
-	 loss: 7.6333, val_loss: 7.7899
+ Epoch 139/1000 
+	 loss: 7.3878, val_loss: 7.5835
 
-Epoch 00036: val_loss did not improve from 7.77807
-Epoch 37/100
-137/137 - 17s - loss: 7.6240 - val_loss: 7.8020
+Epoch 00139: val_loss did not improve from 7.55463
+Epoch 140/1000
+137/137 - 16s - loss: 7.3883 - val_loss: 7.5954
 
- Epoch 37/100 
-	 loss: 7.6240, val_loss: 7.8020
+ Epoch 140/1000 
+	 loss: 7.3883, val_loss: 7.5954
 
-Epoch 00037: val_loss did not improve from 7.77807
-Epoch 38/100
-137/137 - 17s - loss: 7.5966 - val_loss: 7.7740
+Epoch 00140: val_loss did not improve from 7.55463
+Epoch 141/1000
+137/137 - 16s - loss: 7.4069 - val_loss: 7.5320
 
- Epoch 38/100 
-	 loss: 7.5966, val_loss: 7.7740
+ Epoch 141/1000 
+	 loss: 7.4069, val_loss: 7.5320
 
-Epoch 00038: val_loss improved from 7.77807 to 7.77399, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 39/100
-137/137 - 17s - loss: 7.5869 - val_loss: 7.7804
+Epoch 00141: val_loss improved from 7.55463 to 7.53196, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 142/1000
+137/137 - 17s - loss: 7.3888 - val_loss: 7.5693
 
- Epoch 39/100 
-	 loss: 7.5869, val_loss: 7.7804
+ Epoch 142/1000 
+	 loss: 7.3888, val_loss: 7.5693
 
-Epoch 00039: val_loss did not improve from 7.77399
-Epoch 40/100
-137/137 - 17s - loss: 7.5776 - val_loss: 7.8722
+Epoch 00142: val_loss did not improve from 7.53196
+Epoch 143/1000
+137/137 - 16s - loss: 7.3859 - val_loss: 7.5706
 
- Epoch 40/100 
-	 loss: 7.5776, val_loss: 7.8722
+ Epoch 143/1000 
+	 loss: 7.3859, val_loss: 7.5706
 
-Epoch 00040: val_loss did not improve from 7.77399
-Epoch 41/100
-137/137 - 17s - loss: 7.5981 - val_loss: 7.7585
+Epoch 00143: val_loss did not improve from 7.53196
+Epoch 144/1000
+137/137 - 16s - loss: 7.3608 - val_loss: 7.5636
 
- Epoch 41/100 
-	 loss: 7.5981, val_loss: 7.7585
+ Epoch 144/1000 
+	 loss: 7.3608, val_loss: 7.5636
 
-Epoch 00041: val_loss improved from 7.77399 to 7.75852, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 42/100
-137/137 - 16s - loss: 7.5385 - val_loss: 7.7011
+Epoch 00144: val_loss did not improve from 7.53196
+Epoch 145/1000
+137/137 - 16s - loss: 7.3706 - val_loss: 7.6510
 
- Epoch 42/100 
-	 loss: 7.5385, val_loss: 7.7011
+ Epoch 145/1000 
+	 loss: 7.3706, val_loss: 7.6510
 
-Epoch 00042: val_loss improved from 7.75852 to 7.70115, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 43/100
-137/137 - 17s - loss: 7.5468 - val_loss: 7.7319
+Epoch 00145: val_loss did not improve from 7.53196
+Epoch 146/1000
+137/137 - 16s - loss: 7.3640 - val_loss: 7.5801
 
- Epoch 43/100 
-	 loss: 7.5468, val_loss: 7.7319
+ Epoch 146/1000 
+	 loss: 7.3640, val_loss: 7.5801
 
-Epoch 00043: val_loss did not improve from 7.70115
-Epoch 44/100
-137/137 - 17s - loss: 7.5322 - val_loss: 7.7384
+Epoch 00146: val_loss did not improve from 7.53196
+Epoch 147/1000
+137/137 - 16s - loss: 7.3857 - val_loss: 7.5593
 
- Epoch 44/100 
-	 loss: 7.5322, val_loss: 7.7384
+ Epoch 147/1000 
+	 loss: 7.3857, val_loss: 7.5593
 
-Epoch 00044: val_loss did not improve from 7.70115
-Epoch 45/100
-137/137 - 17s - loss: 7.5428 - val_loss: 7.6919
+Epoch 00147: val_loss did not improve from 7.53196
+Epoch 148/1000
+137/137 - 17s - loss: 7.3620 - val_loss: 7.6390
 
- Epoch 45/100 
-	 loss: 7.5428, val_loss: 7.6919
+ Epoch 148/1000 
+	 loss: 7.3620, val_loss: 7.6390
 
-Epoch 00045: val_loss improved from 7.70115 to 7.69186, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 46/100
-137/137 - 17s - loss: 7.5029 - val_loss: 7.6679
+Epoch 00148: val_loss did not improve from 7.53196
+Epoch 149/1000
+137/137 - 17s - loss: 7.3890 - val_loss: 7.5375
 
- Epoch 46/100 
-	 loss: 7.5029, val_loss: 7.6679
+ Epoch 149/1000 
+	 loss: 7.3890, val_loss: 7.5375
 
-Epoch 00046: val_loss improved from 7.69186 to 7.66792, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 47/100
-137/137 - 17s - loss: 7.5018 - val_loss: 7.6964
+Epoch 00149: val_loss did not improve from 7.53196
+Epoch 150/1000
+137/137 - 16s - loss: 7.3769 - val_loss: 7.5111
 
- Epoch 47/100 
-	 loss: 7.5018, val_loss: 7.6964
+ Epoch 150/1000 
+	 loss: 7.3769, val_loss: 7.5111
 
-Epoch 00047: val_loss did not improve from 7.66792
-Epoch 48/100
-137/137 - 17s - loss: 7.4991 - val_loss: 7.6759
+Epoch 00150: val_loss improved from 7.53196 to 7.51108, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 151/1000
+137/137 - 16s - loss: 7.3494 - val_loss: 7.5294
 
- Epoch 48/100 
-	 loss: 7.4991, val_loss: 7.6759
+ Epoch 151/1000 
+	 loss: 7.3494, val_loss: 7.5294
 
-Epoch 00048: val_loss did not improve from 7.66792
-Epoch 49/100
-137/137 - 15s - loss: 7.4711 - val_loss: 7.6854
+Epoch 00151: val_loss did not improve from 7.51108
+Epoch 152/1000
+137/137 - 17s - loss: 7.3571 - val_loss: 7.5590
 
- Epoch 49/100 
-	 loss: 7.4711, val_loss: 7.6854
+ Epoch 152/1000 
+	 loss: 7.3571, val_loss: 7.5590
 
-Epoch 00049: val_loss did not improve from 7.66792
-Epoch 50/100
-137/137 - 16s - loss: 7.4669 - val_loss: 7.6824
+Epoch 00152: val_loss did not improve from 7.51108
+Epoch 153/1000
+137/137 - 16s - loss: 7.3766 - val_loss: 7.5568
 
- Epoch 50/100 
-	 loss: 7.4669, val_loss: 7.6824
+ Epoch 153/1000 
+	 loss: 7.3766, val_loss: 7.5568
 
-Epoch 00050: val_loss did not improve from 7.66792
-Epoch 51/100
-137/137 - 27s - loss: 7.4742 - val_loss: 7.6554
+Epoch 00153: val_loss did not improve from 7.51108
+Epoch 154/1000
+137/137 - 16s - loss: 7.3475 - val_loss: 7.5999
 
- Epoch 51/100 
-	 loss: 7.4742, val_loss: 7.6554
+ Epoch 154/1000 
+	 loss: 7.3475, val_loss: 7.5999
 
-Epoch 00051: val_loss improved from 7.66792 to 7.65535, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 52/100
-137/137 - 27s - loss: 7.4621 - val_loss: 7.7201
+Epoch 00154: val_loss did not improve from 7.51108
+Epoch 155/1000
+137/137 - 16s - loss: 7.3495 - val_loss: 7.6205
 
- Epoch 52/100 
-	 loss: 7.4621, val_loss: 7.7201
+ Epoch 155/1000 
+	 loss: 7.3495, val_loss: 7.6205
 
-Epoch 00052: val_loss did not improve from 7.65535
-Epoch 53/100
-137/137 - 20s - loss: 7.4513 - val_loss: 7.6557
+Epoch 00155: val_loss did not improve from 7.51108
+Epoch 156/1000
+137/137 - 16s - loss: 7.3580 - val_loss: 7.6186
 
- Epoch 53/100 
-	 loss: 7.4513, val_loss: 7.6557
+ Epoch 156/1000 
+	 loss: 7.3580, val_loss: 7.6186
 
-Epoch 00053: val_loss did not improve from 7.65535
-Epoch 54/100
-137/137 - 20s - loss: 7.4308 - val_loss: 7.6121
+Epoch 00156: val_loss did not improve from 7.51108
+Epoch 157/1000
+137/137 - 16s - loss: 7.3456 - val_loss: 7.5704
 
- Epoch 54/100 
-	 loss: 7.4308, val_loss: 7.6121
+ Epoch 157/1000 
+	 loss: 7.3456, val_loss: 7.5704
 
-Epoch 00054: val_loss improved from 7.65535 to 7.61206, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 55/100
-137/137 - 16s - loss: 7.4460 - val_loss: 7.6201
+Epoch 00157: val_loss did not improve from 7.51108
+Epoch 158/1000
+137/137 - 16s - loss: 7.3337 - val_loss: 7.5256
 
- Epoch 55/100 
-	 loss: 7.4460, val_loss: 7.6201
+ Epoch 158/1000 
+	 loss: 7.3337, val_loss: 7.5256
 
-Epoch 00055: val_loss did not improve from 7.61206
-Epoch 56/100
-137/137 - 17s - loss: 7.4379 - val_loss: 7.6137
+Epoch 00158: val_loss did not improve from 7.51108
+Epoch 159/1000
+137/137 - 16s - loss: 7.3516 - val_loss: 7.5132
 
- Epoch 56/100 
-	 loss: 7.4379, val_loss: 7.6137
+ Epoch 159/1000 
+	 loss: 7.3516, val_loss: 7.5132
 
-Epoch 00056: val_loss did not improve from 7.61206
-Epoch 57/100
-137/137 - 17s - loss: 7.4073 - val_loss: 7.6917
+Epoch 00159: val_loss did not improve from 7.51108
+Epoch 160/1000
+137/137 - 16s - loss: 7.3325 - val_loss: 7.4990
 
- Epoch 57/100 
-	 loss: 7.4073, val_loss: 7.6917
+ Epoch 160/1000 
+	 loss: 7.3325, val_loss: 7.4990
 
-Epoch 00057: val_loss did not improve from 7.61206
-Epoch 58/100
-137/137 - 36s - loss: 7.3965 - val_loss: 7.6295
+Epoch 00160: val_loss improved from 7.51108 to 7.49904, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 161/1000
+137/137 - 16s - loss: 7.3319 - val_loss: 7.5346
 
- Epoch 58/100 
-	 loss: 7.3965, val_loss: 7.6295
+ Epoch 161/1000 
+	 loss: 7.3319, val_loss: 7.5346
 
-Epoch 00058: val_loss did not improve from 7.61206
-Epoch 59/100
-137/137 - 38s - loss: 7.3984 - val_loss: 7.6696
+Epoch 00161: val_loss did not improve from 7.49904
+Epoch 162/1000
+137/137 - 16s - loss: 7.3376 - val_loss: 7.5506
 
- Epoch 59/100 
-	 loss: 7.3984, val_loss: 7.6696
+ Epoch 162/1000 
+	 loss: 7.3376, val_loss: 7.5506
 
-Epoch 00059: val_loss did not improve from 7.61206
-Epoch 60/100
-137/137 - 17s - loss: 7.3806 - val_loss: 7.5743
+Epoch 00162: val_loss did not improve from 7.49904
+Epoch 163/1000
+137/137 - 17s - loss: 7.3358 - val_loss: 7.5416
 
- Epoch 60/100 
-	 loss: 7.3806, val_loss: 7.5743
+ Epoch 163/1000 
+	 loss: 7.3358, val_loss: 7.5416
 
-Epoch 00060: val_loss improved from 7.61206 to 7.57427, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 61/100
-137/137 - 17s - loss: 7.3750 - val_loss: 7.6425
+Epoch 00163: val_loss did not improve from 7.49904
+Epoch 164/1000
+137/137 - 16s - loss: 7.3266 - val_loss: 7.5543
 
- Epoch 61/100 
-	 loss: 7.3750, val_loss: 7.6425
+ Epoch 164/1000 
+	 loss: 7.3266, val_loss: 7.5543
 
-Epoch 00061: val_loss did not improve from 7.57427
-Epoch 62/100
-137/137 - 16s - loss: 7.3694 - val_loss: 7.5831
+Epoch 00164: val_loss did not improve from 7.49904
+Epoch 165/1000
+137/137 - 12s - loss: 7.3198 - val_loss: 7.5357
 
- Epoch 62/100 
-	 loss: 7.3694, val_loss: 7.5831
+ Epoch 165/1000 
+	 loss: 7.3198, val_loss: 7.5357
 
-Epoch 00062: val_loss did not improve from 7.57427
-Epoch 63/100
-137/137 - 17s - loss: 7.3617 - val_loss: 7.6652
+Epoch 00165: val_loss did not improve from 7.49904
+Epoch 166/1000
+137/137 - 12s - loss: 7.3328 - val_loss: 7.5571
 
- Epoch 63/100 
-	 loss: 7.3617, val_loss: 7.6652
+ Epoch 166/1000 
+	 loss: 7.3328, val_loss: 7.5571
 
-Epoch 00063: val_loss did not improve from 7.57427
-Epoch 64/100
-137/137 - 17s - loss: 7.3645 - val_loss: 7.5908
+Epoch 00166: val_loss did not improve from 7.49904
+Epoch 167/1000
+137/137 - 11s - loss: 7.3171 - val_loss: 7.5534
 
- Epoch 64/100 
-	 loss: 7.3645, val_loss: 7.5908
+ Epoch 167/1000 
+	 loss: 7.3171, val_loss: 7.5534
 
-Epoch 00064: val_loss did not improve from 7.57427
-Epoch 65/100
-137/137 - 17s - loss: 7.3212 - val_loss: 7.5653
+Epoch 00167: val_loss did not improve from 7.49904
+Epoch 168/1000
+137/137 - 14s - loss: 7.3201 - val_loss: 7.5177
 
- Epoch 65/100 
-	 loss: 7.3212, val_loss: 7.5653
+ Epoch 168/1000 
+	 loss: 7.3201, val_loss: 7.5177
 
-Epoch 00065: val_loss improved from 7.57427 to 7.56533, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 66/100
-137/137 - 16s - loss: 7.3523 - val_loss: 7.5934
+Epoch 00168: val_loss did not improve from 7.49904
+Epoch 169/1000
+137/137 - 17s - loss: 7.3165 - val_loss: 7.5488
 
- Epoch 66/100 
-	 loss: 7.3523, val_loss: 7.5934
+ Epoch 169/1000 
+	 loss: 7.3165, val_loss: 7.5488
 
-Epoch 00066: val_loss did not improve from 7.56533
-Epoch 67/100
-137/137 - 15s - loss: 7.3217 - val_loss: 7.6132
+Epoch 00169: val_loss did not improve from 7.49904
+Epoch 170/1000
+137/137 - 17s - loss: 7.3166 - val_loss: 7.6705
 
- Epoch 67/100 
-	 loss: 7.3217, val_loss: 7.6132
+ Epoch 170/1000 
+	 loss: 7.3166, val_loss: 7.6705
 
-Epoch 00067: val_loss did not improve from 7.56533
-Epoch 68/100
-137/137 - 16s - loss: 7.3330 - val_loss: 7.5706
+Epoch 00170: val_loss did not improve from 7.49904
+Epoch 171/1000
+137/137 - 16s - loss: 7.3097 - val_loss: 7.4957
 
- Epoch 68/100 
-	 loss: 7.3330, val_loss: 7.5706
+ Epoch 171/1000 
+	 loss: 7.3097, val_loss: 7.4957
 
-Epoch 00068: val_loss did not improve from 7.56533
-Epoch 69/100
-137/137 - 17s - loss: 7.3196 - val_loss: 7.5364
+Epoch 00171: val_loss improved from 7.49904 to 7.49567, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 172/1000
+137/137 - 17s - loss: 7.3161 - val_loss: 7.4992
 
- Epoch 69/100 
-	 loss: 7.3196, val_loss: 7.5364
+ Epoch 172/1000 
+	 loss: 7.3161, val_loss: 7.4992
 
-Epoch 00069: val_loss improved from 7.56533 to 7.53644, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 70/100
-137/137 - 17s - loss: 7.3118 - val_loss: 7.5505
+Epoch 00172: val_loss did not improve from 7.49567
+Epoch 173/1000
+137/137 - 17s - loss: 7.2999 - val_loss: 7.5282
 
- Epoch 70/100 
-	 loss: 7.3118, val_loss: 7.5505
+ Epoch 173/1000 
+	 loss: 7.2999, val_loss: 7.5282
 
-Epoch 00070: val_loss did not improve from 7.53644
-Epoch 71/100
-137/137 - 16s - loss: 7.3010 - val_loss: 7.5172
+Epoch 00173: val_loss did not improve from 7.49567
+Epoch 174/1000
+137/137 - 16s - loss: 7.3091 - val_loss: 7.5867
 
- Epoch 71/100 
-	 loss: 7.3010, val_loss: 7.5172
+ Epoch 174/1000 
+	 loss: 7.3091, val_loss: 7.5867
 
-Epoch 00071: val_loss improved from 7.53644 to 7.51716, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 72/100
-137/137 - 16s - loss: 7.2968 - val_loss: 7.5761
+Epoch 00174: val_loss did not improve from 7.49567
+Epoch 175/1000
+137/137 - 17s - loss: 7.2989 - val_loss: 7.5216
 
- Epoch 72/100 
-	 loss: 7.2968, val_loss: 7.5761
+ Epoch 175/1000 
+	 loss: 7.2989, val_loss: 7.5216
 
-Epoch 00072: val_loss did not improve from 7.51716
-Epoch 73/100
-137/137 - 16s - loss: 7.2911 - val_loss: 7.5288
+Epoch 00175: val_loss did not improve from 7.49567
+Epoch 176/1000
+137/137 - 17s - loss: 7.2924 - val_loss: 7.4909
 
- Epoch 73/100 
-	 loss: 7.2911, val_loss: 7.5288
+ Epoch 176/1000 
+	 loss: 7.2924, val_loss: 7.4909
 
-Epoch 00073: val_loss did not improve from 7.51716
-Epoch 74/100
-137/137 - 16s - loss: 7.2749 - val_loss: 7.5466
+Epoch 00176: val_loss improved from 7.49567 to 7.49095, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 177/1000
+137/137 - 16s - loss: 7.2963 - val_loss: 7.5331
 
- Epoch 74/100 
-	 loss: 7.2749, val_loss: 7.5466
+ Epoch 177/1000 
+	 loss: 7.2963, val_loss: 7.5331
 
-Epoch 00074: val_loss did not improve from 7.51716
-Epoch 75/100
-137/137 - 16s - loss: 7.2532 - val_loss: 7.5699
+Epoch 00177: val_loss did not improve from 7.49095
+Epoch 178/1000
+137/137 - 14s - loss: 7.3086 - val_loss: 7.4594
 
- Epoch 75/100 
-	 loss: 7.2532, val_loss: 7.5699
+ Epoch 178/1000 
+	 loss: 7.3086, val_loss: 7.4594
 
-Epoch 00075: val_loss did not improve from 7.51716
-Epoch 76/100
-137/137 - 17s - loss: 7.2752 - val_loss: 7.5903
+Epoch 00178: val_loss improved from 7.49095 to 7.45936, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 179/1000
+137/137 - 14s - loss: 7.3002 - val_loss: 7.5303
 
- Epoch 76/100 
-	 loss: 7.2752, val_loss: 7.5903
+ Epoch 179/1000 
+	 loss: 7.3002, val_loss: 7.5303
 
-Epoch 00076: val_loss did not improve from 7.51716
-Epoch 77/100
-137/137 - 18s - loss: 7.2795 - val_loss: 7.4708
+Epoch 00179: val_loss did not improve from 7.45936
+Epoch 180/1000
+137/137 - 14s - loss: 7.2903 - val_loss: 7.4745
 
- Epoch 77/100 
-	 loss: 7.2795, val_loss: 7.4708
+ Epoch 180/1000 
+	 loss: 7.2903, val_loss: 7.4745
 
-Epoch 00077: val_loss improved from 7.51716 to 7.47082, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 78/100
-137/137 - 22s - loss: 7.2662 - val_loss: 7.4875
+Epoch 00180: val_loss did not improve from 7.45936
+Epoch 181/1000
+137/137 - 16s - loss: 7.2878 - val_loss: 7.4873
 
- Epoch 78/100 
-	 loss: 7.2662, val_loss: 7.4875
+ Epoch 181/1000 
+	 loss: 7.2878, val_loss: 7.4873
 
-Epoch 00078: val_loss did not improve from 7.47082
-Epoch 79/100
-137/137 - 17s - loss: 7.2523 - val_loss: 7.5511
+Epoch 00181: val_loss did not improve from 7.45936
+Epoch 182/1000
+137/137 - 16s - loss: 7.2934 - val_loss: 7.5018
 
- Epoch 79/100 
-	 loss: 7.2523, val_loss: 7.5511
+ Epoch 182/1000 
+	 loss: 7.2934, val_loss: 7.5018
 
-Epoch 00079: val_loss did not improve from 7.47082
-Epoch 80/100
-137/137 - 22s - loss: 7.2429 - val_loss: 7.5688
+Epoch 00182: val_loss did not improve from 7.45936
+Epoch 183/1000
+137/137 - 16s - loss: 7.2876 - val_loss: 7.5117
 
- Epoch 80/100 
-	 loss: 7.2429, val_loss: 7.5688
+ Epoch 183/1000 
+	 loss: 7.2876, val_loss: 7.5117
 
-Epoch 00080: val_loss did not improve from 7.47082
-Epoch 81/100
-137/137 - 17s - loss: 7.2398 - val_loss: 7.5420
+Epoch 00183: val_loss did not improve from 7.45936
+Epoch 184/1000
+137/137 - 16s - loss: 7.2847 - val_loss: 7.5017
 
- Epoch 81/100 
-	 loss: 7.2398, val_loss: 7.5420
+ Epoch 184/1000 
+	 loss: 7.2847, val_loss: 7.5017
 
-Epoch 00081: val_loss did not improve from 7.47082
-Epoch 82/100
-137/137 - 17s - loss: 7.2472 - val_loss: 7.4762
+Epoch 00184: val_loss did not improve from 7.45936
+Epoch 185/1000
+137/137 - 16s - loss: 7.2669 - val_loss: 7.4745
 
- Epoch 82/100 
-	 loss: 7.2472, val_loss: 7.4762
+ Epoch 185/1000 
+	 loss: 7.2669, val_loss: 7.4745
 
-Epoch 00082: val_loss did not improve from 7.47082
-Epoch 83/100
-137/137 - 17s - loss: 7.2433 - val_loss: 7.5311
+Epoch 00185: val_loss did not improve from 7.45936
+Epoch 186/1000
+137/137 - 16s - loss: 7.2939 - val_loss: 7.5008
 
- Epoch 83/100 
-	 loss: 7.2433, val_loss: 7.5311
+ Epoch 186/1000 
+	 loss: 7.2939, val_loss: 7.5008
 
-Epoch 00083: val_loss did not improve from 7.47082
-Epoch 84/100
-137/137 - 17s - loss: 7.2223 - val_loss: 7.6372
+Epoch 00186: val_loss did not improve from 7.45936
+Epoch 187/1000
+137/137 - 17s - loss: 7.2807 - val_loss: 7.4652
 
- Epoch 84/100 
-	 loss: 7.2223, val_loss: 7.6372
+ Epoch 187/1000 
+	 loss: 7.2807, val_loss: 7.4652
 
-Epoch 00084: val_loss did not improve from 7.47082
-Epoch 85/100
-137/137 - 17s - loss: 7.2699 - val_loss: 7.5553
+Epoch 00187: val_loss did not improve from 7.45936
+Epoch 188/1000
+137/137 - 17s - loss: 7.2811 - val_loss: 7.4546
 
- Epoch 85/100 
-	 loss: 7.2699, val_loss: 7.5553
+ Epoch 188/1000 
+	 loss: 7.2811, val_loss: 7.4546
 
-Epoch 00085: val_loss did not improve from 7.47082
-Epoch 86/100
-137/137 - 17s - loss: 7.2248 - val_loss: 7.5045
+Epoch 00188: val_loss improved from 7.45936 to 7.45464, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 189/1000
+137/137 - 16s - loss: 7.2718 - val_loss: 7.5154
 
- Epoch 86/100 
-	 loss: 7.2248, val_loss: 7.5045
+ Epoch 189/1000 
+	 loss: 7.2718, val_loss: 7.5154
 
-Epoch 00086: val_loss did not improve from 7.47082
-Epoch 87/100
-137/137 - 17s - loss: 7.2037 - val_loss: 7.4578
+Epoch 00189: val_loss did not improve from 7.45464
+Epoch 190/1000
+137/137 - 17s - loss: 7.2972 - val_loss: 7.4724
 
- Epoch 87/100 
-	 loss: 7.2037, val_loss: 7.4578
+ Epoch 190/1000 
+	 loss: 7.2972, val_loss: 7.4724
 
-Epoch 00087: val_loss improved from 7.47082 to 7.45781, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 88/100
-137/137 - 18s - loss: 7.2003 - val_loss: 7.4871
+Epoch 00190: val_loss did not improve from 7.45464
+Epoch 191/1000
+137/137 - 16s - loss: 7.2845 - val_loss: 7.5175
 
- Epoch 88/100 
-	 loss: 7.2003, val_loss: 7.4871
+ Epoch 191/1000 
+	 loss: 7.2845, val_loss: 7.5175
 
-Epoch 00088: val_loss did not improve from 7.45781
-Epoch 89/100
-137/137 - 18s - loss: 7.1957 - val_loss: 7.6113
+Epoch 00191: val_loss did not improve from 7.45464
+Epoch 192/1000
+137/137 - 16s - loss: 7.2713 - val_loss: 7.4796
 
- Epoch 89/100 
-	 loss: 7.1957, val_loss: 7.6113
+ Epoch 192/1000 
+	 loss: 7.2713, val_loss: 7.4796
 
-Epoch 00089: val_loss did not improve from 7.45781
-Epoch 90/100
-137/137 - 30s - loss: 7.2068 - val_loss: 7.4908
+Epoch 00192: val_loss did not improve from 7.45464
+Epoch 193/1000
+137/137 - 16s - loss: 7.2676 - val_loss: 7.4783
 
- Epoch 90/100 
-	 loss: 7.2068, val_loss: 7.4908
+ Epoch 193/1000 
+	 loss: 7.2676, val_loss: 7.4783
 
-Epoch 00090: val_loss did not improve from 7.45781
-Epoch 91/100
-137/137 - 19s - loss: 7.1825 - val_loss: 7.4415
+Epoch 00193: val_loss did not improve from 7.45464
+Epoch 194/1000
+137/137 - 17s - loss: 7.2609 - val_loss: 7.5256
 
- Epoch 91/100 
-	 loss: 7.1825, val_loss: 7.4415
+ Epoch 194/1000 
+	 loss: 7.2609, val_loss: 7.5256
 
-Epoch 00091: val_loss improved from 7.45781 to 7.44150, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 92/100
-137/137 - 20s - loss: 7.1997 - val_loss: 7.4762
+Epoch 00194: val_loss did not improve from 7.45464
+Epoch 195/1000
+137/137 - 16s - loss: 7.2675 - val_loss: 7.4930
 
- Epoch 92/100 
-	 loss: 7.1997, val_loss: 7.4762
+ Epoch 195/1000 
+	 loss: 7.2675, val_loss: 7.4930
 
-Epoch 00092: val_loss did not improve from 7.44150
-Epoch 93/100
-137/137 - 17s - loss: 7.1695 - val_loss: 7.5135
+Epoch 00195: val_loss did not improve from 7.45464
+Epoch 196/1000
+137/137 - 16s - loss: 7.2595 - val_loss: 7.4745
 
- Epoch 93/100 
-	 loss: 7.1695, val_loss: 7.5135
+ Epoch 196/1000 
+	 loss: 7.2595, val_loss: 7.4745
 
-Epoch 00093: val_loss did not improve from 7.44150
-Epoch 94/100
-137/137 - 17s - loss: 7.1966 - val_loss: 7.5289
+Epoch 00196: val_loss did not improve from 7.45464
+Epoch 197/1000
+137/137 - 16s - loss: 7.2510 - val_loss: 7.5211
 
- Epoch 94/100 
-	 loss: 7.1966, val_loss: 7.5289
+ Epoch 197/1000 
+	 loss: 7.2510, val_loss: 7.5211
 
-Epoch 00094: val_loss did not improve from 7.44150
-Epoch 95/100
-137/137 - 17s - loss: 7.1866 - val_loss: 7.5757
+Epoch 00197: val_loss did not improve from 7.45464
+Epoch 198/1000
+137/137 - 16s - loss: 7.2473 - val_loss: 7.4624
 
- Epoch 95/100 
-	 loss: 7.1866, val_loss: 7.5757
+ Epoch 198/1000 
+	 loss: 7.2473, val_loss: 7.4624
 
-Epoch 00095: val_loss did not improve from 7.44150
-Epoch 96/100
-137/137 - 17s - loss: 7.1936 - val_loss: 7.3897
+Epoch 00198: val_loss did not improve from 7.45464
+Epoch 199/1000
+137/137 - 16s - loss: 7.2500 - val_loss: 7.4768
 
- Epoch 96/100 
-	 loss: 7.1936, val_loss: 7.3897
+ Epoch 199/1000 
+	 loss: 7.2500, val_loss: 7.4768
 
-Epoch 00096: val_loss improved from 7.44150 to 7.38971, saving model to ../../results/MsplineN/Z1j/run_2//model_checkpoint/weights
-Epoch 97/100
-137/137 - 17s - loss: 7.1658 - val_loss: 7.4588
+Epoch 00199: val_loss did not improve from 7.45464
+Epoch 200/1000
+137/137 - 12s - loss: 7.2668 - val_loss: 7.5276
 
- Epoch 97/100 
-	 loss: 7.1658, val_loss: 7.4588
+ Epoch 200/1000 
+	 loss: 7.2668, val_loss: 7.5276
 
-Epoch 00097: val_loss did not improve from 7.38971
-Epoch 98/100
-137/137 - 17s - loss: 7.1512 - val_loss: 7.4126
+Epoch 00200: val_loss did not improve from 7.45464
+Epoch 201/1000
+137/137 - 11s - loss: 7.2568 - val_loss: 7.4648
 
- Epoch 98/100 
-	 loss: 7.1512, val_loss: 7.4126
+ Epoch 201/1000 
+	 loss: 7.2568, val_loss: 7.4648
 
-Epoch 00098: val_loss did not improve from 7.38971
-Epoch 99/100
-137/137 - 17s - loss: 7.1418 - val_loss: 7.4568
+Epoch 00201: val_loss did not improve from 7.45464
+Epoch 202/1000
+137/137 - 11s - loss: 7.2631 - val_loss: 7.4662
 
- Epoch 99/100 
-	 loss: 7.1418, val_loss: 7.4568
+ Epoch 202/1000 
+	 loss: 7.2631, val_loss: 7.4662
 
-Epoch 00099: val_loss did not improve from 7.38971
-Epoch 100/100
-137/137 - 17s - loss: 7.1247 - val_loss: 7.4180
+Epoch 00202: val_loss did not improve from 7.45464
+Epoch 203/1000
+137/137 - 12s - loss: 7.2512 - val_loss: 7.5408
 
- Epoch 100/100 
-	 loss: 7.1247, val_loss: 7.4180
+ Epoch 203/1000 
+	 loss: 7.2512, val_loss: 7.5408
 
-Epoch 00100: val_loss did not improve from 7.38971
-Model trained in 1837.8800647212192 s.
+Epoch 00203: val_loss did not improve from 7.45464
+Epoch 204/1000
+137/137 - 14s - loss: 7.2594 - val_loss: 7.4470
 
-===========
-Computing predictions
-===========
+ Epoch 204/1000 
+	 loss: 7.2594, val_loss: 7.4470
 
-saving samples...
-samples saved
-Test first sample: [-41.082973   65.6094    273.34494   -37.479523  -20.647364   70.64896
-  71.96081   -40.31492     2.8742433]
-NF first sample: [-61.912018 -47.627163 269.3362    64.87022  -30.583628 206.16762
- -16.30197   35.973785 -15.203301]
-Results dict saved
-Logger saved
-Results saved
-Details saved
-===========
-Run failed
+Epoch 00204: val_loss improved from 7.45464 to 7.44702, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 205/1000
+137/137 - 16s - loss: 7.2468 - val_loss: 7.4744
 
-Exception type : IndexError 
-Exception message : index 2 is out of bounds for axis 0 with size 2
-Stack trace : ['File : c_Main_MsplineN_Z1j.py , Line : 185, Func.Name : <module>, Message : Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)', "File : ../../../code/Plotters.py , Line : 206, Func.Name : marginal_plot, Message : axs[row,column].hist(target_test_data[:,dim], bins=n_bins,density=True,histtype='step',color='red')"]
-===========
+ Epoch 205/1000 
+	 loss: 7.2468, val_loss: 7.4744
 
-===========
-Running 3 / 8 with hyperparameters:
- ndims= 9 
- seed_train= 0 
- nsamples= 100000 
- correlation= None 
- activation= relu 
- eps_regulariser= 0 
- regulariser= None 
- bijector= MsplineN 
- nbijectors= 5 
- spline_knots= 8 
- range_min= -5 
- batch_size= 1024 
- hidden_layers= [128, 128, 128] epocs_input= 100 
-===========
+Epoch 00205: val_loss did not improve from 7.44702
+Epoch 206/1000
+137/137 - 16s - loss: 7.2417 - val_loss: 7.5628
 
-Training model.
+ Epoch 206/1000 
+	 loss: 7.2417, val_loss: 7.5628
 
-Train first sample: [ 1.0665622  -0.23791106 -0.08094089 -0.9928192  -0.42125896  0.08020908
- -0.64648056  0.92785245  1.1443974 ]
-KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_7'), name='input_7', description="created by layer 'input_7'")
-####### log_prob####
-KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_1089/AddV2:0', description="created by layer 'tf.__operators__.add_1089'")
-Not weights found. Training from scratch.
-No history found. Generating new history.
-Epoch 1/100
-69/69 - 44s - loss: 11.8095 - val_loss: 10.3538
+Epoch 00206: val_loss did not improve from 7.44702
+Epoch 207/1000
+137/137 - 17s - loss: 7.2559 - val_loss: 7.4264
 
- Epoch 1/100 
-	 loss: 11.8095, val_loss: 10.3538
+ Epoch 207/1000 
+	 loss: 7.2559, val_loss: 7.4264
 
-Epoch 00001: val_loss improved from inf to 10.35385, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 2/100
-69/69 - 10s - loss: 9.9454 - val_loss: 9.6804
+Epoch 00207: val_loss improved from 7.44702 to 7.42635, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 208/1000
+137/137 - 17s - loss: 7.2441 - val_loss: 7.4189
 
- Epoch 2/100 
-	 loss: 9.9454, val_loss: 9.6804
+ Epoch 208/1000 
+	 loss: 7.2441, val_loss: 7.4189
 
-Epoch 00002: val_loss improved from 10.35385 to 9.68041, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 3/100
-69/69 - 14s - loss: 9.5348 - val_loss: 9.4911
+Epoch 00208: val_loss improved from 7.42635 to 7.41888, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 209/1000
+137/137 - 17s - loss: 7.2340 - val_loss: 7.4860
 
- Epoch 3/100 
-	 loss: 9.5348, val_loss: 9.4911
+ Epoch 209/1000 
+	 loss: 7.2340, val_loss: 7.4860
 
-Epoch 00003: val_loss improved from 9.68041 to 9.49114, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 4/100
-69/69 - 8s - loss: 9.3326 - val_loss: 9.2949
+Epoch 00209: val_loss did not improve from 7.41888
+Epoch 210/1000
+137/137 - 16s - loss: 7.2248 - val_loss: 7.4770
 
- Epoch 4/100 
-	 loss: 9.3326, val_loss: 9.2949
+ Epoch 210/1000 
+	 loss: 7.2248, val_loss: 7.4770
 
-Epoch 00004: val_loss improved from 9.49114 to 9.29493, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 5/100
-69/69 - 9s - loss: 9.1781 - val_loss: 9.1588
+Epoch 00210: val_loss did not improve from 7.41888
+Epoch 211/1000
+137/137 - 17s - loss: 7.2289 - val_loss: 7.4619
 
- Epoch 5/100 
-	 loss: 9.1781, val_loss: 9.1588
+ Epoch 211/1000 
+	 loss: 7.2289, val_loss: 7.4619
 
-Epoch 00005: val_loss improved from 9.29493 to 9.15880, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 6/100
-69/69 - 9s - loss: 9.0810 - val_loss: 9.1003
+Epoch 00211: val_loss did not improve from 7.41888
+Epoch 212/1000
+137/137 - 16s - loss: 7.2410 - val_loss: 7.5777
 
- Epoch 6/100 
-	 loss: 9.0810, val_loss: 9.1003
+ Epoch 212/1000 
+	 loss: 7.2410, val_loss: 7.5777
 
-Epoch 00006: val_loss improved from 9.15880 to 9.10030, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 7/100
-69/69 - 9s - loss: 8.9918 - val_loss: 9.0475
+Epoch 00212: val_loss did not improve from 7.41888
+Epoch 213/1000
+137/137 - 17s - loss: 7.2362 - val_loss: 7.4416
 
- Epoch 7/100 
-	 loss: 8.9918, val_loss: 9.0475
+ Epoch 213/1000 
+	 loss: 7.2362, val_loss: 7.4416
 
-Epoch 00007: val_loss improved from 9.10030 to 9.04750, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 8/100
-69/69 - 9s - loss: 8.9153 - val_loss: 8.9185
+Epoch 00213: val_loss did not improve from 7.41888
+Epoch 214/1000
+137/137 - 17s - loss: 7.2300 - val_loss: 7.4311
 
- Epoch 8/100 
-	 loss: 8.9153, val_loss: 8.9185
+ Epoch 214/1000 
+	 loss: 7.2300, val_loss: 7.4311
 
-Epoch 00008: val_loss improved from 9.04750 to 8.91854, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 9/100
-69/69 - 9s - loss: 8.8632 - val_loss: 8.8764
+Epoch 00214: val_loss did not improve from 7.41888
+Epoch 215/1000
+137/137 - 16s - loss: 7.2364 - val_loss: 7.4827
 
- Epoch 9/100 
-	 loss: 8.8632, val_loss: 8.8764
+ Epoch 215/1000 
+	 loss: 7.2364, val_loss: 7.4827
 
-Epoch 00009: val_loss improved from 8.91854 to 8.87642, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 10/100
-69/69 - 9s - loss: 8.8053 - val_loss: 8.8945
+Epoch 00215: val_loss did not improve from 7.41888
+Epoch 216/1000
+137/137 - 17s - loss: 7.2307 - val_loss: 7.4697
 
- Epoch 10/100 
-	 loss: 8.8053, val_loss: 8.8945
+ Epoch 216/1000 
+	 loss: 7.2307, val_loss: 7.4697
 
-Epoch 00010: val_loss did not improve from 8.87642
-Epoch 11/100
-69/69 - 9s - loss: 8.7626 - val_loss: 8.8023
+Epoch 00216: val_loss did not improve from 7.41888
+Epoch 217/1000
+137/137 - 17s - loss: 7.2252 - val_loss: 7.4477
 
- Epoch 11/100 
-	 loss: 8.7626, val_loss: 8.8023
+ Epoch 217/1000 
+	 loss: 7.2252, val_loss: 7.4477
 
-Epoch 00011: val_loss improved from 8.87642 to 8.80230, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 12/100
-69/69 - 9s - loss: 8.7289 - val_loss: 8.7683
+Epoch 00217: val_loss did not improve from 7.41888
+Epoch 218/1000
+137/137 - 16s - loss: 7.2315 - val_loss: 7.4452
 
- Epoch 12/100 
-	 loss: 8.7289, val_loss: 8.7683
+ Epoch 218/1000 
+	 loss: 7.2315, val_loss: 7.4452
 
-Epoch 00012: val_loss improved from 8.80230 to 8.76835, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 13/100
-69/69 - 9s - loss: 8.7032 - val_loss: 8.7382
+Epoch 00218: val_loss did not improve from 7.41888
+Epoch 219/1000
+137/137 - 16s - loss: 7.2134 - val_loss: 7.5478
 
- Epoch 13/100 
-	 loss: 8.7032, val_loss: 8.7382
+ Epoch 219/1000 
+	 loss: 7.2134, val_loss: 7.5478
 
-Epoch 00013: val_loss improved from 8.76835 to 8.73822, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 14/100
-69/69 - 9s - loss: 8.6603 - val_loss: 8.9180
+Epoch 00219: val_loss did not improve from 7.41888
+Epoch 220/1000
+137/137 - 17s - loss: 7.2244 - val_loss: 7.4990
 
- Epoch 14/100 
-	 loss: 8.6603, val_loss: 8.9180
+ Epoch 220/1000 
+	 loss: 7.2244, val_loss: 7.4990
 
-Epoch 00014: val_loss did not improve from 8.73822
-Epoch 15/100
-69/69 - 9s - loss: 8.6780 - val_loss: 8.7414
+Epoch 00220: val_loss did not improve from 7.41888
+Epoch 221/1000
+137/137 - 16s - loss: 7.2207 - val_loss: 7.4275
 
- Epoch 15/100 
-	 loss: 8.6780, val_loss: 8.7414
+ Epoch 221/1000 
+	 loss: 7.2207, val_loss: 7.4275
 
-Epoch 00015: val_loss did not improve from 8.73822
-Epoch 16/100
-69/69 - 9s - loss: 8.6244 - val_loss: 8.6524
+Epoch 00221: val_loss did not improve from 7.41888
+Epoch 222/1000
+137/137 - 17s - loss: 7.2291 - val_loss: 7.4772
 
- Epoch 16/100 
-	 loss: 8.6244, val_loss: 8.6524
+ Epoch 222/1000 
+	 loss: 7.2291, val_loss: 7.4772
 
-Epoch 00016: val_loss improved from 8.73822 to 8.65238, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 17/100
-69/69 - 9s - loss: 8.5922 - val_loss: 8.7153
+Epoch 00222: val_loss did not improve from 7.41888
+Epoch 223/1000
+137/137 - 17s - loss: 7.2046 - val_loss: 7.4597
 
- Epoch 17/100 
-	 loss: 8.5922, val_loss: 8.7153
+ Epoch 223/1000 
+	 loss: 7.2046, val_loss: 7.4597
 
-Epoch 00017: val_loss did not improve from 8.65238
-Epoch 18/100
-69/69 - 9s - loss: 8.5931 - val_loss: 8.6240
+Epoch 00223: val_loss did not improve from 7.41888
+Epoch 224/1000
+137/137 - 16s - loss: 7.2241 - val_loss: 7.4692
 
- Epoch 18/100 
-	 loss: 8.5931, val_loss: 8.6240
+ Epoch 224/1000 
+	 loss: 7.2241, val_loss: 7.4692
 
-Epoch 00018: val_loss improved from 8.65238 to 8.62403, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 19/100
-69/69 - 9s - loss: 8.5787 - val_loss: 8.6079
+Epoch 00224: val_loss did not improve from 7.41888
+Epoch 225/1000
+137/137 - 16s - loss: 7.2135 - val_loss: 7.4227
 
- Epoch 19/100 
-	 loss: 8.5787, val_loss: 8.6079
+ Epoch 225/1000 
+	 loss: 7.2135, val_loss: 7.4227
 
-Epoch 00019: val_loss improved from 8.62403 to 8.60791, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 20/100
-69/69 - 9s - loss: 8.5414 - val_loss: 8.6001
+Epoch 00225: val_loss did not improve from 7.41888
+Epoch 226/1000
+137/137 - 16s - loss: 7.2020 - val_loss: 7.4908
 
- Epoch 20/100 
-	 loss: 8.5414, val_loss: 8.6001
+ Epoch 226/1000 
+	 loss: 7.2020, val_loss: 7.4908
 
-Epoch 00020: val_loss improved from 8.60791 to 8.60013, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 21/100
-69/69 - 9s - loss: 8.5371 - val_loss: 8.5708
+Epoch 00226: val_loss did not improve from 7.41888
+Epoch 227/1000
+137/137 - 17s - loss: 7.1991 - val_loss: 7.4885
 
- Epoch 21/100 
-	 loss: 8.5371, val_loss: 8.5708
+ Epoch 227/1000 
+	 loss: 7.1991, val_loss: 7.4885
 
-Epoch 00021: val_loss improved from 8.60013 to 8.57079, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 22/100
-69/69 - 9s - loss: 8.4859 - val_loss: 8.6773
+Epoch 00227: val_loss did not improve from 7.41888
+Epoch 228/1000
+137/137 - 16s - loss: 7.2109 - val_loss: 7.4546
 
- Epoch 22/100 
-	 loss: 8.4859, val_loss: 8.6773
+ Epoch 228/1000 
+	 loss: 7.2109, val_loss: 7.4546
 
-Epoch 00022: val_loss did not improve from 8.57079
-Epoch 23/100
-69/69 - 9s - loss: 8.5111 - val_loss: 8.7404
+Epoch 00228: val_loss did not improve from 7.41888
+Epoch 229/1000
+137/137 - 16s - loss: 7.2119 - val_loss: 7.4608
 
- Epoch 23/100 
-	 loss: 8.5111, val_loss: 8.7404
+ Epoch 229/1000 
+	 loss: 7.2119, val_loss: 7.4608
 
-Epoch 00023: val_loss did not improve from 8.57079
-Epoch 24/100
-69/69 - 8s - loss: 8.4896 - val_loss: 8.6736
+Epoch 00229: val_loss did not improve from 7.41888
+Epoch 230/1000
+137/137 - 15s - loss: 7.2099 - val_loss: 7.4146
 
- Epoch 24/100 
-	 loss: 8.4896, val_loss: 8.6736
+ Epoch 230/1000 
+	 loss: 7.2099, val_loss: 7.4146
 
-Epoch 00024: val_loss did not improve from 8.57079
-Epoch 25/100
-69/69 - 9s - loss: 8.4359 - val_loss: 8.6142
+Epoch 00230: val_loss improved from 7.41888 to 7.41458, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 231/1000
+137/137 - 15s - loss: 7.2108 - val_loss: 7.4560
 
- Epoch 25/100 
-	 loss: 8.4359, val_loss: 8.6142
+ Epoch 231/1000 
+	 loss: 7.2108, val_loss: 7.4560
 
-Epoch 00025: val_loss did not improve from 8.57079
-Epoch 26/100
-69/69 - 8s - loss: 8.4510 - val_loss: 8.5301
+Epoch 00231: val_loss did not improve from 7.41458
+Epoch 232/1000
+137/137 - 15s - loss: 7.1923 - val_loss: 7.5008
 
- Epoch 26/100 
-	 loss: 8.4510, val_loss: 8.5301
+ Epoch 232/1000 
+	 loss: 7.1923, val_loss: 7.5008
 
-Epoch 00026: val_loss improved from 8.57079 to 8.53009, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 27/100
-69/69 - 9s - loss: 8.4268 - val_loss: 8.5340
+Epoch 00232: val_loss did not improve from 7.41458
+Epoch 233/1000
+137/137 - 15s - loss: 7.2001 - val_loss: 7.4657
 
- Epoch 27/100 
-	 loss: 8.4268, val_loss: 8.5340
+ Epoch 233/1000 
+	 loss: 7.2001, val_loss: 7.4657
 
-Epoch 00027: val_loss did not improve from 8.53009
-Epoch 28/100
-69/69 - 9s - loss: 8.4224 - val_loss: 8.4959
+Epoch 00233: val_loss did not improve from 7.41458
+Epoch 234/1000
+137/137 - 15s - loss: 7.2008 - val_loss: 7.4469
 
- Epoch 28/100 
-	 loss: 8.4224, val_loss: 8.4959
+ Epoch 234/1000 
+	 loss: 7.2008, val_loss: 7.4469
 
-Epoch 00028: val_loss improved from 8.53009 to 8.49590, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 29/100
-69/69 - 9s - loss: 8.4184 - val_loss: 8.5393
+Epoch 00234: val_loss did not improve from 7.41458
+Epoch 235/1000
+137/137 - 16s - loss: 7.2092 - val_loss: 7.4645
 
- Epoch 29/100 
-	 loss: 8.4184, val_loss: 8.5393
+ Epoch 235/1000 
+	 loss: 7.2092, val_loss: 7.4645
 
-Epoch 00029: val_loss did not improve from 8.49590
-Epoch 30/100
-69/69 - 15s - loss: 8.4068 - val_loss: 8.4962
+Epoch 00235: val_loss did not improve from 7.41458
+Epoch 236/1000
+137/137 - 17s - loss: 7.1957 - val_loss: 7.4151
 
- Epoch 30/100 
-	 loss: 8.4068, val_loss: 8.4962
+ Epoch 236/1000 
+	 loss: 7.1957, val_loss: 7.4151
 
-Epoch 00030: val_loss did not improve from 8.49590
-Epoch 31/100
-69/69 - 21s - loss: 8.3739 - val_loss: 8.5127
+Epoch 00236: val_loss did not improve from 7.41458
+Epoch 237/1000
+137/137 - 17s - loss: 7.1846 - val_loss: 7.4107
 
- Epoch 31/100 
-	 loss: 8.3739, val_loss: 8.5127
+ Epoch 237/1000 
+	 loss: 7.1846, val_loss: 7.4107
 
-Epoch 00031: val_loss did not improve from 8.49590
-Epoch 32/100
-69/69 - 23s - loss: 8.3855 - val_loss: 8.4215
+Epoch 00237: val_loss improved from 7.41458 to 7.41066, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 238/1000
+137/137 - 17s - loss: 7.1900 - val_loss: 7.4376
 
- Epoch 32/100 
-	 loss: 8.3855, val_loss: 8.4215
+ Epoch 238/1000 
+	 loss: 7.1900, val_loss: 7.4376
 
-Epoch 00032: val_loss improved from 8.49590 to 8.42146, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 33/100
-69/69 - 20s - loss: 8.3476 - val_loss: 8.4189
+Epoch 00238: val_loss did not improve from 7.41066
+Epoch 239/1000
+137/137 - 17s - loss: 7.1929 - val_loss: 7.4436
 
- Epoch 33/100 
-	 loss: 8.3476, val_loss: 8.4189
+ Epoch 239/1000 
+	 loss: 7.1929, val_loss: 7.4436
 
-Epoch 00033: val_loss improved from 8.42146 to 8.41891, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 34/100
-69/69 - 22s - loss: 8.3359 - val_loss: 8.3877
+Epoch 00239: val_loss did not improve from 7.41066
+Epoch 240/1000
+137/137 - 17s - loss: 7.1831 - val_loss: 7.4186
 
- Epoch 34/100 
-	 loss: 8.3359, val_loss: 8.3877
+ Epoch 240/1000 
+	 loss: 7.1831, val_loss: 7.4186
 
-Epoch 00034: val_loss improved from 8.41891 to 8.38765, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 35/100
-69/69 - 21s - loss: 8.3241 - val_loss: 8.4023
+Epoch 00240: val_loss did not improve from 7.41066
+Epoch 241/1000
+137/137 - 17s - loss: 7.1981 - val_loss: 7.5362
 
- Epoch 35/100 
-	 loss: 8.3241, val_loss: 8.4023
+ Epoch 241/1000 
+	 loss: 7.1981, val_loss: 7.5362
 
-Epoch 00035: val_loss did not improve from 8.38765
-Epoch 36/100
-69/69 - 19s - loss: 8.3119 - val_loss: 8.3728
+Epoch 00241: val_loss did not improve from 7.41066
+Epoch 242/1000
+137/137 - 16s - loss: 7.2114 - val_loss: 7.4182
 
- Epoch 36/100 
-	 loss: 8.3119, val_loss: 8.3728
+ Epoch 242/1000 
+	 loss: 7.2114, val_loss: 7.4182
 
-Epoch 00036: val_loss improved from 8.38765 to 8.37279, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 37/100
-69/69 - 20s - loss: 8.3021 - val_loss: 8.3953
+Epoch 00242: val_loss did not improve from 7.41066
+Epoch 243/1000
+137/137 - 16s - loss: 7.1903 - val_loss: 7.4426
 
- Epoch 37/100 
-	 loss: 8.3021, val_loss: 8.3953
+ Epoch 243/1000 
+	 loss: 7.1903, val_loss: 7.4426
 
-Epoch 00037: val_loss did not improve from 8.37279
-Epoch 38/100
-69/69 - 22s - loss: 8.2727 - val_loss: 8.4040
+Epoch 00243: val_loss did not improve from 7.41066
+Epoch 244/1000
+137/137 - 16s - loss: 7.1871 - val_loss: 7.4800
 
- Epoch 38/100 
-	 loss: 8.2727, val_loss: 8.4040
+ Epoch 244/1000 
+	 loss: 7.1871, val_loss: 7.4800
 
-Epoch 00038: val_loss did not improve from 8.37279
-Epoch 39/100
-69/69 - 16s - loss: 8.2919 - val_loss: 8.4820
+Epoch 00244: val_loss did not improve from 7.41066
+Epoch 245/1000
+137/137 - 16s - loss: 7.1878 - val_loss: 7.3954
 
- Epoch 39/100 
-	 loss: 8.2919, val_loss: 8.4820
+ Epoch 245/1000 
+	 loss: 7.1878, val_loss: 7.3954
 
-Epoch 00039: val_loss did not improve from 8.37279
-Epoch 40/100
-69/69 - 18s - loss: 8.2681 - val_loss: 8.3309
+Epoch 00245: val_loss improved from 7.41066 to 7.39536, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 246/1000
+137/137 - 17s - loss: 7.1859 - val_loss: 7.4110
 
- Epoch 40/100 
-	 loss: 8.2681, val_loss: 8.3309
+ Epoch 246/1000 
+	 loss: 7.1859, val_loss: 7.4110
 
-Epoch 00040: val_loss improved from 8.37279 to 8.33092, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 41/100
-69/69 - 19s - loss: 8.2433 - val_loss: 8.3254
+Epoch 00246: val_loss did not improve from 7.39536
+Epoch 247/1000
+137/137 - 16s - loss: 7.1850 - val_loss: 7.4226
 
- Epoch 41/100 
-	 loss: 8.2433, val_loss: 8.3254
+ Epoch 247/1000 
+	 loss: 7.1850, val_loss: 7.4226
 
-Epoch 00041: val_loss improved from 8.33092 to 8.32538, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 42/100
-69/69 - 22s - loss: 8.2440 - val_loss: 8.3837
+Epoch 00247: val_loss did not improve from 7.39536
+Epoch 248/1000
+137/137 - 17s - loss: 7.1867 - val_loss: 7.4864
 
- Epoch 42/100 
-	 loss: 8.2440, val_loss: 8.3837
+ Epoch 248/1000 
+	 loss: 7.1867, val_loss: 7.4864
 
-Epoch 00042: val_loss did not improve from 8.32538
-Epoch 43/100
-69/69 - 20s - loss: 8.2388 - val_loss: 8.3307
+Epoch 00248: val_loss did not improve from 7.39536
+Epoch 249/1000
+137/137 - 17s - loss: 7.1861 - val_loss: 7.3937
 
- Epoch 43/100 
-	 loss: 8.2388, val_loss: 8.3307
+ Epoch 249/1000 
+	 loss: 7.1861, val_loss: 7.3937
 
-Epoch 00043: val_loss did not improve from 8.32538
-Epoch 44/100
-69/69 - 16s - loss: 8.2079 - val_loss: 8.3189
+Epoch 00249: val_loss improved from 7.39536 to 7.39373, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 250/1000
+137/137 - 17s - loss: 7.1875 - val_loss: 7.4089
 
- Epoch 44/100 
-	 loss: 8.2079, val_loss: 8.3189
+ Epoch 250/1000 
+	 loss: 7.1875, val_loss: 7.4089
 
-Epoch 00044: val_loss improved from 8.32538 to 8.31888, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 45/100
-69/69 - 20s - loss: 8.2279 - val_loss: 8.4631
+Epoch 00250: val_loss did not improve from 7.39373
+Epoch 251/1000
+137/137 - 16s - loss: 7.1651 - val_loss: 7.4185
 
- Epoch 45/100 
-	 loss: 8.2279, val_loss: 8.4631
+ Epoch 251/1000 
+	 loss: 7.1651, val_loss: 7.4185
 
-Epoch 00045: val_loss did not improve from 8.31888
-Epoch 46/100
-69/69 - 22s - loss: 8.1957 - val_loss: 8.2952
+Epoch 00251: val_loss did not improve from 7.39373
+Epoch 252/1000
+137/137 - 14s - loss: 7.1826 - val_loss: 7.4257
 
- Epoch 46/100 
-	 loss: 8.1957, val_loss: 8.2952
+ Epoch 252/1000 
+	 loss: 7.1826, val_loss: 7.4257
 
-Epoch 00046: val_loss improved from 8.31888 to 8.29516, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 47/100
-69/69 - 16s - loss: 8.2286 - val_loss: 8.3035
+Epoch 00252: val_loss did not improve from 7.39373
+Epoch 253/1000
+137/137 - 15s - loss: 7.1754 - val_loss: 7.4755
 
- Epoch 47/100 
-	 loss: 8.2286, val_loss: 8.3035
+ Epoch 253/1000 
+	 loss: 7.1754, val_loss: 7.4755
 
-Epoch 00047: val_loss did not improve from 8.29516
-Epoch 48/100
-69/69 - 19s - loss: 8.1694 - val_loss: 8.2557
+Epoch 00253: val_loss did not improve from 7.39373
+Epoch 254/1000
+137/137 - 12s - loss: 7.1846 - val_loss: 7.4188
 
- Epoch 48/100 
-	 loss: 8.1694, val_loss: 8.2557
+ Epoch 254/1000 
+	 loss: 7.1846, val_loss: 7.4188
 
-Epoch 00048: val_loss improved from 8.29516 to 8.25574, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 49/100
-69/69 - 21s - loss: 8.1768 - val_loss: 8.2836
+Epoch 00254: val_loss did not improve from 7.39373
+Epoch 255/1000
+137/137 - 15s - loss: 7.1836 - val_loss: 7.4352
 
- Epoch 49/100 
-	 loss: 8.1768, val_loss: 8.2836
+ Epoch 255/1000 
+	 loss: 7.1836, val_loss: 7.4352
 
-Epoch 00049: val_loss did not improve from 8.25574
-Epoch 50/100
-69/69 - 20s - loss: 8.1684 - val_loss: 8.2484
+Epoch 00255: val_loss did not improve from 7.39373
+Epoch 256/1000
+137/137 - 16s - loss: 7.1641 - val_loss: 7.4117
 
- Epoch 50/100 
-	 loss: 8.1684, val_loss: 8.2484
+ Epoch 256/1000 
+	 loss: 7.1641, val_loss: 7.4117
 
-Epoch 00050: val_loss improved from 8.25574 to 8.24836, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 51/100
-69/69 - 20s - loss: 8.1593 - val_loss: 8.2469
+Epoch 00256: val_loss did not improve from 7.39373
+Epoch 257/1000
+137/137 - 16s - loss: 7.1618 - val_loss: 7.4278
 
- Epoch 51/100 
-	 loss: 8.1593, val_loss: 8.2469
+ Epoch 257/1000 
+	 loss: 7.1618, val_loss: 7.4278
 
-Epoch 00051: val_loss improved from 8.24836 to 8.24692, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 52/100
-69/69 - 20s - loss: 8.1305 - val_loss: 8.2395
+Epoch 00257: val_loss did not improve from 7.39373
+Epoch 258/1000
+137/137 - 13s - loss: 7.1608 - val_loss: 7.4231
 
- Epoch 52/100 
-	 loss: 8.1305, val_loss: 8.2395
+ Epoch 258/1000 
+	 loss: 7.1608, val_loss: 7.4231
 
-Epoch 00052: val_loss improved from 8.24692 to 8.23952, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 53/100
-69/69 - 21s - loss: 8.1369 - val_loss: 8.2297
+Epoch 00258: val_loss did not improve from 7.39373
+Epoch 259/1000
+137/137 - 11s - loss: 7.1687 - val_loss: 7.3985
 
- Epoch 53/100 
-	 loss: 8.1369, val_loss: 8.2297
+ Epoch 259/1000 
+	 loss: 7.1687, val_loss: 7.3985
 
-Epoch 00053: val_loss improved from 8.23952 to 8.22972, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 54/100
-69/69 - 20s - loss: 8.1033 - val_loss: 8.2145
+Epoch 00259: val_loss did not improve from 7.39373
+Epoch 260/1000
+137/137 - 12s - loss: 7.1524 - val_loss: 7.4363
 
- Epoch 54/100 
-	 loss: 8.1033, val_loss: 8.2145
+ Epoch 260/1000 
+	 loss: 7.1524, val_loss: 7.4363
 
-Epoch 00054: val_loss improved from 8.22972 to 8.21446, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 55/100
-69/69 - 8s - loss: 8.1200 - val_loss: 8.2022
+Epoch 00260: val_loss did not improve from 7.39373
+Epoch 261/1000
+137/137 - 12s - loss: 7.1657 - val_loss: 7.4189
 
- Epoch 55/100 
-	 loss: 8.1200, val_loss: 8.2022
+ Epoch 261/1000 
+	 loss: 7.1657, val_loss: 7.4189
 
-Epoch 00055: val_loss improved from 8.21446 to 8.20225, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 56/100
-69/69 - 8s - loss: 8.0981 - val_loss: 8.2141
+Epoch 00261: val_loss did not improve from 7.39373
+Epoch 262/1000
+137/137 - 16s - loss: 7.1625 - val_loss: 7.3874
 
- Epoch 56/100 
-	 loss: 8.0981, val_loss: 8.2141
+ Epoch 262/1000 
+	 loss: 7.1625, val_loss: 7.3874
 
-Epoch 00056: val_loss did not improve from 8.20225
-Epoch 57/100
-69/69 - 9s - loss: 8.0996 - val_loss: 8.2173
+Epoch 00262: val_loss improved from 7.39373 to 7.38743, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 263/1000
+137/137 - 16s - loss: 7.1713 - val_loss: 7.4721
 
- Epoch 57/100 
-	 loss: 8.0996, val_loss: 8.2173
+ Epoch 263/1000 
+	 loss: 7.1713, val_loss: 7.4721
 
-Epoch 00057: val_loss did not improve from 8.20225
-Epoch 58/100
-69/69 - 9s - loss: 8.1066 - val_loss: 8.2713
+Epoch 00263: val_loss did not improve from 7.38743
+Epoch 264/1000
+137/137 - 17s - loss: 7.1748 - val_loss: 7.3929
 
- Epoch 58/100 
-	 loss: 8.1066, val_loss: 8.2713
+ Epoch 264/1000 
+	 loss: 7.1748, val_loss: 7.3929
 
-Epoch 00058: val_loss did not improve from 8.20225
-Epoch 59/100
-69/69 - 9s - loss: 8.0750 - val_loss: 8.1638
+Epoch 00264: val_loss did not improve from 7.38743
+Epoch 265/1000
+137/137 - 17s - loss: 7.1546 - val_loss: 7.4240
 
- Epoch 59/100 
-	 loss: 8.0750, val_loss: 8.1638
+ Epoch 265/1000 
+	 loss: 7.1546, val_loss: 7.4240
 
-Epoch 00059: val_loss improved from 8.20225 to 8.16377, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 60/100
-69/69 - 9s - loss: 8.0854 - val_loss: 8.1698
+Epoch 00265: val_loss did not improve from 7.38743
+Epoch 266/1000
+137/137 - 17s - loss: 7.1649 - val_loss: 7.4127
 
- Epoch 60/100 
-	 loss: 8.0854, val_loss: 8.1698
+ Epoch 266/1000 
+	 loss: 7.1649, val_loss: 7.4127
 
-Epoch 00060: val_loss did not improve from 8.16377
-Epoch 61/100
-69/69 - 9s - loss: 8.0499 - val_loss: 8.1896
+Epoch 00266: val_loss did not improve from 7.38743
+Epoch 267/1000
+137/137 - 17s - loss: 7.1491 - val_loss: 7.4281
 
- Epoch 61/100 
-	 loss: 8.0499, val_loss: 8.1896
+ Epoch 267/1000 
+	 loss: 7.1491, val_loss: 7.4281
 
-Epoch 00061: val_loss did not improve from 8.16377
-Epoch 62/100
-69/69 - 9s - loss: 8.0503 - val_loss: 8.1610
+Epoch 00267: val_loss did not improve from 7.38743
+Epoch 268/1000
+137/137 - 17s - loss: 7.1461 - val_loss: 7.3923
 
- Epoch 62/100 
-	 loss: 8.0503, val_loss: 8.1610
+ Epoch 268/1000 
+	 loss: 7.1461, val_loss: 7.3923
 
-Epoch 00062: val_loss improved from 8.16377 to 8.16105, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 63/100
-69/69 - 9s - loss: 8.0438 - val_loss: 8.1411
+Epoch 00268: val_loss did not improve from 7.38743
+Epoch 269/1000
+137/137 - 17s - loss: 7.1489 - val_loss: 7.4060
 
- Epoch 63/100 
-	 loss: 8.0438, val_loss: 8.1411
+ Epoch 269/1000 
+	 loss: 7.1489, val_loss: 7.4060
 
-Epoch 00063: val_loss improved from 8.16105 to 8.14106, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 64/100
-69/69 - 9s - loss: 8.0408 - val_loss: 8.1599
+Epoch 00269: val_loss did not improve from 7.38743
+Epoch 270/1000
+137/137 - 16s - loss: 7.1671 - val_loss: 7.3989
 
- Epoch 64/100 
-	 loss: 8.0408, val_loss: 8.1599
+ Epoch 270/1000 
+	 loss: 7.1671, val_loss: 7.3989
 
-Epoch 00064: val_loss did not improve from 8.14106
-Epoch 65/100
-69/69 - 9s - loss: 8.0306 - val_loss: 8.1526
+Epoch 00270: val_loss did not improve from 7.38743
+Epoch 271/1000
+137/137 - 17s - loss: 7.1452 - val_loss: 7.4074
 
- Epoch 65/100 
-	 loss: 8.0306, val_loss: 8.1526
+ Epoch 271/1000 
+	 loss: 7.1452, val_loss: 7.4074
 
-Epoch 00065: val_loss did not improve from 8.14106
-Epoch 66/100
-69/69 - 9s - loss: 8.0297 - val_loss: 8.1268
+Epoch 00271: val_loss did not improve from 7.38743
+Epoch 272/1000
+137/137 - 16s - loss: 7.1515 - val_loss: 7.4403
 
- Epoch 66/100 
-	 loss: 8.0297, val_loss: 8.1268
+ Epoch 272/1000 
+	 loss: 7.1515, val_loss: 7.4403
 
-Epoch 00066: val_loss improved from 8.14106 to 8.12679, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 67/100
-69/69 - 9s - loss: 8.0308 - val_loss: 8.1513
+Epoch 00272: val_loss did not improve from 7.38743
+Epoch 273/1000
+137/137 - 17s - loss: 7.1505 - val_loss: 7.4120
 
- Epoch 67/100 
-	 loss: 8.0308, val_loss: 8.1513
+ Epoch 273/1000 
+	 loss: 7.1505, val_loss: 7.4120
 
-Epoch 00067: val_loss did not improve from 8.12679
-Epoch 68/100
-69/69 - 8s - loss: 8.0358 - val_loss: 8.1362
+Epoch 00273: val_loss did not improve from 7.38743
+Epoch 274/1000
+137/137 - 16s - loss: 7.1372 - val_loss: 7.3957
 
- Epoch 68/100 
-	 loss: 8.0358, val_loss: 8.1362
+ Epoch 274/1000 
+	 loss: 7.1372, val_loss: 7.3957
 
-Epoch 00068: val_loss did not improve from 8.12679
-Epoch 69/100
-69/69 - 9s - loss: 8.0079 - val_loss: 8.1554
+Epoch 00274: val_loss did not improve from 7.38743
+Epoch 275/1000
+137/137 - 16s - loss: 7.1433 - val_loss: 7.3725
 
- Epoch 69/100 
-	 loss: 8.0079, val_loss: 8.1554
+ Epoch 275/1000 
+	 loss: 7.1433, val_loss: 7.3725
 
-Epoch 00069: val_loss did not improve from 8.12679
-Epoch 70/100
-69/69 - 9s - loss: 8.0058 - val_loss: 8.0858
+Epoch 00275: val_loss improved from 7.38743 to 7.37253, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 276/1000
+137/137 - 17s - loss: 7.1421 - val_loss: 7.4599
 
- Epoch 70/100 
-	 loss: 8.0058, val_loss: 8.0858
+ Epoch 276/1000 
+	 loss: 7.1421, val_loss: 7.4599
 
-Epoch 00070: val_loss improved from 8.12679 to 8.08584, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 71/100
-69/69 - 8s - loss: 7.9879 - val_loss: 8.0997
+Epoch 00276: val_loss did not improve from 7.37253
+Epoch 277/1000
+137/137 - 16s - loss: 7.1392 - val_loss: 7.4639
 
- Epoch 71/100 
-	 loss: 7.9879, val_loss: 8.0997
+ Epoch 277/1000 
+	 loss: 7.1392, val_loss: 7.4639
 
-Epoch 00071: val_loss did not improve from 8.08584
-Epoch 72/100
-69/69 - 9s - loss: 7.9756 - val_loss: 8.0911
+Epoch 00277: val_loss did not improve from 7.37253
+Epoch 278/1000
+137/137 - 16s - loss: 7.1417 - val_loss: 7.3715
 
- Epoch 72/100 
-	 loss: 7.9756, val_loss: 8.0911
+ Epoch 278/1000 
+	 loss: 7.1417, val_loss: 7.3715
 
-Epoch 00072: val_loss did not improve from 8.08584
-Epoch 73/100
-69/69 - 9s - loss: 7.9732 - val_loss: 8.1341
+Epoch 00278: val_loss improved from 7.37253 to 7.37146, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 279/1000
+137/137 - 16s - loss: 7.1413 - val_loss: 7.3796
 
- Epoch 73/100 
-	 loss: 7.9732, val_loss: 8.1341
+ Epoch 279/1000 
+	 loss: 7.1413, val_loss: 7.3796
 
-Epoch 00073: val_loss did not improve from 8.08584
-Epoch 74/100
-69/69 - 9s - loss: 7.9696 - val_loss: 8.0949
+Epoch 00279: val_loss did not improve from 7.37146
+Epoch 280/1000
+137/137 - 16s - loss: 7.1329 - val_loss: 7.3807
 
- Epoch 74/100 
-	 loss: 7.9696, val_loss: 8.0949
+ Epoch 280/1000 
+	 loss: 7.1329, val_loss: 7.3807
 
-Epoch 00074: val_loss did not improve from 8.08584
-Epoch 75/100
-69/69 - 9s - loss: 7.9535 - val_loss: 8.0839
+Epoch 00280: val_loss did not improve from 7.37146
+Epoch 281/1000
+137/137 - 17s - loss: 7.1268 - val_loss: 7.4447
 
- Epoch 75/100 
-	 loss: 7.9535, val_loss: 8.0839
+ Epoch 281/1000 
+	 loss: 7.1268, val_loss: 7.4447
 
-Epoch 00075: val_loss improved from 8.08584 to 8.08391, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 76/100
-69/69 - 9s - loss: 7.9783 - val_loss: 8.1238
+Epoch 00281: val_loss did not improve from 7.37146
+Epoch 282/1000
+137/137 - 16s - loss: 7.1366 - val_loss: 7.4108
 
- Epoch 76/100 
-	 loss: 7.9783, val_loss: 8.1238
+ Epoch 282/1000 
+	 loss: 7.1366, val_loss: 7.4108
 
-Epoch 00076: val_loss did not improve from 8.08391
-Epoch 77/100
-69/69 - 9s - loss: 7.9383 - val_loss: 8.0909
+Epoch 00282: val_loss did not improve from 7.37146
+Epoch 283/1000
+137/137 - 17s - loss: 7.1421 - val_loss: 7.4290
 
- Epoch 77/100 
-	 loss: 7.9383, val_loss: 8.0909
+ Epoch 283/1000 
+	 loss: 7.1421, val_loss: 7.4290
 
-Epoch 00077: val_loss did not improve from 8.08391
-Epoch 78/100
-69/69 - 8s - loss: 7.9522 - val_loss: 8.0422
+Epoch 00283: val_loss did not improve from 7.37146
+Epoch 284/1000
+137/137 - 17s - loss: 7.1427 - val_loss: 7.3758
 
- Epoch 78/100 
-	 loss: 7.9522, val_loss: 8.0422
+ Epoch 284/1000 
+	 loss: 7.1427, val_loss: 7.3758
 
-Epoch 00078: val_loss improved from 8.08391 to 8.04221, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 79/100
-69/69 - 8s - loss: 7.9186 - val_loss: 8.0911
+Epoch 00284: val_loss did not improve from 7.37146
+Epoch 285/1000
+137/137 - 17s - loss: 7.1294 - val_loss: 7.3746
 
- Epoch 79/100 
-	 loss: 7.9186, val_loss: 8.0911
+ Epoch 285/1000 
+	 loss: 7.1294, val_loss: 7.3746
 
-Epoch 00079: val_loss did not improve from 8.04221
-Epoch 80/100
-69/69 - 9s - loss: 7.9155 - val_loss: 8.0685
+Epoch 00285: val_loss did not improve from 7.37146
+Epoch 286/1000
+137/137 - 16s - loss: 7.1248 - val_loss: 7.4387
 
- Epoch 80/100 
-	 loss: 7.9155, val_loss: 8.0685
+ Epoch 286/1000 
+	 loss: 7.1248, val_loss: 7.4387
 
-Epoch 00080: val_loss did not improve from 8.04221
-Epoch 81/100
-69/69 - 9s - loss: 7.9174 - val_loss: 8.0253
+Epoch 00286: val_loss did not improve from 7.37146
+Epoch 287/1000
+137/137 - 14s - loss: 7.1584 - val_loss: 7.3722
 
- Epoch 81/100 
-	 loss: 7.9174, val_loss: 8.0253
+ Epoch 287/1000 
+	 loss: 7.1584, val_loss: 7.3722
 
-Epoch 00081: val_loss improved from 8.04221 to 8.02525, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 82/100
-69/69 - 9s - loss: 7.9294 - val_loss: 8.1456
+Epoch 00287: val_loss did not improve from 7.37146
+Epoch 288/1000
+137/137 - 14s - loss: 7.1430 - val_loss: 7.4143
 
- Epoch 82/100 
-	 loss: 7.9294, val_loss: 8.1456
+ Epoch 288/1000 
+	 loss: 7.1430, val_loss: 7.4143
 
-Epoch 00082: val_loss did not improve from 8.02525
-Epoch 83/100
-69/69 - 9s - loss: 7.9111 - val_loss: 8.1208
+Epoch 00288: val_loss did not improve from 7.37146
+Epoch 289/1000
+137/137 - 14s - loss: 7.1338 - val_loss: 7.4353
 
- Epoch 83/100 
-	 loss: 7.9111, val_loss: 8.1208
+ Epoch 289/1000 
+	 loss: 7.1338, val_loss: 7.4353
 
-Epoch 00083: val_loss did not improve from 8.02525
-Epoch 84/100
-69/69 - 9s - loss: 7.8972 - val_loss: 8.0113
+Epoch 00289: val_loss did not improve from 7.37146
+Epoch 290/1000
+137/137 - 14s - loss: 7.1482 - val_loss: 7.3776
 
- Epoch 84/100 
-	 loss: 7.8972, val_loss: 8.0113
+ Epoch 290/1000 
+	 loss: 7.1482, val_loss: 7.3776
 
-Epoch 00084: val_loss improved from 8.02525 to 8.01130, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 85/100
-69/69 - 9s - loss: 7.8776 - val_loss: 8.0807
+Epoch 00290: val_loss did not improve from 7.37146
+Epoch 291/1000
+137/137 - 15s - loss: 7.1380 - val_loss: 7.3935
 
- Epoch 85/100 
-	 loss: 7.8776, val_loss: 8.0807
+ Epoch 291/1000 
+	 loss: 7.1380, val_loss: 7.3935
 
-Epoch 00085: val_loss did not improve from 8.01130
-Epoch 86/100
-69/69 - 9s - loss: 7.8910 - val_loss: 8.0408
+Epoch 00291: val_loss did not improve from 7.37146
+Epoch 292/1000
+137/137 - 16s - loss: 7.1287 - val_loss: 7.3905
 
- Epoch 86/100 
-	 loss: 7.8910, val_loss: 8.0408
+ Epoch 292/1000 
+	 loss: 7.1287, val_loss: 7.3905
 
-Epoch 00086: val_loss did not improve from 8.01130
-Epoch 87/100
-69/69 - 9s - loss: 7.9057 - val_loss: 8.0138
+Epoch 00292: val_loss did not improve from 7.37146
+Epoch 293/1000
+137/137 - 17s - loss: 7.1207 - val_loss: 7.3775
 
- Epoch 87/100 
-	 loss: 7.9057, val_loss: 8.0138
+ Epoch 293/1000 
+	 loss: 7.1207, val_loss: 7.3775
 
-Epoch 00087: val_loss did not improve from 8.01130
-Epoch 88/100
-69/69 - 9s - loss: 7.9134 - val_loss: 8.0100
+Epoch 00293: val_loss did not improve from 7.37146
+Epoch 294/1000
+137/137 - 17s - loss: 7.1368 - val_loss: 7.4192
 
- Epoch 88/100 
-	 loss: 7.9134, val_loss: 8.0100
+ Epoch 294/1000 
+	 loss: 7.1368, val_loss: 7.4192
 
-Epoch 00088: val_loss improved from 8.01130 to 8.00998, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 89/100
-69/69 - 9s - loss: 7.8675 - val_loss: 7.9671
+Epoch 00294: val_loss did not improve from 7.37146
+Epoch 295/1000
+137/137 - 17s - loss: 7.1075 - val_loss: 7.3976
 
- Epoch 89/100 
-	 loss: 7.8675, val_loss: 7.9671
+ Epoch 295/1000 
+	 loss: 7.1075, val_loss: 7.3976
 
-Epoch 00089: val_loss improved from 8.00998 to 7.96713, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 90/100
-69/69 - 9s - loss: 7.8592 - val_loss: 8.0480
+Epoch 00295: val_loss did not improve from 7.37146
+Epoch 296/1000
+137/137 - 16s - loss: 7.1090 - val_loss: 7.4263
 
- Epoch 90/100 
-	 loss: 7.8592, val_loss: 8.0480
+ Epoch 296/1000 
+	 loss: 7.1090, val_loss: 7.4263
 
-Epoch 00090: val_loss did not improve from 7.96713
-Epoch 91/100
-69/69 - 8s - loss: 7.8567 - val_loss: 8.0161
+Epoch 00296: val_loss did not improve from 7.37146
+Epoch 297/1000
+137/137 - 17s - loss: 7.1227 - val_loss: 7.4352
 
- Epoch 91/100 
-	 loss: 7.8567, val_loss: 8.0161
+ Epoch 297/1000 
+	 loss: 7.1227, val_loss: 7.4352
 
-Epoch 00091: val_loss did not improve from 7.96713
-Epoch 92/100
-69/69 - 9s - loss: 7.8452 - val_loss: 7.9776
+Epoch 00297: val_loss did not improve from 7.37146
+Epoch 298/1000
+137/137 - 17s - loss: 7.1314 - val_loss: 7.4326
 
- Epoch 92/100 
-	 loss: 7.8452, val_loss: 7.9776
+ Epoch 298/1000 
+	 loss: 7.1314, val_loss: 7.4326
 
-Epoch 00092: val_loss did not improve from 7.96713
-Epoch 93/100
-69/69 - 9s - loss: 7.8444 - val_loss: 8.0391
+Epoch 00298: val_loss did not improve from 7.37146
+Epoch 299/1000
+137/137 - 17s - loss: 7.1276 - val_loss: 7.4664
 
- Epoch 93/100 
-	 loss: 7.8444, val_loss: 8.0391
+ Epoch 299/1000 
+	 loss: 7.1276, val_loss: 7.4664
 
-Epoch 00093: val_loss did not improve from 7.96713
-Epoch 94/100
-69/69 - 9s - loss: 7.8683 - val_loss: 8.0853
+Epoch 00299: val_loss did not improve from 7.37146
+Epoch 300/1000
+137/137 - 16s - loss: 7.1295 - val_loss: 7.3763
 
- Epoch 94/100 
-	 loss: 7.8683, val_loss: 8.0853
+ Epoch 300/1000 
+	 loss: 7.1295, val_loss: 7.3763
 
-Epoch 00094: val_loss did not improve from 7.96713
-Epoch 95/100
-69/69 - 9s - loss: 7.8525 - val_loss: 8.0183
+Epoch 00300: val_loss did not improve from 7.37146
+Epoch 301/1000
+137/137 - 16s - loss: 7.0970 - val_loss: 7.4699
 
- Epoch 95/100 
-	 loss: 7.8525, val_loss: 8.0183
+ Epoch 301/1000 
+	 loss: 7.0970, val_loss: 7.4699
 
-Epoch 00095: val_loss did not improve from 7.96713
-Epoch 96/100
-69/69 - 9s - loss: 7.8370 - val_loss: 7.9474
+Epoch 00301: val_loss did not improve from 7.37146
+Epoch 302/1000
+137/137 - 16s - loss: 7.1060 - val_loss: 7.3935
 
- Epoch 96/100 
-	 loss: 7.8370, val_loss: 7.9474
+ Epoch 302/1000 
+	 loss: 7.1060, val_loss: 7.3935
 
-Epoch 00096: val_loss improved from 7.96713 to 7.94742, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 97/100
-69/69 - 9s - loss: 7.8262 - val_loss: 7.9406
+Epoch 00302: val_loss did not improve from 7.37146
+Epoch 303/1000
+137/137 - 17s - loss: 7.1257 - val_loss: 7.3649
 
- Epoch 97/100 
-	 loss: 7.8262, val_loss: 7.9406
+ Epoch 303/1000 
+	 loss: 7.1257, val_loss: 7.3649
 
-Epoch 00097: val_loss improved from 7.94742 to 7.94056, saving model to ../../results/MsplineN/Z1j/run_3//model_checkpoint/weights
-Epoch 98/100
-69/69 - 9s - loss: 7.8408 - val_loss: 7.9485
+Epoch 00303: val_loss improved from 7.37146 to 7.36491, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 304/1000
+137/137 - 16s - loss: 7.1070 - val_loss: 7.4057
 
- Epoch 98/100 
-	 loss: 7.8408, val_loss: 7.9485
+ Epoch 304/1000 
+	 loss: 7.1070, val_loss: 7.4057
 
-Epoch 00098: val_loss did not improve from 7.94056
-Epoch 99/100
-69/69 - 9s - loss: 7.8298 - val_loss: 7.9600
+Epoch 00304: val_loss did not improve from 7.36491
+Epoch 305/1000
+137/137 - 16s - loss: 7.1198 - val_loss: 7.3999
 
- Epoch 99/100 
-	 loss: 7.8298, val_loss: 7.9600
+ Epoch 305/1000 
+	 loss: 7.1198, val_loss: 7.3999
 
-Epoch 00099: val_loss did not improve from 7.94056
-Epoch 100/100
-69/69 - 9s - loss: 7.8103 - val_loss: 8.0853
+Epoch 00305: val_loss did not improve from 7.36491
+Epoch 306/1000
+137/137 - 17s - loss: 7.1103 - val_loss: 7.4070
 
- Epoch 100/100 
-	 loss: 7.8103, val_loss: 8.0853
+ Epoch 306/1000 
+	 loss: 7.1103, val_loss: 7.4070
 
-Epoch 00100: val_loss did not improve from 7.94056
-Model trained in 1235.2443968318403 s.
+Epoch 00306: val_loss did not improve from 7.36491
+Epoch 307/1000
+137/137 - 17s - loss: 7.1013 - val_loss: 7.3528
 
-===========
-Computing predictions
-===========
+ Epoch 307/1000 
+	 loss: 7.1013, val_loss: 7.3528
 
-saving samples...
-samples saved
-Test first sample: [-41.082973   65.6094    273.34494   -37.479523  -20.647364   70.64896
-  71.96081   -40.31492     2.8742433]
-NF first sample: [-39.053772 -46.13047   65.811844  54.10253  -33.204514  91.26167
- -11.142157  45.107956  14.111698]
-Results dict saved
-Logger saved
-Results saved
-Details saved
-===========
-Run failed
+Epoch 00307: val_loss improved from 7.36491 to 7.35277, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 308/1000
+137/137 - 17s - loss: 7.1133 - val_loss: 7.3935
 
-Exception type : IndexError 
-Exception message : index 2 is out of bounds for axis 0 with size 2
-Stack trace : ['File : c_Main_MsplineN_Z1j.py , Line : 185, Func.Name : <module>, Message : Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)', "File : ../../../code/Plotters.py , Line : 206, Func.Name : marginal_plot, Message : axs[row,column].hist(target_test_data[:,dim], bins=n_bins,density=True,histtype='step',color='red')"]
-===========
+ Epoch 308/1000 
+	 loss: 7.1133, val_loss: 7.3935
 
-===========
-Running 4 / 8 with hyperparameters:
- ndims= 9 
- seed_train= 0 
- nsamples= 100000 
- correlation= None 
- activation= relu 
- eps_regulariser= 0 
- regulariser= None 
- bijector= MsplineN 
- nbijectors= 5 
- spline_knots= 8 
- range_min= -5 
- batch_size= 1024 
- hidden_layers= [256, 256, 256] epocs_input= 100 
-===========
+Epoch 00308: val_loss did not improve from 7.35277
+Epoch 309/1000
+137/137 - 17s - loss: 7.1073 - val_loss: 7.3913
 
-Training model.
+ Epoch 309/1000 
+	 loss: 7.1073, val_loss: 7.3913
 
-Train first sample: [ 1.0665622  -0.23791106 -0.08094089 -0.9928192  -0.42125896  0.08020908
- -0.64648056  0.92785245  1.1443974 ]
-KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_10'), name='input_10', description="created by layer 'input_10'")
-####### log_prob####
-KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_1525/AddV2:0', description="created by layer 'tf.__operators__.add_1525'")
-Not weights found. Training from scratch.
-No history found. Generating new history.
-Epoch 1/100
-69/69 - 46s - loss: 11.3879 - val_loss: 10.0209
+Epoch 00309: val_loss did not improve from 7.35277
+Epoch 310/1000
+137/137 - 16s - loss: 7.0929 - val_loss: 7.4269
 
- Epoch 1/100 
-	 loss: 11.3879, val_loss: 10.0209
+ Epoch 310/1000 
+	 loss: 7.0929, val_loss: 7.4269
 
-Epoch 00001: val_loss improved from inf to 10.02090, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 2/100
-69/69 - 9s - loss: 9.6631 - val_loss: 9.5019
+Epoch 00310: val_loss did not improve from 7.35277
+Epoch 311/1000
+137/137 - 16s - loss: 7.1034 - val_loss: 7.3504
 
- Epoch 2/100 
-	 loss: 9.6631, val_loss: 9.5019
+ Epoch 311/1000 
+	 loss: 7.1034, val_loss: 7.3504
 
-Epoch 00002: val_loss improved from 10.02090 to 9.50186, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 3/100
-69/69 - 9s - loss: 9.2584 - val_loss: 9.1698
+Epoch 00311: val_loss improved from 7.35277 to 7.35036, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 312/1000
+137/137 - 17s - loss: 7.1029 - val_loss: 7.4183
 
- Epoch 3/100 
-	 loss: 9.2584, val_loss: 9.1698
+ Epoch 312/1000 
+	 loss: 7.1029, val_loss: 7.4183
 
-Epoch 00003: val_loss improved from 9.50186 to 9.16983, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 4/100
-69/69 - 9s - loss: 9.0376 - val_loss: 8.9943
+Epoch 00312: val_loss did not improve from 7.35036
+Epoch 313/1000
+137/137 - 17s - loss: 7.1104 - val_loss: 7.3879
 
- Epoch 4/100 
-	 loss: 9.0376, val_loss: 8.9943
+ Epoch 313/1000 
+	 loss: 7.1104, val_loss: 7.3879
 
-Epoch 00004: val_loss improved from 9.16983 to 8.99426, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 5/100
-69/69 - 9s - loss: 8.9121 - val_loss: 8.9228
+Epoch 00313: val_loss did not improve from 7.35036
+Epoch 314/1000
+137/137 - 11s - loss: 7.0947 - val_loss: 7.3935
 
- Epoch 5/100 
-	 loss: 8.9121, val_loss: 8.9228
+ Epoch 314/1000 
+	 loss: 7.0947, val_loss: 7.3935
 
-Epoch 00005: val_loss improved from 8.99426 to 8.92280, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 6/100
-69/69 - 9s - loss: 8.7885 - val_loss: 8.7562
+Epoch 00314: val_loss did not improve from 7.35036
+Epoch 315/1000
+137/137 - 11s - loss: 7.0864 - val_loss: 7.4029
 
- Epoch 6/100 
-	 loss: 8.7885, val_loss: 8.7562
+ Epoch 315/1000 
+	 loss: 7.0864, val_loss: 7.4029
 
-Epoch 00006: val_loss improved from 8.92280 to 8.75615, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 7/100
-69/69 - 9s - loss: 8.6711 - val_loss: 8.6852
+Epoch 00315: val_loss did not improve from 7.35036
+Epoch 316/1000
+137/137 - 11s - loss: 7.1128 - val_loss: 7.4516
 
- Epoch 7/100 
-	 loss: 8.6711, val_loss: 8.6852
+ Epoch 316/1000 
+	 loss: 7.1128, val_loss: 7.4516
 
-Epoch 00007: val_loss improved from 8.75615 to 8.68515, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 8/100
-69/69 - 9s - loss: 8.6196 - val_loss: 8.6441
+Epoch 00316: val_loss did not improve from 7.35036
+Epoch 317/1000
+137/137 - 13s - loss: 7.1045 - val_loss: 7.4340
 
- Epoch 8/100 
-	 loss: 8.6196, val_loss: 8.6441
+ Epoch 317/1000 
+	 loss: 7.1045, val_loss: 7.4340
 
-Epoch 00008: val_loss improved from 8.68515 to 8.64411, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 9/100
-69/69 - 9s - loss: 8.5273 - val_loss: 8.5414
+Epoch 00317: val_loss did not improve from 7.35036
+Epoch 318/1000
+137/137 - 16s - loss: 7.0980 - val_loss: 7.3734
 
- Epoch 9/100 
-	 loss: 8.5273, val_loss: 8.5414
+ Epoch 318/1000 
+	 loss: 7.0980, val_loss: 7.3734
 
-Epoch 00009: val_loss improved from 8.64411 to 8.54141, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 10/100
-69/69 - 9s - loss: 8.4719 - val_loss: 8.7142
+Epoch 00318: val_loss did not improve from 7.35036
+Epoch 319/1000
+137/137 - 16s - loss: 7.0891 - val_loss: 7.3691
 
- Epoch 10/100 
-	 loss: 8.4719, val_loss: 8.7142
+ Epoch 319/1000 
+	 loss: 7.0891, val_loss: 7.3691
 
-Epoch 00010: val_loss did not improve from 8.54141
-Epoch 11/100
-69/69 - 9s - loss: 8.4162 - val_loss: 8.4531
+Epoch 00319: val_loss did not improve from 7.35036
+Epoch 320/1000
+137/137 - 16s - loss: 7.0988 - val_loss: 7.3609
 
- Epoch 11/100 
-	 loss: 8.4162, val_loss: 8.4531
+ Epoch 320/1000 
+	 loss: 7.0988, val_loss: 7.3609
 
-Epoch 00011: val_loss improved from 8.54141 to 8.45310, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 12/100
-69/69 - 9s - loss: 8.3722 - val_loss: 8.5373
+Epoch 00320: val_loss did not improve from 7.35036
+Epoch 321/1000
+137/137 - 16s - loss: 7.0877 - val_loss: 7.3542
 
- Epoch 12/100 
-	 loss: 8.3722, val_loss: 8.5373
+ Epoch 321/1000 
+	 loss: 7.0877, val_loss: 7.3542
 
-Epoch 00012: val_loss did not improve from 8.45310
-Epoch 13/100
-69/69 - 9s - loss: 8.3325 - val_loss: 8.3653
+Epoch 00321: val_loss did not improve from 7.35036
+Epoch 322/1000
+137/137 - 16s - loss: 7.0931 - val_loss: 7.3772
 
- Epoch 13/100 
-	 loss: 8.3325, val_loss: 8.3653
+ Epoch 322/1000 
+	 loss: 7.0931, val_loss: 7.3772
 
-Epoch 00013: val_loss improved from 8.45310 to 8.36535, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 14/100
-69/69 - 8s - loss: 8.2725 - val_loss: 8.3225
+Epoch 00322: val_loss did not improve from 7.35036
+Epoch 323/1000
+137/137 - 16s - loss: 7.1081 - val_loss: 7.3489
 
- Epoch 14/100 
-	 loss: 8.2725, val_loss: 8.3225
+ Epoch 323/1000 
+	 loss: 7.1081, val_loss: 7.3489
 
-Epoch 00014: val_loss improved from 8.36535 to 8.32250, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 15/100
-69/69 - 9s - loss: 8.2425 - val_loss: 8.3011
+Epoch 00323: val_loss improved from 7.35036 to 7.34892, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 324/1000
+137/137 - 17s - loss: 7.1009 - val_loss: 7.3961
 
- Epoch 15/100 
-	 loss: 8.2425, val_loss: 8.3011
+ Epoch 324/1000 
+	 loss: 7.1009, val_loss: 7.3961
 
-Epoch 00015: val_loss improved from 8.32250 to 8.30112, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 16/100
-69/69 - 9s - loss: 8.2324 - val_loss: 8.4055
+Epoch 00324: val_loss did not improve from 7.34892
+Epoch 325/1000
+137/137 - 16s - loss: 7.0926 - val_loss: 7.3567
 
- Epoch 16/100 
-	 loss: 8.2324, val_loss: 8.4055
+ Epoch 325/1000 
+	 loss: 7.0926, val_loss: 7.3567
 
-Epoch 00016: val_loss did not improve from 8.30112
-Epoch 17/100
-69/69 - 9s - loss: 8.1805 - val_loss: 8.2827
+Epoch 00325: val_loss did not improve from 7.34892
+Epoch 326/1000
+137/137 - 17s - loss: 7.1019 - val_loss: 7.3489
 
- Epoch 17/100 
-	 loss: 8.1805, val_loss: 8.2827
+ Epoch 326/1000 
+	 loss: 7.1019, val_loss: 7.3489
 
-Epoch 00017: val_loss improved from 8.30112 to 8.28270, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 18/100
-69/69 - 9s - loss: 8.1466 - val_loss: 8.2764
+Epoch 00326: val_loss improved from 7.34892 to 7.34890, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 327/1000
+137/137 - 16s - loss: 7.0892 - val_loss: 7.3375
 
- Epoch 18/100 
-	 loss: 8.1466, val_loss: 8.2764
+ Epoch 327/1000 
+	 loss: 7.0892, val_loss: 7.3375
 
-Epoch 00018: val_loss improved from 8.28270 to 8.27641, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 19/100
-69/69 - 9s - loss: 8.1127 - val_loss: 8.1862
+Epoch 00327: val_loss improved from 7.34890 to 7.33755, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 328/1000
+137/137 - 16s - loss: 7.0751 - val_loss: 7.3471
 
- Epoch 19/100 
-	 loss: 8.1127, val_loss: 8.1862
+ Epoch 328/1000 
+	 loss: 7.0751, val_loss: 7.3471
 
-Epoch 00019: val_loss improved from 8.27641 to 8.18620, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 20/100
-69/69 - 9s - loss: 8.1096 - val_loss: 8.2292
+Epoch 00328: val_loss did not improve from 7.33755
+Epoch 329/1000
+137/137 - 16s - loss: 7.0853 - val_loss: 7.4727
 
- Epoch 20/100 
-	 loss: 8.1096, val_loss: 8.2292
+ Epoch 329/1000 
+	 loss: 7.0853, val_loss: 7.4727
 
-Epoch 00020: val_loss did not improve from 8.18620
-Epoch 21/100
-69/69 - 9s - loss: 8.0686 - val_loss: 8.2356
+Epoch 00329: val_loss did not improve from 7.33755
+Epoch 330/1000
+137/137 - 16s - loss: 7.0851 - val_loss: 7.4295
 
- Epoch 21/100 
-	 loss: 8.0686, val_loss: 8.2356
+ Epoch 330/1000 
+	 loss: 7.0851, val_loss: 7.4295
 
-Epoch 00021: val_loss did not improve from 8.18620
-Epoch 22/100
-69/69 - 9s - loss: 8.0498 - val_loss: 8.1388
+Epoch 00330: val_loss did not improve from 7.33755
+Epoch 331/1000
+137/137 - 17s - loss: 7.0943 - val_loss: 7.3866
 
- Epoch 22/100 
-	 loss: 8.0498, val_loss: 8.1388
+ Epoch 331/1000 
+	 loss: 7.0943, val_loss: 7.3866
 
-Epoch 00022: val_loss improved from 8.18620 to 8.13884, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 23/100
-69/69 - 9s - loss: 8.0395 - val_loss: 8.2000
+Epoch 00331: val_loss did not improve from 7.33755
+Epoch 332/1000
+137/137 - 16s - loss: 7.0922 - val_loss: 7.3956
 
- Epoch 23/100 
-	 loss: 8.0395, val_loss: 8.2000
+ Epoch 332/1000 
+	 loss: 7.0922, val_loss: 7.3956
 
-Epoch 00023: val_loss did not improve from 8.13884
-Epoch 24/100
-69/69 - 9s - loss: 8.0273 - val_loss: 8.0898
+Epoch 00332: val_loss did not improve from 7.33755
+Epoch 333/1000
+137/137 - 16s - loss: 7.0805 - val_loss: 7.4028
 
- Epoch 24/100 
-	 loss: 8.0273, val_loss: 8.0898
+ Epoch 333/1000 
+	 loss: 7.0805, val_loss: 7.4028
 
-Epoch 00024: val_loss improved from 8.13884 to 8.08981, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 25/100
-69/69 - 9s - loss: 7.9787 - val_loss: 8.1771
+Epoch 00333: val_loss did not improve from 7.33755
+Epoch 334/1000
+137/137 - 16s - loss: 7.1071 - val_loss: 7.3281
 
- Epoch 25/100 
-	 loss: 7.9787, val_loss: 8.1771
+ Epoch 334/1000 
+	 loss: 7.1071, val_loss: 7.3281
 
-Epoch 00025: val_loss did not improve from 8.08981
-Epoch 26/100
-69/69 - 9s - loss: 7.9607 - val_loss: 8.0848
+Epoch 00334: val_loss improved from 7.33755 to 7.32807, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 335/1000
+137/137 - 16s - loss: 7.0750 - val_loss: 7.3345
 
- Epoch 26/100 
-	 loss: 7.9607, val_loss: 8.0848
+ Epoch 335/1000 
+	 loss: 7.0750, val_loss: 7.3345
 
-Epoch 00026: val_loss improved from 8.08981 to 8.08483, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 27/100
-69/69 - 8s - loss: 7.9488 - val_loss: 8.0778
+Epoch 00335: val_loss did not improve from 7.32807
+Epoch 336/1000
+137/137 - 17s - loss: 7.0837 - val_loss: 7.3344
 
- Epoch 27/100 
-	 loss: 7.9488, val_loss: 8.0778
+ Epoch 336/1000 
+	 loss: 7.0837, val_loss: 7.3344
 
-Epoch 00027: val_loss improved from 8.08483 to 8.07785, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 28/100
-69/69 - 9s - loss: 7.9165 - val_loss: 8.1776
+Epoch 00336: val_loss did not improve from 7.32807
+Epoch 337/1000
+137/137 - 16s - loss: 7.0761 - val_loss: 7.3469
 
- Epoch 28/100 
-	 loss: 7.9165, val_loss: 8.1776
+ Epoch 337/1000 
+	 loss: 7.0761, val_loss: 7.3469
 
-Epoch 00028: val_loss did not improve from 8.07785
-Epoch 29/100
-69/69 - 9s - loss: 7.9499 - val_loss: 8.0501
+Epoch 00337: val_loss did not improve from 7.32807
+Epoch 338/1000
+137/137 - 16s - loss: 7.0951 - val_loss: 7.3814
 
- Epoch 29/100 
-	 loss: 7.9499, val_loss: 8.0501
+ Epoch 338/1000 
+	 loss: 7.0951, val_loss: 7.3814
 
-Epoch 00029: val_loss improved from 8.07785 to 8.05012, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 30/100
-69/69 - 8s - loss: 7.9316 - val_loss: 8.0490
+Epoch 00338: val_loss did not improve from 7.32807
+Epoch 339/1000
+137/137 - 16s - loss: 7.0837 - val_loss: 7.4053
 
- Epoch 30/100 
-	 loss: 7.9316, val_loss: 8.0490
+ Epoch 339/1000 
+	 loss: 7.0837, val_loss: 7.4053
 
-Epoch 00030: val_loss improved from 8.05012 to 8.04897, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 31/100
-69/69 - 9s - loss: 7.8890 - val_loss: 8.0541
+Epoch 00339: val_loss did not improve from 7.32807
+Epoch 340/1000
+137/137 - 15s - loss: 7.0828 - val_loss: 7.3675
 
- Epoch 31/100 
-	 loss: 7.8890, val_loss: 8.0541
+ Epoch 340/1000 
+	 loss: 7.0828, val_loss: 7.3675
 
-Epoch 00031: val_loss did not improve from 8.04897
-Epoch 32/100
-69/69 - 8s - loss: 7.8592 - val_loss: 7.9932
+Epoch 00340: val_loss did not improve from 7.32807
+Epoch 341/1000
+137/137 - 14s - loss: 7.0759 - val_loss: 7.3766
 
- Epoch 32/100 
-	 loss: 7.8592, val_loss: 7.9932
+ Epoch 341/1000 
+	 loss: 7.0759, val_loss: 7.3766
 
-Epoch 00032: val_loss improved from 8.04897 to 7.99319, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 33/100
-69/69 - 9s - loss: 7.8595 - val_loss: 7.9758
+Epoch 00341: val_loss did not improve from 7.32807
+Epoch 342/1000
+137/137 - 14s - loss: 7.0747 - val_loss: 7.3793
 
- Epoch 33/100 
-	 loss: 7.8595, val_loss: 7.9758
+ Epoch 342/1000 
+	 loss: 7.0747, val_loss: 7.3793
 
-Epoch 00033: val_loss improved from 7.99319 to 7.97576, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 34/100
-69/69 - 8s - loss: 7.8320 - val_loss: 7.9870
+Epoch 00342: val_loss did not improve from 7.32807
+Epoch 343/1000
+137/137 - 15s - loss: 7.0696 - val_loss: 7.4258
 
- Epoch 34/100 
-	 loss: 7.8320, val_loss: 7.9870
+ Epoch 343/1000 
+	 loss: 7.0696, val_loss: 7.4258
 
-Epoch 00034: val_loss did not improve from 7.97576
-Epoch 35/100
-69/69 - 9s - loss: 7.8479 - val_loss: 8.0319
+Epoch 00343: val_loss did not improve from 7.32807
+Epoch 344/1000
+137/137 - 15s - loss: 7.0937 - val_loss: 7.3952
 
- Epoch 35/100 
-	 loss: 7.8479, val_loss: 8.0319
+ Epoch 344/1000 
+	 loss: 7.0937, val_loss: 7.3952
 
-Epoch 00035: val_loss did not improve from 7.97576
-Epoch 36/100
-69/69 - 9s - loss: 7.8165 - val_loss: 7.9385
+Epoch 00344: val_loss did not improve from 7.32807
+Epoch 345/1000
+137/137 - 16s - loss: 7.0847 - val_loss: 7.3828
 
- Epoch 36/100 
-	 loss: 7.8165, val_loss: 7.9385
+ Epoch 345/1000 
+	 loss: 7.0847, val_loss: 7.3828
 
-Epoch 00036: val_loss improved from 7.97576 to 7.93846, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 37/100
-69/69 - 9s - loss: 7.8085 - val_loss: 8.0929
+Epoch 00345: val_loss did not improve from 7.32807
+Epoch 346/1000
+137/137 - 16s - loss: 7.0880 - val_loss: 7.3959
 
- Epoch 37/100 
-	 loss: 7.8085, val_loss: 8.0929
+ Epoch 346/1000 
+	 loss: 7.0880, val_loss: 7.3959
 
-Epoch 00037: val_loss did not improve from 7.93846
-Epoch 38/100
-69/69 - 9s - loss: 7.7963 - val_loss: 7.9488
+Epoch 00346: val_loss did not improve from 7.32807
+Epoch 347/1000
+137/137 - 16s - loss: 7.0629 - val_loss: 7.3221
 
- Epoch 38/100 
-	 loss: 7.7963, val_loss: 7.9488
+ Epoch 347/1000 
+	 loss: 7.0629, val_loss: 7.3221
 
-Epoch 00038: val_loss did not improve from 7.93846
-Epoch 39/100
-69/69 - 9s - loss: 7.8024 - val_loss: 8.0438
+Epoch 00347: val_loss improved from 7.32807 to 7.32211, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 348/1000
+137/137 - 16s - loss: 7.0738 - val_loss: 7.3905
 
- Epoch 39/100 
-	 loss: 7.8024, val_loss: 8.0438
+ Epoch 348/1000 
+	 loss: 7.0738, val_loss: 7.3905
 
-Epoch 00039: val_loss did not improve from 7.93846
-Epoch 40/100
-69/69 - 9s - loss: 7.7693 - val_loss: 7.8765
+Epoch 00348: val_loss did not improve from 7.32211
+Epoch 349/1000
+137/137 - 16s - loss: 7.0668 - val_loss: 7.3398
 
- Epoch 40/100 
-	 loss: 7.7693, val_loss: 7.8765
+ Epoch 349/1000 
+	 loss: 7.0668, val_loss: 7.3398
 
-Epoch 00040: val_loss improved from 7.93846 to 7.87647, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 41/100
-69/69 - 8s - loss: 7.7518 - val_loss: 7.8829
+Epoch 00349: val_loss did not improve from 7.32211
+Epoch 350/1000
+137/137 - 16s - loss: 7.0692 - val_loss: 7.3256
 
- Epoch 41/100 
-	 loss: 7.7518, val_loss: 7.8829
+ Epoch 350/1000 
+	 loss: 7.0692, val_loss: 7.3256
 
-Epoch 00041: val_loss did not improve from 7.87647
-Epoch 42/100
-69/69 - 8s - loss: 7.7255 - val_loss: 7.9054
+Epoch 00350: val_loss did not improve from 7.32211
+Epoch 351/1000
+137/137 - 17s - loss: 7.0573 - val_loss: 7.3306
 
- Epoch 42/100 
-	 loss: 7.7255, val_loss: 7.9054
+ Epoch 351/1000 
+	 loss: 7.0573, val_loss: 7.3306
 
-Epoch 00042: val_loss did not improve from 7.87647
-Epoch 43/100
-69/69 - 8s - loss: 7.7287 - val_loss: 7.9336
+Epoch 00351: val_loss did not improve from 7.32211
+Epoch 352/1000
+137/137 - 16s - loss: 7.0665 - val_loss: 7.3688
 
- Epoch 43/100 
-	 loss: 7.7287, val_loss: 7.9336
+ Epoch 352/1000 
+	 loss: 7.0665, val_loss: 7.3688
 
-Epoch 00043: val_loss did not improve from 7.87647
-Epoch 44/100
-69/69 - 9s - loss: 7.7155 - val_loss: 7.8633
+Epoch 00352: val_loss did not improve from 7.32211
+Epoch 353/1000
+137/137 - 16s - loss: 7.0789 - val_loss: 7.3187
 
- Epoch 44/100 
-	 loss: 7.7155, val_loss: 7.8633
+ Epoch 353/1000 
+	 loss: 7.0789, val_loss: 7.3187
 
-Epoch 00044: val_loss improved from 7.87647 to 7.86334, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 45/100
-69/69 - 9s - loss: 7.7140 - val_loss: 7.9392
+Epoch 00353: val_loss improved from 7.32211 to 7.31871, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 354/1000
+137/137 - 17s - loss: 7.0572 - val_loss: 7.3546
 
- Epoch 45/100 
-	 loss: 7.7140, val_loss: 7.9392
+ Epoch 354/1000 
+	 loss: 7.0572, val_loss: 7.3546
 
-Epoch 00045: val_loss did not improve from 7.86334
-Epoch 46/100
-69/69 - 9s - loss: 7.6883 - val_loss: 7.9916
+Epoch 00354: val_loss did not improve from 7.31871
+Epoch 355/1000
+137/137 - 16s - loss: 7.0695 - val_loss: 7.3433
 
- Epoch 46/100 
-	 loss: 7.6883, val_loss: 7.9916
+ Epoch 355/1000 
+	 loss: 7.0695, val_loss: 7.3433
 
-Epoch 00046: val_loss did not improve from 7.86334
-Epoch 47/100
-69/69 - 8s - loss: 7.7167 - val_loss: 7.8556
+Epoch 00355: val_loss did not improve from 7.31871
+Epoch 356/1000
+137/137 - 16s - loss: 7.0617 - val_loss: 7.3442
 
- Epoch 47/100 
-	 loss: 7.7167, val_loss: 7.8556
+ Epoch 356/1000 
+	 loss: 7.0617, val_loss: 7.3442
 
-Epoch 00047: val_loss improved from 7.86334 to 7.85561, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 48/100
-69/69 - 9s - loss: 7.6947 - val_loss: 7.8349
+Epoch 00356: val_loss did not improve from 7.31871
+Epoch 357/1000
+137/137 - 16s - loss: 7.0562 - val_loss: 7.3681
 
- Epoch 48/100 
-	 loss: 7.6947, val_loss: 7.8349
+ Epoch 357/1000 
+	 loss: 7.0562, val_loss: 7.3681
 
-Epoch 00048: val_loss improved from 7.85561 to 7.83495, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 49/100
-69/69 - 8s - loss: 7.6511 - val_loss: 7.8018
+Epoch 00357: val_loss did not improve from 7.31871
+Epoch 358/1000
+137/137 - 16s - loss: 7.0642 - val_loss: 7.3704
 
- Epoch 49/100 
-	 loss: 7.6511, val_loss: 7.8018
+ Epoch 358/1000 
+	 loss: 7.0642, val_loss: 7.3704
 
-Epoch 00049: val_loss improved from 7.83495 to 7.80179, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 50/100
-69/69 - 8s - loss: 7.6692 - val_loss: 7.8602
+Epoch 00358: val_loss did not improve from 7.31871
+Epoch 359/1000
+137/137 - 16s - loss: 7.0656 - val_loss: 7.3479
 
- Epoch 50/100 
-	 loss: 7.6692, val_loss: 7.8602
+ Epoch 359/1000 
+	 loss: 7.0656, val_loss: 7.3479
 
-Epoch 00050: val_loss did not improve from 7.80179
-Epoch 51/100
-69/69 - 8s - loss: 7.6482 - val_loss: 7.8524
+Epoch 00359: val_loss did not improve from 7.31871
+Epoch 360/1000
+137/137 - 15s - loss: 7.0494 - val_loss: 7.3766
 
- Epoch 51/100 
-	 loss: 7.6482, val_loss: 7.8524
+ Epoch 360/1000 
+	 loss: 7.0494, val_loss: 7.3766
 
-Epoch 00051: val_loss did not improve from 7.80179
-Epoch 52/100
-69/69 - 9s - loss: 7.6535 - val_loss: 7.8165
+Epoch 00360: val_loss did not improve from 7.31871
+Epoch 361/1000
+137/137 - 16s - loss: 7.0546 - val_loss: 7.3492
 
- Epoch 52/100 
-	 loss: 7.6535, val_loss: 7.8165
+ Epoch 361/1000 
+	 loss: 7.0546, val_loss: 7.3492
 
-Epoch 00052: val_loss did not improve from 7.80179
-Epoch 53/100
-69/69 - 9s - loss: 7.6255 - val_loss: 7.8031
+Epoch 00361: val_loss did not improve from 7.31871
+Epoch 362/1000
+137/137 - 16s - loss: 7.0787 - val_loss: 7.3259
 
- Epoch 53/100 
-	 loss: 7.6255, val_loss: 7.8031
+ Epoch 362/1000 
+	 loss: 7.0787, val_loss: 7.3259
 
-Epoch 00053: val_loss did not improve from 7.80179
-Epoch 54/100
-69/69 - 8s - loss: 7.6459 - val_loss: 7.8077
+Epoch 00362: val_loss did not improve from 7.31871
+Epoch 363/1000
+137/137 - 16s - loss: 7.0478 - val_loss: 7.3117
 
- Epoch 54/100 
-	 loss: 7.6459, val_loss: 7.8077
+ Epoch 363/1000 
+	 loss: 7.0478, val_loss: 7.3117
 
-Epoch 00054: val_loss did not improve from 7.80179
-Epoch 55/100
-69/69 - 9s - loss: 7.6212 - val_loss: 7.8308
+Epoch 00363: val_loss improved from 7.31871 to 7.31170, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 364/1000
+137/137 - 16s - loss: 7.0886 - val_loss: 7.3788
 
- Epoch 55/100 
-	 loss: 7.6212, val_loss: 7.8308
+ Epoch 364/1000 
+	 loss: 7.0886, val_loss: 7.3788
 
-Epoch 00055: val_loss did not improve from 7.80179
-Epoch 56/100
-69/69 - 8s - loss: 7.6180 - val_loss: 7.8181
+Epoch 00364: val_loss did not improve from 7.31170
+Epoch 365/1000
+137/137 - 16s - loss: 7.0411 - val_loss: 7.4463
 
- Epoch 56/100 
-	 loss: 7.6180, val_loss: 7.8181
+ Epoch 365/1000 
+	 loss: 7.0411, val_loss: 7.4463
 
-Epoch 00056: val_loss did not improve from 7.80179
-Epoch 57/100
-69/69 - 9s - loss: 7.6310 - val_loss: 7.8208
+Epoch 00365: val_loss did not improve from 7.31170
+Epoch 366/1000
+137/137 - 17s - loss: 7.0809 - val_loss: 7.4719
 
- Epoch 57/100 
-	 loss: 7.6310, val_loss: 7.8208
+ Epoch 366/1000 
+	 loss: 7.0809, val_loss: 7.4719
 
-Epoch 00057: val_loss did not improve from 7.80179
-Epoch 58/100
-69/69 - 9s - loss: 7.5864 - val_loss: 7.7648
+Epoch 00366: val_loss did not improve from 7.31170
+Epoch 367/1000
+137/137 - 17s - loss: 7.0580 - val_loss: 7.3301
 
- Epoch 58/100 
-	 loss: 7.5864, val_loss: 7.7648
+ Epoch 367/1000 
+	 loss: 7.0580, val_loss: 7.3301
 
-Epoch 00058: val_loss improved from 7.80179 to 7.76476, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 59/100
-69/69 - 9s - loss: 7.5734 - val_loss: 7.7831
+Epoch 00367: val_loss did not improve from 7.31170
+Epoch 368/1000
+137/137 - 16s - loss: 7.0488 - val_loss: 7.3456
 
- Epoch 59/100 
-	 loss: 7.5734, val_loss: 7.7831
+ Epoch 368/1000 
+	 loss: 7.0488, val_loss: 7.3456
 
-Epoch 00059: val_loss did not improve from 7.76476
-Epoch 60/100
-69/69 - 9s - loss: 7.5856 - val_loss: 7.8232
+Epoch 00368: val_loss did not improve from 7.31170
+Epoch 369/1000
+137/137 - 12s - loss: 7.0454 - val_loss: 7.3367
 
- Epoch 60/100 
-	 loss: 7.5856, val_loss: 7.8232
+ Epoch 369/1000 
+	 loss: 7.0454, val_loss: 7.3367
 
-Epoch 00060: val_loss did not improve from 7.76476
-Epoch 61/100
-69/69 - 8s - loss: 7.5988 - val_loss: 7.8012
+Epoch 00369: val_loss did not improve from 7.31170
+Epoch 370/1000
+137/137 - 11s - loss: 7.0466 - val_loss: 7.3255
 
- Epoch 61/100 
-	 loss: 7.5988, val_loss: 7.8012
+ Epoch 370/1000 
+	 loss: 7.0466, val_loss: 7.3255
 
-Epoch 00061: val_loss did not improve from 7.76476
-Epoch 62/100
-69/69 - 9s - loss: 7.5583 - val_loss: 7.7525
+Epoch 00370: val_loss did not improve from 7.31170
+Epoch 371/1000
+137/137 - 11s - loss: 7.0693 - val_loss: 7.3072
 
- Epoch 62/100 
-	 loss: 7.5583, val_loss: 7.7525
+ Epoch 371/1000 
+	 loss: 7.0693, val_loss: 7.3072
 
-Epoch 00062: val_loss improved from 7.76476 to 7.75253, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 63/100
-69/69 - 8s - loss: 7.5443 - val_loss: 7.7616
+Epoch 00371: val_loss improved from 7.31170 to 7.30724, saving model to ../../results/MsplineN/Z1j/run_1//model_checkpoint/weights
+Epoch 372/1000
+137/137 - 10s - loss: 7.0417 - val_loss: 7.3524
 
- Epoch 63/100 
-	 loss: 7.5443, val_loss: 7.7616
+ Epoch 372/1000 
+	 loss: 7.0417, val_loss: 7.3524
 
-Epoch 00063: val_loss did not improve from 7.75253
-Epoch 64/100
-69/69 - 9s - loss: 7.5624 - val_loss: 7.7515
+Epoch 00372: val_loss did not improve from 7.30724
+Epoch 373/1000
+137/137 - 15s - loss: 7.0451 - val_loss: 7.3607
 
- Epoch 64/100 
-	 loss: 7.5624, val_loss: 7.7515
+ Epoch 373/1000 
+	 loss: 7.0451, val_loss: 7.3607
 
-Epoch 00064: val_loss improved from 7.75253 to 7.75146, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 65/100
-69/69 - 9s - loss: 7.5428 - val_loss: 7.7816
+Epoch 00373: val_loss did not improve from 7.30724
+Epoch 374/1000
+137/137 - 16s - loss: 7.0438 - val_loss: 7.3673
 
- Epoch 65/100 
-	 loss: 7.5428, val_loss: 7.7816
+ Epoch 374/1000 
+	 loss: 7.0438, val_loss: 7.3673
 
-Epoch 00065: val_loss did not improve from 7.75146
-Epoch 66/100
-69/69 - 8s - loss: 7.5431 - val_loss: 7.7360
+Epoch 00374: val_loss did not improve from 7.30724
+Epoch 375/1000
+137/137 - 16s - loss: 7.0527 - val_loss: 7.3440
 
- Epoch 66/100 
-	 loss: 7.5431, val_loss: 7.7360
+ Epoch 375/1000 
+	 loss: 7.0527, val_loss: 7.3440
 
-Epoch 00066: val_loss improved from 7.75146 to 7.73599, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 67/100
-69/69 - 9s - loss: 7.5313 - val_loss: 7.6870
+Epoch 00375: val_loss did not improve from 7.30724
+Epoch 376/1000
+137/137 - 16s - loss: 7.0406 - val_loss: 7.3082
 
- Epoch 67/100 
-	 loss: 7.5313, val_loss: 7.6870
+ Epoch 376/1000 
+	 loss: 7.0406, val_loss: 7.3082
 
-Epoch 00067: val_loss improved from 7.73599 to 7.68698, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 68/100
-69/69 - 8s - loss: 7.5198 - val_loss: 7.7229
+Epoch 00376: val_loss did not improve from 7.30724
+Epoch 377/1000
+137/137 - 16s - loss: 7.0544 - val_loss: 7.3167
 
- Epoch 68/100 
-	 loss: 7.5198, val_loss: 7.7229
+ Epoch 377/1000 
+	 loss: 7.0544, val_loss: 7.3167
 
-Epoch 00068: val_loss did not improve from 7.68698
-Epoch 69/100
-69/69 - 9s - loss: 7.5109 - val_loss: 7.7272
+Epoch 00377: val_loss did not improve from 7.30724
+Epoch 378/1000
+137/137 - 16s - loss: 7.0357 - val_loss: 7.3590
 
- Epoch 69/100 
-	 loss: 7.5109, val_loss: 7.7272
+ Epoch 378/1000 
+	 loss: 7.0357, val_loss: 7.3590
 
-Epoch 00069: val_loss did not improve from 7.68698
-Epoch 70/100
-69/69 - 9s - loss: 7.5078 - val_loss: 7.7581
+Epoch 00378: val_loss did not improve from 7.30724
+Epoch 379/1000
+137/137 - 16s - loss: 7.0792 - val_loss: 7.3223
 
- Epoch 70/100 
-	 loss: 7.5078, val_loss: 7.7581
+ Epoch 379/1000 
+	 loss: 7.0792, val_loss: 7.3223
 
-Epoch 00070: val_loss did not improve from 7.68698
-Epoch 71/100
-69/69 - 9s - loss: 7.4911 - val_loss: 7.7122
-
- Epoch 71/100 
-	 loss: 7.4911, val_loss: 7.7122
-
-Epoch 00071: val_loss did not improve from 7.68698
-Epoch 72/100
-69/69 - 8s - loss: 7.4973 - val_loss: 7.8311
-
- Epoch 72/100 
-	 loss: 7.4973, val_loss: 7.8311
-
-Epoch 00072: val_loss did not improve from 7.68698
-Epoch 73/100
-69/69 - 8s - loss: 7.5175 - val_loss: 7.6960
-
- Epoch 73/100 
-	 loss: 7.5175, val_loss: 7.6960
-
-Epoch 00073: val_loss did not improve from 7.68698
-Epoch 74/100
-69/69 - 9s - loss: 7.4679 - val_loss: 7.7899
-
- Epoch 74/100 
-	 loss: 7.4679, val_loss: 7.7899
-
-Epoch 00074: val_loss did not improve from 7.68698
-Epoch 75/100
-69/69 - 9s - loss: 7.4807 - val_loss: 7.6674
-
- Epoch 75/100 
-	 loss: 7.4807, val_loss: 7.6674
-
-Epoch 00075: val_loss improved from 7.68698 to 7.66736, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 76/100
-69/69 - 9s - loss: 7.4658 - val_loss: 7.8096
-
- Epoch 76/100 
-	 loss: 7.4658, val_loss: 7.8096
-
-Epoch 00076: val_loss did not improve from 7.66736
-Epoch 77/100
-69/69 - 9s - loss: 7.4880 - val_loss: 7.6796
-
- Epoch 77/100 
-	 loss: 7.4880, val_loss: 7.6796
-
-Epoch 00077: val_loss did not improve from 7.66736
-Epoch 78/100
-69/69 - 9s - loss: 7.4468 - val_loss: 7.6852
-
- Epoch 78/100 
-	 loss: 7.4468, val_loss: 7.6852
-
-Epoch 00078: val_loss did not improve from 7.66736
-Epoch 79/100
-69/69 - 9s - loss: 7.4426 - val_loss: 7.6657
-
- Epoch 79/100 
-	 loss: 7.4426, val_loss: 7.6657
-
-Epoch 00079: val_loss improved from 7.66736 to 7.66572, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 80/100
-69/69 - 8s - loss: 7.4642 - val_loss: 7.7042
-
- Epoch 80/100 
-	 loss: 7.4642, val_loss: 7.7042
-
-Epoch 00080: val_loss did not improve from 7.66572
-Epoch 81/100
-69/69 - 9s - loss: 7.4481 - val_loss: 7.6683
-
- Epoch 81/100 
-	 loss: 7.4481, val_loss: 7.6683
-
-Epoch 00081: val_loss did not improve from 7.66572
-Epoch 82/100
-69/69 - 9s - loss: 7.4409 - val_loss: 7.6793
-
- Epoch 82/100 
-	 loss: 7.4409, val_loss: 7.6793
-
-Epoch 00082: val_loss did not improve from 7.66572
-Epoch 83/100
-69/69 - 9s - loss: 7.4357 - val_loss: 7.6599
-
- Epoch 83/100 
-	 loss: 7.4357, val_loss: 7.6599
-
-Epoch 00083: val_loss improved from 7.66572 to 7.65994, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 84/100
-69/69 - 9s - loss: 7.4252 - val_loss: 7.7241
-
- Epoch 84/100 
-	 loss: 7.4252, val_loss: 7.7241
-
-Epoch 00084: val_loss did not improve from 7.65994
-Epoch 85/100
-69/69 - 9s - loss: 7.4297 - val_loss: 7.7997
-
- Epoch 85/100 
-	 loss: 7.4297, val_loss: 7.7997
-
-Epoch 00085: val_loss did not improve from 7.65994
-Epoch 86/100
-69/69 - 9s - loss: 7.4293 - val_loss: 7.6750
-
- Epoch 86/100 
-	 loss: 7.4293, val_loss: 7.6750
-
-Epoch 00086: val_loss did not improve from 7.65994
-Epoch 87/100
-69/69 - 8s - loss: 7.4539 - val_loss: 7.6747
-
- Epoch 87/100 
-	 loss: 7.4539, val_loss: 7.6747
-
-Epoch 00087: val_loss did not improve from 7.65994
-Epoch 88/100
-69/69 - 9s - loss: 7.4273 - val_loss: 7.6214
-
- Epoch 88/100 
-	 loss: 7.4273, val_loss: 7.6214
-
-Epoch 00088: val_loss improved from 7.65994 to 7.62138, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 89/100
-69/69 - 9s - loss: 7.4012 - val_loss: 7.6522
-
- Epoch 89/100 
-	 loss: 7.4012, val_loss: 7.6522
-
-Epoch 00089: val_loss did not improve from 7.62138
-Epoch 90/100
-69/69 - 9s - loss: 7.3901 - val_loss: 7.6762
-
- Epoch 90/100 
-	 loss: 7.3901, val_loss: 7.6762
-
-Epoch 00090: val_loss did not improve from 7.62138
-Epoch 91/100
-69/69 - 8s - loss: 7.3931 - val_loss: 7.6281
-
- Epoch 91/100 
-	 loss: 7.3931, val_loss: 7.6281
-
-Epoch 00091: val_loss did not improve from 7.62138
-Epoch 92/100
-69/69 - 9s - loss: 7.3958 - val_loss: 7.6542
-
- Epoch 92/100 
-	 loss: 7.3958, val_loss: 7.6542
-
-Epoch 00092: val_loss did not improve from 7.62138
-Epoch 93/100
-69/69 - 8s - loss: 7.3909 - val_loss: 7.6168
-
- Epoch 93/100 
-	 loss: 7.3909, val_loss: 7.6168
-
-Epoch 00093: val_loss improved from 7.62138 to 7.61682, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 94/100
-69/69 - 9s - loss: 7.4011 - val_loss: 7.8090
-
- Epoch 94/100 
-	 loss: 7.4011, val_loss: 7.8090
-
-Epoch 00094: val_loss did not improve from 7.61682
-Epoch 95/100
-69/69 - 8s - loss: 7.4011 - val_loss: 7.6186
-
- Epoch 95/100 
-	 loss: 7.4011, val_loss: 7.6186
-
-Epoch 00095: val_loss did not improve from 7.61682
-Epoch 96/100
-69/69 - 9s - loss: 7.3962 - val_loss: 7.6607
-
- Epoch 96/100 
-	 loss: 7.3962, val_loss: 7.6607
-
-Epoch 00096: val_loss did not improve from 7.61682
-Epoch 97/100
-69/69 - 9s - loss: 7.3728 - val_loss: 7.6194
-
- Epoch 97/100 
-	 loss: 7.3728, val_loss: 7.6194
-
-Epoch 00097: val_loss did not improve from 7.61682
-Epoch 98/100
-69/69 - 9s - loss: 7.3602 - val_loss: 7.5750
-
- Epoch 98/100 
-	 loss: 7.3602, val_loss: 7.5750
-
-Epoch 00098: val_loss improved from 7.61682 to 7.57503, saving model to ../../results/MsplineN/Z1j/run_4//model_checkpoint/weights
-Epoch 99/100
-69/69 - 9s - loss: 7.3410 - val_loss: 7.6068
-
- Epoch 99/100 
-	 loss: 7.3410, val_loss: 7.6068
-
-Epoch 00099: val_loss did not improve from 7.57503
-Epoch 100/100
-69/69 - 9s - loss: 7.3524 - val_loss: 7.7849
-
- Epoch 100/100 
-	 loss: 7.3524, val_loss: 7.7849
-
-Epoch 00100: val_loss did not improve from 7.57503
-Model trained in 916.2812987109646 s.
-
-===========
-Computing predictions
-===========
-
-saving samples...
-samples saved
-Test first sample: [-41.082973   65.6094    273.34494   -37.479523  -20.647364   70.64896
-  71.96081   -40.31492     2.8742433]
-NF first sample: [-46.876404 -53.45769  216.7697    61.70991  -37.089943 179.32274
- -16.880556  47.098557  23.93805 ]
-Results dict saved
-Logger saved
-Results saved
-Details saved
-===========
-Run failed
-
-Exception type : IndexError 
-Exception message : index 2 is out of bounds for axis 0 with size 2
-Stack trace : ['File : c_Main_MsplineN_Z1j.py , Line : 185, Func.Name : <module>, Message : Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)', "File : ../../../code/Plotters.py , Line : 206, Func.Name : marginal_plot, Message : axs[row,column].hist(target_test_data[:,dim], bins=n_bins,density=True,histtype='step',color='red')"]
-===========
-
-===========
-Running 5 / 8 with hyperparameters:
- ndims= 9 
- seed_train= 0 
- nsamples= 100000 
- correlation= None 
- activation= relu 
- eps_regulariser= 0 
- regulariser= None 
- bijector= MsplineN 
- nbijectors= 10 
- spline_knots= 8 
- range_min= -5 
- batch_size= 512 
- hidden_layers= [128, 128, 128] epocs_input= 100 
-===========
-
-Training model.
-
-Train first sample: [ 1.0665622  -0.23791106 -0.08094089 -0.9928192  -0.42125896  0.08020908
- -0.64648056  0.92785245  1.1443974 ]
-KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_13'), name='input_13', description="created by layer 'input_13'")
-####### log_prob####
-KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_2181/AddV2:0', description="created by layer 'tf.__operators__.add_2181'")
-Not weights found. Training from scratch.
-No history found. Generating new history.
-Epoch 1/100
-137/137 - 119s - loss: 12.3756 - val_loss: 10.5247
-
- Epoch 1/100 
-	 loss: 12.3756, val_loss: 10.5247
-
-Epoch 00001: val_loss improved from inf to 10.52475, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 2/100
-137/137 - 33s - loss: 10.0642 - val_loss: 9.7329
-
- Epoch 2/100 
-	 loss: 10.0642, val_loss: 9.7329
-
-Epoch 00002: val_loss improved from 10.52475 to 9.73294, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 3/100
-137/137 - 33s - loss: 9.5678 - val_loss: 9.5428
-
- Epoch 3/100 
-	 loss: 9.5678, val_loss: 9.5428
-
-Epoch 00003: val_loss improved from 9.73294 to 9.54279, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 4/100
-137/137 - 34s - loss: 9.3103 - val_loss: 9.2391
-
- Epoch 4/100 
-	 loss: 9.3103, val_loss: 9.2391
-
-Epoch 00004: val_loss improved from 9.54279 to 9.23913, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 5/100
-137/137 - 34s - loss: 9.1516 - val_loss: 9.1028
-
- Epoch 5/100 
-	 loss: 9.1516, val_loss: 9.1028
-
-Epoch 00005: val_loss improved from 9.23913 to 9.10280, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 6/100
-137/137 - 32s - loss: 9.0464 - val_loss: 9.0279
-
- Epoch 6/100 
-	 loss: 9.0464, val_loss: 9.0279
-
-Epoch 00006: val_loss improved from 9.10280 to 9.02793, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 7/100
-137/137 - 34s - loss: 8.9911 - val_loss: 9.0664
-
- Epoch 7/100 
-	 loss: 8.9911, val_loss: 9.0664
-
-Epoch 00007: val_loss did not improve from 9.02793
-Epoch 8/100
-137/137 - 32s - loss: 8.8952 - val_loss: 8.9646
-
- Epoch 8/100 
-	 loss: 8.8952, val_loss: 8.9646
-
-Epoch 00008: val_loss improved from 9.02793 to 8.96461, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 9/100
-137/137 - 33s - loss: 8.8521 - val_loss: 8.8461
-
- Epoch 9/100 
-	 loss: 8.8521, val_loss: 8.8461
-
-Epoch 00009: val_loss improved from 8.96461 to 8.84610, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 10/100
-137/137 - 33s - loss: 8.7903 - val_loss: 8.8222
-
- Epoch 10/100 
-	 loss: 8.7903, val_loss: 8.8222
-
-Epoch 00010: val_loss improved from 8.84610 to 8.82223, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 11/100
-137/137 - 32s - loss: 8.7633 - val_loss: 8.7706
-
- Epoch 11/100 
-	 loss: 8.7633, val_loss: 8.7706
-
-Epoch 00011: val_loss improved from 8.82223 to 8.77055, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 12/100
-137/137 - 32s - loss: 8.7092 - val_loss: 8.9265
-
- Epoch 12/100 
-	 loss: 8.7092, val_loss: 8.9265
-
-Epoch 00012: val_loss did not improve from 8.77055
-Epoch 13/100
-137/137 - 34s - loss: 8.6778 - val_loss: 8.7163
-
- Epoch 13/100 
-	 loss: 8.6778, val_loss: 8.7163
-
-Epoch 00013: val_loss improved from 8.77055 to 8.71633, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 14/100
-137/137 - 31s - loss: 8.6316 - val_loss: 8.6639
-
- Epoch 14/100 
-	 loss: 8.6316, val_loss: 8.6639
-
-Epoch 00014: val_loss improved from 8.71633 to 8.66388, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 15/100
-137/137 - 32s - loss: 8.5739 - val_loss: 8.6470
-
- Epoch 15/100 
-	 loss: 8.5739, val_loss: 8.6470
-
-Epoch 00015: val_loss improved from 8.66388 to 8.64698, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 16/100
-137/137 - 31s - loss: 8.5480 - val_loss: 8.5844
-
- Epoch 16/100 
-	 loss: 8.5480, val_loss: 8.5844
-
-Epoch 00016: val_loss improved from 8.64698 to 8.58437, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 17/100
-137/137 - 32s - loss: 8.5177 - val_loss: 8.5711
-
- Epoch 17/100 
-	 loss: 8.5177, val_loss: 8.5711
-
-Epoch 00017: val_loss improved from 8.58437 to 8.57115, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 18/100
-137/137 - 32s - loss: 8.4929 - val_loss: 8.5296
-
- Epoch 18/100 
-	 loss: 8.4929, val_loss: 8.5296
-
-Epoch 00018: val_loss improved from 8.57115 to 8.52956, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 19/100
-137/137 - 32s - loss: 8.4380 - val_loss: 8.5175
-
- Epoch 19/100 
-	 loss: 8.4380, val_loss: 8.5175
-
-Epoch 00019: val_loss improved from 8.52956 to 8.51751, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 20/100
-137/137 - 32s - loss: 8.4110 - val_loss: 8.4631
-
- Epoch 20/100 
-	 loss: 8.4110, val_loss: 8.4631
-
-Epoch 00020: val_loss improved from 8.51751 to 8.46312, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 21/100
-137/137 - 32s - loss: 8.3887 - val_loss: 8.4427
-
- Epoch 21/100 
-	 loss: 8.3887, val_loss: 8.4427
-
-Epoch 00021: val_loss improved from 8.46312 to 8.44268, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 22/100
-137/137 - 32s - loss: 8.3629 - val_loss: 8.4003
-
- Epoch 22/100 
-	 loss: 8.3629, val_loss: 8.4003
-
-Epoch 00022: val_loss improved from 8.44268 to 8.40033, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 23/100
-137/137 - 32s - loss: 8.3403 - val_loss: 8.4061
-
- Epoch 23/100 
-	 loss: 8.3403, val_loss: 8.4061
-
-Epoch 00023: val_loss did not improve from 8.40033
-Epoch 24/100
-137/137 - 32s - loss: 8.3216 - val_loss: 8.3547
-
- Epoch 24/100 
-	 loss: 8.3216, val_loss: 8.3547
-
-Epoch 00024: val_loss improved from 8.40033 to 8.35471, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 25/100
-137/137 - 32s - loss: 8.3137 - val_loss: 8.3547
-
- Epoch 25/100 
-	 loss: 8.3137, val_loss: 8.3547
-
-Epoch 00025: val_loss did not improve from 8.35471
-Epoch 26/100
-137/137 - 32s - loss: 8.2844 - val_loss: 8.3063
-
- Epoch 26/100 
-	 loss: 8.2844, val_loss: 8.3063
-
-Epoch 00026: val_loss improved from 8.35471 to 8.30628, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 27/100
-137/137 - 32s - loss: 8.2193 - val_loss: 8.3200
-
- Epoch 27/100 
-	 loss: 8.2193, val_loss: 8.3200
-
-Epoch 00027: val_loss did not improve from 8.30628
-Epoch 28/100
-137/137 - 32s - loss: 8.2168 - val_loss: 8.2726
-
- Epoch 28/100 
-	 loss: 8.2168, val_loss: 8.2726
-
-Epoch 00028: val_loss improved from 8.30628 to 8.27263, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 29/100
-137/137 - 32s - loss: 8.1949 - val_loss: 8.2446
-
- Epoch 29/100 
-	 loss: 8.1949, val_loss: 8.2446
-
-Epoch 00029: val_loss improved from 8.27263 to 8.24464, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 30/100
-137/137 - 32s - loss: 8.1813 - val_loss: 8.2657
-
- Epoch 30/100 
-	 loss: 8.1813, val_loss: 8.2657
-
-Epoch 00030: val_loss did not improve from 8.24464
-Epoch 31/100
-137/137 - 33s - loss: 8.1539 - val_loss: 8.3095
-
- Epoch 31/100 
-	 loss: 8.1539, val_loss: 8.3095
-
-Epoch 00031: val_loss did not improve from 8.24464
-Epoch 32/100
-137/137 - 33s - loss: 8.1607 - val_loss: 8.1784
-
- Epoch 32/100 
-	 loss: 8.1607, val_loss: 8.1784
-
-Epoch 00032: val_loss improved from 8.24464 to 8.17837, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 33/100
-137/137 - 32s - loss: 8.1024 - val_loss: 8.1454
-
- Epoch 33/100 
-	 loss: 8.1024, val_loss: 8.1454
-
-Epoch 00033: val_loss improved from 8.17837 to 8.14537, saving model to ../../results/MsplineN/Z1j/run_5//model_checkpoint/weights
-Epoch 34/100
-137/137 - 32s - loss: 8.0933 - val_loss: 8.2044
+Epoch 00379: val_loss did not improve from 7.30724
+Epoch 380/1000
+137/137 - 16s - loss: 7.0401 - val_loss: 7.3096

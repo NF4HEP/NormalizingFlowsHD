@@ -77,6 +77,9 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
 
 
     #load_weights=True
+    training_time = 0
+    train_loss=[]
+    val_loss=[]
     if load_weights==True:
     
         try:
@@ -92,11 +95,10 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
                 json_file = json.load(f)
                 train_loss = json_file['train_loss_history']
                 val_loss = json_file['val_loss_history']
+                training_time = json_file['time']
                 print('Found and loaded existing history.')
         except:
             print('No history found. Generating new history.')
-            train_loss=[]
-            val_loss=[]
 
     ns = X_data.shape[0]
     if batch_size is None:
@@ -139,6 +141,7 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
     else:
         callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint,StopOnNAN]
 
+    start = timer()
     history = model.fit(x=X_data,
                         y=np.zeros((ns, 0), dtype=np.float32),
                         batch_size=batch_size,
@@ -147,11 +150,13 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
                         shuffle=True,
                         verbose=2,
                         callbacks=callbacks)
+    end = timer()
+    training_time = training_time + end - start
     
     history.history['loss']=train_loss+history.history['loss']
     history.history['val_loss']=val_loss+history.history['val_loss']
     
-    return history
+    return history, training_time
 
 #######custom training
 

@@ -20,7 +20,7 @@ def reset_random_seeds(seed):
     np.random.seed(seed)
     random.seed(seed)
 
-def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,training_device):
+def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,prediction_time,training_device):
     """
     Function that writes results to the a dictionary.
     """
@@ -54,9 +54,10 @@ def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,co
     results_dict.get('fn_list').append(fn_list)
     results_dict.get('epochs_input').append(epochs_input)
     results_dict.get('epochs_output').append(epochs_output)
-    results_dict.get('time').append(training_time)
+    results_dict.get('training_time').append(training_time)
     results_dict.get('hidden_layers').append(hidden_layers)
     results_dict.get('batch_size').append(batch_size)
+    results_dict.get('prediction_time').append(training_device)
     results_dict.get('training_device').append(training_device)
     return results_dict
 
@@ -250,15 +251,18 @@ def convert_types_dict(d):
             dd[k] = np.array(v).tolist()
     return dd
 
-def save_details_json(hyperparams_dict,results_dict,train_loss_history,val_loss_history,path_to_results):
+def save_details_json(hyperparams_dict,results_dict,train_loss_history,val_loss_history,lr_history,path_to_results):
     """ Save results and hyperparameters json
     """
     if val_loss_history is None:
         val_loss_history = []
     if train_loss_history is None:
         train_loss_history = []
+    if lr_history is None:
+        lr_history = []
     train_loss_history = np.array(train_loss_history)
     val_loss_history = np.array(val_loss_history)
+    lr_history = np.array(lr_history)
     if val_loss_history.tolist() != []:
         best_val_loss = np.min(val_loss_history)
         try:
@@ -285,6 +289,7 @@ def save_details_json(hyperparams_dict,results_dict,train_loss_history,val_loss_
     details_dict = {**hd,**rd,
                     "train_loss_history": train_loss_history.tolist(),
                     "val_loss_history": val_loss_history.tolist(),
+                    "lr_history": lr_history.tolist(), 
                     "best_train_loss": best_train_loss,
                     "best_val_loss": best_val_loss,
                     "best_epoch": position_best_val_loss}
