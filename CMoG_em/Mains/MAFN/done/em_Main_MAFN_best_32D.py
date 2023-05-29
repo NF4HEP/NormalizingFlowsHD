@@ -18,6 +18,10 @@ import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Uti
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
+from tensorflow.python.client import device_lib
+local_device_protos = device_lib.list_local_devices()
+available_gpus = [[x.name, x.physical_device_desc] for x in local_device_protos if x.device_type == 'GPU'] # type: ignore
+training_device = str(available_gpus[0])
 
 def MixtureGaussian(ncomp,ndims,seed=0):
     targ_dist = MixtureDistributions.MixMultiNormal1(ncomp,ndims,seed=seed)
@@ -186,7 +190,7 @@ for ndims in ndims_list:
                                                                 print("Test first sample:",X_data_test[0])
                                                                 print("NF first sample:",X_data_nf[0])
                                                                 ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list=Metrics.ComputeMetrics(X_data_test,X_data_nf)
-                                                                results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time)
+                                                                results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,training_device)
                                                                 results_dict_saved=True
                                                                 print("Results dict saved")
                                                                 Utils.logger(log_file_name,results_dict)

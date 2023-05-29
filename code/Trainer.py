@@ -55,7 +55,7 @@ def loader(nf_dist,path_to_weights):
 
 
 ###training_routine
-def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n_disp,path_to_results,load_weights=False,load_weights_path=None,lr=.001,patience=30,min_delta_patience=0.001,reduce_lr_factor=0.2,seed=0):
+def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n_disp,path_to_results,load_weights=False,load_weights_path=None,lr=.001,patience=30,min_delta_patience=0.001,reduce_lr_factor=0.2,seed=0,stop_on_nan=True):
     Utils.reset_random_seeds(seed)
     #log_file_train=open('train_log.txt','w')
     #log_file_train.write('### '+str(ndims)+' ### \n')
@@ -134,6 +134,10 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
                 
     StopOnNAN=tf.keras.callbacks.TerminateOnNaN()
 
+    if stop_on_nan==False:
+        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint]
+    else:
+        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint,StopOnNAN]
 
     history = model.fit(x=X_data,
                         y=np.zeros((ns, 0), dtype=np.float32),
@@ -142,7 +146,7 @@ def graph_execution(ndims,trainable_distribution, X_data,n_epochs, batch_size, n
                         validation_split=0.3,
                         shuffle=True,
                         verbose=2,
-                        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint,StopOnNAN])
+                        callbacks=callbacks)
     
     history.history['loss']=train_loss+history.history['loss']
     history.history['val_loss']=val_loss+history.history['val_loss']

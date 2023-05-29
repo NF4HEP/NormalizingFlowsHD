@@ -18,6 +18,10 @@ import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Uti
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
+from tensorflow.python.client import device_lib
+local_device_protos = device_lib.list_local_devices()
+available_gpus = [[x.name, x.physical_device_desc] for x in local_device_protos if x.device_type == 'GPU'] # type: ignore
+training_device = str(available_gpus[0])
 
 def MixtureGaussian(ncomp,ndims,seed=0):
     targ_dist = MixtureDistributions.MixMultiNormal1(ncomp,ndims,seed=seed)
@@ -56,8 +60,8 @@ except:
     print('file exists')
 
 ### Initialize dictionaries ###
-results_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ks_list':[],'ad_mean':[],'ad_std':[],'ad_list':[],'wd_mean':[],'wd_std':[],'wd_list':[],'swd_mean':[],'swd_std':[],'swd_list':[],'fn_mean':[],'fn_std':[],'fn_list':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[]}
-hyperparams_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'spline_knots':[],'range_min':[],'hidden_layers':[],'batch_size':[],'activation':[],'eps_regulariser':[],'regulariser':[],'dist_seed':[],'test_seed':[]}
+results_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ks_list':[],'ad_mean':[],'ad_std':[],'ad_list':[],'wd_mean':[],'wd_std':[],'wd_list':[],'swd_mean':[],'swd_std':[],'swd_list':[],'fn_mean':[],'fn_std':[],'fn_list':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'time':[],'training_device':[]}
+hyperparams_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'spline_knots':[],'range_min':[],'hidden_layers':[],'batch_size':[],'activation':[],'eps_regulariser':[],'regulariser':[],'dist_seed':[],'test_seed':[],'training_device':[]} 
 
 ### Create 'log' file ####
 log_file_name = Utils.create_log_file(mother_output_dir,results_dict)
@@ -112,7 +116,7 @@ for seed_train in seeds_list:
                                         end=timer()
                                         train_data_time=end-start
                                         print("Train data generated in",train_data_time,"s.\n")       
-                                        Utils.save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,seed_dist,seed_test)
+                                        Utils.save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,seed_dist,seed_test,training_device)
                                         print("===========\nRunning",run_number,"/",n_runs,"with hyperparameters:\n",
                                               "ndims=",ndims,"\n",
                                               "seed_train=",seed_train,"\n",
@@ -128,6 +132,7 @@ for seed_train in seeds_list:
                                               "batch_size=",batch_size,"\n",
                                               "hidden_layers=",hidden_layers,
                                               "epocs_input=",epochs,
+                                              "training_device=",training_device,
                                               "\n===========\n")
                                         bijector=Bijectors.ChooseBijector(bijector_name,ndims,spline_knots,nbijectors,range_min,hidden_layers,activation,regulariser,eps_regulariser)
                                         Utils.save_bijector_info(bijector,path_to_results)
@@ -175,7 +180,7 @@ for seed_train in seeds_list:
                                         print("Test first sample:",X_data_test[0])
                                         print("NF first sample:",X_data_nf[0])
                                         ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list=Metrics.ComputeMetrics(X_data_test,X_data_nf)
-                                        results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time)
+                                        results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,training_device)
                                         results_dict_saved=True
                                         print("Results dict saved")
                                         Utils.logger(log_file_name,results_dict)

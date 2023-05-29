@@ -20,7 +20,7 @@ def reset_random_seeds(seed):
     np.random.seed(seed)
     random.seed(seed)
 
-def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time):
+def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,training_device):
     """
     Function that writes results to the a dictionary.
     """
@@ -57,6 +57,7 @@ def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,co
     results_dict.get('time').append(training_time)
     results_dict.get('hidden_layers').append(hidden_layers)
     results_dict.get('batch_size').append(batch_size)
+    results_dict.get('training_device').append(training_device)
     return results_dict
 
 def logger(log_file_name,results_dict):
@@ -112,7 +113,7 @@ def results_current(path_to_results,results_dict):
     currrent_results_file.close()
     return
 
-def save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed):
+def save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed,training_device):
     """
     Function that writes hyperparameters values to a dictionary and saves it to the hyperparam.txt file.
     """
@@ -133,6 +134,7 @@ def save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed
     hyperparams_dict.get('regulariser').append(regulariser)
     hyperparams_dict.get('dist_seed').append(dist_seed)
     hyperparams_dict.get('test_seed').append(test_seed)
+    hyperparams_dict.get('training_device').append(training_device)
     hyperparams_frame=pd.DataFrame(hyperparams_dict)
     hyperparams_frame.to_csv(path_to_results+'hyperparams.txt',index=False)
     return hyperparams_dict

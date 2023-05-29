@@ -1,0 +1,270 @@
+Loading events dataset...
+Events dataset loaded in 1.0882102763280272 seconds. Shape: (3987098, 12)
+file exists
+../../results/MAFN/Z1j/run_1/ file exists
+../../results/MAFN/Z1j/run_1/weights/ file exists
+===========
+Running 1 / 4 with hyperparameters:
+ ndims= 9 
+ seed_train= 0 
+ nsamples= 100000 
+ correlation= None 
+ activation= relu 
+ eps_regulariser= 0 
+ regulariser= None 
+ bijector= MAFN 
+ nbijectors= 5 
+ spline_knots= 8 
+ range_min= -5 
+ batch_size= 512 
+ hidden_layers= [128, 128, 128] epocs_input= 2 
+===========
+
+Training model.
+
+Train first sample: [ 1.0665622  -0.23791106 -0.08094089 -0.9928192  -0.42125896  0.08020908
+ -0.64648056  0.92785245  1.1443974 ]
+KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'")
+####### log_prob####
+KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_37/AddV2:0', description="created by layer 'tf.__operators__.add_37'")
+Found and loaded existing weights.
+Found and loaded existing history.
+Epoch 1/2
+137/137 - 7s - loss: 8.3612 - val_loss: 8.5070
+
+ Epoch 1/2 
+	 loss: 8.3612, val_loss: 8.5070
+
+Epoch 00001: val_loss improved from inf to 8.50698, saving model to ../../results/MAFN/Z1j/run_1//model_checkpoint/weights
+Epoch 2/2
+137/137 - 3s - loss: 8.3504 - val_loss: 8.5094
+
+ Epoch 2/2 
+	 loss: 8.3504, val_loss: 8.5094
+
+Epoch 00002: val_loss did not improve from 8.50698
+Model trained in 12.574255371466279 s.
+
+===========
+Computing predictions
+===========
+
+saving samples...
+samples saved
+Test first sample: [-41.082973   65.6094    273.34494   -37.479523  -20.647364   70.64896
+  71.96081   -40.31492     2.8742433]
+NF first sample: [-116.01346   -29.601086  680.30835    29.28458   -29.275091  517.69
+   42.53552    22.782204  196.78058 ]
+Results dict saved
+Logger saved
+Results saved
+Details saved
+===========
+Run failed
+
+Exception type : IndexError 
+Exception message : index 2 is out of bounds for axis 0 with size 2
+Stack trace : ['File : c_Main_MAFN_Z1j.py , Line : 185, Func.Name : <module>, Message : Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)', "File : ../../../code/Plotters.py , Line : 206, Func.Name : marginal_plot, Message : axs[row,column].hist(target_test_data[:,dim], bins=n_bins,density=True,histtype='step',color='red')"]
+===========
+
+../../results/MAFN/Z1j/run_2/ file exists
+../../results/MAFN/Z1j/run_2/weights/ file exists
+===========
+Running 2 / 4 with hyperparameters:
+ ndims= 9 
+ seed_train= 0 
+ nsamples= 100000 
+ correlation= None 
+ activation= relu 
+ eps_regulariser= 0 
+ regulariser= None 
+ bijector= MAFN 
+ nbijectors= 5 
+ spline_knots= 8 
+ range_min= -5 
+ batch_size= 512 
+ hidden_layers= [256, 256, 256] epocs_input= 2 
+===========
+
+Training model.
+
+Train first sample: [ 1.0665622  -0.23791106 -0.08094089 -0.9928192  -0.42125896  0.08020908
+ -0.64648056  0.92785245  1.1443974 ]
+KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_4'), name='input_4', description="created by layer 'input_4'")
+####### log_prob####
+KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_113/AddV2:0', description="created by layer 'tf.__operators__.add_113'")
+Found and loaded existing weights.
+Found and loaded existing history.
+Epoch 1/2
+137/137 - 5s - loss: 7.9542 - val_loss: 8.2401
+
+ Epoch 1/2 
+	 loss: 7.9542, val_loss: 8.2401
+
+Epoch 00001: val_loss improved from inf to 8.24006, saving model to ../../results/MAFN/Z1j/run_2//model_checkpoint/weights
+Epoch 2/2
+137/137 - 3s - loss: 7.9477 - val_loss: 8.2479
+
+ Epoch 2/2 
+	 loss: 7.9477, val_loss: 8.2479
+
+Epoch 00002: val_loss did not improve from 8.24006
+Model trained in 11.691216885112226 s.
+
+===========
+Computing predictions
+===========
+
+saving samples...
+samples saved
+Test first sample: [-41.082973   65.6094    273.34494   -37.479523  -20.647364   70.64896
+  71.96081   -40.31492     2.8742433]
+NF first sample: [-111.62766   -68.271225  614.9563     29.27545   -35.44535   398.63504
+   28.506937   46.56981   -37.016705]
+Results dict saved
+Logger saved
+Results saved
+Details saved
+===========
+Run failed
+
+Exception type : IndexError 
+Exception message : index 2 is out of bounds for axis 0 with size 2
+Stack trace : ['File : c_Main_MAFN_Z1j.py , Line : 185, Func.Name : <module>, Message : Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)', "File : ../../../code/Plotters.py , Line : 206, Func.Name : marginal_plot, Message : axs[row,column].hist(target_test_data[:,dim], bins=n_bins,density=True,histtype='step',color='red')"]
+===========
+
+../../results/MAFN/Z1j/run_3/ file exists
+../../results/MAFN/Z1j/run_3/weights/ file exists
+===========
+Running 3 / 4 with hyperparameters:
+ ndims= 9 
+ seed_train= 0 
+ nsamples= 100000 
+ correlation= None 
+ activation= relu 
+ eps_regulariser= 0 
+ regulariser= None 
+ bijector= MAFN 
+ nbijectors= 10 
+ spline_knots= 8 
+ range_min= -5 
+ batch_size= 512 
+ hidden_layers= [128, 128, 128] epocs_input= 2 
+===========
+
+Training model.
+
+Train first sample: [ 1.0665622  -0.23791106 -0.08094089 -0.9928192  -0.42125896  0.08020908
+ -0.64648056  0.92785245  1.1443974 ]
+KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_7'), name='input_7', description="created by layer 'input_7'")
+####### log_prob####
+KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_229/AddV2:0', description="created by layer 'tf.__operators__.add_229'")
+Found and loaded existing weights.
+Found and loaded existing history.
+Epoch 1/2
+137/137 - 12s - loss: 11.2604 - val_loss: 9.8513
+
+ Epoch 1/2 
+	 loss: 11.2604, val_loss: 9.8513
+
+Epoch 00001: val_loss improved from inf to 9.85128, saving model to ../../results/MAFN/Z1j/run_3//model_checkpoint/weights
+Epoch 2/2
+137/137 - 6s - loss: 9.6339 - val_loss: 9.5106
+
+ Epoch 2/2 
+	 loss: 9.6339, val_loss: 9.5106
+
+Epoch 00002: val_loss improved from 9.85128 to 9.51062, saving model to ../../results/MAFN/Z1j/run_3//model_checkpoint/weights
+Model trained in 22.17629000544548 s.
+
+===========
+Computing predictions
+===========
+
+saving samples...
+Samples containing nan have been removed. The fraction of nans over the total samples was: 0.0005 .
+samples saved
+Test first sample: [-41.082973   65.6094    273.34494   -37.479523  -20.647364   70.64896
+  71.96081   -40.31492     2.8742433]
+NF first sample: [  -57.920574   220.71338  -1839.0101      40.792576    54.92162
+ -1371.7346      30.878014  -206.01201    -13.044751]
+Results dict saved
+Logger saved
+Results saved
+Details saved
+===========
+Run failed
+
+Exception type : IndexError 
+Exception message : index 2 is out of bounds for axis 0 with size 2
+Stack trace : ['File : c_Main_MAFN_Z1j.py , Line : 185, Func.Name : <module>, Message : Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)', "File : ../../../code/Plotters.py , Line : 206, Func.Name : marginal_plot, Message : axs[row,column].hist(target_test_data[:,dim], bins=n_bins,density=True,histtype='step',color='red')"]
+===========
+
+../../results/MAFN/Z1j/run_4/ file exists
+../../results/MAFN/Z1j/run_4/weights/ file exists
+===========
+Running 4 / 4 with hyperparameters:
+ ndims= 9 
+ seed_train= 0 
+ nsamples= 100000 
+ correlation= None 
+ activation= relu 
+ eps_regulariser= 0 
+ regulariser= None 
+ bijector= MAFN 
+ nbijectors= 10 
+ spline_knots= 8 
+ range_min= -5 
+ batch_size= 512 
+ hidden_layers= [256, 256, 256] epocs_input= 2 
+===========
+
+Training model.
+
+Train first sample: [ 1.0665622  -0.23791106 -0.08094089 -0.9928192  -0.42125896  0.08020908
+ -0.64648056  0.92785245  1.1443974 ]
+KerasTensor(type_spec=TensorSpec(shape=(None, 9), dtype=tf.float32, name='input_10'), name='input_10', description="created by layer 'input_10'")
+####### log_prob####
+KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_385/AddV2:0', description="created by layer 'tf.__operators__.add_385'")
+Found and loaded existing weights.
+Found and loaded existing history.
+Epoch 1/2
+137/137 - 11s - loss: 11.8954 - val_loss: 10.2007
+
+ Epoch 1/2 
+	 loss: 11.8954, val_loss: 10.2007
+
+Epoch 00001: val_loss improved from inf to 10.20069, saving model to ../../results/MAFN/Z1j/run_4//model_checkpoint/weights
+Epoch 2/2
+137/137 - 6s - loss: 9.8692 - val_loss: 9.6783
+
+ Epoch 2/2 
+	 loss: 9.8692, val_loss: 9.6783
+
+Epoch 00002: val_loss improved from 10.20069 to 9.67832, saving model to ../../results/MAFN/Z1j/run_4//model_checkpoint/weights
+Model trained in 21.52119761519134 s.
+
+===========
+Computing predictions
+===========
+
+saving samples...
+Samples containing nan have been removed. The fraction of nans over the total samples was: 0.001 .
+samples saved
+Test first sample: [-41.082973   65.6094    273.34494   -37.479523  -20.647364   70.64896
+  71.96081   -40.31492     2.8742433]
+NF first sample: [ -14.384957   99.35452  -627.11786    21.385166  -32.59393  -189.58022
+  -12.861634  -60.179    -726.57324 ]
+Results dict saved
+Logger saved
+Results saved
+Details saved
+===========
+Run failed
+
+Exception type : IndexError 
+Exception message : index 2 is out of bounds for axis 0 with size 2
+Stack trace : ['File : c_Main_MAFN_Z1j.py , Line : 185, Func.Name : <module>, Message : Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)', "File : ../../../code/Plotters.py , Line : 206, Func.Name : marginal_plot, Message : axs[row,column].hist(target_test_data[:,dim], bins=n_bins,density=True,histtype='step',color='red')"]
+===========
+
+Everything done.

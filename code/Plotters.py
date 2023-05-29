@@ -142,7 +142,7 @@ def cornerplotter(target_test_data,nf_dist,path_to_plots,ndims,rot=None,norm=Fal
     figure=corner.corner(target_samples,color='red',bins=n_bins,labels=[r"%s" % s for s in labels])
     corner.corner(nf_samples,color='blue',bins=n_bins,fig=figure)
     plt.legend(handles=[blue_line,red_line], bbox_to_anchor=(-ndims+1.8, ndims+.3, 1., 0.) ,fontsize='xx-large')
-    plt.savefig(path_to_plots+'/corner_plot.pdf',pil_kwargs={'quality':50})
+    plt.savefig(path_to_plots+'/corner_plot.pdf',dpi=300)#pil_kwargs={'quality':50})
     plt.close()
     return
 
