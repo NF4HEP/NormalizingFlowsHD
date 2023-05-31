@@ -44,6 +44,7 @@ def MixtureGaussian(ncomp,ndims,seed=0):
 ncomp=3
 
 ### Initialize hyperparameters lists ###
+ndims_list=[64]
 batch_size_list=[512]
 bijectors_list=['MAFN']
 nbijectors_list=[5]
@@ -73,64 +74,64 @@ except:
     print('file exists')
 
 ### Initialize dictionaries ###
-results_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ks_list':[],'ad_mean':[],'ad_std':[],'ad_list':[],'wd_mean':[],'wd_std':[],'wd_list':[],'swd_mean':[],'swd_std':[],'swd_list':[],'fn_mean':[],'fn_std':[],'fn_list':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'training_time':[],'prediction_time':[],'training_device':[]}
+results_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ks_list':[],'ad_mean':[],'ad_std':[],'ad_list':[],'wd_mean':[],'wd_std':[],'wd_list':[],'swd_mean':[],'swd_std':[],'swd_list':[],'fn_mean':[],'fn_std':[],'fn_list':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'training_time':[],'prediction_time':[],'total_time':[],'training_device':[]}
 hyperparams_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'spline_knots':[],'range_min':[],'hidden_layers':[],'batch_size':[],'activation':[],'eps_regulariser':[],'regulariser':[],'dist_seed':[],'test_seed':[],'training_device':[]} 
 
 ### Create 'log' file ####
 log_file_name = Utils.create_log_file(mother_output_dir,results_dict)
 
 ### Run loop  ###
-ndims = 64
 run_number = 0
 corr=None
 activation='relu'
 nsamples=100000
 eps_regulariser=0
 regulariser = None
-n_runs = len(seeds_list)*len(bijectors_list)*len(nbijectors_list)*len(spline_knots_list)*len(range_min_list)*len(batch_size_list)*len(hidden_layers_list)
-targ_dist=MixtureGaussian(ncomp,ndims,seed=seed_dist)
-for seed_train in seeds_list:
-    for bijector_name in bijectors_list:
-        for nbijectors in nbijectors_list:
-            for spline_knots in spline_knots_list:
-                for range_min in range_min_list:
-                    for batch_size in batch_size_list:
-                        for hidden_layers in hidden_layers_list:
-                            hllabel='-'.join(str(e) for e in hidden_layers)
-                            run_number = run_number + 1
-                            results_dict_saved=False
-                            logger_saved=False
-                            results_current_saved=False
-                            details_saved=False
-                            path_to_results=mother_output_dir+'run_'+str(run_number)+'/'
-                            to_run=True
-                            try:    
-                                os.mkdir(path_to_results)
-                            except:
-                                print(path_to_results+' file exists')
-                                #to_run=False
-                                epochs=10
-                            try:
-                                if to_run:
-                                    path_to_weights=path_to_results+'weights/'
-                                    try:
-                                        os.mkdir(path_to_weights)
-                                    except:
-                                        print(path_to_weights+' file exists')
-                                    succeded=False
-                                    while not succeded:
-                                        Utils.reset_random_seeds(seed=seed_train)
-                                        print("seed_train = ",seed_train)
-                                        seed_test=seed_train+1
-                                        print("===========\nGenerating train data for run",run_number,".\n")
-                                        print("===========\n")
-                                        start=timer()
-                                        X_data_train=targ_dist.sample(nsamples,seed=seed_train).numpy()
-                                        end=timer()
-                                        train_data_time=end-start
-                                        print("Train data generated in",train_data_time,"s.\n")       
-                                        Utils.save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,seed_dist,seed_test,training_device)
-                                        print("===========\nRunning",run_number,"/",n_runs,"with hyperparameters:\n",
+n_runs = len(ndims_list)*len(seeds_list)*len(bijectors_list)*len(nbijectors_list)*len(spline_knots_list)*len(range_min_list)*len(batch_size_list)*len(hidden_layers_list)
+for ndims in ndims_list:
+    targ_dist=MixtureGaussian(ncomp,ndims,seed=seed_dist)
+    for seed_train in seeds_list:
+        for bijector_name in bijectors_list:
+            for nbijectors in nbijectors_list:
+                for spline_knots in spline_knots_list:
+                    for range_min in range_min_list:
+                        for batch_size in batch_size_list:
+                            for hidden_layers in hidden_layers_list:
+                                start_global = timer()
+                                hllabel='-'.join(str(e) for e in hidden_layers)
+                                run_number = run_number + 1
+                                results_dict_saved=False
+                                logger_saved=False
+                                results_current_saved=False
+                                details_saved=False
+                                path_to_results=mother_output_dir+'run_'+str(run_number)+'/'
+                                to_run=True
+                                try:    
+                                    os.mkdir(path_to_results)
+                                except:
+                                    print(path_to_results+' file exists')
+                                    #to_run=False
+                                    epochs=10
+                                try:
+                                    if to_run:
+                                        path_to_weights=path_to_results+'weights/'
+                                        try:
+                                            os.mkdir(path_to_weights)
+                                        except:
+                                            print(path_to_weights+' file exists')
+                                        succeded=False
+                                        while not succeded:
+                                            Utils.reset_random_seeds(seed=seed_train)
+                                            seed_test=seed_train+1
+                                            print("===========\nGenerating train data for run",run_number,".\n")
+                                            print("===========\n")
+                                            start=timer()
+                                            X_data_train=targ_dist.sample(nsamples,seed=seed_train).numpy()
+                                            end=timer()
+                                            train_data_time=end-start
+                                            print("Train data generated in",train_data_time,"s.\n")       
+                                            Utils.save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,seed_dist,seed_test,training_device)
+                                            print("===========\nRunning",run_number,"/",n_runs,"with hyperparameters:\n",
                                               "ndims=",ndims,"\n",
                                               "seed_train=",seed_train,"\n",
                                               "nsamples=",nsamples,"\n",
@@ -143,31 +144,35 @@ for seed_train in seeds_list:
                                               "spline_knots=",spline_knots,"\n",
                                               "range_min=",range_min,"\n",
                                               "batch_size=",batch_size,"\n",
-                                              "hidden_layers=",hidden_layers,
-                                              "epocs_input=",epochs,
-                                              "training_device=",training_device,
+                                              "hidden_layers=",hidden_layers,"\n",
+                                              "epocs_input=",epochs,"\n",
+                                              "training_device=",training_device,"\n",
                                               "\n===========\n")
-                                        bijector=Bijectors.ChooseBijector(bijector_name,ndims,spline_knots,nbijectors,range_min,hidden_layers,activation,regulariser,eps_regulariser)
-                                        Utils.save_bijector_info(bijector,path_to_results)
-                                        base_dist=Distributions.gaussians(ndims)
-                                        nf_dist=tfd.TransformedDistribution(base_dist,bijector)
-                                        print("Training model.\n")
-                                        epochs_input = epochs
-                                        lr=lr_orig
-                                        n_displays=1
-                                        print("Train first sample:",X_data_train[0])
-                                        history, training_time = Trainer.graph_execution(ndims,nf_dist, X_data_train,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed_train)
-                                        t_losses_all=list(history.history['loss'])
-                                        v_losses_all=list(history.history['val_loss'])
-                                        lr_all=list(history.history['lr'])
-                                        if len(t_losses_all) >= 10:
-                                            succeded=True
-                                        else:
-                                            seed_train = np.random.randint(1000000)
-                                            print("Training failed: trying again with seed",seed_train,".")
-                                    epochs_output = len(t_losses_all)
-                                    print("Model trained in",training_time,"s.\n")
-                                    #continue
+                                            bijector=Bijectors.ChooseBijector(bijector_name,ndims,spline_knots,nbijectors,range_min,hidden_layers,activation,regulariser,eps_regulariser)
+                                            Utils.save_bijector_info(bijector,path_to_results)
+                                            base_dist=Distributions.gaussians(ndims)
+                                            nf_dist=tfd.TransformedDistribution(base_dist,bijector)
+                                            start=timer()
+                                            print("Training model.\n")
+                                            epochs_input = epochs
+                                            lr=lr_orig
+                                            n_displays=1
+                                            print("Train first sample:",X_data_train[0])
+                                            history, training_time = Trainer.graph_execution(ndims,nf_dist, X_data_train,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed_train)
+                                            t_losses_all=list(history.history['loss'])
+                                            v_losses_all=list(history.history['val_loss'])
+                                            lr_all=list(history.history['lr'])
+                                            if len(t_losses_all) > 10:
+                                                succeded=True
+                                                succeded=True
+                                                end=timer()
+                                            else:
+                                                seed_train = np.random.randint(1000000)
+                                                print("Training failed: trying again with seed",seed_train,".")
+                                        epochs_output = len(t_losses_all)
+                                        training_time=end-start
+                                        print("Model trained in",training_time,"s.\n")
+                                        #continue
                                         start=timer()
                                         try:
                                             print("===========\nComputing predictions\n===========\n")
@@ -219,7 +224,17 @@ for seed_train in seeds_list:
                                                 ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list=Metrics.ComputeMetrics(X_data_test,X_data_nf)
                                         end_pred=timer()
                                         prediction_time=end_pred-start_pred
-                                        results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,prediction_time,training_device)
+                                        try:
+                                            Plotters.train_plotter(t_losses_all,v_losses_all,path_to_results)
+                                            Plotters.cornerplotter(X_data_test,X_data_nf,path_to_results,ndims,norm=True)
+                                            Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)
+                                            #Plotters.sample_plotter(X_data_test,nf_dist,path_to_results)
+                                            print("Plots saved")
+                                        except:
+                                            print("===========\nFailed to plot\n===========\n")
+                                        end_global=timer()
+                                        total_time=end_global-start_global
+                                        results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,prediction_time,total_time,training_device)
                                         results_dict_saved=True
                                         print("Results dict saved")
                                         Utils.logger(log_file_name,results_dict)
@@ -231,44 +246,35 @@ for seed_train in seeds_list:
                                         Utils.save_details_json(hyperparams_dict,results_dict,t_losses_all,v_losses_all,lr_all,path_to_results)
                                         details_saved=True
                                         print("Details saved")
+                                        print("Model predictions computed in",prediction_time,"s.\n")
+                                    else:
+                                        print("===========\nRun",run_number,"/",n_runs,"already exists. Skipping it.\n")
+                                        print("===========\n")
+                                except Exception as ex:
+                                    # Get current system exception
+                                    ex_type, ex_value, ex_traceback = sys.exc_info()
+                                    # Extract unformatter stack traces as tuples
+                                    trace_back = traceback.extract_tb(ex_traceback)
+                                    # Format stacktrace
+                                    stack_trace = list()
+                                    for trace in trace_back:
+                                        stack_trace.append("File : %s , Line : %d, Func.Name : %s, Message : %s" % (trace[0], trace[1], trace[2], trace[3]))
+                                    if not results_dict_saved:
+                                        results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,"nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan",hllabel,batch_size,eps_regulariser,regulariser,epochs_input,"nan","nan","nan","nan",training_device)
+                                    if not logger_saved:
+                                        Utils.logger(log_file_name,results_dict)
+                                    if not results_current_saved:
+                                        Utils.results_current(path_to_results,results_dict)
+                                    if not details_saved:
                                         try:
-                                            Plotters.train_plotter(t_losses_all,v_losses_all,path_to_results)
-                                            Plotters.cornerplotter(X_data_test,X_data_nf,path_to_results,ndims,norm=True)
-                                            Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)
-                                            #Plotters.sample_plotter(X_data_test,nf_dist,path_to_results)
+                                            Utils.save_details_json(hyperparams_dict,results_dict,t_losses_all,v_losses_all,lr_all,path_to_results)
                                         except:
-                                            print("===========\nFailed to plot\n===========\n")
-                                        end=timer()
-                                        predictions_time=end-start
-                                        print("Model predictions computed in",predictions_time,"s.\n")
-                                else:
-                                    print("===========\nRun",run_number,"/",n_runs,"already exists. Skipping it.\n")
-                                    print("===========\n")
-                            except Exception as ex:
-                                # Get current system exception
-                                ex_type, ex_value, ex_traceback = sys.exc_info()
-                                # Extract unformatter stack traces as tuples
-                                trace_back = traceback.extract_tb(ex_traceback)
-                                # Format stacktrace
-                                stack_trace = list()
-                                for trace in trace_back:
-                                    stack_trace.append("File : %s , Line : %d, Func.Name : %s, Message : %s" % (trace[0], trace[1], trace[2], trace[3]))
-                                if not results_dict_saved:
-                                    results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,"nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan","nan",hllabel,batch_size,eps_regulariser,regulariser,epochs_input,"nan","nan","nan","nan")
-                                if not logger_saved:
-                                    Utils.logger(log_file_name,results_dict)
-                                if not results_current_saved:
-                                    Utils.results_current(path_to_results,results_dict)
-                                if not details_saved:
-                                    try:
-                                        Utils.save_details_json(hyperparams_dict,results_dict,t_losses_all,v_losses_all,lr_all,path_to_results)
-                                    except:
-                                        Utils.save_details_json(hyperparams_dict,results_dict,None,None,None,path_to_results)
-                                print("===========\nRun failed\n")
-                                print("Exception type : %s " % ex_type.__name__)
-                                print("Exception message : %s" %ex_value)
-                                print("Stack trace : %s" %stack_trace)
-                                print("===========\n")   
+                                            Utils.save_details_json(hyperparams_dict,results_dict,None,None,None,path_to_results)
+                                    print("===========\nRun failed\n")
+                                    print("Exception type : %s " % ex_type.__name__)
+                                    print("Exception message : %s" %ex_value)
+                                    print("Stack trace : %s" %stack_trace)
+                                    print("===========\n")   
 dict_copy = results_dict.copy()
 dict_copy.pop('ks_list')
 dict_copy.pop('ad_list')

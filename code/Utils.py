@@ -20,7 +20,7 @@ def reset_random_seeds(seed):
     np.random.seed(seed)
     random.seed(seed)
 
-def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,prediction_time,training_device):
+def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hidden_layers,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,prediction_time,total_time,training_device):
     """
     Function that writes results to the a dictionary.
     """
@@ -57,7 +57,8 @@ def ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,co
     results_dict.get('training_time').append(training_time)
     results_dict.get('hidden_layers').append(hidden_layers)
     results_dict.get('batch_size').append(batch_size)
-    results_dict.get('prediction_time').append(training_device)
+    results_dict.get('prediction_time').append(prediction_time)
+    results_dict.get('total_time').append(total_time)
     results_dict.get('training_device').append(training_device)
     return results_dict
 
@@ -308,7 +309,6 @@ def create_log_file(mother_output_dir,results_dict):
     if os.path.isfile(log_file_name)==False:
         log_file=open(log_file_name,'w')
         header=','.join(list(dict_copy.keys()))
-        print(header)
         log_file.write(header)
         log_file.write('\n')
         log_file.close()
