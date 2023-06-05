@@ -9,6 +9,7 @@ tfb = tfp.bijectors
 import pandas as pd
 import pickle
 from timeit import default_timer as timer
+import time
 import traceback
 from typing import Dict, Any
 from tensorflow.python.client import device_lib
@@ -131,7 +132,10 @@ for ndims in ndims_list:
                                             train_data_time=end-start
                                             print("Train data generated in",train_data_time,"s.\n")       
                                             Utils.save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,seed_dist,seed_test,training_device)
+                                            local_time = time.localtime()
+                                            local_time_str = time.strftime('%a, %d %b %Y %H:%M:%S', local_time)
                                             print("===========\nRunning",run_number,"/",n_runs,"with hyperparameters:\n",
+                                              "timestamp=",local_time_str,"\n",
                                               "ndims=",ndims,"\n",
                                               "seed_train=",seed_train,"\n",
                                               "nsamples=",nsamples,"\n",
@@ -162,8 +166,7 @@ for ndims in ndims_list:
                                             t_losses_all=list(history.history['loss'])
                                             v_losses_all=list(history.history['val_loss'])
                                             lr_all=list(history.history['lr'])
-                                            if len(t_losses_all) > 10:
-                                                succeded=True
+                                            if len(t_losses_all) > 5:
                                                 succeded=True
                                                 end=timer()
                                             else:

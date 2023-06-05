@@ -3,5 +3,5 @@ run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,spline
 2,0,1,4,100000,,2,MsplineN,8,-16,256-256-256,512,relu,0,,0,1,NVIDIA A40
 3,0,1,4,100000,,2,MsplineN,12,-16,128-128-128,512,relu,0,,0,1,NVIDIA A40
 4,0,1,4,100000,,2,MsplineN,12,-16,256-256-256,512,relu,0,,0,1,NVIDIA A40
-5,0,1,8,100000,,2,MsplineN,8,-16,128-128-128,512,relu,0,,0,1,NVIDIA A40
-6,0,1,8,100000,,2,MsplineN,8,-16,256-256-256,512,relu,0,,0,1,NVIDIA A40
+5,187,188,4,100000,,2,MsplineN,8,-16,128-128-128,512,relu,0,,0,188,NVIDIA A40
+6,187,188,4,100000,,2,MsplineN,8,-16,256-256-256,512,relu,0,,0,188,NVIDIA A40
