@@ -1,4 +1,0 @@
-run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,spline_knots,range_min,hidden_layers,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed,training_device
-1,0,0,9,100000,,5,MAFN,8,-5,128-128-128,512,relu,0,,0,0,"['/device:GPU:0', 'device: 0, name: NVIDIA A40, pci bus id: 0000:4b:00.0, compute capability: 8.6']"
-2,0,0,9,100000,,5,MAFN,8,-5,256-256-256,512,relu,0,,0,0,"['/device:GPU:0', 'device: 0, name: NVIDIA A40, pci bus id: 0000:4b:00.0, compute capability: 8.6']"
-3,0,0,9,100000,,5,MAFN,8,-5,512-512-512,512,relu,0,,0,0,"['/device:GPU:0', 'device: 0, name: NVIDIA A40, pci bus id: 0000:4b:00.0, compute capability: 8.6']"

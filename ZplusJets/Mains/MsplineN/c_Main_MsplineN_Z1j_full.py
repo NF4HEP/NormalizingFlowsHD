@@ -10,6 +10,7 @@ tfb = tfp.bijectors
 import pandas as pd
 import pickle
 from timeit import default_timer as timer
+import time
 import traceback
 from typing import Dict, Any
 from tensorflow.python.client import device_lib
@@ -17,7 +18,7 @@ from tensorflow.python.client import device_lib
 sys.path.append('../../../code')
 import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
 
@@ -52,7 +53,7 @@ print("Events dataset loaded in", end - start, "seconds. Shape:", events.shape)
         
 
 ### Initialize hyperparameters lists ###
-batch_size_list=[512,1024]
+batch_size_list=[512]
 bijectors_list=['MsplineN']
 nbijectors_list=[2,5]
 hidden_layers_list=[[128,128,128],[256,256,256],[512,512,512],[128,128,128,128,128],[256,256,256,256,256],[512,512,512,512,512]]
@@ -61,7 +62,7 @@ n_displays=1
 
 ### Initialize variables for the neural splines ###
 range_min_list=[-5]
-spline_knots_list=[8]
+spline_knots_list=[8,12]
 
 ### Initialize train hyerparameters ###
 ntest_samples=100000
@@ -107,6 +108,7 @@ for seed_train in seeds_list:
                 for range_min in range_min_list:
                     for batch_size in batch_size_list:
                         for hidden_layers in hidden_layers_list:
+                            start_global = timer()
                             hllabel='-'.join(str(e) for e in hidden_layers)
                             run_number = run_number + 1
                             results_dict_saved=False
@@ -119,8 +121,8 @@ for seed_train in seeds_list:
                                 os.mkdir(path_to_results)
                             except:
                                 print(path_to_results+' file exists')
-                                #to_run=False
-                                epochs=10
+                                to_run=False
+                                #epochs=10
                             try:
                                 if to_run:
                                     path_to_weights=path_to_results+'weights/'
@@ -128,12 +130,20 @@ for seed_train in seeds_list:
                                         os.mkdir(path_to_weights)
                                     except:
                                         print(path_to_weights+' file exists')
-                                    succeded=False
                                     mean = X_data_train.mean(axis=0)
                                     std = X_data_train.std(axis=0)
+                                    print("===========\nStandardizing train/test data for run",run_number,".\n")
+                                    print("===========\n")
+                                    start=timer()
                                     X_data_train_std = (X_data_train - mean) / std
+                                    end=timer()
+                                    train_data_time=end-start
+                                    print("Train/text data standardized in",train_data_time,"s.\n")       
                                     Utils.save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,spline_knots,range_min,hllabel,batch_size,activation,eps_regulariser,regulariser,seed_dist,seed_test,training_device)
+                                    local_time = time.localtime()
+                                    local_time_str = time.strftime('%a, %d %b %Y %H:%M:%S', local_time)
                                     print("===========\nRunning",run_number,"/",n_runs,"with hyperparameters:\n",
+                                          "timestamp=",local_time_str,"\n",
                                           "ndims=",ndims,"\n",
                                           "seed_train=",seed_train,"\n",
                                           "nsamples=",nsamples,"\n",
@@ -146,8 +156,9 @@ for seed_train in seeds_list:
                                           "spline_knots=",spline_knots,"\n",
                                           "range_min=",range_min,"\n",
                                           "batch_size=",batch_size,"\n",
-                                          "hidden_layers=",hidden_layers,
-                                          "epocs_input=",epochs,
+                                          "hidden_layers=",hidden_layers,"\n",
+                                          "epocs_input=",epochs,"\n",
+                                          "training_device=",training_device,"\n",
                                           "\n===========\n")
                                     bijector=Bijectors.ChooseBijector(bijector_name,ndims,spline_knots,nbijectors,range_min,hidden_layers,activation,regulariser,eps_regulariser)
                                     Utils.save_bijector_info(bijector,path_to_results)
@@ -172,13 +183,6 @@ for seed_train in seeds_list:
                                         print("===========\nComputing predictions\n===========\n")
                                         print("===========\nTrying on GPU\n===========\n")
                                         Utils.reset_random_seeds(seed=seed_test)
-                                        print("===========\nGenerating test data for ndims=",ndims,".\n")
-                                        print("===========\n")
-                                        start=timer()
-                                        X_data_test=targ_dist.sample(ntest_samples,seed=seed_test).numpy()
-                                        end=timer()
-                                        test_data_time=end-start
-                                        print("Test data generated in",test_data_time,"s.\n")
                                         #if V is not None:
                                         #    X_data_train = MixtureDistributions.inverse_transform_data(X_data_train,V)
                                         #reload_best
@@ -187,7 +191,10 @@ for seed_train in seeds_list:
                                         pickle_logprob_nf=open(path_to_results+'logprob_nf.pcl', 'wb')
                                         pickle.dump(logprob_nf, pickle_logprob_nf, protocol=4)
                                         pickle_logprob_nf.close()
-                                        [X_data_test, X_data_nf]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,iter_size=10000,seed=seed_test)
+                                        [X_data_test, X_data_nf_std]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,iter_size=10000,seed=seed_test)
+                                        X_data_nf = X_data_nf_std * std + mean
+                                        with open(path_to_results+'nf_sample.npy', 'wb') as f:
+                                            np.save(f, X_data_nf, allow_pickle=True)
                                         print("Test first sample:",X_data_test[0])
                                         print("NF first sample:",X_data_nf[0])
                                         start_pred=timer()
@@ -196,13 +203,6 @@ for seed_train in seeds_list:
                                         print("===========\nFailed on GPU, re-trying on CPU\n===========\n")
                                         with tf.device('/device:CPU:0'):
                                             Utils.reset_random_seeds(seed=seed_test)
-                                            print("===========\nGenerating test data for ndims=",ndims,".\n")
-                                            print("===========\n")
-                                            start=timer()
-                                            X_data_test=targ_dist.sample(ntest_samples,seed=seed_test).numpy()
-                                            end=timer()
-                                            test_data_time=end-start
-                                            print("Test data generated in",test_data_time,"s.\n")
                                             #if V is not None:
                                             #    X_data_train = MixtureDistributions.inverse_transform_data(X_data_train,V)
                                             #reload_best
@@ -211,13 +211,26 @@ for seed_train in seeds_list:
                                             pickle_logprob_nf=open(path_to_results+'logprob_nf.pcl', 'wb')
                                             pickle.dump(logprob_nf, pickle_logprob_nf, protocol=4)
                                             pickle_logprob_nf.close()
-                                            [X_data_test, X_data_nf]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,iter_size=10000,seed=seed_test)
+                                            [X_data_test, X_data_nf_std]=Utils.sample_save(X_data_test,nf_dist,path_to_results,sample_size=ntest_samples,iter_size=10000,seed=seed_test)
+                                            X_data_nf = X_data_nf_std * std + mean
+                                            with open(path_to_results+'nf_sample.npy', 'wb') as f:
+                                                np.save(f, X_data_nf, allow_pickle=True)
                                             print("Test first sample:",X_data_test[0])
                                             print("NF first sample:",X_data_nf[0])
                                             start_pred=timer()
                                             ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list=Metrics.ComputeMetrics(X_data_test,X_data_nf)
                                     end_pred=timer()
                                     prediction_time=end_pred-start_pred
+                                    try:
+                                        Plotters.train_plotter(t_losses_all,v_losses_all,path_to_results)
+                                        Plotters.cornerplotter(X_data_test,X_data_nf,path_to_results,ndims,norm=True)
+                                        Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)
+                                        #Plotters.sample_plotter(X_data_test,nf_dist,path_to_results)
+                                        print("Plots saved")
+                                    except:
+                                        print("===========\nFailed to plot\n===========\n")
+                                    end_global=timer()
+                                    total_time=end_global-start_global
                                     results_dict=Utils.ResultsToDict(results_dict,run_number,seed_train,seed_test,ndims,nsamples,corr,bijector_name,nbijectors,activation,spline_knots,range_min,ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list,hllabel,batch_size,eps_regulariser,regulariser,epochs_input,epochs_output,training_time,prediction_time,total_time,training_device)
                                     results_dict_saved=True
                                     print("Results dict saved")
@@ -230,16 +243,7 @@ for seed_train in seeds_list:
                                     Utils.save_details_json(hyperparams_dict,results_dict,t_losses_all,v_losses_all,lr_all,path_to_results)
                                     details_saved=True
                                     print("Details saved")
-                                    try:
-                                        Plotters.train_plotter(t_losses_all,v_losses_all,path_to_results)
-                                        Plotters.cornerplotter(X_data_test,X_data_nf,path_to_results,ndims,norm=True)
-                                        Plotters.marginal_plot(X_data_test,X_data_nf,path_to_results,ndims)
-                                        #Plotters.sample_plotter(X_data_test,nf_dist,path_to_results)
-                                    except:
-                                        print("===========\nFailed to plot\n===========\n")
-                                    end=timer()
-                                    predictions_time=end-start
-                                    print("Model predictions computed in",predictions_time,"s.\n")
+                                    print("Model predictions computed in",prediction_time,"s.\n")
                                 else:
                                     print("===========\nRun",run_number,"/",n_runs,"already exists. Skipping it.\n")
                                     print("===========\n")

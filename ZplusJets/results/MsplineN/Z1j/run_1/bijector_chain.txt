@@ -1,9 +1,0 @@
-MAFspline
-permute
-MAFspline
-permute
-MAFspline
-permute
-MAFspline
-permute
-MAFspline
