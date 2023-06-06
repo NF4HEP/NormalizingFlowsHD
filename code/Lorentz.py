@@ -452,9 +452,9 @@ NN_depth = [128, 128, 128]
 num_bijectors = max(num_particles, len(NN_depth))
 
 # ParticleBoostedNormalizingFlow sets up the chain of bijectors for us
-flow = ParticleBoostedNormalizingFlow(base_distribution=base_dist, 
-                                      num_bijectors=num_bijectors, 
-                                      hidden_units=NN_depth)
+flow = GeneralLorentzNormalizingFlow(base_distribution=base_dist, 
+                                     num_bijectors=num_bijectors, 
+                                     hidden_units=NN_depth)
 
 # Assuming X_data_train and X_data_test are the training and testing data.
 X_data_train = ... 

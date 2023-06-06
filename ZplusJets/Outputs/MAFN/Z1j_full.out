@@ -9211,3 +9211,136 @@ Epoch 569/1000
 
 Epoch 00569: val_loss did not improve from -0.91223
 137/137 - 14s - loss: -5.6474e-01 - val_loss: -6.7919e-01 - lr: 0.0010 - 14s/epoch - 104ms/step
+Epoch 570/1000
+
+ Epoch 570/1000 
+	 loss: -0.7392, val_loss: -0.7731
+
+Epoch 00570: val_loss did not improve from -0.91223
+137/137 - 15s - loss: -7.3924e-01 - val_loss: -7.7305e-01 - lr: 0.0010 - 15s/epoch - 106ms/step
+Epoch 571/1000
+
+ Epoch 571/1000 
+	 loss: -0.6206, val_loss: -0.5158
+
+Epoch 00571: val_loss did not improve from -0.91223
+137/137 - 14s - loss: -6.2061e-01 - val_loss: -5.1575e-01 - lr: 0.0010 - 14s/epoch - 101ms/step
+Epoch 572/1000
+
+ Epoch 572/1000 
+	 loss: -0.7732, val_loss: -0.4799
+
+Epoch 00572: val_loss did not improve from -0.91223
+137/137 - 14s - loss: -7.7318e-01 - val_loss: -4.7990e-01 - lr: 0.0010 - 14s/epoch - 101ms/step
+Epoch 573/1000
+
+ Epoch 573/1000 
+	 loss: -0.3382, val_loss: -0.6066
+
+Epoch 00573: val_loss did not improve from -0.91223
+137/137 - 14s - loss: -3.3818e-01 - val_loss: -6.0663e-01 - lr: 0.0010 - 14s/epoch - 99ms/step
+Epoch 574/1000
+
+ Epoch 574/1000 
+	 loss: -0.8400, val_loss: -0.4749
+
+Epoch 00574: val_loss did not improve from -0.91223
+137/137 - 14s - loss: -8.4005e-01 - val_loss: -4.7487e-01 - lr: 0.0010 - 14s/epoch - 103ms/step
+Epoch 575/1000
+
+ Epoch 575/1000 
+	 loss: -0.6902, val_loss: -0.9986
+
+Epoch 00575: val_loss improved from -0.91223 to -0.99862, saving model to ../../results/MAFN/Z1j_full/run_2//model_checkpoint/weights
+137/137 - 14s - loss: -6.9021e-01 - val_loss: -9.9862e-01 - lr: 0.0010 - 14s/epoch - 101ms/step
+Epoch 576/1000
+
+ Epoch 576/1000 
+	 loss: -0.6368, val_loss: -0.2908
+
+Epoch 00576: val_loss did not improve from -0.99862
+137/137 - 13s - loss: -6.3677e-01 - val_loss: -2.9082e-01 - lr: 0.0010 - 13s/epoch - 96ms/step
+Epoch 577/1000
+
+ Epoch 577/1000 
+	 loss: -0.6319, val_loss: -0.7815
+
+Epoch 00577: val_loss did not improve from -0.99862
+137/137 - 14s - loss: -6.3194e-01 - val_loss: -7.8145e-01 - lr: 0.0010 - 14s/epoch - 100ms/step
+Epoch 578/1000
+
+ Epoch 578/1000 
+	 loss: -0.6026, val_loss: -0.6932
+
+Epoch 00578: val_loss did not improve from -0.99862
+137/137 - 15s - loss: -6.0257e-01 - val_loss: -6.9324e-01 - lr: 0.0010 - 15s/epoch - 108ms/step
+Epoch 579/1000
+
+ Epoch 579/1000 
+	 loss: -0.6148, val_loss: -0.8014
+
+Epoch 00579: val_loss did not improve from -0.99862
+137/137 - 14s - loss: -6.1485e-01 - val_loss: -8.0144e-01 - lr: 0.0010 - 14s/epoch - 101ms/step
+Epoch 580/1000
+
+ Epoch 580/1000 
+	 loss: -0.9016, val_loss: -0.8213
+
+Epoch 00580: val_loss did not improve from -0.99862
+137/137 - 14s - loss: -9.0158e-01 - val_loss: -8.2130e-01 - lr: 0.0010 - 14s/epoch - 102ms/step
+Epoch 581/1000
+
+ Epoch 581/1000 
+	 loss: -0.8018, val_loss: -0.2362
+
+Epoch 00581: val_loss did not improve from -0.99862
+137/137 - 15s - loss: -8.0184e-01 - val_loss: -2.3624e-01 - lr: 0.0010 - 15s/epoch - 106ms/step
+Epoch 582/1000
+
+ Epoch 582/1000 
+	 loss: -0.7403, val_loss: -0.5739
+
+Epoch 00582: val_loss did not improve from -0.99862
+137/137 - 13s - loss: -7.4035e-01 - val_loss: -5.7392e-01 - lr: 0.0010 - 13s/epoch - 98ms/step
+Epoch 583/1000
+
+ Epoch 583/1000 
+	 loss: -0.8654, val_loss: -0.9178
+
+Epoch 00583: val_loss did not improve from -0.99862
+137/137 - 13s - loss: -8.6542e-01 - val_loss: -9.1777e-01 - lr: 0.0010 - 13s/epoch - 98ms/step
+Epoch 584/1000
+
+ Epoch 584/1000 
+	 loss: -0.7599, val_loss: -0.2815
+
+Epoch 00584: val_loss did not improve from -0.99862
+137/137 - 14s - loss: -7.5995e-01 - val_loss: -2.8147e-01 - lr: 0.0010 - 14s/epoch - 103ms/step
+Epoch 585/1000
+
+ Epoch 585/1000 
+	 loss: -0.6071, val_loss: -0.0551
+
+Epoch 00585: val_loss did not improve from -0.99862
+137/137 - 13s - loss: -6.0706e-01 - val_loss: -5.5123e-02 - lr: 0.0010 - 13s/epoch - 96ms/step
+Epoch 586/1000
+
+ Epoch 586/1000 
+	 loss: -0.5139, val_loss: -0.8125
+
+Epoch 00586: val_loss did not improve from -0.99862
+137/137 - 14s - loss: -5.1387e-01 - val_loss: -8.1251e-01 - lr: 0.0010 - 14s/epoch - 99ms/step
+Epoch 587/1000
+
+ Epoch 587/1000 
+	 loss: -0.7555, val_loss: -0.4178
+
+Epoch 00587: val_loss did not improve from -0.99862
+137/137 - 13s - loss: -7.5549e-01 - val_loss: -4.1778e-01 - lr: 0.0010 - 13s/epoch - 97ms/step
+Epoch 588/1000
+
+ Epoch 588/1000 
+	 loss: -0.7227, val_loss: -0.9553
+
+Epoch 00588: val_loss did not improve from -0.99862
+137/137 - 14s - loss: -7.2266e-01 - val_loss: -9.5525e-01 - lr: 0.0010 - 14s/epoch - 99ms/step

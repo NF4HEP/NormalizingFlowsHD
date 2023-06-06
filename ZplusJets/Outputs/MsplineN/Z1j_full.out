@@ -4021,3 +4021,66 @@ Epoch 197/1000
 
 Epoch 00197: val_loss did not improve from -2.12826
 137/137 - 32s - loss: -1.6547e+00 - val_loss: -5.5081e-01 - lr: 0.0010 - 32s/epoch - 234ms/step
+Epoch 198/1000
+
+ Epoch 198/1000 
+	 loss: -1.6466, val_loss: -1.2505
+
+Epoch 00198: val_loss did not improve from -2.12826
+137/137 - 33s - loss: -1.6466e+00 - val_loss: -1.2505e+00 - lr: 0.0010 - 33s/epoch - 238ms/step
+Epoch 199/1000
+
+ Epoch 199/1000 
+	 loss: -1.6386, val_loss: -1.4136
+
+Epoch 00199: val_loss did not improve from -2.12826
+137/137 - 31s - loss: -1.6386e+00 - val_loss: -1.4136e+00 - lr: 0.0010 - 31s/epoch - 229ms/step
+Epoch 200/1000
+
+ Epoch 200/1000 
+	 loss: -1.9317, val_loss: -1.8860
+
+Epoch 00200: val_loss did not improve from -2.12826
+137/137 - 32s - loss: -1.9317e+00 - val_loss: -1.8860e+00 - lr: 0.0010 - 32s/epoch - 235ms/step
+Epoch 201/1000
+
+ Epoch 201/1000 
+	 loss: -1.6980, val_loss: -2.2054
+
+Epoch 00201: val_loss improved from -2.12826 to -2.20542, saving model to ../../results/MsplineN/Z1j_full/run_2//model_checkpoint/weights
+137/137 - 32s - loss: -1.6980e+00 - val_loss: -2.2054e+00 - lr: 0.0010 - 32s/epoch - 234ms/step
+Epoch 202/1000
+
+ Epoch 202/1000 
+	 loss: -1.7684, val_loss: -1.5940
+
+Epoch 00202: val_loss did not improve from -2.20542
+137/137 - 31s - loss: -1.7684e+00 - val_loss: -1.5940e+00 - lr: 0.0010 - 31s/epoch - 228ms/step
+Epoch 203/1000
+
+ Epoch 203/1000 
+	 loss: -1.8097, val_loss: -2.3628
+
+Epoch 00203: val_loss improved from -2.20542 to -2.36279, saving model to ../../results/MsplineN/Z1j_full/run_2//model_checkpoint/weights
+137/137 - 32s - loss: -1.8097e+00 - val_loss: -2.3628e+00 - lr: 0.0010 - 32s/epoch - 236ms/step
+Epoch 204/1000
+
+ Epoch 204/1000 
+	 loss: -1.6316, val_loss: -1.5339
+
+Epoch 00204: val_loss did not improve from -2.36279
+137/137 - 33s - loss: -1.6316e+00 - val_loss: -1.5339e+00 - lr: 0.0010 - 33s/epoch - 237ms/step
+Epoch 205/1000
+
+ Epoch 205/1000 
+	 loss: -1.7467, val_loss: -2.4286
+
+Epoch 00205: val_loss improved from -2.36279 to -2.42859, saving model to ../../results/MsplineN/Z1j_full/run_2//model_checkpoint/weights
+137/137 - 33s - loss: -1.7467e+00 - val_loss: -2.4286e+00 - lr: 0.0010 - 33s/epoch - 244ms/step
+Epoch 206/1000
+
+ Epoch 206/1000 
+	 loss: -1.7388, val_loss: -1.9226
+
+Epoch 00206: val_loss did not improve from -2.42859
+137/137 - 32s - loss: -1.7388e+00 - val_loss: -1.9226e+00 - lr: 0.0010 - 32s/epoch - 231ms/step
