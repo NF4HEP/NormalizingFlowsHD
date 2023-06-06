@@ -170,7 +170,7 @@ for seed_train in seeds_list:
                                     lr=lr_orig
                                     n_displays=1
                                     print("Train first sample:",X_data_train_std[0])
-                                    history=Trainer.graph_execution(ndims,nf_dist, X_data_train_std,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed_train,stop_on_nan=False)
+                                    history=Trainer.graph_execution(ndims,nf_dist, X_data_train_std,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed_train,stop_on_nan=True)
                                     t_losses_all=list(history.history['loss'])
                                     v_losses_all=list(history.history['val_loss'])
                                     epochs_output = len(t_losses_all)

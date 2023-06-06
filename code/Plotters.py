@@ -107,7 +107,7 @@ def train_plotter(t_losses,v_losses,path_to_plots):
 #    plt.show()
 #    plt.close()  
 
-def cornerplotter(target_test_data,nf_dist,path_to_plots,ndims,rot=None,norm=False,max_dim=32):
+def cornerplotter(target_test_data,nf_dist,path_to_plots,ndims,rot=None,norm=False,max_dim=32, n_bins=50):
     # Define the two samples (target and nf)
     shape = target_test_data.shape
     target_samples=target_test_data
@@ -138,8 +138,7 @@ def cornerplotter(target_test_data,nf_dist,path_to_plots,ndims,rot=None,norm=Fal
     nf_samples = nf_samples[:,::thin]
     # Select labels
     labels = list(np.array(labels)[::thin])
-
-    n_bins = 50
+    
     #red_bins=50
     #density=(np.max(target_samples,axis=0)-np.min(target_samples,axis=0))/red_bins
     #
@@ -153,8 +152,8 @@ def cornerplotter(target_test_data,nf_dist,path_to_plots,ndims,rot=None,norm=Fal
 
     blue_line = mlines.Line2D([], [], color='red', label='target')
     red_line = mlines.Line2D([], [], color='blue', label='NF')
-    figure=corner.corner(target_samples,color='red',bins=n_bins,labels=[r"%s" % s for s in labels])
-    corner.corner(nf_samples,color='blue',bins=n_bins,fig=figure)
+    figure=corner.corner(target_samples,color='red',bins=n_bins,labels=[r"%s" % s for s in labels],normalize1d=True)
+    corner.corner(nf_samples,color='blue',bins=n_bins,fig=figure, normalize1d=True)
     plt.legend(handles=[blue_line,red_line], bbox_to_anchor=(-ndims+1.8, ndims+.3, 1., 0.) ,fontsize='xx-large')
     plt.savefig(path_to_plots+'/corner_plot.png',pil_kwargs={'quality':50})
     #try:
