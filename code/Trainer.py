@@ -7,6 +7,7 @@ Created on Sat Jul 13 12:36:34 2019
 
 @author: reyes-gonzalez
 """
+import os
 from sklearn import datasets
 from sklearn.preprocessing import StandardScaler
 import numpy as np
