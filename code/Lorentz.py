@@ -1,3 +1,4 @@
+import os
 import json
 from timeit import default_timer as timer
 import numpy as np
@@ -907,12 +908,6 @@ class HuberLogProbLoss(tf.keras.losses.Loss):
         small_error_loss = 0.5 * tf.square(error)
         large_error_loss = delta * (tf.abs(error) - 0.5 * delta)
         return tf.where(condition, small_error_loss, large_error_loss)
-
-
-class Trainer_short:
-    def __init__(self,
-                 callbacks_kwargs=None,
-                 ):        
         
 
 #prova = Trainer(data_kwargs={'seed': 0},
@@ -922,66 +917,114 @@ class Trainer_short:
 #                fit_kwargs={'batch_size': 1000, 'epochs': 1000, 'verbose': 0},
 #                callbacks_kwargs={'patience': 30, 'min_delta': 0.001, 'reduce_lr_factor': 0.2, 'stop_on_nan': True, 'seed': 0},)
 
-prova = Trainer(data_kwargs={'seed': 0},
-                com
 
 class Trainer:
     def __init__(self, 
-                 ndims, 
                  trainable_distribution, 
                  X_data, 
-                 n_epochs, 
-                 batch_size, 
-                 n_disp,
-                 path_to_results, 
-                 load_weights=False, 
-                 load_weights_path=None, 
-                 lr=.001, 
-                 patience=30,
-                 min_delta_patience=0.001, 
-                 reduce_lr_factor=0.2, 
-                 stop_on_nan=True,
                  data_kwargs=None,
                  compiler_kwargs=None,
                  callbacks_kwargs=None,
-                 fit_kwargs=None
+                 fit_kwargs=None,
+                 io_kwargs=None
                  ):
 
-        Utils.reset_random_seeds(data_kwargs.get('seed', 0))
-        
-        self.X_data = X_data
-        self.n_epochs = n_epochs
-        self.batch_size = batch_size if batch_size else X_data.shape[0]
-        self.path_to_results = path_to_results
+        # Parse data kwargs
+        self._data_kwargs = self._get_data_args(data_kwargs)
 
-        self.x_ = Input(shape=(ndims,), dtype=tf.float32)
-        self.log_prob_ = trainable_distribution.log_prob(self.x_)
-        self.model = Model(self.x_, self.log_prob_)
+        # Reset random seeds
+        Utils.reset_random_seeds(self.seed)
+        
+        self._nf_dist = trainable_distribution
+        self._X_data = X_data
+        self._ndims = X_data.shape[1]
+
+        input = Input(shape=(self.ndims,), dtype=tf.float32)
+        self._log_prob = trainable_distribution.log_prob(input)
+        self._model = Model(input, self._log_prob)
         
         # Get compile args
-        optimizer_config, loss_config, metrics_configs, compile_kwargs = self._get_compile_args(compiler_kwargs)
+        self._optimizer_config, self._loss_config, self._metrics_configs, self._compile_kwargs = self._get_compile_args(compiler_kwargs)
         
         # Get optimizer, loss, and metrics from their configs
-        optimizer = tf.keras.optimizers.get(optimizer_config)
-        loss = self._get_loss(loss_config)
-        metrics = [self._get_loss(metric_config) for metric_config in metrics_configs]
+        self._optimizer = tf.keras.optimizers.get(self._optimizer_config)
+        self._loss = self._get_loss(self._loss_config)
+        self._metrics = [self._get_loss(metric_config) for metric_config in self._metrics_configs]
         
         # Get callbacks args
-        callbacks_configs = self._get_callbacks_args(callbacks_kwargs)
+        self._callbacks_configs = self._get_callbacks_args(callbacks_kwargs)
         
         # Get callbacks from their configs
-        self._callbacks = self._initialize_callbacks(callbacks_configs)
+        self._callbacks = self._initialize_callbacks(self._callbacks_configs)
         
-        self.model.compile(optimizer=optimizer, loss=loss, metrics=metrics, **compile_kwargs)
+        # Parse fit kwargs
+        self._fit_kwargs = self._get_fit_args(fit_kwargs)
         
-        self.load_weights = load_weights
+        # Parse io kwargs
+        self._io_kwargs = self._get_io_args(io_kwargs)
 
         self.training_time = 0
         self.train_loss=[]
         self.val_loss=[]
+            
+        # Compile model
+        # self.co(optimizer=optimizer, loss=loss, metrics=metrics, **self._compile_kwargs)
+            
+    @property
+    def data_kwargs(self):  
+        return self._data_kwargs
+    
+    @property
+    def seed(self):
+        return self._data_kwargs.get('seed')
+    
+    @property.setter
+    def seed(self, value):
+        self._data_kwargs['seed'] = value
+    
+    @property
+    def X_data(self):
+        return self._X_data
+    
+    @property
+    def nf_dist(self):
+        return self._nf_dist
+    
+    @property
+    def ndims(self):
+        return self._ndims
+    
+    @property
+    def log_prob(self):
+        return self._log_prob
+    
+    @property
+    def model(self):
+        return self._model
+    
+    @property
+    def optimizer_config(self):
+        return self._optimizer_config
+    
+    @property
+    def loss_config(self):  
+        return self._loss_config
+    
+    @property
+    def metrics_configs(self):  
+        return self._metrics_configs
+    
+    @property
+    def compile_kwargs(self):
+        return self._compile_kwargs
 
-        if load_weights:
-            self.load_model_weights()
+    @property
+    def n_epochs(self):
+        return self._fit_kwargs.get('epochs')
+            
+    @property
+    def batch_size(self):
+        return self._fit_kwargs.get('batch_size')
             
     @property
     def optimizer(self):
@@ -998,6 +1041,38 @@ class Trainer:
     @property
     def callbacks(self):
         return self._callbacks
+    
+    @property
+    def fit_kwargs(self):
+        return self._fit_kwargs
+    
+    @property
+    def io_kwargs(self):
+        return self._io_kwargs
+    
+    @property
+    def results_path(self):
+        return self.io_kwargs.get('results_path')
+
+    @property
+    def load_weights(self):
+        return self.io_kwargs.get('load_weights')
+
+    @property
+    def load_results(self):
+        return self.io_kwargs.get('load_results')
+        
+    def _get_data_args(self, data_kwargs):
+        if data_kwargs is None:
+            data_kwargs = {}
+
+        # Default data args
+        default_data_args = {'seed': 0}
+        
+        # Update default args with provided ones
+        data_args = {**default_data_args, **data_kwargs}
+        
+        return data_args
             
     def _get_compile_args(self, compiler_kwargs):
         # Default values
@@ -1077,21 +1152,54 @@ class Trainer:
             print('\n Epoch {}/{}'.format(epoch + 1, self.n_epochs, logs),
                   '\n\t ' + (': {:.4f}, '.join(logs.keys()) + ': {:.4f}').format(*logs.values()))
 
+    def _get_fit_args(self, fit_kwargs):
+        if fit_kwargs is None:
+            fit_kwargs = {}
+
+        # Default fit args
+        default_fit_args = {'batch_size': 512, 'epochs': 10, 'validation_split': 0.3, 'shuffle': True, 'verbose': 2}
+
+        # Update default args with provided ones
+        fit_args = {**default_fit_args, **fit_kwargs}
+
+        return fit_args
+    
+    def _get_io_args(self, io_kwargs):
+        if io_kwargs is None:
+            io_kwargs = {}
+
+        # Default values
+        default_io_kwargs = {'results_path': os.path.abspath("results"),
+                             'load_weights': False,
+                             'load_results': False}
+
+        # Check if values are provided in io_kwargs and use defaults if not
+        for key, default_value in default_io_kwargs.items():
+            io_kwargs.setdefault(key, default_value)
+
+        # Create results directory if it doesn't exist
+        os.makedirs(io_kwargs['results_path'], exist_ok=True)
+
+        return io_kwargs
+
     def load_model_weights(self):
         # Load weights logic here
         pass
 
+    def compile(self):
+        self.model.compile(optimizer=self.optimizer,
+                           loss=self.loss,
+                           metrics=self.metrics,
+                           **self.compile_kwargs)
+
     def fit(self):
         start = timer()
-        callbacks = self._initialize_callbacks(callbacks_kwargs)
         history = self.model.fit(x=self.X_data,
                                  y=np.zeros((self.X_data.shape[0], 0), dtype=np.float32),
                                  batch_size=self.batch_size,
-                                 epochs=self.n_epochs,
-                                 validation_split=0.3,
-                                 shuffle=True,
-                                 verbose=2,
-                                 callbacks=callbacks)
+                                 callbacks=self.callbacks
+                                 **self.fit_kwargs
+                                 )
         end = timer()
         self.training_time += end - start
     
