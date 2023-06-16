@@ -909,15 +909,6 @@ class HuberLogProbLoss(tf.keras.losses.Loss):
         large_error_loss = delta * (tf.abs(error) - 0.5 * delta)
         return tf.where(condition, small_error_loss, large_error_loss)
         
-
-#prova = Trainer(data_kwargs={'seed': 0},
-#                compiler_kwargs={'optimizer': {'class_name': 'Adam', 'config': {'learning_rate': 0.001}}, 
-#                                 'loss': {'class_name': 'HuberLogProbLoss', 'config': {}}},
-#                optimizer_kargs={'learning_rate': 0.001},
-#                fit_kwargs={'batch_size': 1000, 'epochs': 1000, 'verbose': 0},
-#                callbacks_kwargs={'patience': 30, 'min_delta': 0.001, 'reduce_lr_factor': 0.2, 'stop_on_nan': True, 'seed': 0},)
-
-
 class Trainer:
     def __init__(self, 
                  trainable_distribution, 
@@ -967,8 +958,12 @@ class Trainer:
         self.train_loss=[]
         self.val_loss=[]
             
-        # Compile model
-        # self.co(optimizer=optimizer, loss=loss, metrics=metrics, **self._compile_kwargs)
+        # Compile model and load weights
+        self.compile()
+        if self.load_weights:
+            self.load_model_weights()
+        if self.load_results:
+            self.load_model_history()
             
     @property
     def data_kwargs(self):  
@@ -1183,8 +1178,24 @@ class Trainer:
         return io_kwargs
 
     def load_model_weights(self):
-        # Load weights logic here
-        pass
+        weights_path = os.path.join(self.results_path, 'model_checkpoint', 'weights')
+        try:
+            self.model.load_weights(weights_path)
+            print('Found and loaded existing weights.')
+        except:
+            print('No weights found. Training from scratch.')
+    
+    def load_model_history(self):
+        details_path = os.path.join(self.results_path, 'details.json')
+        try:
+            with open(details_path, 'r') as f:
+                json_file = json.load(f)
+                self.train_loss = json_file['train_loss_history']
+                self.val_loss = json_file['val_loss_history']
+                self.training_time = json_file['time']
+                print('Found and loaded existing history.')
+        except:
+            print('No history found. Generating new history.')
 
     def compile(self):
         self.model.compile(optimizer=self.optimizer,
