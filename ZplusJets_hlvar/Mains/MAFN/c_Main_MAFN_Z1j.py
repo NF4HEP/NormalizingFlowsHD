@@ -18,13 +18,30 @@ from tensorflow.python.client import device_lib
 
 
 sys.path.append('../../../code')
-import Bijectors,Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils
+import Bijectors,Distributions,Metrics,MixtureDistributions,Trainer,Utils
+sys.path.append('../../../code/Zplusjets_code')
+import Plotters
 from ZjetsTransformations import *
-'''
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 gpu_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(gpu_devices[0], True)
-'''
+
+import subprocess
+def get_gpu_info():
+    try:
+        gpu_info = subprocess.check_output(["nvidia-smi", "--query-gpu=gpu_name", "--format=csv,noheader"]).decode('utf-8')
+        return gpu_info.strip().split('\n')
+    except Exception as e:
+        print(e)
+        return None
+gpu_models = get_gpu_info()
+if gpu_models:
+    training_device = gpu_models[eval(os.environ["CUDA_VISIBLE_DEVICES"])]
+    print("Successfully loaded GPU model: {}".format(training_device))
+else:
+    training_device = 'undetermined'
+    print("Failed to load GPU model. Defaulting to 'undetermined'.")
 
 import subprocess
 def get_gpu_info():
@@ -46,24 +63,18 @@ else:
 
 print("Loading events dataset...")
 start = timer()
-'''
-with h5py.File(events_dataset_path, 'r') as hdf:
-    # Save the datasets into the file with unique names
-    try:
-        events = np.array(hdf['Z+1j'][:]).astype(np.float32)
-    except:
-        raise Exception("Z+1j not found in the dataset.")
-'''
-
 
 def OpenWhichDataSet(which_dataset):
     
     if which_dataset=='jet1':
-        events_dataset_path=events_dataset_prefix+'/LHCCoordZjet1.h5'
+        #events_dataset_path=events_dataset_prefix+'/LHCCoordZjet1.h5'
+        events_dataset_path=events_dataset_prefix+'/events.h5'
     if which_dataset=='jet2':
-        events_dataset_path=events_dataset_prefix+'/LHCCoordZjet2.h5'
+        #events_dataset_path=events_dataset_prefix+'/LHCCoordZjet2.h5'
+        events_dataset_path=events_dataset_prefix+'/events.h5'
     if which_dataset=='jet3':
-        events_dataset_path=events_dataset_prefix+'/LHCCoordZjet3.h5'
+        #events_dataset_path=events_dataset_prefix+'/LHCCoordZjet3.h5'
+        events_dataset_path=events_dataset_prefix+'/events.h5'
         
 
     return events_dataset_path
@@ -99,7 +110,8 @@ def OpenEvents(events_dataset_path,which_dataset):
     with h5py.File(events_dataset_path, 'r') as hdf:
         # Save the datasets into the file with unique names
         try:
-            events = np.array(hdf['LHCCoordZ'+which_dataset][:]).astype(np.float32)
+            events = np.array(hdf['Z+1j'][:]).astype(np.float32)
+            #events = np.array(hdf['LHCCoordZ'+which_dataset][:]).astype(np.float32)
         except:
             raise Exception(which_dataset+" not found in the dataset.")
 
@@ -109,10 +121,8 @@ def GetMaxMin(X_data_train):
     min = X_data_train.min(axis=0)
     return max,min
 
-
-
-events_dataset_prefix="/Users/humberto/Documents/work/NFs/RiccardoDir/ZplusJets/Preprocess/"
-
+#events_dataset_prefix="/Users/humberto/Documents/work/NFs/RiccardoDir/ZplusJets/Preprocess/"
+events_dataset_prefix="/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/ZplusJets/events/"
 
 which_dataset_list=['jet1','jet2','jet3']
 ### Initialize hyperparameters lists ###
@@ -129,7 +139,7 @@ spline_knots_list=[8]
 
 ### Initialize train hyperparameters ###
 ntest_samples=100000
-epochs=50
+epochs=5
 lr_orig_list=[.001]
 #lr_orig=.001
 patience=50

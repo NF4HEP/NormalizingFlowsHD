@@ -1,0 +1,445 @@
+Successfully loaded GPU model: Tesla V100-PCIE-32GB
+Successfully loaded GPU model: Tesla V100-PCIE-32GB
+Loading events dataset...
+Successfully loaded GPU model: Tesla V100-PCIE-32GB
+Successfully loaded GPU model: Tesla V100-PCIE-32GB
+Loading events dataset...
+file exists
+===========
+Standardizing train/test data for run 1 .
+
+===========
+
+Train/text data standardized in 0.028859809041023254 s.
+
+===========
+Running 1 / 1 with hyperparameters:
+ timestamp= Fri, 16 Jun 2023 12:29:30 
+ ndims= 12 
+ seed_train= 0 
+ nsamples= 100000 
+ correlation= None 
+ activation= relu 
+ eps_regulariser= 0 
+ regulariser= l1 
+ bijector= MAFN 
+ nbijectors= 5 
+ spline_knots= 8 
+ range_min= -5 
+ batch_size= 512 
+ hidden_layers= [128, 128, 128] 
+ epocs_input= 50 
+ training_device= Tesla V100-PCIE-32GB 
+ 
+===========
+
+Training model.
+
+Train first sample: [-0.9786655   1.0665622          nan         nan -0.50117004         nan
+         nan  0.08020908         nan         nan  0.92785245  1.1443974 ]
+KerasTensor(type_spec=TensorSpec(shape=(None, 12), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'")
+####### log_prob####
+KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='tf.__operators__.add_37/AddV2:0', description="created by layer 'tf.__operators__.add_37'")
+No weights found. Training from scratch.
+No history found. Generating new history.
+Epoch 1/50
+137/137 - 6s - loss: nan - val_loss: nan
+
+ Epoch 1/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00001: val_loss did not improve from inf
+Epoch 2/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 2/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00002: val_loss did not improve from inf
+Epoch 3/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 3/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00003: val_loss did not improve from inf
+Epoch 4/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 4/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00004: val_loss did not improve from inf
+Epoch 5/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 5/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00005: val_loss did not improve from inf
+Epoch 6/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 6/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00006: val_loss did not improve from inf
+Epoch 7/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 7/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00007: val_loss did not improve from inf
+Epoch 8/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 8/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00008: val_loss did not improve from inf
+Epoch 9/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 9/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00009: val_loss did not improve from inf
+Epoch 10/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 10/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00010: val_loss did not improve from inf
+Epoch 11/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 11/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00011: val_loss did not improve from inf
+Epoch 12/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 12/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00012: val_loss did not improve from inf
+Epoch 13/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 13/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00013: val_loss did not improve from inf
+Epoch 14/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 14/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00014: val_loss did not improve from inf
+Epoch 15/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 15/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00015: val_loss did not improve from inf
+Epoch 16/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 16/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00016: val_loss did not improve from inf
+Epoch 17/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 17/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00017: val_loss did not improve from inf
+Epoch 18/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 18/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00018: val_loss did not improve from inf
+Epoch 19/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 19/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00019: val_loss did not improve from inf
+Epoch 20/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 20/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00020: val_loss did not improve from inf
+Epoch 21/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 21/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00021: val_loss did not improve from inf
+Epoch 22/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 22/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00022: val_loss did not improve from inf
+Epoch 23/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 23/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00023: val_loss did not improve from inf
+Epoch 24/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 24/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00024: val_loss did not improve from inf
+Epoch 25/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 25/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00025: val_loss did not improve from inf
+Epoch 26/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 26/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00026: val_loss did not improve from inf
+Epoch 27/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 27/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00027: val_loss did not improve from inf
+Epoch 28/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 28/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00028: val_loss did not improve from inf
+Epoch 29/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 29/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00029: val_loss did not improve from inf
+Epoch 30/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 30/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00030: val_loss did not improve from inf
+Epoch 31/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 31/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00031: val_loss did not improve from inf
+Epoch 32/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 32/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00032: val_loss did not improve from inf
+Epoch 33/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 33/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00033: val_loss did not improve from inf
+Epoch 34/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 34/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00034: val_loss did not improve from inf
+Epoch 35/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 35/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00035: val_loss did not improve from inf
+Epoch 36/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 36/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00036: val_loss did not improve from inf
+Epoch 37/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 37/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00037: val_loss did not improve from inf
+Epoch 38/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 38/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00038: val_loss did not improve from inf
+Epoch 39/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 39/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00039: val_loss did not improve from inf
+Epoch 40/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 40/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00040: val_loss did not improve from inf
+Epoch 41/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 41/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00041: val_loss did not improve from inf
+Epoch 42/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 42/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00042: val_loss did not improve from inf
+Epoch 43/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 43/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00043: val_loss did not improve from inf
+Epoch 44/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 44/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00044: val_loss did not improve from inf
+Epoch 45/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 45/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00045: val_loss did not improve from inf
+Epoch 46/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 46/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00046: val_loss did not improve from inf
+Epoch 47/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 47/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00047: val_loss did not improve from inf
+Epoch 48/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 48/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00048: val_loss did not improve from inf
+Epoch 49/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 49/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00049: val_loss did not improve from inf
+Epoch 50/50
+137/137 - 2s - loss: nan - val_loss: nan
+
+ Epoch 50/50 
+	 loss: nan, val_loss: nan
+
+Epoch 00050: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+
+Epoch 00050: val_loss did not improve from inf
+Model trained in 112.07498686411418 s.
+
+===========
+Computing predictions
+===========
+
+===========
+Trying on GPU
+===========
+
+===========
+Failed on GPU, re-trying on CPU
+===========
+
+===========
+Run failed
+
+Exception type : NotFoundError 
+Exception message : Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ../../results/RealNVPN/Z1j_full_LHCcoord_prep2_nomaxmin_alljets_test_1/run_1/model_checkpoint/weights
+Stack trace : ['File : c_Main_MAFN_Z1j.py , Line : 346, Func.Name : <module>, Message : nf_dist,_=Utils.load_model(nf_dist,path_to_results,ndims,lr=.000001)', "File : ../../../code/Utils.py , Line : 153, Func.Name : load_model, Message : model.load_weights(path_to_results+'model_checkpoint/weights')", 'File : /mnt/project_mnt/teo_fs/anaconda3_ml/envs/hreyes-piptf2/lib/python3.8/site-packages/keras/engine/training.py , Line : 2329, Func.Name : load_weights, Message : filepath, save_format = _detect_save_format(filepath)', 'File : /mnt/project_mnt/teo_fs/anaconda3_ml/envs/hreyes-piptf2/lib/python3.8/site-packages/keras/engine/training.py , Line : 3014, Func.Name : _detect_save_format, Message : if _is_readable_tf_checkpoint(filepath):', 'File : /mnt/project_mnt/teo_fs/anaconda3_ml/envs/hreyes-piptf2/lib/python3.8/site-packages/keras/engine/training.py , Line : 3035, Func.Name : _is_readable_tf_checkpoint, Message : tf.compat.v1.train.NewCheckpointReader(filepath)', 'File : /mnt/project_mnt/teo_fs/anaconda3_ml/envs/hreyes-piptf2/lib/python3.8/site-packages/tensorflow/python/training/py_checkpoint_reader.py , Line : 100, Func.Name : NewCheckpointReader, Message : error_translator(e)', 'File : /mnt/project_mnt/teo_fs/anaconda3_ml/envs/hreyes-piptf2/lib/python3.8/site-packages/tensorflow/python/training/py_checkpoint_reader.py , Line : 35, Func.Name : error_translator, Message : raise errors_impl.NotFoundError(None, None, error_message)']
+===========
+
+===========
+Standardizing train/test data for run 2 .
+
+===========
+
+===========
+Run failed
+
+Exception type : IndexError 
+Exception message : index 12 is out of bounds for axis 1 with size 12
+Stack trace : ['File : c_Main_MAFN_Z1j.py , Line : 238, Func.Name : <module>, Message : X_data_train_pre1=WhichPreprocessing(which_dataset,X_data_train)', 'File : c_Main_MAFN_Z1j.py , Line : 88, Func.Name : WhichPreprocessing, Message : X_data_train_pre1=Preprocess_jet2(X_data_train)', 'File : ../../../code/Zplusjets_code/ZjetsTransformations.py , Line : 75, Func.Name : Preprocess_jet2, Message : spher_all[:,10+2]=np.arctanh(spher_all[:,10+2]/np.pi)']
+===========
+
+===========
+Standardizing train/test data for run 3 .
+
+===========
+
+===========
+Run failed
+
+Exception type : IndexError 
+Exception message : index 14 is out of bounds for axis 1 with size 12
+Stack trace : ['File : c_Main_MAFN_Z1j.py , Line : 238, Func.Name : <module>, Message : X_data_train_pre1=WhichPreprocessing(which_dataset,X_data_train)', 'File : c_Main_MAFN_Z1j.py , Line : 90, Func.Name : WhichPreprocessing, Message : X_data_train_pre1=Preprocess_jet3(X_data_train)', 'File : ../../../code/Zplusjets_code/ZjetsTransformations.py , Line : 122, Func.Name : Preprocess_jet3, Message : spher_all[:,14+0]=np.log(spher_all[:,14+0])']
+===========
+
+Everything done.
