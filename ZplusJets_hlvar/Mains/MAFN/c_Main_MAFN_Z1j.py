@@ -117,7 +117,7 @@ events_dataset_prefix="/Users/humberto/Documents/work/NFs/RiccardoDir/ZplusJets/
 which_dataset_list=['jet1','jet2','jet3']
 ### Initialize hyperparameters lists ###
 batch_size_list=[512]
-bijectors_list=['RealNVPN']
+bijectors_list=['MAFN']
 nbijectors_list=[5]
 hidden_layers_list=[[128,128,128]]
 seeds_list = [0]#, 187, 377, 440, 520, 541, 721, 869, 926, 933]
