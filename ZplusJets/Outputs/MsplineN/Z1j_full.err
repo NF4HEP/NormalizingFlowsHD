@@ -1,0 +1,103 @@
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+/mnt/c/Users/rtorre/Dropbox/Work/04_Projects/Git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/ZplusJets/Mains/MsplineN/../../../code/Metrics.py:241: UserWarning: p-value floored: true value smaller than 0.001
+  p_val=anderson_ksamp([dist_1_k[:,dim], dist_2_k[:,dim]])[2]
+/mnt/c/Users/rtorre/Dropbox/Work/04_Projects/Git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/ZplusJets/Mains/MsplineN/../../../code/Metrics.py:241: UserWarning: p-value capped: true value larger than 0.25
+  p_val=anderson_ksamp([dist_1_k[:,dim], dist_2_k[:,dim]])[2]
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+Exception ignored in: <function _CheckpointRestoreCoordinatorDeleter.__del__ at 0x7f857c0bc5e0>
+Traceback (most recent call last):
+  File "/home/rtorre/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/training/tracking/util.py", line 178, in __del__
+TypeError: 'NoneType' object is not callable
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+Traceback (most recent call last):
+  File "/mnt/c/Users/rtorre/Dropbox/Work/04_Projects/Git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/ZplusJets/Mains/MsplineN/c_Main_MsplineN_Z1j_full.py", line 289, in <module>
+    nf_dist,_=Utils.load_model(nf_dist,path_to_results,ndims,lr=.000001)
+  File "/mnt/c/Users/rtorre/Dropbox/Work/04_Projects/Git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/ZplusJets/Mains/MsplineN/../../../code/Utils.py", line 153, in load_model
+    model.load_weights(path_to_results+'model_checkpoint/weights')
+  File "/home/rtorre/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/rtorre/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/training/py_checkpoint_reader.py", line 35, in error_translator
+    raise errors_impl.NotFoundError(None, None, error_message)
+tensorflow.python.framework.errors_impl.NotFoundError: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ../../results/MsplineN/Z1j_full/run_2/model_checkpoint/weights
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+/mnt/c/Users/rtorre/Dropbox/Work/04_Projects/Git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/ZplusJets/Mains/MsplineN/../../../code/Metrics.py:241: UserWarning: p-value floored: true value smaller than 0.001
+  p_val=anderson_ksamp([dist_1_k[:,dim], dist_2_k[:,dim]])[2]
+/mnt/c/Users/rtorre/Dropbox/Work/04_Projects/Git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/ZplusJets/Mains/MsplineN/../../../code/Metrics.py:241: UserWarning: p-value capped: true value larger than 0.25
+  p_val=anderson_ksamp([dist_1_k[:,dim], dist_2_k[:,dim]])[2]
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+WARNING:root:Too few points to create valid contours
+Exception ignored in: <function _CheckpointRestoreCoordinatorDeleter.__del__ at 0x7f4a414bc5e0>
+Traceback (most recent call last):
+  File "/home/rtorre/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/training/tracking/util.py", line 178, in __del__
+TypeError: 'NoneType' object is not callable

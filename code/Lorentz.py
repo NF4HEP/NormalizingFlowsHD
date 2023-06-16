@@ -6,6 +6,7 @@ import tensorflow as tf
 import tensorflow.keras as tfk
 import tensorflow_probability as tfp
 from tensorflow.keras import Model, Input
+from tensorflow.keras.layers import Layer, Dense
 from tensorflow.keras.callbacks import LambdaCallback
 tfd = tfp.distributions
 tfb = tfp.bijectors
@@ -14,7 +15,7 @@ import matplotlib.lines as mlines
 from corner import corner
 import Utils
 
-class BaseDistribution4Momenta(tfd.Distribution):
+class BaseDistribution4Momenta(tfd.Distribution): # type: ignore
     """
     A base distribution for a physical system of n_particles in 4-momenta representation.
     """
@@ -172,7 +173,7 @@ class BaseDistribution4Momenta(tfd.Distribution):
         return tf.TensorShape([4*self.n_particles])
 
 
-class LorentzTransformNN(tfk.Model):
+class LorentzTransformNN(Model):
     """
     A simple neural network that takes a four-momentum as input and outputs the parameters
     of a Lorentz boost that is applied to the four-momentum.
@@ -196,9 +197,9 @@ class LorentzTransformNN(tfk.Model):
         return: None
         """
         super(LorentzTransformNN, self).__init__(name=name, **kwargs)
-        self.dense_layers = [tfk.layers.Dense(units, activation=activation, kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) for units in hidden_units] # Hidden layers
-        self.dense_beta = tfk.layers.Dense(1, activation='tanh', kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) # (boost parameters β_i), ranges from -1 to 1
-        self.dense_angles = tfk.layers.Dense(5, activation='sigmoid', kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) # (rotation angles theta_i), ranges from 0 to 1 (0 to 2π)
+        self.dense_layers = [Dense(units, activation=activation, kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) for units in hidden_units] # Hidden layers
+        self.dense_beta = Dense(1, activation='tanh', kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) # (boost parameters β_i), ranges from -1 to 1
+        self.dense_angles = Dense(5, activation='sigmoid', kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) # (rotation angles theta_i), ranges from 0 to 1 (0 to 2π)
 
     def call(self, inputs):
         """
@@ -206,17 +207,19 @@ class LorentzTransformNN(tfk.Model):
         :param inputs: The inputs. shape: (n_events, n_particles, 4)
         :return: The outputs.
         """
+        epsilon = 1e-4
         x = inputs
         for layer in self.dense_layers:
             x = layer(x)
-        beta = self.dense_beta(x)/2+0.5  # scale the output of tanh to [0, 1]
-        #betas = 2*self.dense_betas(x)-1  # scale the output of sigmoid to [-1, 1]
+        beta = self.dense_beta(x)  # Output of tanh: range [-1, 1]
+        beta = (beta + 1) / 2  # Scale to [0, 1]
+        beta = (1 - 2*epsilon) * beta + epsilon  # Scale and shift to [epsilon, 1-epsilon]
         angles = 2 * np.pi * self.dense_angles(x)  # scale the output of sigmoid to [0, 2π]
         parameters = tf.concat([beta, angles], axis=-1)
         return parameters
     
     
-class MomentumCorrectionBijector(tfb.Bijector):
+class MomentumCorrectionBijector(tfb.Bijector): # type: ignore
     """ 
     A bijector that corrects the momentum of the first particle in an event to conserve momentum.
     """
@@ -308,7 +311,7 @@ class MomentumCorrectionBijector(tfb.Bijector):
         return output
 
 
-class GeneralLorentzTransformBijector(tfb.Bijector):
+class GeneralLorentzTransformBijector(tfb.Bijector): # type: ignore
     """
     A bijector that performs a general Lorentz transformation on a 4-momentum vector.
     """
@@ -397,7 +400,7 @@ class GeneralLorentzTransformBijector(tfb.Bijector):
         output = tf.constant(0., y.dtype)
         return output
 
-class GeneralLorentzNormalizingFlow(tfb.Chain):
+class GeneralLorentzNormalizingFlow(tfb.Chain): # type: ignore
     """
     A normalizing flow that applies a general Lorentz transformation to each particle in an event.
     """
@@ -590,7 +593,7 @@ def lorentz_boost(beta, theta, phi, dtype="float32"):
     gammam1 = gamma - 1
     
     # Define the zero_beta condition
-    zero_beta = tf.less(beta, 1e-10)
+    zero_beta = tf.less(tf.abs(beta), 1e-7)
     zero = tf.constant(0., dtype=dtype)
     one = tf.constant(1., dtype=dtype)
 
@@ -908,6 +911,16 @@ class HuberLogProbLoss(tf.keras.losses.Loss):
         small_error_loss = 0.5 * tf.square(error)
         large_error_loss = delta * (tf.abs(error) - 0.5 * delta)
         return tf.where(condition, small_error_loss, large_error_loss)
+    
+class LogProbLayer(Layer):
+    def __init__(self, distribution, **kwargs):
+        super(LogProbLayer, self).__init__(**kwargs)
+        self.distribution = distribution
+
+    def call(self, inputs):
+        log_prob = self.distribution.log_prob(inputs)
+        tf.debugging.assert_all_finite(log_prob, 'Log probability contains NaN or inf values.')
+        return log_prob
         
 class Trainer:
     def __init__(self, 
@@ -972,8 +985,8 @@ class Trainer:
     @property
     def seed(self):
         return self._data_kwargs.get('seed')
-    
-    @property.setter
+
+    @seed.setter
     def seed(self, value):
         self._data_kwargs['seed'] = value
     
@@ -1140,11 +1153,11 @@ class Trainer:
             callbacks.append(callback)
 
         return callbacks
-
+            
     def _epoch_callback(self, epoch, logs):
         n_disp = 1  # or whatever number you want to use
         if epoch % n_disp == 0:
-            print('\n Epoch {}/{}'.format(epoch + 1, self.n_epochs, logs),
+            print('\n Epoch {}/{}'.format(epoch + 1, self.n_epochs),
                   '\n\t ' + (': {:.4f}, '.join(logs.keys()) + ': {:.4f}').format(*logs.values()))
 
     def _get_fit_args(self, fit_kwargs):
@@ -1228,7 +1241,6 @@ def graph_execution(ndims,
                     n_disp,
                     path_to_results,
                     load_weights=False,
-                    load_weights_path=None,
                     lr=.001,
                     patience=30,
                     min_delta_patience=0.001,
@@ -1240,7 +1252,7 @@ def graph_execution(ndims,
     x_ = Input(shape=(ndims,), dtype=tf.float32)
     print(x_)
 	
-    log_prob_ = trainable_distribution.log_prob(x_)
+    log_prob_ = LogProbLayer(trainable_distribution)(x_)
     print('####### log_prob####')
     print(log_prob_)
     model = Model(x_, log_prob_)
@@ -1250,18 +1262,13 @@ def graph_execution(ndims,
                                    beta_2=0.999,
                                    epsilon=1e-07,
                                    amsgrad=True,
-                                   weight_decay=None,
+                                   decay=0.0,
                                    clipnorm=1.0,
                                    clipvalue=0.5,
-                                   global_clipnorm=None,
-                                   use_ema=False,
-                                   ema_momentum=0.99,
-                                   ema_overwrite_frequency=None,
-                                   jit_compile=True,
-                                   name='Adam')
+                                   global_clipnorm=None)
     
     #loss = lambda _, log_prob: -log_prob
-    loss = Huber_log_prob_loss
+    loss = HuberLogProbLoss()
 
     model.compile(optimizer=optimizer,loss=loss)
    
@@ -1306,8 +1313,8 @@ def graph_execution(ndims,
     # Display the loss every n_disp epoch
     epoch_callback = LambdaCallback(
         on_epoch_end=lambda epoch, logs:
-                        print('\n Epoch {}/{}'.format(epoch+1, n_epochs, logs),
-                              '\n\t ' + (': {:.4f}, '.join(logs.keys()) + ': {:.4f}').format(*logs.values()))
+                        print('\n Epoch {}/{}'.format(epoch + 1, n_epochs),
+                        '\n\t ' + (': {:.4f}, '.join(logs.keys()) + ': {:.4f}').format(*logs.values()))
                                        if epoch % n_disp == 0 else False
     )
 

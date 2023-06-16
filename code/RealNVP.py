@@ -143,7 +143,7 @@ class NN(Layer):
         t = self.t_layer(y)
         return t, log_s
     
-class RealNVP(tfb.Bijector):
+class RealNVP(tfb.Bijector): # type: ignore
     """
     Implementation of a Real-NVP for Denisty Estimation. L. Dinh “Density estimation using Real NVP,” 2016.
 
