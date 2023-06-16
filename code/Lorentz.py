@@ -4,6 +4,8 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.keras as tfk
 import tensorflow_probability as tfp
+from tensorflow.keras import Model, Input
+from tensorflow.keras.callbacks import LambdaCallback
 tfd = tfp.distributions
 tfb = tfp.bijectors
 import matplotlib.pyplot as plt
@@ -15,10 +17,64 @@ class BaseDistribution4Momenta(tfd.Distribution):
     """
     A base distribution for a physical system of n_particles in 4-momenta representation.
     """
-    def __init__(self, n_particles, masses=None, means3mom=None, stdev3mom=None, name="BaseDistribution4Momenta", 
-                 dtype=tf.float64, reparameterization_type=tfd.FULLY_REPARAMETERIZED, validate_args=False, allow_nan_stats=True, **kwargs):
+    def __init__(self, 
+                 n_particles, 
+                 masses=None, 
+                 means3mom=None, 
+                 stdev3mom=None,
+                 conserve_transverse_momentum=True,
+                 name="BaseDistribution4Momenta", 
+                 dtype=tf.float32, 
+                 reparameterization_type=tfd.FULLY_REPARAMETERIZED, 
+                 validate_args=False, 
+                 allow_nan_stats=True, 
+                 **kwargs):
         """
         Initialize the distribution.
+        
+        Parameters
+        ----------
+        n_particles : int, strictly positive
+            Number of particles in the system.
+        masses : array-like, optional, default None, shape (n_particles,)
+            Masses of the particles. If None, all masses are set to zero.
+        means3mom : array-like, optional, default None, shape (3,)
+            Means of the 3-momenta of the particles. If None, all means are set to zero.
+        stdev3mom : array-like, optional, default None, shape (3,)
+            Standard deviations of the 3-momenta of the particles. If None, all standard deviations are set to one.
+        conserve_transverse_momentum : bool, optional, default True
+            Flag that determines if the base distribution should conserve the transverse momentum.
+        name : str, optional, default 'BaseDistribution4Momenta'
+            Name of the distribution.
+        dtype : tf.dtype, optional, default tf.float32
+            Type of the distribution.
+        reparameterization_type : tfp.distributions.ReparameterizationType, optional, default tfd.FULLY_REPARAMETERIZED
+            Reparameterization type of the distribution.
+        validate_args : bool, optional, default False
+            Whether to validate input with asserts.
+        allow_nan_stats : bool, optional, default True
+            Whether to allow NaN statistics.
+        **kwargs
+            Additional keyword arguments.
+            
+        Raises
+        ------
+        ValueError
+            If the number of particles is not positive.
+        ValueError
+            If the number of particles is not an integer.
+        ValueError
+            If the masses are not positive.
+        ValueError
+            If the means of the 3-momenta are not finite. 
+        ValueError
+            If the standard deviations of the 3-momenta are not positive.
+        ValueError
+            If the standard deviations of the 3-momenta are not finite.
+
+        Returns 
+        ------- 
+        None    
         """
         super(BaseDistribution4Momenta, self).__init__(
             dtype=dtype,
@@ -30,6 +86,7 @@ class BaseDistribution4Momenta(tfd.Distribution):
         )
 
         self.n_particles = n_particles
+        self.transverse_momentum_conservation = conserve_transverse_momentum
 
         if masses is None:
             masses = tf.zeros((n_particles,),dtype=self.dtype)
@@ -49,40 +106,30 @@ class BaseDistribution4Momenta(tfd.Distribution):
         """
         # sample 3-momenta of n_particles particles from normal distribution with mean and stddev given by means3mom and stdev3mom
         samples = tf.random.normal((n, self.n_particles, 3), mean=self.means3mom, stddev=self.stdev3mom, dtype=self.dtype) # (n, n_particles, 3)
-
-        # compute sum of px and py for each event to use for last particle (px + px_last = 0 and py + py_last = 0)
-        sum_px = tf.reduce_sum(samples[..., 0], axis=-1, keepdims=True) # (n, 1)
-        sum_py = tf.reduce_sum(samples[..., 1], axis=-1, keepdims=True) # (n, 1)
-
-        # compute px and py for last particle (px_last = -sum_px and py_last = -sum_py)
-        samples_fixed_px_py = samples[:, :-1] # (n, n_particles-1, 3)
-        
-        # create new tensor with updated last px and py (px_last = -sum_px and py_last = -sum_py) and pz
-        last_px_py = -tf.stack([sum_px, sum_py], axis=-1)[:, 0] + samples[:, -1, :2] # (n, 2)
-        
-        # extract pz of last particle from samples drawn from normal distribution with mean and stddev given by means3mom and stdev3mom
-        last_pz = samples[:, -1, 2]
-
-        # reshape last_px_py and last_pz to match dimensions
-        last_px_py = tf.reshape(last_px_py, [n, -1])
-        last_pz = tf.reshape(last_pz, [n, -1])
-
-        # create new tensor with updated last px, py and pzs
-        last_particle = tf.concat([last_px_py, last_pz], axis=-1)
-        samples = tf.concat([samples_fixed_px_py, last_particle[:, tf.newaxis, :]], axis=1)
-        
-        # shuffle the particles (3-momenta) in each event
-        #samples = tf.transpose(tf.random.shuffle(tf.transpose(samples, [1, 0, 2])), [1, 0, 2])
-
+        # If transverse momentum conservation is required, fix the last particle's momenta to ensure that the total transverse momentum is zero
+        # (px + px_last = 0 and py + py_last = 0)
+        if self.transverse_momentum_conservation:
+            # compute sum of px and py for each event to use for last particle (px + px_last = 0 and py + py_last = 0)
+            sum_px = tf.reduce_sum(samples[..., 0], axis=-1, keepdims=True) # (n, 1)
+            sum_py = tf.reduce_sum(samples[..., 1], axis=-1, keepdims=True) # (n, 1)
+            # compute px and py for last particle (px_last = -sum_px and py_last = -sum_py)
+            samples_fixed_px_py = samples[:, :-1] # (n, n_particles-1, 3)
+            # create new tensor with updated last px and py (px_last = -sum_px and py_last = -sum_py) and pz
+            last_px_py = -tf.stack([sum_px, sum_py], axis=-1)[:, 0] + samples[:, -1, :2] # (n, 2)
+            # extract pz of last particle from samples drawn from normal distribution with mean and stddev given by means3mom and stdev3mom
+            last_pz = samples[:, -1, 2]
+            # reshape last_px_py and last_pz to match dimensions
+            last_px_py = tf.reshape(last_px_py, [n, -1])
+            last_pz = tf.reshape(last_pz, [n, -1])
+            # create new tensor with updated last px, py and pzs
+            last_particle = tf.concat([last_px_py, last_pz], axis=-1)
+            samples = tf.concat([samples_fixed_px_py, last_particle[:, tf.newaxis, :]], axis=1)
         # compute energy from momenta and mass
         energy = tf.sqrt(tf.reduce_sum(samples ** 2, axis=-1) + tf.reshape(self.masses, (1, self.n_particles)) ** 2)
-
         # stack energy and momenta to form 4-momenta
         samples = tf.concat([energy[..., tf.newaxis], samples], axis=-1)
-
         # reshape the samples to the desired shape
         samples = tf.reshape(samples, [n, 4*self.n_particles])
-
         return samples
 
     def _log_prob(self, x):
@@ -90,22 +137,28 @@ class BaseDistribution4Momenta(tfd.Distribution):
         Compute log-probability of x under the distribution.
         """
         x = tf.reshape(x, [-1, self.n_particles, 4])
-        px = x[..., 1]
-        py = x[..., 2]
-        pz = x[..., 3]
+        px = x[..., 1] # shape (n_samples, n_particles)
+        py = x[..., 2] # shape (n_samples, n_particles)
+        pz = x[..., 3] # shape (n_samples, n_particles)
 
-        # only consider px and py for particles other than the last
-        px = px[..., :-1]
-        py = py[..., :-1]
+        if self.transverse_momentum_conservation:
+            # only consider px and py for particles other than the last
+            px = px[..., :-1] # shape (n_samples, n_particles-1)
+            py = py[..., :-1] # shape (n_samples, n_particles-1)
 
         # normal distribution for momenta
         log_prob_px = tf.reduce_sum(tfd.Normal(self.means3mom[..., 0], self.stdev3mom[..., 0]).log_prob(px), axis=-1)
         log_prob_py = tf.reduce_sum(tfd.Normal(self.means3mom[..., 1], self.stdev3mom[..., 1]).log_prob(py), axis=-1)
         log_prob_pz = tf.reduce_sum(tfd.Normal(self.means3mom[..., 2], self.stdev3mom[..., 2]).log_prob(pz), axis=-1)
 
-        return log_prob_px + log_prob_py + log_prob_pz
+        log_prob_sum = log_prob_px + log_prob_py + log_prob_pz
+
+        return log_prob_sum
 
     def _batch_shape_tensor(self):
+        """
+        Get the batch shape as a tensor.
+        """
         return tf.constant([], dtype=tf.int32)
 
     def _batch_shape(self):
@@ -123,7 +176,12 @@ class LorentzTransformNN(tfk.Model):
     A simple neural network that takes a four-momentum as input and outputs the parameters
     of a Lorentz boost that is applied to the four-momentum.
     """
-    def __init__(self, hidden_units, activation='relu', name='LorentzTransformNN', dtype='float32', **kwargs):
+    def __init__(self, 
+                 hidden_units, 
+                 activation='relu', 
+                 name='LorentzTransformNN', 
+                 dtype='float32', 
+                 **kwargs):
         """
         Initialize the network.
         
@@ -137,9 +195,9 @@ class LorentzTransformNN(tfk.Model):
         return: None
         """
         super(LorentzTransformNN, self).__init__(name=name, **kwargs)
-        self.dense_layers = [tfk.layers.Dense(units, activation=activation, dtype=dtype) for units in hidden_units] # Hidden layers
-        self.dense_betas = tfk.layers.Dense(3, activation='sigmoid', dtype=dtype)  # (boost  velocities betas), ranges from -1 to 1
-        self.dense_angles = tfk.layers.Dense(3, activation='sigmoid', dtype=dtype)  # (rotation angles theta_i), ranges from 0 to 1 (0 to 2π)
+        self.dense_layers = [tfk.layers.Dense(units, activation=activation, kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) for units in hidden_units] # Hidden layers
+        self.dense_beta = tfk.layers.Dense(1, activation='tanh', kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) # (boost parameters β_i), ranges from -1 to 1
+        self.dense_angles = tfk.layers.Dense(5, activation='sigmoid', kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) # (rotation angles theta_i), ranges from 0 to 1 (0 to 2π)
 
     def call(self, inputs):
         """
@@ -150,17 +208,114 @@ class LorentzTransformNN(tfk.Model):
         x = inputs
         for layer in self.dense_layers:
             x = layer(x)
-        betas = 2*self.dense_betas(x)-1  # scale the output of sigmoid to [-1, 1]
+        beta = self.dense_beta(x)/2+0.5  # scale the output of tanh to [0, 1]
+        #betas = 2*self.dense_betas(x)-1  # scale the output of sigmoid to [-1, 1]
         angles = 2 * np.pi * self.dense_angles(x)  # scale the output of sigmoid to [0, 2π]
-        parameters = tf.concat([betas, angles], axis=-1)
+        parameters = tf.concat([beta, angles], axis=-1)
         return parameters
     
     
+class MomentumCorrectionBijector(tfb.Bijector):
+    """ 
+    A bijector that corrects the momentum of the first particle in an event to conserve momentum.
+    """
+    def __init__(self, 
+                 validate_args=False, 
+                 name='MomentumCorrectionBijector'):
+        super(MomentumCorrectionBijector, self).__init__(validate_args=validate_args, forward_min_event_ndims=1, name=name)
+
+    def _forward(self, x):
+        # Assume the input is an array of shape (n_events, 4*n_particles) where the first 4 values are the
+        #  4-momenta of the first particle, the next 4 values are the 4-momenta of the second particle, etc.
+        # The 4-momenta are ordered as (E, px, py, pz).
+        # The output is an array of the same shape, but with the momentum of the first particle corrected
+        #  to conserve momentum.
+        
+        # Reshape the input to (n_events, n_particles, 4)
+        n_particles = x.shape[1] // 4
+        x_reshaped = tf.reshape(x, [-1, n_particles, 4])
+        
+        # Compute the total px and py for particles 2 to N
+        total_px = tf.reduce_sum(x_reshaped[:, 1:, 1], axis=1, keepdims=True)
+        total_py = tf.reduce_sum(x_reshaped[:, 1:, 2], axis=1, keepdims=True)
+        
+        # Subtract these from the first particle to conserve momentum
+        corrected_px = -total_px
+        corrected_py = -total_py
+        
+        # Compute the energy using the on-shell condition (E^2 = m^2 + p^2)
+        original_mass_squared = x_reshaped[:, 0, :1] ** 2 - tf.reduce_sum(x_reshaped[:, 0, 1:] ** 2, axis=-1, keepdims=True)
+        corrected_energy = tf.sqrt(original_mass_squared + corrected_px ** 2 + corrected_py ** 2 + x_reshaped[:, 0, 3:4] ** 2)
+        
+        # Create a new array with the corrected particle and the transformed particles
+        corrected_particle = tf.concat([corrected_energy, corrected_px, corrected_py, x_reshaped[:, :1, 3]], axis=1)
+
+        # Concatenate the corrected particle with the transformed particles
+        y = tf.concat([corrected_particle[:, None, :], x_reshaped[:, 1:, :]], axis=1)
+        
+        # Reshape the output to (n_events, 4*n_particles)
+        y = tf.reshape(y, [-1, 4*n_particles])
+
+        return y
+
+    def _inverse(self, y):
+        # Assume the input is an array of shape (n_events, 4*n_particles) where the first 4 values are the
+        #  4-momenta of the first particle, the next 4 values are the 4-momenta of the second particle, etc.
+        # The 4-momenta are ordered as (E, px, py, pz).
+        # The output is an array of the same shape, but with the momentum of the first particle corrected
+        #  back to its original value
+        
+        # Reshape the input to (n_events, n_particles, 4)
+        n_particles = y.shape[1] // 4
+        y_reshaped = tf.reshape(y, [-1, n_particles, 4])
+        
+        # Compute the total px and py for particles 2 to N
+        total_px = tf.reduce_sum(y_reshaped[:, 1:, 1], axis=1, keepdims=True)
+        total_py = tf.reduce_sum(y_reshaped[:, 1:, 2], axis=1, keepdims=True)
+        
+        # Add these to the first particle to get back the original momentum
+        original_px = total_px
+        original_py = total_py
+        
+        # Compute the energy using the on-shell condition (E^2 = m^2 + p^2)
+        original_mass_squared = y_reshaped[:, 0, :1] ** 2 - tf.reduce_sum(y_reshaped[:, 0, 1:] ** 2, axis=-1, keepdims=True)
+        original_energy = tf.sqrt(original_mass_squared + original_px ** 2 + original_py ** 2 + y_reshaped[:, 0, 3:4] ** 2)
+        
+        # Create a new array with the original particle and the transformed particles
+        original_particle = tf.concat([original_energy, original_px, original_py, y_reshaped[:, :1, 3]], axis=1)
+
+        # Concatenate the original particle with the transformed particles
+        x = tf.concat([original_particle[:, None, :], y_reshaped[:, 1:, :]], axis=1)
+        
+        # Reshape the output to (n_events, 4*n_particles)
+        x = tf.reshape(x, [-1, 4*n_particles])
+
+        return x
+    
+    def _forward_log_det_jacobian(self, x):
+        """
+        The Jacobian determinant of a momentum correction is 1
+        """
+        output = tf.constant(0., x.dtype)
+        return output
+    
+    def _inverse_log_det_jacobian(self, y):
+        """
+        The Jacobian determinant of a momentum correction is 1
+        """
+        output = tf.constant(0., y.dtype)
+        return output
+
+
 class GeneralLorentzTransformBijector(tfb.Bijector):
     """
     A bijector that performs a general Lorentz transformation on a 4-momentum vector.
     """
-    def __init__(self, n_particles, lorentz_transform_NN, validate_args=False, name='GeneralLorentzTransformBijector'):
+    def __init__(self, 
+                 #n_particles, 
+                 lorentz_transform_NN,
+                 validate_args=False, 
+                 name='GeneralLorentzTransformBijector'):
         """
         A bijector that performs a general Lorentz transformation on a 4-momentum vector.
         :param n_particles: The number of particles in the event.
@@ -173,48 +328,59 @@ class GeneralLorentzTransformBijector(tfb.Bijector):
             validate_args=validate_args, 
             forward_min_event_ndims=1, 
             name=name)
-        self.n_particles = n_particles
+        #self.n_particles = n_particles
         self.lorentz_transform_NN = lorentz_transform_NN
-
+        x = tf.keras.Input((4,))
+        parameters = self.lorentz_transform_NN(x)
+        self.nn = Model(x, parameters)
+        
     def _forward(self, x):
         """
         Perform a general Lorentz transformation on a 4-momentum vector.
         :param x: The 4-momentum vector.
         :return: The transformed 4-momentum vector.
         """
-        x_reshaped = tf.reshape(x, [-1, self.n_particles, 4])
-        x_particle = x_reshaped[:, 0, :]  # Use the first particle's 4-momentum
+        x_a = x[:, :4]  # shape: (n_samples, 4)
+        x_b = x[:, 4:]  # shape: (n_samples, 4*(n_particles-1))
         # Use the LorentzTransformNN to choose the Lorentz transformation
-        parameters = self.lorentz_transform_NN(x_particle) # shape: (n_samples, 6)
-        beta_x = parameters[..., 0]  # Velocity for boost in the x direction (ranges from -1 to 1). shape (n_samples,)
-        beta_y = parameters[..., 1]  # Velocity for boost in the y direction (ranges from -1 to 1). shape (n_samples,)
-        beta_z = parameters[..., 2]  # Velocity for boost in the z direction (ranges from -1 to 1). shape (n_samples,)
+        parameters = self.nn(x_a)  # shape: (n_samples, 6)
+        beta = parameters[..., 0]  # Velocity for boost in the x direction (ranges from -1 to 1). shape (n_samples,)
+        theta = parameters[..., 1]  # Polar angle for boost in the x direction (ranges from 0 to pi). shape (n_samples,)
+        phi = parameters[..., 2]  # Azimuthal angle for boost in the x direction (ranges from 0 to 2*pi). shape (n_samples,)
         theta_1 = parameters[..., 3]  # Euler angle 1: rotation around z-axis. shape (n_samples,)
         theta_2 = parameters[..., 4]  # Euler angle 2: rotation around y-axis. shape (n_samples,)
         theta_3 = parameters[..., 5]  # Euler angle 3: rotation around new z-axis. shape (n_samples,)
         # Apply the chosen Lorentz transformation to all particles
-        x_transformed = lorentz_transform(x, beta_x, beta_y, beta_z, theta_1, theta_2, theta_3)
-        return tf.reshape(x_transformed, tf.shape(x))
-
+        y_a = x_a
+        y_b = lorentz_transform(x_b, beta, theta, phi, theta_1, theta_2, theta_3, dtype=x.dtype)
+        y = tf.concat([y_a, y_b], axis=-1)
+        return tf.reshape(y, tf.shape(x))
+    
     def _inverse(self, y):
         """
         Perform the inverse of a general Lorentz transformation on a 4-momentum vector.
+        
+        Parameters:
         :param y: The 4-momentum vector.
+        
+        Return:
         :return: The transformed 4-momentum vector.
         """
-        y_reshaped = tf.reshape(y, [-1, self.n_particles, 4])
-        y_particle = y_reshaped[:, 0, :]  # Use the first particle's 4-momentum
+        y_a = y[:, :4]  # shape: (n_samples, 4)
+        y_b = y[:, 4:]  # shape: (n_samples, 4*(n_particles-1))
         # Use the LorentzTransformNN to choose the Lorentz transformation
-        parameters = self.lorentz_transform_NN(y_particle) # shape: (n_samples, 6)
-        beta_x = parameters[..., 0]  # Velocity for boost in the x direction (ranges from -1 to 1). shape (n_samples,)
-        beta_y = parameters[..., 1]  # Velocity for boost in the y direction (ranges from -1 to 1). shape (n_samples,)
-        beta_z = parameters[..., 2]  # Velocity for boost in the z direction (ranges from -1 to 1). shape (n_samples,)
+        parameters = self.nn(y_a)  # shape: (n_samples, 6)
+        beta = parameters[..., 0]  # Velocity for boost in the x direction (ranges from -1 to 1). shape (n_samples,)
+        theta = parameters[..., 1]  # Polar angle for boost in the x direction (ranges from 0 to pi). shape (n_samples,)
+        phi = parameters[..., 2]  # Azimuthal angle for boost in the x direction (ranges from 0 to 2*pi). shape (n_samples,)
         theta_1 = parameters[..., 3]  # Euler angle 1: rotation around z-axis. shape (n_samples,)
         theta_2 = parameters[..., 4]  # Euler angle 2: rotation around y-axis. shape (n_samples,)
         theta_3 = parameters[..., 5]  # Euler angle 3: rotation around new z-axis. shape (n_samples,)
-        # Apply the inverse of the chosen Lorentz transformation to all particles
-        y_transformed = inverse_lorentz_transform(y, beta_x, beta_y, beta_z, theta_1, theta_2, theta_3)
-        return tf.reshape(y_transformed, tf.shape(y))
+        # Apply the chosen Lorentz transformation to all particles
+        x_a = y_a
+        x_b = inverse_lorentz_transform(y_b, beta, theta, phi, theta_1, theta_2, theta_3, dtype=y.dtype)
+        x = tf.concat([x_a, x_b], axis=-1)
+        return tf.reshape(x, tf.shape(y))
     
     def _forward_log_det_jacobian(self, x):
         """
@@ -230,17 +396,26 @@ class GeneralLorentzTransformBijector(tfb.Bijector):
         output = tf.constant(0., y.dtype)
         return output
 
-
 class GeneralLorentzNormalizingFlow(tfb.Chain):
     """
     A normalizing flow that applies a general Lorentz transformation to each particle in an event.
     """
-    def __init__(self, n_particles, n_bijectors, hidden_units, activation='relu', name='ParticleBoostedNormalizingFlow', permute_only=False, **kwargs):
+    def __init__(self, 
+                 n_particles, 
+                 n_bijectors, 
+                 hidden_units, 
+                 activation='relu',
+                 conserve_transverse_momentum=True,
+                 name='ParticleBoostedNormalizingFlow', 
+                 dtype="float32",
+                 permute_only=False, 
+                 **kwargs):
         """
         A normalizing flow that applies a general Lorentz transformation to each particle in an event.
         :param n_particles: The number of particles in the event.
         :param n_bijectors: The number of bijectors in the flow.
         :param hidden_units: The number of hidden units in the Lorentz transformation selector.
+        :param conserve_transverse_momentum: Python `bool` indicating whether to conserve transverse momentum in the Lorentz transformation selector.
         :param activation: The activation function to use in the Lorentz transformation selector.
         :param name: Python `str`, name given to ops managed by this object.
         :param permute_only: Python `bool` indicating whether to only permute the particles. Only useful for debugging paricles permuted by the flow.
@@ -248,13 +423,16 @@ class GeneralLorentzNormalizingFlow(tfb.Chain):
         """
         # If n_bijectors < n_particles, set n_bijectors to n_particles and print a warning
         if n_bijectors < n_particles:
-            print("Warning: Number of bijectors was less than the number of particles. Number of bijectors has been set to the number of particles.")
-            n_bijectors = n_particles
+            print("Warning: Number of bijectors was less than the number of particles. Performances may be poor.")
+            #print("Warning: Number of bijectors was less than the number of particles. Number of bijectors has been set to the number of particles.")
+            #n_bijectors = n_particles
         
         self.n_particles = n_particles # The number of particles in the event
         self.n_bijectors = n_bijectors # The number of bijectors in the flow
         self.hidden_units = hidden_units  # The number of hidden units in the Lorentz transformation selector
+        self.conserve_transverse_momentum = conserve_transverse_momentum # Python `bool` indicating whether to conserve transverse momentum in the Lorentz transformation selector
         self.activation = activation # The activation function to use in the Lorentz transformation selector
+        self.flow_dtype = dtype # The dtype of the flow
         bijectors = [] # The list of bijectors that make up the flow
         lorentz_transform_NNs = [] # The list of Lorentz transformation selectors
 
@@ -265,19 +443,26 @@ class GeneralLorentzNormalizingFlow(tfb.Chain):
             # Add a Permute bijector to the list of bijectors
             permutation = tfb.Permute(permutation=base_perm)
 
-            # Always add a LorentzTransformNN bijector
+            # If permute_only is True, only add the Permute bijector to the list of bijectors
+            # Otherwise, add a LorentzTransformNN and a GeneralLorentzTransformBijector to the list of bijectors
             if permute_only:
+                # Add a Permute bijector to the list of bijectors
                 bijector = tfb.Identity()
+                bijectors.extend([bijector, permutation])
             else:
-                lorentz_transform_NN = LorentzTransformNN(hidden_units=self.hidden_units, activation=self.activation, name='LorentzTransformNN_'+str(i))
-                bijector = GeneralLorentzTransformBijector(n_particles=self.n_particles, lorentz_transform_NN=lorentz_transform_NN,  name='GeneralLorentzTransformBijector_'+str(i))
+                # Initialize a LorentzTransformNN to choose the Lorentz transformation
+                lorentz_transform_NN = LorentzTransformNN(hidden_units=self.hidden_units, activation=self.activation, name='LorentzTransformNN_'+str(i), dtype=self.flow_dtype)
                 lorentz_transform_NNs.append(lorentz_transform_NN)
-            
-            bijectors.extend([bijector, permutation])
-
-            # Cycle the base_perm for next iteration
-            # base_perm = np.roll(base_perm, -1)
-            
+                # Add a GeneralLorentzTransformBijector to the list of bijectors
+                bijector = GeneralLorentzTransformBijector(lorentz_transform_NN=lorentz_transform_NN, name='GeneralLorentzTransformBijector_'+str(i))
+                if self.conserve_transverse_momentum:
+                    # If transverse momentum is conserved, add a MomentumCorrectionBijector to the list of bijectors
+                    correction = MomentumCorrectionBijector(name='MomentumCorrectionBijector_'+str(i))
+                    bijectors.extend([bijector, correction, permutation])
+                else:
+                    # Otherwise, only add the GeneralLorentzTransformBijector to the list of bijectors
+                    bijectors.extend([bijector, permutation])
+                
         # Calculate shift necessary to restore original order
         restore_shift = self.n_particles - self.n_bijectors % self.n_particles
 
@@ -286,7 +471,7 @@ class GeneralLorentzNormalizingFlow(tfb.Chain):
             for q in range(restore_shift):
                 permutation = tfb.Permute(permutation=base_perm)
                 bijector = tfb.Identity()
-                self.bijectors.extend([bijector, permutation])
+                bijectors.extend([bijector, permutation])
                 
         super(GeneralLorentzNormalizingFlow, self).__init__(list(reversed(bijectors)), validate_args=True, name=name)
         
@@ -312,7 +497,7 @@ class GeneralLorentzNormalizingFlow(tfb.Chain):
         """
         return self.forward(z)
 
-def lorentz_transform(particle, beta_x, beta_y, beta_z, theta_1, theta_2, theta_3):
+def lorentz_transform(particle, beta, theta, phi, theta_1, theta_2, theta_3, dtype="float32"):
     """
     Perform a general Lorentz transformation on a 4-momentum vector.
     The transformation is a boost with rapidity eta along the (phi, theta) direction 
@@ -321,12 +506,12 @@ def lorentz_transform(particle, beta_x, beta_y, beta_z, theta_1, theta_2, theta_
 
     :param particle: tf.Tensor
         Tensor of shape (n_events, n_particles, 4), the input 4-momentum vector.
-    :param beta_x: tf.Tensor
-        Tensor of shape (n_events, ), the x-component of the boost velocity.
-    :param beta_y: tf.Tensor
-        Tensor of shape (n_events, ), the y-component of the boost velocity.
-    :param beta_z: tf.Tensor
-        Tensor of shape (n_events, ), the z-component of the boost velocity.
+    :param beta : tf.Tensor
+        Tensor of shape (n_events, ), the boost velocity.
+    :param theta: tf.Tensor
+        Tensor of shape (n_events, ), the polar angle of the boost velocity.
+    :param phi: tf.Tensor   
+        Tensor of shape (n_events, ), the azimuthal angle of the boost velocity.
     :param theta_1: tf.Tensor 
         Tensor of shape (n_events, ), the first Euler angle.
     :param theta_2: tf.Tensor
@@ -338,8 +523,8 @@ def lorentz_transform(particle, beta_x, beta_y, beta_z, theta_1, theta_2, theta_
         Tensor of shape (n_events, n_particles, 4), the transformed 4-momentum vector.
     """
     # Compute the Lorentz boost matrix and the rotation matrix
-    boost_matrix = lorentz_boost(beta_x, beta_y, beta_z)  # shape: (n_samples, 4, 4)
-    rotation_matrix = euler_rotation(theta_1, theta_2, theta_3)  # shape: (n_samples, 4, 4)
+    boost_matrix = lorentz_boost(beta, theta, phi, dtype=dtype)  # shape: (n_samples, 4, 4)
+    rotation_matrix = euler_rotation(theta_1, theta_2, theta_3, dtype=dtype)  # shape: (n_samples, 4, 4)
     
     # Apply first the boost and then the rotation
     transformed_particle = apply_lorentz_transformation(particle, boost_matrix)
@@ -347,7 +532,7 @@ def lorentz_transform(particle, beta_x, beta_y, beta_z, theta_1, theta_2, theta_
     
     return transformed_particle
 
-def inverse_lorentz_transform(particle, beta_x, beta_y, beta_z, theta_1, theta_2, theta_3):
+def inverse_lorentz_transform(particle, beta, theta, phi, theta_1, theta_2, theta_3, dtype="float32"):
     """
     Perform the inverse Lorentz transformation of lorentz_transform on a 4-momentum vector.
     The "3-2-3" notation for Euler angles is used.
@@ -359,8 +544,8 @@ def inverse_lorentz_transform(particle, beta_x, beta_y, beta_z, theta_1, theta_2
     same as lorentz_transform
     """
     # Compute the inverse Lorentz boost matrix and the inverse rotation matrix
-    boost_matrix = lorentz_boost(-beta_z, -beta_y, -beta_x)  # shape: (n_samples, 4, 4)
-    rotation_matrix = euler_rotation(-theta_3, -theta_2, -theta_1)  # shape: (n_samples, 4, 4)
+    boost_matrix = lorentz_boost(-beta, theta, phi, dtype=dtype)  # shape: (n_samples, 4, 4)
+    rotation_matrix = euler_rotation(-theta_3, -theta_2, -theta_1, dtype=dtype)  # shape: (n_samples, 4, 4)
     
     # Apply first the rotation and then the boost
     transformed_particle = apply_lorentz_transformation(particle, rotation_matrix)
@@ -368,59 +553,66 @@ def inverse_lorentz_transform(particle, beta_x, beta_y, beta_z, theta_1, theta_2
 
     return transformed_particle
 
-def lorentz_boost(beta_x, beta_y, beta_z):
+def lorentz_boost(beta, theta, phi, dtype="float32"):
     """
     Generates the tensor for a Lorentz boosts on 4-momentum vectors. 
-    The boost is parametrized by the eta_x, eta_y and eta_z rapidities.
+    The boost is parametrized by the speed beta and the angles theta and phi.
 
     Parameters:
-    beta_x: Tensor of shape (n_samples, n_particles), the velocity of the boost along the x axis for each event and each particle.
-    beta_y: Tensor of shape (n_samples, n_particles), the velocity of the boost along the x axis for each event and each particle.
-    beta_z: Tensor of shape (n_samples, n_particles), the velocity of the boost along the x axis for each event and each particle.
+    beta: Tensor of shape (n_samples, n_particles), the speed of the boost for each event and each particle.
+    theta: Tensor of shape (n_samples, n_particles), the polar angle of the boost direction for each event and each particle.
+    phi: Tensor of shape (n_samples, n_particles), the azimuthal angle of the boost direction for each event and each particle.
 
     Returns:
     Tensor of shape (n_samples, 4, 4), the boost matrices for each sample.
     """
+
     # Check input shapes. If inputs are just numbers, convert them to tensors
-    if isinstance(beta_x, (int, float)):
-        beta_x = tf.convert_to_tensor([beta_x], dtype=tf.float32)
-    if isinstance(beta_y, (int, float)):
-        beta_y = tf.convert_to_tensor([beta_y], dtype=tf.float32)
-    if isinstance(beta_z, (int, float)):
-        beta_z = tf.convert_to_tensor([beta_z], dtype=tf.float32)
+    if isinstance(beta, (int, float)):
+        beta = tf.convert_to_tensor([beta], dtype=dtype)
+    if isinstance(theta, (int, float)):
+        theta = tf.convert_to_tensor([theta], dtype=dtype)
+    if isinstance(phi, (int, float)):
+        phi = tf.convert_to_tensor([phi], dtype=dtype)
+    
+    # Compute the beta components
+    beta_x = beta * tf.sin(theta) * tf.cos(phi)
+    beta_y = beta * tf.sin(theta) * tf.sin(phi)
+    beta_z = beta * tf.cos(theta)
     
     # Compute the number of samples
     n_samples = tf.shape(beta_x)[0]
 
-    # Compute the magnitude of the velocity theta_2 and the relativistic factor theta_3
-    beta = tf.sqrt(beta_x**2 + beta_y**2 + beta_z**2)  # shape: (n_samples, n_particles)
+    # Compute the gamma factor
     gamma = 1 / tf.sqrt(1 - beta**2)  # shape: (n_samples, n_particles)
     # Compute other relevant quantities
     gammam1 = gamma - 1
     
     # Define the zero_beta condition
     zero_beta = tf.less(beta, 1e-10)
+    zero = tf.constant(0., dtype=dtype)
+    one = tf.constant(1., dtype=dtype)
 
     # Build the componets of the boost matrix. If beta is zero, the boost matrix is the identity
     b00 = gamma
-    b01 = tf.where(zero_beta, 0., -gamma * beta_x)
-    b02 = tf.where(zero_beta, 0., -gamma * beta_y)
-    b03 = tf.where(zero_beta, 0., -gamma * beta_z)
+    b01 = tf.where(zero_beta, zero, -gamma * beta_x)
+    b02 = tf.where(zero_beta, zero, -gamma * beta_y)
+    b03 = tf.where(zero_beta, zero, -gamma * beta_z)
 
     b10 = -gamma * beta_x
-    b11 = tf.where(zero_beta, 1., 1 + gammam1 * beta_x**2 / beta**2)
-    b12 = tf.where(zero_beta, 0., gammam1 * beta_x * beta_y / beta**2)
-    b13 = tf.where(zero_beta, 0., gammam1 * beta_x * beta_z / beta**2)
+    b11 = tf.where(zero_beta, one, 1 + gammam1 * beta_x**2 / beta**2)
+    b12 = tf.where(zero_beta, zero, gammam1 * beta_x * beta_y / beta**2)
+    b13 = tf.where(zero_beta, zero, gammam1 * beta_x * beta_z / beta**2)
 
     b20 = -gamma * beta_y
     b21 = b12
-    b22 = tf.where(zero_beta, 1., 1 + gammam1 * beta_y**2 / beta**2)
-    b23 = tf.where(zero_beta, 0., gammam1 * beta_y * beta_z / beta**2)
+    b22 = tf.where(zero_beta, one, 1 + gammam1 * beta_y**2 / beta**2)
+    b23 = tf.where(zero_beta, zero, gammam1 * beta_y * beta_z / beta**2)
 
     b30 = b03
     b31 = b13
     b32 = b23
-    b33 = tf.where(zero_beta, 1., 1 + gammam1 * beta_z**2 / beta**2)
+    b33 = tf.where(zero_beta, one, 1 + gammam1 * beta_z**2 / beta**2)
 
     # Stack the components together and reshape to get a shape of (4, 4, n_samples)
     boost_matrix = tf.reshape(tf.stack([
@@ -434,7 +626,7 @@ def lorentz_boost(beta_x, beta_y, beta_z):
         
     return boost_matrix
 
-def euler_rotation(theta_1, theta_2, theta_3):
+def euler_rotation(theta_1, theta_2, theta_3, dtype="float32"):
     """
     Generates the tensor of Euler rotations on 4-momentum vectors. 
     The rotation angles are specified by the theta_1, theta_2 and theta_3 angles and the "3-2-3" convention is followed.
@@ -449,11 +641,11 @@ def euler_rotation(theta_1, theta_2, theta_3):
     """
     # Check input shapes. If inputs are just numbers, convert them to tensors
     if isinstance(theta_1, (int, float)):
-        theta_1 = tf.convert_to_tensor([theta_1], dtype=tf.float32)
+        theta_1 = tf.convert_to_tensor([theta_1], dtype=dtype)
     if isinstance(theta_2, (int, float)):
-        theta_2 = tf.convert_to_tensor([theta_2], dtype=tf.float32)
+        theta_2 = tf.convert_to_tensor([theta_2], dtype=dtype)
     if isinstance(theta_3, (int, float)):
-        theta_3 = tf.convert_to_tensor([theta_3], dtype=tf.float32)
+        theta_3 = tf.convert_to_tensor([theta_3], dtype=dtype)
     
     # Compute the number of samples
     n_samples = tf.shape(theta_1)[0]
@@ -689,60 +881,361 @@ def cornerplotter(target_test_data,nf_dist,max_dim=32,n_bins=50):
     plt.close()
     return
 
-#def lorentz_boost(eta, phi, theta):
-#    """
-#    Generates the tensor for a Lorentz boosts on 4-momentum vectors. 
-#    The boost is parametrized by the rapidity eta along the (phi, theta) direction.
-#
-#    Parameters:
-#    eta: Tensor of shape (n_samples, n_particles), the rapidity of the boost for each event and each particle.
-#    phi: Tensor of shape (n_samples, n_particles), the phi angle for the boost direction for each event and each particle.
-#    theta: Tensor of shape (n_samples, n_particles), the theta angle for the boost direction for each event and each particle.
-#
-#    Returns:
-#    Tensor of shape (n_samples, 4, 4), the boost matrices for each sample.
-#    """
-#    # Compute the cosh and sinh of the rapidity and the cos and sin of the angles
-#    c_eta, s_eta = tf.cosh(eta), tf.sinh(eta)  # shape: (n_samples,)
-#    c_theta, s_theta = tf.cos(theta), tf.sin(theta)  # shape: (n_samples,)
-#    c_phi, s_phi = tf.cos(phi), tf.sin(phi)  # shape: (n_samples,)
-#    
-#    # Compute the relevant squares
-#    c_theta_sq = c_theta**2
-#    s_theta_sq = s_theta**2
-#    c_phi_sq = c_phi**2
-#    s_phi_sq = s_phi**2
-#    
-#    # Build the componets of the boost matrix
-#    b00 = c_eta
-#    b01 = -s_eta * s_theta * c_phi
-#    b02 = -s_eta * s_theta * s_phi
-#    b03 = -s_eta * c_theta
-#    
-#    b10 = -s_eta * s_theta * c_phi
-#    b11 = 1 + (c_eta - 1) * c_theta_sq * c_phi_sq
-#    b12 = (c_eta - 1) * c_theta * s_theta * s_phi
-#    b13 = (c_eta - 1) * c_theta * c_theta * s_phi
-#    
-#    b20 = -s_eta * s_theta * s_phi
-#    b21 = (c_eta - 1) * c_theta * s_theta * s_phi
-#    b22 = 1 + (c_eta - 1) * s_theta_sq * s_phi_sq
-#    b23 = (c_eta - 1) * s_theta * c_theta * s_phi
-#    
-#    b30 = -s_eta * c_theta
-#    b31 = (c_eta - 1) * c_theta * c_theta * s_phi
-#    b32 = (c_eta - 1) * s_theta * c_theta * s_phi
-#    b33 = 1 + (c_eta - 1) * c_theta_sq
-#    
-#    # Stack the components together and reshape to get a shape of (4, 4, 5)
-#    boost_matrix = tf.reshape(tf.stack([
-#        b00, b01, b02, b03,
-#        b10, b11, b12, b13,
-#        b20, b21, b22, b23,
-#        b30, b31, b32, b33
-#    ], axis=0), (4, 4, 5))
-#    
-#    # Transpose to get a shape of (5, 4, 4)
-#    boost_matrix = tf.transpose(boost_matrix, perm=[2, 0, 1])
-#        
-#    return boost_matrix
+#def Huber_log_prob_loss(y_true, y_pred, delta=5.0):
+#    """Huber loss function for log_prob loss"""
+#    # Define threshold
+#    delta = tf.cast(delta, y_pred.dtype)
+#    # Define error
+#    error = -y_pred
+#    # Define condition for error
+#    condition = tf.abs(error) < delta
+#    # Apply quadratic loss for small errors and linear loss for large errors
+#    small_error_loss = 0.5 * tf.square(error)
+#    large_error_loss = delta * (tf.abs(error) - 0.5 * delta)
+#    # Return loss depending on condition
+#    return tf.where(condition, small_error_loss, large_error_loss)
+
+class HuberLogProbLoss(tf.keras.losses.Loss):
+    def __init__(self, delta=5.0, **kwargs):
+        self.delta = delta
+        super().__init__(**kwargs)
+
+    def call(self, y_true, y_pred):
+        delta = tf.cast(self.delta, y_pred.dtype)
+        error = -y_pred
+        condition = tf.abs(error) < delta
+        small_error_loss = 0.5 * tf.square(error)
+        large_error_loss = delta * (tf.abs(error) - 0.5 * delta)
+        return tf.where(condition, small_error_loss, large_error_loss)
+
+
+class Trainer:
+    def __init__(self,
+                 data_kwargs=None,
+                 compiler_kwargs=None,
+                 callbacks_kwargs=None,
+                 fit_kwargs=None
+                 ):
+
+        Utils.reset_random_seeds(data_kwargs.get('seed', 0))
+        
+        
+        
+        
+            
+        
+
+prova = Trainer(data_kwargs={'seed': 0},
+                compiler_kwargs={'optimizer': {'class_name': 'Adam', 'config': {'learning_rate': 0.001}}, 
+                                 'loss': {'class_name': 'HuberLogProbLoss', 'config': {}}},
+                optimizer_kargs={'learning_rate': 0.001},
+                fit_kwargs={'batch_size': 1000, 'epochs': 1000, 'verbose': 0},
+                callbacks_kwargs={'patience': 30, 'min_delta': 0.001, 'reduce_lr_factor': 0.2, 'stop_on_nan': True, 'seed': 0},)
+
+class Trainer_full:
+    def __init__(self, 
+                 ndims, 
+                 trainable_distribution, 
+                 X_data, 
+                 n_epochs, 
+                 batch_size, 
+                 n_disp,
+                 path_to_results, 
+                 load_weights=False, 
+                 load_weights_path=None, 
+                 lr=.001, 
+                 patience=30,
+                 min_delta_patience=0.001, 
+                 reduce_lr_factor=0.2, 
+                 stop_on_nan=True,
+                 compiler_kwargs=None,
+                 callbacks_kwargs=None,
+                 fit_kwargs=None
+                 ):
+
+        Utils.reset_random_seeds(data_kwargs.get('seed', 0))
+        
+        self.X_data = X_data
+        self.n_epochs = n_epochs
+        self.batch_size = batch_size if batch_size else X_data.shape[0]
+        self.path_to_results = path_to_results
+
+        self.x_ = Input(shape=(ndims,), dtype=tf.float32)
+        self.log_prob_ = trainable_distribution.log_prob(self.x_)
+        self.model = Model(self.x_, self.log_prob_)
+        
+        # Get compile args
+        optimizer_config, loss_config, metrics_configs, compile_kwargs = self.get_compile_args(compiler_kwargs)
+        
+        # Get optimizer, loss, and metrics from their configs
+        optimizer = tf.keras.optimizers.get(optimizer_config)
+        loss = self.get_loss(loss_config)
+        metrics = [self.get_loss(metric_config) for metric_config in metrics_configs]
+        
+        # Get callbacks
+        callbacks_configs = self._get_callbacks_args(callbacks_kwargs)
+
+        self.callbacks = self._initialize_callbacks(callbacks_kwargs)
+
+        self.model.compile(optimizer=optimizer, loss=loss, metrics=metrics, **compile_kwargs)
+        
+        self.load_weights = load_weights
+
+        self.training_time = 0
+        self.train_loss=[]
+        self.val_loss=[]
+
+        if load_weights:
+            self.load_model_weights()
+            
+    @property
+    def optimizer(self):
+        return self.model.optimizer
+
+    @property
+    def loss(self):
+        return self.model.loss
+
+    @property
+    def metrics(self):
+        return self.model.metrics
+            
+    def get_compile_args(self, compiler_kwargs):
+        # Default values
+        default_optimizer_config = {'class_name': 'Adam', 'config': {'learning_rate': 0.001}}
+        default_loss_config = {'class_name': 'HuberLogProbLoss', 'config': {}}
+        default_metrics_configs = [{'class_name': 'log_prob', 'config': {}},
+                                   {'class_name': 'HuberLogProbLoss', 'config': {}}]
+
+        # Check if optimizer, loss, and metrics configs are provided
+        optimizer_config = compiler_kwargs.get('optimizer', default_optimizer_config)
+        loss_config = compiler_kwargs.get('loss', default_loss_config)
+        metrics_configs = compiler_kwargs.get('metrics', default_metrics_configs)
+
+        # Get any additional kwargs for model.compile
+        compile_kwargs = compiler_kwargs.get('compile_kwargs', {})
+
+        return optimizer_config, loss_config, metrics_configs, compile_kwargs
+
+    def get_loss(self, loss_config):
+        class_name = loss_config['class_name']
+        if class_name.lower() == 'huberlogprobloss':
+            return HuberLogProbLoss(**loss_config['config'])
+        elif class_name.lower() == 'log_prob':
+            return lambda _, log_prob: -log_prob
+        else:
+            raise ValueError(f"Unsupported loss: {class_name}")
+        
+    def _get_callbacks_args(self, callbacks_kwargs):
+        if callbacks_kwargs is None:
+            callbacks_kwargs = []
+
+        # Default callbacks configurations
+        default_callbacks_configs = [
+            {'type': 'LambdaCallback', 'config': {'on_epoch_end': self._epoch_callback, 'n_disp': 1}},
+            {'type': 'ModelCheckpoint', 'config': {'filepath': self.path_to_results + '/model_checkpoint/weights', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True}}
+        ]
+
+        # Combine provided and default configs
+        callbacks_configs = callbacks_kwargs + default_callbacks_configs
+
+        for callback_config in callbacks_configs:
+            callback_type = callback_config.get("type", None)
+            if callback_type is None:
+                raise ValueError("Each callback config dictionary should have a 'type' key.")
+        
+        return callbacks_configs
+    
+    def _initialize_callbacks(self, callbacks_kwargs):
+        # Define default callbacks
+        callbacks = [self._create_epoch_callback()]
+
+        # Parse callback configurations
+        if callbacks_kwargs:
+            for callback_config in callbacks_kwargs:
+                callback = tf.keras.callbacks.get(callback_config)
+                callbacks.append(callback)
+
+        # Always add a model checkpoint callback
+        checkpoint_callback = self._create_checkpoint_callback()
+        callbacks.append(checkpoint_callback)
+
+        return callbacks
+
+    def get_callbacks(self, patience, min_delta_patience, lr, reduce_lr_factor, n_disp, stop_on_nan):
+        # Define your callbacks here
+        # ...
+        return callbacks
+    
+    
+
+    def _create_epoch_callback(self, n_disp=1):
+        return tf.keras.callbacks.LambdaCallback(
+            on_epoch_end=lambda epoch, logs:
+            print('\n Epoch {}/{}'.format(epoch + 1, self.n_epochs, logs),
+                  '\n\t ' + (': {:.4f}, '.join(logs.keys()) + ': {:.4f}').format(*logs.values()))
+            if epoch % n_disp == 0 else False
+        )
+
+    def _create_checkpoint_callback(self):
+        return tf.keras.callbacks.ModelCheckpoint(
+            self.path_to_results + '/model_checkpoint/weights',
+            monitor="val_loss",
+            verbose=1,
+            save_best_only=True,
+            save_weights_only=True,
+            mode="auto",
+            save_freq="epoch"
+        )
+
+    def load_model_weights(self):
+        # Load weights logic here
+        pass
+
+    def fit(self):
+        start = timer()
+        callbacks = self._initialize_callbacks(callbacks_kwargs)
+        history = self.model.fit(x=self.X_data,
+                                 y=np.zeros((self.X_data.shape[0], 0), dtype=np.float32),
+                                 batch_size=self.batch_size,
+                                 epochs=self.n_epochs,
+                                 validation_split=0.3,
+                                 shuffle=True,
+                                 verbose=2,
+                                 callbacks=callbacks)
+        end = timer()
+        self.training_time += end - start
+    
+        history.history['loss']=self.train_loss+history.history['loss']
+        history.history['val_loss']=self.val_loss+history.history['val_loss']
+        
+        return history, self.training_time
+
+
+
+
+def graph_execution(ndims,
+                    trainable_distribution, 
+                    X_data,
+                    n_epochs, 
+                    batch_size, 
+                    n_disp,
+                    path_to_results,
+                    load_weights=False,
+                    load_weights_path=None,
+                    lr=.001,
+                    patience=30,
+                    min_delta_patience=0.001,
+                    reduce_lr_factor=0.2,
+                    seed=0,
+                    stop_on_nan=True):
+    Utils.reset_random_seeds(seed)
+
+    x_ = Input(shape=(ndims,), dtype=tf.float32)
+    print(x_)
+	
+    log_prob_ = trainable_distribution.log_prob(x_)
+    print('####### log_prob####')
+    print(log_prob_)
+    model = Model(x_, log_prob_)
+
+    optimizer = tf.optimizers.Adam(learning_rate=lr,
+                                   beta_1=0.9,
+                                   beta_2=0.999,
+                                   epsilon=1e-07,
+                                   amsgrad=True,
+                                   weight_decay=None,
+                                   clipnorm=1.0,
+                                   clipvalue=0.5,
+                                   global_clipnorm=None,
+                                   use_ema=False,
+                                   ema_momentum=0.99,
+                                   ema_overwrite_frequency=None,
+                                   jit_compile=True,
+                                   name='Adam')
+    
+    #loss = lambda _, log_prob: -log_prob
+    loss = Huber_log_prob_loss
+
+    model.compile(optimizer=optimizer,loss=loss)
+   
+    training_time = 0
+    train_loss=[]
+    val_loss=[]
+    if load_weights==True:
+    
+        try:
+           model.load_weights(path_to_results+'/model_checkpoint/weights')
+           print('Found and loaded existing weights.')
+           #nf_dist=loader(nf_dist,load_weights_path)      
+        except:
+            print('No weights found. Training from scratch.')
+            
+        try:
+            with open(path_to_results+'/details.json', 'r') as f:
+                # Load JSON data from file
+                json_file = json.load(f)
+                train_loss = json_file['train_loss_history']
+                val_loss = json_file['val_loss_history']
+                training_time = json_file['time']
+                print('Found and loaded existing history.')
+        except:
+            print('No history found. Generating new history.')
+
+    ns = X_data.shape[0]
+    if batch_size is None:
+        batch_size = ns
+
+
+    #earlystopping
+    early_stopping=tf.keras.callbacks.EarlyStopping(
+    monitor='val_loss', min_delta=min_delta_patience, patience=patience*1.2, verbose=1,
+    mode='auto', baseline=None, restore_best_weights=True
+     )
+    #reducelronplateau
+    reducelronplateau=tf.keras.callbacks.ReduceLROnPlateau(
+    monitor="val_loss", min_delta=min_delta_patience, patience=patience, verbose=1,
+    factor=reduce_lr_factor, mode="auto", cooldown=0, min_lr=lr/1000
+     )
+    # Display the loss every n_disp epoch
+    epoch_callback = LambdaCallback(
+        on_epoch_end=lambda epoch, logs:
+                        print('\n Epoch {}/{}'.format(epoch+1, n_epochs, logs),
+                              '\n\t ' + (': {:.4f}, '.join(logs.keys()) + ': {:.4f}').format(*logs.values()))
+                                       if epoch % n_disp == 0 else False
+    )
+
+
+    checkpoint=tf.keras.callbacks.ModelCheckpoint(
+    path_to_results+'/model_checkpoint/weights',
+    monitor="val_loss",
+    verbose=1,
+    save_best_only=True,
+    save_weights_only=True,
+    mode="auto",
+    save_freq="epoch",
+    options=None)
+                
+    StopOnNAN=tf.keras.callbacks.TerminateOnNaN()
+
+    if stop_on_nan==False:
+        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint]
+    else:
+        callbacks=[epoch_callback,early_stopping,reducelronplateau,checkpoint,StopOnNAN]
+
+    start = timer()
+    history = model.fit(x=X_data,
+                        y=np.zeros((ns, 0), dtype=np.float32),
+                        batch_size=batch_size,
+                        epochs=n_epochs,
+                        validation_split=0.3,
+                        shuffle=True,
+                        verbose=2,
+                        callbacks=callbacks)
+    end = timer()
+    training_time = training_time + end - start
+    
+    history.history['loss']=train_loss+history.history['loss']
+    history.history['val_loss']=val_loss+history.history['val_loss']
+    
+    return history, training_time
