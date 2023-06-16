@@ -909,30 +909,23 @@ class HuberLogProbLoss(tf.keras.losses.Loss):
         return tf.where(condition, small_error_loss, large_error_loss)
 
 
-class Trainer:
+class Trainer_short:
     def __init__(self,
-                 data_kwargs=None,
-                 compiler_kwargs=None,
                  callbacks_kwargs=None,
-                 fit_kwargs=None
-                 ):
+                 ):        
+        
 
-        Utils.reset_random_seeds(data_kwargs.get('seed', 0))
-        
-        
-        
-        
-            
-        
+#prova = Trainer(data_kwargs={'seed': 0},
+#                compiler_kwargs={'optimizer': {'class_name': 'Adam', 'config': {'learning_rate': 0.001}}, 
+#                                 'loss': {'class_name': 'HuberLogProbLoss', 'config': {}}},
+#                optimizer_kargs={'learning_rate': 0.001},
+#                fit_kwargs={'batch_size': 1000, 'epochs': 1000, 'verbose': 0},
+#                callbacks_kwargs={'patience': 30, 'min_delta': 0.001, 'reduce_lr_factor': 0.2, 'stop_on_nan': True, 'seed': 0},)
 
 prova = Trainer(data_kwargs={'seed': 0},
-                compiler_kwargs={'optimizer': {'class_name': 'Adam', 'config': {'learning_rate': 0.001}}, 
-                                 'loss': {'class_name': 'HuberLogProbLoss', 'config': {}}},
-                optimizer_kargs={'learning_rate': 0.001},
-                fit_kwargs={'batch_size': 1000, 'epochs': 1000, 'verbose': 0},
-                callbacks_kwargs={'patience': 30, 'min_delta': 0.001, 'reduce_lr_factor': 0.2, 'stop_on_nan': True, 'seed': 0},)
+                com
 
-class Trainer_full:
+class Trainer:
     def __init__(self, 
                  ndims, 
                  trainable_distribution, 
@@ -948,6 +941,7 @@ class Trainer_full:
                  min_delta_patience=0.001, 
                  reduce_lr_factor=0.2, 
                  stop_on_nan=True,
+                 data_kwargs=None,
                  compiler_kwargs=None,
                  callbacks_kwargs=None,
                  fit_kwargs=None
@@ -965,18 +959,19 @@ class Trainer_full:
         self.model = Model(self.x_, self.log_prob_)
         
         # Get compile args
-        optimizer_config, loss_config, metrics_configs, compile_kwargs = self.get_compile_args(compiler_kwargs)
+        optimizer_config, loss_config, metrics_configs, compile_kwargs = self._get_compile_args(compiler_kwargs)
         
         # Get optimizer, loss, and metrics from their configs
         optimizer = tf.keras.optimizers.get(optimizer_config)
-        loss = self.get_loss(loss_config)
-        metrics = [self.get_loss(metric_config) for metric_config in metrics_configs]
+        loss = self._get_loss(loss_config)
+        metrics = [self._get_loss(metric_config) for metric_config in metrics_configs]
         
-        # Get callbacks
+        # Get callbacks args
         callbacks_configs = self._get_callbacks_args(callbacks_kwargs)
-
-        self.callbacks = self._initialize_callbacks(callbacks_kwargs)
-
+        
+        # Get callbacks from their configs
+        self._callbacks = self._initialize_callbacks(callbacks_configs)
+        
         self.model.compile(optimizer=optimizer, loss=loss, metrics=metrics, **compile_kwargs)
         
         self.load_weights = load_weights
@@ -999,8 +994,12 @@ class Trainer_full:
     @property
     def metrics(self):
         return self.model.metrics
+    
+    @property
+    def callbacks(self):
+        return self._callbacks
             
-    def get_compile_args(self, compiler_kwargs):
+    def _get_compile_args(self, compiler_kwargs):
         # Default values
         default_optimizer_config = {'class_name': 'Adam', 'config': {'learning_rate': 0.001}}
         default_loss_config = {'class_name': 'HuberLogProbLoss', 'config': {}}
@@ -1017,7 +1016,7 @@ class Trainer_full:
 
         return optimizer_config, loss_config, metrics_configs, compile_kwargs
 
-    def get_loss(self, loss_config):
+    def _get_loss(self, loss_config):
         class_name = loss_config['class_name']
         if class_name.lower() == 'huberlogprobloss':
             return HuberLogProbLoss(**loss_config['config'])
@@ -1032,12 +1031,12 @@ class Trainer_full:
 
         # Default callbacks configurations
         default_callbacks_configs = [
-            {'type': 'LambdaCallback', 'config': {'on_epoch_end': self._epoch_callback, 'n_disp': 1}},
+            {'type': 'LambdaCallback', 'config': {'on_epoch_end': self._epoch_callback}},
             {'type': 'ModelCheckpoint', 'config': {'filepath': self.path_to_results + '/model_checkpoint/weights', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True}}
         ]
 
         # Combine provided and default configs
-        callbacks_configs = callbacks_kwargs + default_callbacks_configs
+        callbacks_configs = default_callbacks_configs + callbacks_kwargs
 
         for callback_config in callbacks_configs:
             callback_type = callback_config.get("type", None)
@@ -1046,47 +1045,37 @@ class Trainer_full:
         
         return callbacks_configs
     
-    def _initialize_callbacks(self, callbacks_kwargs):
-        # Define default callbacks
-        callbacks = [self._create_epoch_callback()]
+    def _initialize_callbacks(self, callbacks_configs):
+        # Initialize an empty list to hold callbacks
+        callbacks = []
 
-        # Parse callback configurations
-        if callbacks_kwargs:
-            for callback_config in callbacks_kwargs:
-                callback = tf.keras.callbacks.get(callback_config)
-                callbacks.append(callback)
+        # Loop over the configurations and create callback instances
+        for callback_config in callbacks_configs:
+            callback_type = callback_config.get("type")
+            callback_kwargs = callback_config.get("config", {})
 
-        # Always add a model checkpoint callback
-        checkpoint_callback = self._create_checkpoint_callback()
-        callbacks.append(checkpoint_callback)
+            if callback_type == "LambdaCallback":
+                callback = tf.keras.callbacks.LambdaCallback(**callback_kwargs)
+            elif callback_type == "ModelCheckpoint":
+                callback = tf.keras.callbacks.ModelCheckpoint(**callback_kwargs)
+            elif callback_type == "EarlyStopping":
+                callback = tf.keras.callbacks.EarlyStopping(**callback_kwargs)
+            elif callback_type == "ReduceLROnPlateau":
+                callback = tf.keras.callbacks.ReduceLROnPlateau(**callback_kwargs)
+            elif callback_type == "TerminateOnNaN":
+                callback = tf.keras.callbacks.TerminateOnNaN()
+            else:
+                raise ValueError(f"Unsupported callback type: {callback_type}")
+
+            callbacks.append(callback)
 
         return callbacks
 
-    def get_callbacks(self, patience, min_delta_patience, lr, reduce_lr_factor, n_disp, stop_on_nan):
-        # Define your callbacks here
-        # ...
-        return callbacks
-    
-    
-
-    def _create_epoch_callback(self, n_disp=1):
-        return tf.keras.callbacks.LambdaCallback(
-            on_epoch_end=lambda epoch, logs:
+    def _epoch_callback(self, epoch, logs):
+        n_disp = 1  # or whatever number you want to use
+        if epoch % n_disp == 0:
             print('\n Epoch {}/{}'.format(epoch + 1, self.n_epochs, logs),
                   '\n\t ' + (': {:.4f}, '.join(logs.keys()) + ': {:.4f}').format(*logs.values()))
-            if epoch % n_disp == 0 else False
-        )
-
-    def _create_checkpoint_callback(self):
-        return tf.keras.callbacks.ModelCheckpoint(
-            self.path_to_results + '/model_checkpoint/weights',
-            monitor="val_loss",
-            verbose=1,
-            save_best_only=True,
-            save_weights_only=True,
-            mode="auto",
-            save_freq="epoch"
-        )
 
     def load_model_weights(self):
         # Load weights logic here
@@ -1110,8 +1099,6 @@ class Trainer_full:
         history.history['val_loss']=self.val_loss+history.history['val_loss']
         
         return history, self.training_time
-
-
 
 
 def graph_execution(ndims,
