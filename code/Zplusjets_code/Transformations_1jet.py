@@ -442,7 +442,7 @@ cornerplotter_comp(events[:100000,:],cart_coord[:100000,:],name)
 
 spher_all_prep,min_0,min_3,min_6=Preprocess_1(spher_all_orig)
 name='corner_plot_sphercoord_preprocessed_nomin.png'
-cornerplotter(spher_all[:1000000,:],name)
+cornerplotter(spher_all[:1000000,:],name,range=[-10.0, 10.0])
 
 
 spher_all_undo=Undo_Preprocess_1(spher_all_prep,min_0,min_3,min_6)
