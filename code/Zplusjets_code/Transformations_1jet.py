@@ -1,9 +1,11 @@
+import sys
 import h5py
 import numpy as np
-import corner
 import matplotlib.lines as mlines
 import matplotlib.pyplot as plt
 
+sys.path.append('../')
+import corner
 
 def marginal_plot(target_test_data,sample_nf,name):
 
@@ -136,7 +138,8 @@ def cornerplotter_comp(data,data_2,name):
     plt.close()
     return
 
-events_dataset_path = "../events/events.h5"
+#events_dataset_path = "../events/events.h5"
+events_dataset_path = "/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/ZplusJets_hlvar/events/events.h5"
 
 with h5py.File(events_dataset_path, 'r') as hdf:
     # Save the datasets into the file with unique names
@@ -304,6 +307,9 @@ def Preprocess_1(spher_all):
     spher_all[:,3+0]=np.log(spher_all[:,3+0])
     spher_all[:,6+0]=np.log(spher_all[:,6+0])
 
+    # Needed to avoid rare division by zero in arctanh function
+    spher_all[spher_all >=  1] =  0.9999999
+    spher_all[spher_all <= -1] = -0.9999999
 
     spher_all[:,2]=np.arctanh(spher_all[:,2]/np.pi)
     spher_all[:,3+2]=np.arctanh(spher_all[:,3+2]/np.pi)
