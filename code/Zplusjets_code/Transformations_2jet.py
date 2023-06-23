@@ -143,7 +143,7 @@ with h5py.File(events_dataset_path, 'r') as hdf:
     try:
         events = np.array(hdf['Z+2j'][:]).astype(np.float32)
     except:
-        raise Exception("Z+1j not found in the dataset.")
+        raise Exception("Z+2j not found in the dataset.")
 
 
 
