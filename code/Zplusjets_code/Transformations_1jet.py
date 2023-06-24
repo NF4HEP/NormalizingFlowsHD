@@ -82,6 +82,11 @@ def marginal_plot(target_test_data,sample_nf,name):
 
 def cornerplotter(data,name):
 
+    check_inf = np.isfinite(data)
+    result = data[check_inf]    
+    print(np.shape(data))
+    print(np.shape(result))
+
     ndims=np.shape(data)[1]
     n_bins = 50
     #red_bins=50
@@ -442,7 +447,7 @@ cornerplotter_comp(events[:100000,:],cart_coord[:100000,:],name)
 
 spher_all_prep,min_0,min_3,min_6=Preprocess_1(spher_all_orig)
 name='corner_plot_sphercoord_preprocessed_nomin.png'
-cornerplotter(spher_all[:1000000,:],name,range=[-10.0, 10.0])
+cornerplotter(spher_all[:1000000,:],name)
 
 
 spher_all_undo=Undo_Preprocess_1(spher_all_prep,min_0,min_3,min_6)
