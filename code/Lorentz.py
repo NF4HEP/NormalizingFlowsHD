@@ -1,3 +1,24 @@
+__all__ = ["BaseDistribution4Momenta", 
+           "LorentzTransformNN",    
+           "MomentumCorrectionBijector",
+           "GeneralLorentzTransformBijector",
+           "GeneralLorentzNormalizingFlow",
+           "lorentz_transform",
+           "inverse_lorentz_transform",
+           "lorentz_boost",
+           "euler_rotation",
+           "apply_lorentz_transformation",
+           "chop_to_zero",
+           "chop_to_zero_array",
+           "check_4momentum_conservation",
+           "compute_masses",
+           "compute_squared_masses",
+           "cornerplotter",
+           "HuberLogProbLoss",
+           "LogProbLayer",
+           "Trainer"
+            ]
+           
 import os
 import json
 from timeit import default_timer as timer
@@ -6,8 +27,9 @@ import tensorflow as tf
 import tensorflow.keras as tfk
 import tensorflow_probability as tfp
 from tensorflow.keras import Model, Input
-from tensorflow.keras.layers import Layer, Dense
+from tensorflow.keras.layers import Layer, Dense, Dropout, BatchNormalization
 from tensorflow.keras.callbacks import LambdaCallback
+from tensorflow.keras.regularizers import l1_l2
 tfd = tfp.distributions
 tfb = tfp.bijectors
 import matplotlib.pyplot as plt
@@ -21,8 +43,8 @@ class BaseDistribution4Momenta(tfd.Distribution): # type: ignore
     """
     def __init__(self, 
                  n_particles, 
-                 masses=None, 
-                 means3mom=None, 
+                 masses=None, # masses of the particles (shape (n_particles,))
+                 means3mom=None, # means of the 3-momenta of the particles (shape (3,))
                  stdev3mom=None,
                  conserve_transverse_momentum=True,
                  name="BaseDistribution4Momenta", 
@@ -87,20 +109,44 @@ class BaseDistribution4Momenta(tfd.Distribution): # type: ignore
             **kwargs
         )
 
-        self.n_particles = n_particles
-        self.transverse_momentum_conservation = conserve_transverse_momentum
+        self._n_particles = n_particles
+        self._transverse_momentum_conservation = conserve_transverse_momentum
 
         if masses is None:
             masses = tf.zeros((n_particles,),dtype=self.dtype)
-        self.masses = tf.cast(masses, dtype=self.dtype)
-
+        self._masses = tf.cast(masses, dtype=self.dtype)
+        
         if means3mom is None:
-            means3mom = tf.zeros((3,), dtype=self.dtype)
-        self.means3mom = tf.cast(means3mom, dtype=self.dtype)
+            means3mom = tf.zeros((1, self.n_particles, 3), dtype=self.dtype)
+        elif tf.rank(means3mom) == 1:
+            means3mom = tf.tile(tf.reshape(means3mom, (1, 3)), [self.n_particles, 1])
+        self._means3mom = tf.constant(tf.cast(means3mom, dtype=self.dtype))
 
         if stdev3mom is None:
-            stdev3mom = tf.ones((3,), dtype=self.dtype)
-        self.stdev3mom = tf.cast(stdev3mom, dtype=self.dtype)
+            stdev3mom = tf.ones((1, self.n_particles, 3), dtype=self.dtype)
+        elif tf.rank(stdev3mom) == 1:
+            stdev3mom = tf.tile(tf.reshape(stdev3mom, (1, 3)), [self.n_particles, 1])
+        self._stdev3mom = tf.constant(tf.cast(stdev3mom, dtype=self.dtype))
+        
+    @property
+    def n_particles(self):
+        return self._n_particles
+    
+    @property
+    def transverse_momentum_conservation(self):
+        return self._transverse_momentum_conservation
+    
+    @property
+    def masses(self):
+        return self._masses
+    
+    @property
+    def means3mom(self):
+        return self._means3mom
+    
+    @property
+    def stdev3mom(self):
+        return self._stdev3mom
 
     def _sample_n(self, n, seed=None):
         """
@@ -149,18 +195,18 @@ class BaseDistribution4Momenta(tfd.Distribution): # type: ignore
             py = py[..., :-1] # shape (n_samples, n_particles-1)
 
         # normal distribution for momenta
-        log_prob_px = tf.reduce_sum(tfd.Normal(self.means3mom[..., 0], self.stdev3mom[..., 0]).log_prob(px), axis=-1)
-        log_prob_py = tf.reduce_sum(tfd.Normal(self.means3mom[..., 1], self.stdev3mom[..., 1]).log_prob(py), axis=-1)
-        log_prob_pz = tf.reduce_sum(tfd.Normal(self.means3mom[..., 2], self.stdev3mom[..., 2]).log_prob(pz), axis=-1)
+        log_prob_px = tf.reduce_sum(tfd.Normal(self.means3mom[..., 0], self.stdev3mom[..., 0]).log_prob(px), axis=[-1, -2])
+        log_prob_py = tf.reduce_sum(tfd.Normal(self.means3mom[..., 1], self.stdev3mom[..., 1]).log_prob(py), axis=[-1, -2])
+        log_prob_pz = tf.reduce_sum(tfd.Normal(self.means3mom[..., 2], self.stdev3mom[..., 2]).log_prob(pz), axis=[-1, -2])
+        #log_prob_px = tf.reduce_sum(tfd.Normal(self.means3mom[..., 0], self.stdev3mom[..., 0]).log_prob(px), axis=-1)
+        #log_prob_py = tf.reduce_sum(tfd.Normal(self.means3mom[..., 1], self.stdev3mom[..., 1]).log_prob(py), axis=-1)
+        #log_prob_pz = tf.reduce_sum(tfd.Normal(self.means3mom[..., 2], self.stdev3mom[..., 2]).log_prob(pz), axis=-1)
 
         log_prob_sum = log_prob_px + log_prob_py + log_prob_pz
 
         return log_prob_sum
 
     def _batch_shape_tensor(self):
-        """
-        Get the batch shape as a tensor.
-        """
         return tf.constant([], dtype=tf.int32)
 
     def _batch_shape(self):
@@ -180,9 +226,16 @@ class LorentzTransformNN(Model):
     """
     def __init__(self, 
                  hidden_units, 
-                 activation='relu', 
-                 name='LorentzTransformNN', 
+                 activation=None, # dict with keys 'hidden', 'beta' and 'angles'
+                 kernel_initializer=None, # dict with keys 'hidden', 'beta' and 'angles'
+                 bias_initializer=None, # dict with keys 'hidden', 'beta' and 'angles'             
                  dtype='float32', 
+                 dropout_rate=0.0,
+                 batch_normalization=False, 
+                 l1_l2_reg=None, # dict with keys 'hidden', 'beta' and 'angles'
+                 regularize_output_layers=False,
+                 epsilon_beta=1e-04,
+                 name='LorentzTransformNN',
                  **kwargs):
         """
         Initialize the network.
@@ -197,9 +250,94 @@ class LorentzTransformNN(Model):
         return: None
         """
         super(LorentzTransformNN, self).__init__(name=name, **kwargs)
-        self.dense_layers = [Dense(units, activation=activation, kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) for units in hidden_units] # Hidden layers
-        self.dense_beta = Dense(1, activation='tanh', kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) # (boost parameters β_i), ranges from -1 to 1
-        self.dense_angles = Dense(5, activation='sigmoid', kernel_initializer='glorot_uniform', bias_initializer='zeros', dtype=dtype) # (rotation angles theta_i), ranges from 0 to 1 (0 to 2π)
+        
+        # Define activations, initializers, batch normalization and l1_l2_reg for hidden, beta and angle Dense layers
+        hidden_activation, beta_activation, angles_activation = self._get_activations(activation)
+        hidden_kernel_initializer, beta_kernel_initializer, angles_kernel_initializer = self._get_initializers(kernel_initializer)
+        hidden_bias_initializer, beta_bias_initializer, angles_bias_initializer = self._get_initializers(bias_initializer)
+        hidden_l1_l2_reg, beta_l1_l2_reg, angles_l1_l2_reg = self._get_l1_l2_reg(l1_l2_reg)
+        
+        # Define epsilon_beta to clip beta in Lorentz boosts (epsilon_beta < beta < 1-epsilon_beta)
+        self._epsilon_beta = epsilon_beta
+        
+        # Define regularizer for hidden based on the values of l1_l2_reg
+        if hidden_l1_l2_reg[0] != 0 or hidden_l1_l2_reg[1] != 0:
+            hidden_kernel_regularizer = l1_l2(l1=hidden_l1_l2_reg[0], l2=hidden_l1_l2_reg[1])
+        else:   
+            hidden_kernel_regularizer = None
+        
+        # Define the list of Dense hidden layers
+        self._dense_layers = [Dense(units, 
+                                    activation=hidden_activation, 
+                                    kernel_initializer=hidden_kernel_initializer,
+                                    bias_initializer=hidden_bias_initializer,
+                                    kernel_regularizer=hidden_kernel_regularizer,
+                                    dtype=dtype) for units in hidden_units]
+        
+        # Define the list of Dropout layers based on the dropout_rate parameter
+        self._dropout_layers = [Dropout(dropout_rate) for _ in hidden_units]
+        
+        # Define the BatchNormalization layers if batch_normalization is True (None otherwise)
+        self._batch_normalization_layers = [BatchNormalization() for _ in hidden_units] if batch_normalization else None
+        
+        # Define regularizers for beta and angles based on the values of l1_l2_reg
+        if beta_l1_l2_reg[0] != 0 or beta_l1_l2_reg[1] != 0:
+            if regularize_output_layers:
+                beta_regularizer=l1_l2(l1=beta_l1_l2_reg[0], l2=beta_l1_l2_reg[1])
+            else:
+                beta_regularizer=None
+        else:
+            beta_regularizer=None
+        if angles_l1_l2_reg[0] != 0 or angles_l1_l2_reg[1] != 0:
+            if regularize_output_layers:
+                angles_regularizer=l1_l2(l1=angles_l1_l2_reg[0], l2=angles_l1_l2_reg[1])
+            else:
+                angles_regularizer=None
+        else:
+            angles_regularizer=None
+        
+        # Define the Dense beta output layer
+        self._dense_beta = Dense(1, 
+                                 activation=beta_activation, 
+                                 kernel_initializer=beta_kernel_initializer,
+                                 bias_initializer=beta_bias_initializer,
+                                 kernel_regularizer=beta_regularizer,
+                                 dtype=dtype) # (boost parameters β_i)
+
+        self._dense_angles = Dense(5, 
+                                   activation=angles_activation, 
+                                   kernel_initializer=angles_kernel_initializer,
+                                   bias_initializer=angles_bias_initializer,
+                                   kernel_regularizer=angles_regularizer,
+                                   dtype=dtype) # (rotation angles theta_i)
+        
+    @property
+    def epsilon_beta(self): 
+        return self._epsilon_beta
+    
+    @epsilon_beta.setter
+    def epsilon_beta(self, value):
+        self._epsilon_beta = value
+        
+    @property
+    def dense_layers(self):
+        return self._dense_layers
+    
+    @property
+    def dropout_layers(self):
+        return self._dropout_layers
+    
+    @property
+    def batch_normalization_layers(self):
+        return self._batch_normalization_layers
+    
+    @property
+    def dense_beta(self):
+        return self._dense_beta
+
+    @property
+    def dense_angles(self):
+        return self._dense_angles
 
     def call(self, inputs):
         """
@@ -207,17 +345,64 @@ class LorentzTransformNN(Model):
         :param inputs: The inputs. shape: (n_events, n_particles, 4)
         :return: The outputs.
         """
-        epsilon = 1e-4
+        #epsilon = 1e-04
+        epsilon = self.epsilon_beta
         x = inputs
-        for layer in self.dense_layers:
-            x = layer(x)
-        beta = self.dense_beta(x)  # Output of tanh: range [-1, 1]
-        beta = (beta + 1) / 2  # Scale to [0, 1]
-        beta = (1 - 2*epsilon) * beta + epsilon  # Scale and shift to [epsilon, 1-epsilon]
-        angles = 2 * np.pi * self.dense_angles(x)  # scale the output of sigmoid to [0, 2π]
+        if self.batch_normalization_layers is not None:
+            for dense_layer, dropout_layer, batch_normalization_layer in zip(self.dense_layers, self.dropout_layers, self.batch_normalization_layers):
+                x = dense_layer(x)
+                x = dropout_layer(x)
+                x = batch_normalization_layer(x)
+        else:
+            for dense_layer, dropout_layer in zip(self.dense_layers, self.dropout_layers):
+                x = dense_layer(x)
+                x = dropout_layer(x)
+        beta = self.dense_beta(x)
+        beta = (beta + 1) / 2
+        beta = (1 - 2*epsilon) * beta + epsilon
+        angles = 2 * np.pi * self.dense_angles(x)
         parameters = tf.concat([beta, angles], axis=-1)
         return parameters
     
+    def _get_activations(self, activation=None):
+        """
+        Get the activation function.
+        """
+        activation_default = {"hidden": "relu", "beta": "tanh", "angles": "sigmoid"}
+        
+        activation = activation or {}      
+        for key, default in activation_default.items():
+            if activation.get(key) is None:
+                activation[key] = default
+        
+        return activation["hidden"], activation["beta"], activation["angles"]
+
+    def _get_initializers(self, initializer):
+        """
+        Get the initializer.
+        """
+        initializer_default = {"hidden": "glorot_uniform", "beta": "glorot_uniform", "angles": "glorot_uniform"}
+
+        initializer = initializer or {}
+        for key, default in initializer_default.items():
+            if initializer.get(key) is None:
+                initializer[key] = default
+        
+        return initializer["hidden"], initializer["beta"], initializer["angles"]
+
+    def _get_l1_l2_reg(self, l1_l2_reg):
+        """
+        Get the l1_l2_reg.
+        """
+        l1_l2_reg_default = {"hidden": [0., 0.], "beta": [0., 0.], "angles": [0., 0.]}
+        
+        l1_l2_reg = l1_l2_reg or {}
+        for key, default in l1_l2_reg_default.items():
+            if l1_l2_reg.get(key) is None:
+                l1_l2_reg[key] = default
+        
+        return l1_l2_reg["hidden"], l1_l2_reg["beta"], l1_l2_reg["angles"]
+        
     
 class MomentumCorrectionBijector(tfb.Bijector): # type: ignore
     """ 
@@ -407,8 +592,14 @@ class GeneralLorentzNormalizingFlow(tfb.Chain): # type: ignore
     def __init__(self, 
                  n_particles, 
                  n_bijectors, 
-                 hidden_units, 
-                 activation='relu',
+                 hidden_units,
+                 activation=None, # dict with keys 'hidden', 'beta' and 'angles'
+                 kernel_initializer=None, # dict with keys 'hidden', 'beta' and 'angles'
+                 bias_initializer=None, # dict with keys 'hidden', 'beta' and 'angles'             
+                 dropout_rate=0.0,
+                 batch_normalization=False, 
+                 l1_l2_reg=None, # dict with keys 'hidden', 'beta' and 'angles'
+                 regularize_output_layers=False,
                  conserve_transverse_momentum=True,
                  name='ParticleBoostedNormalizingFlow', 
                  dtype="float32",
@@ -433,9 +624,9 @@ class GeneralLorentzNormalizingFlow(tfb.Chain): # type: ignore
         
         self.n_particles = n_particles # The number of particles in the event
         self.n_bijectors = n_bijectors # The number of bijectors in the flow
-        self.hidden_units = hidden_units  # The number of hidden units in the Lorentz transformation selector
+        #self.hidden_units = hidden_units  # The number of hidden units in the Lorentz transformation selector
         self.conserve_transverse_momentum = conserve_transverse_momentum # Python `bool` indicating whether to conserve transverse momentum in the Lorentz transformation selector
-        self.activation = activation # The activation function to use in the Lorentz transformation selector
+        #self.activation = activation # The activation function to use in the Lorentz transformation selector
         self.flow_dtype = dtype # The dtype of the flow
         bijectors = [] # The list of bijectors that make up the flow
         lorentz_transform_NNs = [] # The list of Lorentz transformation selectors
@@ -455,7 +646,16 @@ class GeneralLorentzNormalizingFlow(tfb.Chain): # type: ignore
                 bijectors.extend([bijector, permutation])
             else:
                 # Initialize a LorentzTransformNN to choose the Lorentz transformation
-                lorentz_transform_NN = LorentzTransformNN(hidden_units=self.hidden_units, activation=self.activation, name='LorentzTransformNN_'+str(i), dtype=self.flow_dtype)
+                lorentz_transform_NN = LorentzTransformNN(hidden_units=hidden_units, 
+                                                          activation=activation,
+                                                          kernel_initializer=kernel_initializer,
+                                                          bias_initializer=bias_initializer,
+                                                          dropout_rate=dropout_rate,
+                                                          batch_normalization=batch_normalization, 
+                                                          l1_l2_reg=l1_l2_reg,
+                                                          regularize_output_layers=regularize_output_layers,
+                                                          name='LorentzTransformNN_'+str(i),
+                                                          dtype='float32')
                 lorentz_transform_NNs.append(lorentz_transform_NN)
                 # Add a GeneralLorentzTransformBijector to the list of bijectors
                 bijector = GeneralLorentzTransformBijector(lorentz_transform_NN=lorentz_transform_NN, name='GeneralLorentzTransformBijector_'+str(i))
@@ -926,12 +1126,16 @@ class Trainer:
     def __init__(self, 
                  trainable_distribution, 
                  X_data, 
-                 data_kwargs=None,
-                 compiler_kwargs=None,
-                 callbacks_kwargs=None,
-                 fit_kwargs=None,
-                 io_kwargs=None
+                 io_kwargs=None, # Dictionary of arguments for the io. Example: {"save_model": True, "save_weights": True, "save_history": True, "save_best_only": True, "save_freq": "epoch"}
+                 data_kwargs=None, # Dictionary of arguments for the data. Example: {"batch_size": 1000, "buffer_size": 10000}
+                 compiler_kwargs=None, # Dictionary of arguments for the compiler. Example: {"optimizer": "adam", "loss": "mse", "metrics": ["mse"]}
+                 callbacks_kwargs=None, # Dictionary of arguments for the callbacks. Example: {"EarlyStopping": {"monitor": "loss", "patience": 10}}
+                 fit_kwargs=None # Dictionary of arguments for the fit method. Example: {"epochs": 100, "verbose": 1}
                  ):
+
+        # Parse io kwargs
+        self._io_kwargs = self._get_io_args(io_kwargs)
+        self._results_path = self.io_kwargs["results_path"]
 
         # Parse data kwargs
         self._data_kwargs = self._get_data_args(data_kwargs)
@@ -963,9 +1167,6 @@ class Trainer:
         
         # Parse fit kwargs
         self._fit_kwargs = self._get_fit_args(fit_kwargs)
-        
-        # Parse io kwargs
-        self._io_kwargs = self._get_io_args(io_kwargs)
 
         self.training_time = 0
         self.train_loss=[]
@@ -1036,15 +1237,15 @@ class Trainer:
             
     @property
     def optimizer(self):
-        return self.model.optimizer
+        return self._optimizer
 
     @property
     def loss(self):
-        return self.model.loss
+        return self._loss
 
     @property
     def metrics(self):
-        return self.model.metrics
+        return self._metrics
     
     @property
     def callbacks(self):
@@ -1060,7 +1261,7 @@ class Trainer:
     
     @property
     def results_path(self):
-        return self.io_kwargs.get('results_path')
+        return self._results_path
 
     @property
     def load_weights(self):
@@ -1071,6 +1272,9 @@ class Trainer:
         return self.io_kwargs.get('load_results')
         
     def _get_data_args(self, data_kwargs):
+        """
+        Get data args from their configs
+        """
         if data_kwargs is None:
             data_kwargs = {}
 
@@ -1083,21 +1287,22 @@ class Trainer:
         return data_args
             
     def _get_compile_args(self, compiler_kwargs):
-        # Default values
-        default_optimizer_config = {'class_name': 'Adam', 'config': {'learning_rate': 0.001}}
-        default_loss_config = {'class_name': 'HuberLogProbLoss', 'config': {}}
-        default_metrics_configs = [{'class_name': 'log_prob', 'config': {}},
-                                   {'class_name': 'HuberLogProbLoss', 'config': {}}]
+        """
+        Get optimizer, loss, and metrics from their configs
+        """
+        compiler_kwargs_default = {'optimizer': {'class_name': 'Adam', 'config': {'learning_rate': 0.001}},
+                                   'loss': {'class_name': 'HuberLogProbLoss', 'config': {}},
+                                   'metrics': [{'class_name': 'log_prob', 'config': {}},
+                                               {'class_name': 'HuberLogProbLoss', 'config': {}}],
+                                   'compile_kwargs': {}}
+        
+        compiler_kwargs = compiler_kwargs or {}
 
-        # Check if optimizer, loss, and metrics configs are provided
-        optimizer_config = compiler_kwargs.get('optimizer', default_optimizer_config)
-        loss_config = compiler_kwargs.get('loss', default_loss_config)
-        metrics_configs = compiler_kwargs.get('metrics', default_metrics_configs)
+        for key, value in compiler_kwargs_default.items():
+            if compiler_kwargs.get(key) is None:
+                compiler_kwargs[key] = value
 
-        # Get any additional kwargs for model.compile
-        compile_kwargs = compiler_kwargs.get('compile_kwargs', {})
-
-        return optimizer_config, loss_config, metrics_configs, compile_kwargs
+        return compiler_kwargs['optimizer'], compiler_kwargs['loss'], compiler_kwargs['metrics'], compiler_kwargs['compile_kwargs']
 
     def _get_loss(self, loss_config):
         class_name = loss_config['class_name']
@@ -1108,18 +1313,31 @@ class Trainer:
         else:
             raise ValueError(f"Unsupported loss: {class_name}")
         
-    def _get_callbacks_args(self, callbacks_kwargs):
-        if callbacks_kwargs is None:
-            callbacks_kwargs = []
+    def _get_callbacks_args(self, callbacks_kwargs=None):
+        """
+        Get callbacks from their configs
+            Example of callbacks_kwargs:
+                callbacks_kwargs = [{'type': 'PrintEpochInfo', 'config': {}},
+                                    {'type': 'LambdaCallback', 'config': {}},
+                                    {'type': 'ModelCheckpoint', 'config': {'filepath': self.path_to_results + '/model_checkpoint/weights', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True}},
+                                    {'type': 'EarlyStopping', 'config': {'monitor': 'val_loss', 'patience': 10}},
+                                    {'type': 'ReduceLROnPlateau', 'config': {'monitor': 'val_loss', 'factor': 0.5, 'patience': 5, 'min_lr': 1e-6}},
+                                    {'tyle': 'TerminateOnNaN', 'config': {}},
+                                    {'type': 'TensorBoard', 'config': {'log_dir': self.path_to_results + '/tensorboard', 'histogram_freq': 1, 'write_graph': True, 'write_images': True, 'update_freq': 'epoch', 'profile_batch': 2, 'embeddings_freq': 1, 'embeddings_metadata': None}},
+                                    {'type': 'CSVLogger', 'config': {'filename': self.path_to_results + '/csv_logger/training_log.csv', 'separator': ',', 'append': False}}]
+
+                        """
+        callbacks_kwargs = callbacks_kwargs or [{}]
 
         # Default callbacks configurations
         default_callbacks_configs = [
-            {'type': 'LambdaCallback', 'config': {'on_epoch_end': self._epoch_callback}},
-            {'type': 'ModelCheckpoint', 'config': {'filepath': self.path_to_results + '/model_checkpoint/weights', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True}}
+            {'type': 'PrintEpochInfo', 'config': {}},
+            {'type': 'ModelCheckpoint', 'config': {'filepath': self.results_path + '/model_checkpoint/weights', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True}}
         ]
 
         # Combine provided and default configs
         callbacks_configs = default_callbacks_configs + callbacks_kwargs
+        print("Callbacks configs:", callbacks_configs)
 
         for callback_config in callbacks_configs:
             callback_type = callback_config.get("type", None)
@@ -1137,20 +1355,17 @@ class Trainer:
             callback_type = callback_config.get("type")
             callback_kwargs = callback_config.get("config", {})
 
-            if callback_type == "LambdaCallback":
-                callback = tf.keras.callbacks.LambdaCallback(**callback_kwargs)
-            elif callback_type == "ModelCheckpoint":
-                callback = tf.keras.callbacks.ModelCheckpoint(**callback_kwargs)
-            elif callback_type == "EarlyStopping":
-                callback = tf.keras.callbacks.EarlyStopping(**callback_kwargs)
-            elif callback_type == "ReduceLROnPlateau":
-                callback = tf.keras.callbacks.ReduceLROnPlateau(**callback_kwargs)
-            elif callback_type == "TerminateOnNaN":
-                callback = tf.keras.callbacks.TerminateOnNaN()
+            if callback_type == "PrintEpochInfo":
+                callback = tf.keras.callbacks.LambdaCallback(on_epoch_end=self._epoch_callback)
             else:
-                raise ValueError(f"Unsupported callback type: {callback_type}")
-
-            callbacks.append(callback)
+                try:
+                    callback_string = f"tf.keras.callbacks.{callback_type}(**callback_kwargs)"
+                    callback = eval(callback_string)
+                except AttributeError:
+                    print(callback_type, "is not a valid callback type. Skipping it.")
+                    callback = None
+            if callback is not None:
+                callbacks.append(callback)
 
         return callbacks
             
@@ -1160,30 +1375,32 @@ class Trainer:
             print('\n Epoch {}/{}'.format(epoch + 1, self.n_epochs),
                   '\n\t ' + (': {:.4f}, '.join(logs.keys()) + ': {:.4f}').format(*logs.values()))
 
-    def _get_fit_args(self, fit_kwargs):
-        if fit_kwargs is None:
-            fit_kwargs = {}
-
-        # Default fit args
-        default_fit_args = {'batch_size': 512, 'epochs': 10, 'validation_split': 0.3, 'shuffle': True, 'verbose': 2}
-
-        # Update default args with provided ones
-        fit_args = {**default_fit_args, **fit_kwargs}
-
-        return fit_args
+    def _get_fit_args(self, fit_kwargs=None):
+        """
+        Get fit args from their configs
+        """
+        default_fit_args = {'batch_size': 512, 'verbose': 2}
+        
+        fit_kwargs = fit_kwargs or {}
+        
+        for key, value in default_fit_args.items():
+            if fit_kwargs.get(key) is None:
+                fit_kwargs[key] = value
+        
+        return fit_kwargs
     
     def _get_io_args(self, io_kwargs):
-        if io_kwargs is None:
-            io_kwargs = {}
-
-        # Default values
+        """
+        Get io args from their configs
+        """
         default_io_kwargs = {'results_path': os.path.abspath("results"),
                              'load_weights': False,
                              'load_results': False}
-
-        # Check if values are provided in io_kwargs and use defaults if not
-        for key, default_value in default_io_kwargs.items():
-            io_kwargs.setdefault(key, default_value)
+        
+        io_kwargs = io_kwargs or {}
+        for key, value in default_io_kwargs.items():
+            if io_kwargs.get(key) is None:
+                io_kwargs[key] = value
 
         # Create results directory if it doesn't exist
         os.makedirs(io_kwargs['results_path'], exist_ok=True)
@@ -1221,7 +1438,7 @@ class Trainer:
         history = self.model.fit(x=self.X_data,
                                  y=np.zeros((self.X_data.shape[0], 0), dtype=np.float32),
                                  batch_size=self.batch_size,
-                                 callbacks=self.callbacks
+                                 callbacks=self.callbacks,
                                  **self.fit_kwargs
                                  )
         end = timer()

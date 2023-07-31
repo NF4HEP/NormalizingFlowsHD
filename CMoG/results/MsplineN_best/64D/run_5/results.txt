@@ -1,2 +1,0 @@
-run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,activation,spline_knots,range_min,eps_regulariser,regulariser,ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std,hidden_layers,batch_size,epochs_input,epochs_output,time
-5,520,521,64,100000,None,2,MsplineN,relu,8,-16,0,None,0.39312192174595506,0.28345303779337194,0.18075149655977235,0.08746722900262016,0.031365081304380725,0.016770579578264787,0.031014340741098812,0.017388780424443744,0.4566948961478771,0.07842778727027078,128-128-128,512,2,239,30.697084854356945

@@ -141,11 +141,13 @@ def save_hyperparams(path_to_results,hyperparams_dict,run_number,seed_train,seed
     hyperparams_frame.to_csv(path_to_results+'hyperparams.txt',index=False)
     return hyperparams_dict
 
-def load_model(nf_dist,path_to_results,ndims,lr=.00001):
+def load_model(nf_dist,path_to_results,ndims,lr=.00001,dtype=None):
     """
     Function that loads a model by recreating it, recompiling it and loading checkpointed weights.
     """
-    x_ = Input(shape=(ndims,), dtype=tf.float32)
+    if dtype is None:
+        dtype = tf.float32
+    x_ = Input(shape=(ndims,), dtype=dtype)
     log_prob_ = nf_dist.log_prob(x_)
     model = Model(x_, log_prob_)
     model.compile(optimizer=tf.optimizers.Adam(learning_rate=lr),

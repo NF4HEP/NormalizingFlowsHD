@@ -41,7 +41,7 @@ def plot_corr_matrix(X):
     plt.show()
     plt.close()
 
-def MixNormal1(n_components=3,n_dimensions=4,seed=0):
+def MixNormal1(n_components=3,n_dimensions=4,seed=0, dtype = None):
     """
     Defines a mixture of 'n_components' Normal distributions in 'n_dimensions' dimensions 
     with means and stddevs given by the tensors 'loc' and 'scale' with shapes 
@@ -57,11 +57,13 @@ def MixNormal1(n_components=3,n_dimensions=4,seed=0):
     'MixNormal2' and 'MixNormal2_indep' (also identical).
     """
     reset_random_seeds(seed)
-    loc = np.random.sample([n_components,n_dimensions])*10
+    if dtype is None:
+        dtype = tf.float32
+    loc = tf.cast(np.random.sample([n_components,n_dimensions])*10,dtype=dtype)
     #loc = [[1.,4.,7.,10.],[2.,5.,8.,11.],[3.,6.,9.,12.]]
-    scale = np.random.sample([n_components,n_dimensions])
+    scale = tf.cast(np.random.sample([n_components,n_dimensions]),dtype=dtype)
     #scale = np.full([n_components,n_dimensions],0.1)
-    probs = np.random.sample([n_dimensions,n_components])
+    probs = tf.cast(np.random.sample([n_dimensions,n_components]),dtype=dtype)
     #probs = np.full([n_dimensions,n_components],1.)
     components = []
     for i in range(n_components):
@@ -163,7 +165,7 @@ def MixNormal2_indep(n_components=3,n_dimensions=4,seed=0):
         reinterpreted_batch_ndims=0)
     return mix_gauss
 
-def MixMultiNormal1(n_components=3,n_dimensions=4,seed=0):
+def MixMultiNormal1(n_components=3,n_dimensions=4,seed=0,dtype = None):
     """
     Defines a mixture of 'n_components' Multivariate Normal distributions in 'n_dimensions' dimensions 
     with means and stddevs given by the tensors 'loc' and 'scale' with shapes 
@@ -179,9 +181,11 @@ def MixMultiNormal1(n_components=3,n_dimensions=4,seed=0):
     'MixMultiNormal2' and 'MixMultiNormal2_indep' (also identical).
     """
     reset_random_seeds(seed)
-    loc = np.random.sample([n_components,n_dimensions])*10
-    scale = np.random.sample([n_components,n_dimensions])
-    probs = np.random.sample(n_components)
+    if dtype is None:
+        dtype = tf.float32
+    loc = tf.cast(np.random.sample([n_components,n_dimensions])*10,dtype=dtype)
+    scale = tf.cast(np.random.sample([n_components,n_dimensions]),dtype=dtype)
+    probs = tf.cast(np.random.sample(n_components),dtype=dtype)
     components = []
     for i in range(n_components):
         components.append(tfd.MultivariateNormalDiag(loc=loc[i],scale_diag=scale[i]))

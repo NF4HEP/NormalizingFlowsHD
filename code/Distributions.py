@@ -15,8 +15,14 @@ import tensorflow_probability as tfp
 import numpy as np
 tfd = tfp.distributions
 
-def gaussians(ndims):
-    gaussian=tfd.Sample(tfd.Normal(loc=0, scale=1,allow_nan_stats=False),
+def gaussians(ndims, dtype = None):
+    if dtype is None:
+        dtype = tf.float32
+    loc = tf.constant(0, dtype = dtype)
+    scale = tf.constant(1, dtype = dtype)
+    gaussian=tfd.Sample(tfd.Normal(loc = loc, 
+                                   scale = scale, 
+                                   allow_nan_stats = False),
                sample_shape=[ndims])
     return gaussian
 
