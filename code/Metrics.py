@@ -265,7 +265,7 @@ def FN(dist_1,dist_2,n_iter=10,batch_size=100000):
     else:
         ndims=dist_1.sample(2).numpy().shape[1]
     # Define fn_list that will contain the list of fn for all dimensions and all iterations
-    FN_list=[]
+    fn_list=[]
     # Loop over all iterations
     for k in range(n_iter):
         # If num is true, then the samples are split in n_iter batches of size nsamples/n_iter, otherwise we just sample batch_size points from the distributions
@@ -288,12 +288,9 @@ def FN(dist_1,dist_2,n_iter=10,batch_size=100000):
         dist_2_corr=correlation_from_covariance(dist_2_cov)    
         matrix_sum=dist_1_corr-dist_2_corr
         frob_norm=np.linalg.norm(matrix_sum, ord='fro')
-        FN_list.append(frob_norm)
-    # Compute the mean and std of the p-values
-    FN_mean = np.mean(FN_list)
-    FN_std = np.std(FN_list)
+        fn_list.append(frob_norm)
     # Return the mean and std of the p-values
-    return [FN_mean,FN_std, FN_list]
+    return fn_list
 
 
 def FrobNorm_old(target_test_data,nf_dist,norm=True):
@@ -426,9 +423,9 @@ def SWD(dist_1,dist_2,n_iter=10,batch_size=100000,n_slices=100,seed=None):
     else:
         n_slices = int(n_slices)
     # Define ad_list that will contain the list of swd for all dimensions and all iterations
-    swd_list=[]
-    swd_mean=[]
-    swd_std=[]
+    swd_lists=[]
+    swd_means=[]
+    swd_stds=[]
     # Loop over all iterations
     for k in range(n_iter):
         # If num is true, then the samples are split in n_iter batches of size nsamples/n_iter, otherwise we just sample batch_size points from the distributions
@@ -454,12 +451,12 @@ def SWD(dist_1,dist_2,n_iter=10,batch_size=100000,n_slices=100,seed=None):
             dist_2_proj = dist_2_k @ direction
             swd_proj.append(wasserstein_distance(dist_1_proj, dist_2_proj))
         # Save the swd-value for each iteration
-        swd_list.append(np.mean(swd_proj))
-    # Compute the mean and std over iterations of the swd-values
-    swd_mean.append(np.mean(swd_list))
-    swd_std.append(np.std(swd_list))
+        swd_lists.append(swd_proj)
+        # Compute the mean and std over iterations of the swd-values
+        swd_means.append(np.mean(swd_proj))
+        swd_stds.append(np.std(swd_proj))
     # Return the mean and std of the p-values
-    return [swd_mean,swd_std,swd_list]
+    return [swd_means,swd_stds,swd_lists]
 
 
 def sliced_Wasserstein_distance_old(target_test_data, nf_dist, norm=True, n_slices=None, seed=None):
@@ -504,12 +501,12 @@ def ComputeMetrics(dist_1,dist_2,n_iter=10,batch_size=100000,n_slices=100,seed=N
         - Mean and median of Wasserstein distance
         - Frobenius norm
     """
-    [ks_mean,ks_std,ks_list]=KS_test(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
-    [ad_mean,ad_std,ad_list]=AD_test(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
-    [fn_mean,fn_std,fn_list]=FN(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
-    [wd_mean,wd_std,wd_list]=WD(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size)
-    [swd_mean,swd_std,swd_list]=SWD(dist_1,dist_2,n_iter=n_iter,batch_size=batch_size,n_slices=n_slices,seed=seed)
-    return ks_mean,ks_std,ks_list,ad_mean,ad_std,ad_list,wd_mean,wd_std,wd_list,swd_mean,swd_std,swd_list,fn_mean,fn_std,fn_list
+    [ks_means, ks_stds, ks_lists] = KS_test(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    [ad_means, ad_stds, ad_lists] = AD_test(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    fn_list = FN(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    [wd_means, wd_stds, wd_lists] = WD(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    [swd_means, swd_stds, swd_lists] = SWD(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size, n_slices = n_slices, seed = seed)
+    return ks_means, ks_stds, ks_lists, ad_means, ad_stds, ad_lists, fn_list, wd_means, wd_stds, wd_lists, swd_means, swd_stds, swd_lists
 
 
 '''
