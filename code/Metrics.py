@@ -7,6 +7,7 @@ Created on Sat Jul 13 12:36:34 2019
 
 @author: reyes-gonzalez
 """
+from timeit import default_timer as timer
 from sklearn import datasets
 from sklearn.preprocessing import StandardScaler
 import numpy as np
@@ -19,6 +20,8 @@ from scipy.stats import wasserstein_distance
 from scipy.stats import epps_singleton_2samp
 from scipy.stats import anderson_ksamp
 from statistics import mean,median
+from Utils import reset_random_seeds
+from typing import Optional, Tuple, List, Union
 
 def correlation_from_covariance(covariance):
     """Computes the correlation matrix from the covariance matrix.
@@ -101,10 +104,11 @@ def KS_test(dist_1,dist_2,n_iter=10,batch_size=100000):
         # Save the list of p-values for each iteration
         ks_lists.append(pval_list)
         # Compute the mean and std over dimensions of the p-values for each iteration
-        ks_means.append(np,mean(pval_list))
+        ks_means.append(np.mean(pval_list))
         ks_stds.append(np.std(pval_list))
     # Return the mean and std of the p-values
     return [ks_means,ks_stds,ks_lists]
+
 
 def KS_test_old(target_test_data,nf_dist,n_iter=100,norm=True):
     """Kolmogorov-Smirnov test between target distribution and trained normalising flow 
@@ -390,7 +394,12 @@ def Wasserstein_distance_old(target_test_data,nf_dist,norm=True):
     return wasserstein_distances
 
 
-def SWD(dist_1,dist_2,n_iter=10,batch_size=100000,n_slices=100,seed=None):
+def SWD(dist_1,
+        dist_2,
+        n_iter = 10,
+        batch_size = 100000,
+        n_slices = 100,
+        seed = None):
     """
     Compute the sliced Wasserstein distance between two sets of points using n_slices random directions and the p-th Wasserstein distance.
     The distance is computed for n_iter times and for n_slices directions and the mean and std of the p-values are returned.
@@ -458,6 +467,148 @@ def SWD(dist_1,dist_2,n_iter=10,batch_size=100000,n_slices=100,seed=None):
     # Return the mean and std of the p-values
     return [swd_means,swd_stds,swd_lists]
 
+@tf.function(reduce_retracing=True)
+def wasserstein_distance_tf(dist1: tf.Tensor, 
+                            dist2: tf.Tensor
+                           ) -> tf.Tensor:
+    # sort the distributions
+    dist1_sorted = tf.sort(dist1, axis=-1)
+    dist2_sorted = tf.sort(dist2, axis=-1)
+
+    # calculate the differences between corresponding points in the sorted distributions
+    diff = tf.abs(dist1_sorted - dist2_sorted)
+
+    # calculate the mean of these differences
+    emd = tf.reduce_mean(diff)
+    
+    return emd
+
+@tf.function(reduce_retracing=True)
+def swd_2samp_tf(dist_1: tf.Tensor, 
+                 dist_2: tf.Tensor,
+                 n_slices: int = 100,
+                 ndims: int = 2
+                ) -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
+    # Generate random directions
+    directions = tf.random.normal((n_slices, ndims))
+    directions /= tf.norm(directions, axis=1)[:, None]
+    
+    # Compute projections for all directions at once
+    dist_1_proj = tf.tensordot(dist_1, directions, axes=[[1],[1]])
+    dist_2_proj = tf.tensordot(dist_2, directions, axes=[[1],[1]])
+    
+    # Transpose the projection tensor to have slices on the first axis
+    dist_1_proj = tf.transpose(dist_1_proj)
+    dist_2_proj = tf.transpose(dist_2_proj)
+    
+    # Apply wasserstein_distance to each slice using tf.vectorized_map
+    swd_proj = tf.vectorized_map(lambda args: wasserstein_distance_tf(*args), (dist_1_proj, dist_2_proj))
+    
+    # Compute mean and std
+    swd_mean = tf.reduce_mean(swd_proj)
+    swd_std = tf.math.reduce_std(swd_proj)
+
+    return swd_mean, swd_std, swd_proj
+
+
+def SWD_tf(dist_1: tf.Tensor,
+           dist_2: tf.Tensor,
+           n_iter: int = 10, 
+           batch_size: int = 100000, 
+           n_slices: int = 100, 
+           dtype: tf.DType = tf.float32,
+           seed: Optional[int] = None,
+           max_vectorize: int = int(1e6),
+           device: str = "/GPU:0",
+           verbose: bool = False):
+    
+    with tf.device(device):
+        # Prepare necessary variables
+        max_vectorize = int(max_vectorize)
+        dist_1_num: tf.Tensor = tf.cast(dist_1, dtype=tf.float32)
+        dist_2_num: tf.Tensor = tf.cast(dist_2, dtype=tf.float32)
+        nsamples, ndims = [int(i) for i in dist_1_num.shape]
+        dtype: tf.DType = tf.as_dtype(dtype)
+        start_time: float = 0.
+        end_time: float = 0.
+        elapsed: float = 0.
+        if seed is None:
+            seed = np.random.randint(1000000)
+    
+        # Utility functions
+        @tf.function
+        def conditional_tf_print(verbose: tf.Tensor = tf.convert_to_tensor(False), *args) -> None:
+            tf.cond(tf.equal(verbose, True), lambda: tf.print(*args), lambda: verbose)
+    
+        def start_calculation() -> None:
+            nonlocal start_time
+            conditional_tf_print(verbose, "Starting KS tests calculation...")
+            conditional_tf_print(verbose, "Running TF KS tests...")
+            conditional_tf_print(verbose, "niter =", n_iter)
+            conditional_tf_print(verbose, "batch_size =", batch_size)
+            start_time = timer()
+    
+        def end_calculation() -> None:
+            nonlocal end_time, elapsed
+            end_time = timer()
+            elapsed = end_time - start_time
+            conditional_tf_print(verbose, "KS tests calculation completed in", str(elapsed), "seconds.")
+    
+        @tf.function(reduce_retracing=True)
+        def compute_test() -> tf.Tensor:
+            conditional_tf_print(verbose, "Running compute_test")
+    
+            # Initialize the result TensorArray
+            res = tf.TensorArray(dtype, size=n_iter)
+            res_swd_mean = tf.TensorArray(dtype, size=n_iter)
+            res_swd_std = tf.TensorArray(dtype, size=n_iter)
+            res_swd_proj = tf.TensorArray(dtype, size=n_iter)
+    
+            def body(i, res):
+                # Define the loop body to vectorize over ndims*chunk_size
+                dist_1_k: tf.Tensor = dist_1_num[i * batch_size: (i + 1) * batch_size, :]
+                dist_2_k: tf.Tensor = dist_2_num[i * batch_size: (i + 1) * batch_size, :]
+        
+                swd_mean, swd_std, swd_proj = swd_2samp_tf(dist_1_k, dist_2_k, n_slices = n_slices, ndims = ndims)
+                swd_mean = tf.cast(swd_mean, dtype=dtype)
+                swd_std = tf.cast(swd_std, dtype=dtype)
+                swd_proj = tf.cast(swd_proj, dtype=dtype)
+        
+                # Here we add an extra dimension to `swd_mean` and `swd_std` tensors to match rank with `swd_proj`
+                swd_mean = tf.expand_dims(swd_mean, axis=0)
+                swd_std = tf.expand_dims(swd_std, axis=0)
+        
+                result_value = tf.concat([swd_mean, swd_std, swd_proj], axis=0)
+        
+                res = res.write(i, result_value)
+                return i+1, res
+    
+            _, res = tf.while_loop(lambda i, _: i < n_iter, body, [0, res])
+            
+            for i in range(n_iter):
+                res_i = res.read(i)
+                res_swd_mean = res_swd_mean.write(i,res_i[0])
+                res_swd_std = res_swd_std.write(i,res_i[1])
+                res_swd_proj = res_swd_proj.write(i,res_i[2:])
+            
+            swd_means = res_swd_mean.stack()
+            swd_stds = res_swd_std.stack()
+            swd_lists = res_swd_proj.stack()
+                            
+            return [swd_means, swd_stds, swd_lists]
+    
+        start_calculation()
+    
+        reset_random_seeds(seed=seed)
+    
+        result_value: tf.Tensor = compute_test()
+        
+        result_value = [i.numpy().tolist() for i in result_value]
+    
+        end_calculation()
+    
+        return result_value
+
 
 def sliced_Wasserstein_distance_old(target_test_data, nf_dist, norm=True, n_slices=None, seed=None):
     """
@@ -491,22 +642,74 @@ def sliced_Wasserstein_distance_old(target_test_data, nf_dist, norm=True, n_slic
     return [mean,std]
 
 
-def ComputeMetrics(dist_1,dist_2,n_iter=10,batch_size=100000,n_slices=100,seed=None):
+def ComputeMetrics(dist_1,dist_2,n_iter=1,batch_size=100000,n_slices=100,seed=None,verbose=True):
     """
     Function that computes the metrics. The following metrics are implemented:
     
-        - KL-divergence
         - Mean and median of 1D KS-test
         - Mean and median of 1D Anderson-Darling test
-        - Mean and median of Wasserstein distance
         - Frobenius norm
+        - Mean and median of Wasserstein distance
+        - Sliced Wasserstein distance
     """
+    def conditional_print(*args):
+        if verbose:
+            print(args)
+    conditional_print("Computing KS test")
+    start = timer()
     [ks_means, ks_stds, ks_lists] = KS_test(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    end = timer()
+    conditional_print("Time elapsed: ", end-start)
+    conditional_print("Computing AD test")
+    start = timer()
     [ad_means, ad_stds, ad_lists] = AD_test(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    end = timer()
+    conditional_print("Time elapsed: ", end-start)
+    conditional_print("Computing FN test")
+    start = timer()
     fn_list = FN(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    end = timer()
+    conditional_print("Time elapsed: ", end-start)
+    conditional_print("Computing WD test")
+    start = timer()
     [wd_means, wd_stds, wd_lists] = WD(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    end = timer()
+    conditional_print("Time elapsed: ", end-start)
+    conditional_print("Computing SWD test")
+    start = timer()
     [swd_means, swd_stds, swd_lists] = SWD(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size, n_slices = n_slices, seed = seed)
+    end = timer()
+    conditional_print("Time elapsed: ", end-start)
     return ks_means, ks_stds, ks_lists, ad_means, ad_stds, ad_lists, fn_list, wd_means, wd_stds, wd_lists, swd_means, swd_stds, swd_lists
+
+
+def ComputeMetricsReduced(dist_1,dist_2,n_iter=1,batch_size=100000,n_slices=100,seed=None,verbose=True):
+    """
+    Function that computes the metrics. The following metrics are implemented:
+    
+        - Mean and median of 1D KS-test
+        - Frobenius norm
+        - Sliced Wasserstein distance
+    """
+    def conditional_print(*args):
+        if verbose:
+            print(*args)
+    conditional_print("Computing KS test")
+    start = timer()
+    [ks_means, ks_stds, ks_lists] = KS_test(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    end = timer()
+    conditional_print("KS test computed in ", end-start)
+    conditional_print("Computing FN values")
+    start = timer()
+    fn_list = FN(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size)
+    end = timer()
+    conditional_print("FN computed in ", end-start)
+    conditional_print("Computing SWD values")
+    start = timer()
+    [swd_means, swd_stds, swd_lists] = SWD(dist_1, dist_2, n_iter = n_iter, batch_size = batch_size, n_slices = n_slices, seed = seed)
+    end = timer()
+    conditional_print("SWD computed in ", end-start)
+    return ks_means, ks_stds, ks_lists, [], [], [], fn_list, [], [], [], swd_means, swd_stds, swd_lists
 
 
 '''

@@ -152,7 +152,7 @@ except:
     print('file exists')
 
 ### Initialize dictionaries ###
-results_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ks_list':[],'ad_mean':[],'ad_std':[],'ad_list':[],'wd_mean':[],'wd_std':[],'wd_list':[],'swd_mean':[],'swd_std':[],'swd_list':[],'fn_mean':[],'fn_std':[],'fn_list':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'training_time':[],'prediction_time':[],'total_time':[],'training_device':[]}
+results_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'activation':[],'spline_knots':[],'range_min':[],'eps_regulariser':[],'regulariser':[],'ks_mean':[],'ks_std':[],'ks_list':[],'ad_mean':[],'ad_std':[],'ad_list':[],'wd_mean':[],'wd_std':[],'wd_list':[],'swd_mean':[],'swd_std':[],'swd_list':[],'fn_mean':[],'fn_std':[],'fn_list':[],'hidden_layers':[],'batch_size':[],'epochs_input':[],'epochs_output':[],'training_time':[],'prediction_time':[],'total_time':[],'training_device':[]}
 hyperparams_dict: Dict[str,Any] = {'run_n': [],'seed_train': [],'seed_test': [], 'ndims':[],'nsamples':[],'correlation':[],'nbijectors':[],'bijector':[],'spline_knots':[],'range_min':[],'hidden_layers':[],'batch_size':[],'activation':[],'eps_regulariser':[],'regulariser':[],'dist_seed':[],'test_seed':[],'training_device':[]} 
 
 ### Create 'log' file ####
