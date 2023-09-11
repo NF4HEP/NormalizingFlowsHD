@@ -467,7 +467,8 @@ def SWD(dist_1,
     # Return the mean and std of the p-values
     return [swd_means,swd_stds,swd_lists]
 
-@tf.function(reduce_retracing=True)
+#@tf.function(reduce_retracing=True)
+@tf.function
 def wasserstein_distance_tf(dist1: tf.Tensor, 
                             dist2: tf.Tensor
                            ) -> tf.Tensor:
@@ -483,7 +484,8 @@ def wasserstein_distance_tf(dist1: tf.Tensor,
     
     return emd
 
-@tf.function(reduce_retracing=True)
+#@tf.function(reduce_retracing=True)
+tf.function
 def swd_2samp_tf(dist_1: tf.Tensor, 
                  dist_2: tf.Tensor,
                  n_slices: int = 100,
@@ -554,7 +556,8 @@ def SWD_tf(dist_1: tf.Tensor,
             elapsed = end_time - start_time
             conditional_tf_print(verbose, "KS tests calculation completed in", str(elapsed), "seconds.")
     
-        @tf.function(reduce_retracing=True)
+        #@tf.function(reduce_retracing=True)
+        tf.function
         def compute_test() -> tf.Tensor:
             conditional_tf_print(verbose, "Running compute_test")
     

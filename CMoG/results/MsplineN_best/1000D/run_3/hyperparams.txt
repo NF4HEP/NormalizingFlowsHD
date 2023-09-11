@@ -1,4 +1,0 @@
-run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,spline_knots,range_min,hidden_layers,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed
-1,0,1,1000,100000,,2,MsplineN,12,-16,256-256-256,512,relu,0,,0,1
-2,187,188,1000,100000,,2,MsplineN,12,-16,256-256-256,512,relu,0,,0,188
-3,377,378,1000,100000,,2,MsplineN,12,-16,256-256-256,512,relu,0,,0,378

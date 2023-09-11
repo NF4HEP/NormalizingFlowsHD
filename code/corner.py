@@ -170,6 +170,8 @@ def corner(xs, bins=20, range=None, weights=None, color="k", hist_bin_factor=1,
             raise ValueError("Weights must be 1-D")
         if xs.shape[1] != weights.shape[0]:
             raise ValueError("Lengths of weights must match number of samples")
+    else:
+        weights = np.ones(xs.shape[1])
 
     # Parse the parameter ranges.
     if range is None:

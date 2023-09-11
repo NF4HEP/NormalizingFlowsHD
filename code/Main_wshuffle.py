@@ -13,7 +13,7 @@ import traceback
 from typing import Dict, Any
 
 sys.path.append('../../code')
-import Distributions,Metrics,MixtureDistributions,Plotters,Trainer,Utils
+import Distributions,Metrics,MixtureDistributions,Plotters,code.Trainer_old as Trainer_old,Utils
 
 import Bijectors as Bijectors
 ## Execute with
@@ -169,7 +169,7 @@ for ndims in ndims_list:
                                                             lr=lr_orig
                                                             n_displays=1
                                                             print("Train first sample:",X_data_train[0])
-                                                            history=Trainer.graph_execution(ndims,nf_dist, X_data_train,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed)
+                                                            history=Trainer_old.graph_execution(ndims,nf_dist, X_data_train,epochs, batch_size, n_displays,path_to_results,load_weights=True,load_weights_path=path_to_weights,lr=lr,patience=patience,min_delta_patience=min_delta_patience,reduce_lr_factor=lr_change,seed=seed)
                                                             t_losses_all=list(history.history['loss'])
                                                             v_losses_all=list(history.history['val_loss'])
                                                             end=timer()

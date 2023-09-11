@@ -1,0 +1,56 @@
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe272e0>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe26a40>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe261a0>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe25900>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe25060>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe247c0>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe1fee0>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe1f640>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fd9abe1e050>}
+permute
+{'permutation': <tf.Tensor: shape=(16,), dtype=int32, numpy=
+array([ 8,  9, 10, 11, 12, 13, 14, 15,  0,  1,  2,  3,  4,  5,  6,  7],
+      dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+masked_autoregressive_flow
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fe0d546cfa0>}

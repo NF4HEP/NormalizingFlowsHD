@@ -1,4 +1,0 @@
-run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,spline_knots,range_min,hidden_layers,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed,training_device
-1,0,1,4,100000,,5,MAFN,8,-5,128-128-128,512,relu,0,,0,1,NVIDIA A40
-2,0,1,4,100000,,5,MAFN,8,-5,256-256-256,512,relu,0,,0,1,NVIDIA A40
-3,0,1,4,100000,,10,MAFN,8,-5,128-128-128,512,relu,0,,0,1,NVIDIA A40

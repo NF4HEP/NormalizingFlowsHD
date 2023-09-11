@@ -127,11 +127,7 @@ use_bias=True, kernel_initializer='glorot_uniform',
 
 def MAFN(ndims,num_bijectors,hidden_layers,activation,hidden_degrees='equal',use_bias=True, kernel_initializer='glorot_uniform',
     bias_initializer='zeros', kernel_regularizer=None,
-    bias_regularizer=None, kernel_constraint=None, bias_constraint=None,perm_style='bi-partition',shuffle='Noshufffle'):
-   
-    maf=MAF(ndims,hidden_layers,activation,hidden_degrees=hidden_degrees, use_bias=use_bias, kernel_initializer=kernel_initializer,
-            bias_initializer=bias_initializer, kernel_regularizer=kernel_regularizer,
-            bias_regularizer=bias_regularizer, kernel_constraint=kernel_constraint, bias_constraint=bias_constraint)
+    bias_regularizer=None, kernel_constraint=None, bias_constraint=None,perm_style='bi-partition',shuffle='Noshuffle'):
    
     if perm_style=='bi-partition':
    
@@ -145,7 +141,9 @@ def MAFN(ndims,num_bijectors,hidden_layers,activation,hidden_degrees='equal',use
         bijectors=[]
         for _ in range(num_bijectors):
             #bijectors.append(tfb.BatchNormalization())
-
+            maf=MAF(ndims,hidden_layers,activation,hidden_degrees=hidden_degrees, use_bias=use_bias, kernel_initializer=kernel_initializer,
+                    bias_initializer=bias_initializer, kernel_regularizer=kernel_regularizer,
+                    bias_regularizer=bias_regularizer, kernel_constraint=kernel_constraint, bias_constraint=bias_constraint)
             bijectors.append(maf)
         
             bijectors.append(tfb.Permute(permutation=permutation))
@@ -158,9 +156,14 @@ def MAFN(ndims,num_bijectors,hidden_layers,activation,hidden_degrees='equal',use
         bijectors=[]
         for _ in range(num_bijectors):
             #bijectors.append(tfb.BatchNormalization())
-
+            maf=MAF(ndims,hidden_layers,activation,hidden_degrees=hidden_degrees, use_bias=use_bias, kernel_initializer=kernel_initializer,
+                    bias_initializer=bias_initializer, kernel_regularizer=kernel_regularizer,
+                    bias_regularizer=bias_regularizer, kernel_constraint=kernel_constraint, bias_constraint=bias_constraint)
             bijectors.append(maf)
             bijectors.append(tfb.Permute(permutation=permutation))
+            maf=MAF(ndims,hidden_layers,activation,hidden_degrees=hidden_degrees, use_bias=use_bias, kernel_initializer=kernel_initializer,
+                    bias_initializer=bias_initializer, kernel_regularizer=kernel_regularizer,
+                    bias_regularizer=bias_regularizer, kernel_constraint=kernel_constraint, bias_constraint=bias_constraint)
             bijectors.append(maf)
             bijectors.append(tfb.Permute(permutation=RandomShuffle(ndims)))
     
@@ -382,13 +385,7 @@ def MAFspline(ndims,n_hidden,activation,spline_knots,range_min,hidden_degrees='e
 
 def MAFNspline(ndims,spline_knots,num_bijectors,range_min,n_hidden=[128,128,128],activation='relu',hidden_degrees='equal',use_bias=True, kernel_initializer='glorot_uniform',
     bias_initializer='zeros', kernel_regularizer=None,
-    bias_regularizer=None, kernel_constraint=None, bias_constraint=None,perm_style='bi-partition',shuffle='Noshuffle'):
-   
-   
-    mafspline=MAFspline(ndims,n_hidden,activation,spline_knots,range_min,hidden_degrees=hidden_degrees, use_bias=use_bias, kernel_initializer=kernel_initializer,
-    bias_initializer=bias_initializer, kernel_regularizer=kernel_regularizer,
-    bias_regularizer=bias_regularizer, kernel_constraint=kernel_constraint, bias_constraint=bias_constraint)
-    
+    bias_regularizer=None, kernel_constraint=None, bias_constraint=None,perm_style='bi-partition',shuffle='Noshuffle'): 
     
     if perm_style=='bi-partition':
    
@@ -401,17 +398,25 @@ def MAFNspline(ndims,spline_knots,num_bijectors,range_min,n_hidden=[128,128,128]
         bijectors=[]
         for _ in range(num_bijectors):
             #bijectors.append(tfb.BatchNormalization())
-       
+            mafspline=MAFspline(ndims,n_hidden,activation,spline_knots,range_min,hidden_degrees=hidden_degrees, use_bias=use_bias, kernel_initializer=kernel_initializer,
+                                bias_initializer=bias_initializer, kernel_regularizer=kernel_regularizer,
+                                bias_regularizer=bias_regularizer, kernel_constraint=kernel_constraint, bias_constraint=bias_constraint)
             bijectors.append(mafspline)
             bijectors.append(tfb.Permute(permutation=permutation))
-            flow_bijector=tfb.Chain(list(reversed(bijectors[:-1])))
+        flow_bijector=tfb.Chain(list(reversed(bijectors[:-1])))
+    
     if shuffle=='RandomShuffle':
         bijectors=[]
         for _ in range(num_bijectors):
             #bijectors.append(tfb.BatchNormalization())
-       
+            mafspline=MAFspline(ndims,n_hidden,activation,spline_knots,range_min,hidden_degrees=hidden_degrees, use_bias=use_bias, kernel_initializer=kernel_initializer,
+                                bias_initializer=bias_initializer, kernel_regularizer=kernel_regularizer,
+                                bias_regularizer=bias_regularizer, kernel_constraint=kernel_constraint, bias_constraint=bias_constraint)
             bijectors.append(mafspline)
             bijectors.append(tfb.Permute(permutation=permutation))
+            mafspline=MAFspline(ndims,n_hidden,activation,spline_knots,range_min,hidden_degrees=hidden_degrees, use_bias=use_bias, kernel_initializer=kernel_initializer,
+                                bias_initializer=bias_initializer, kernel_regularizer=kernel_regularizer,
+                                bias_regularizer=bias_regularizer, kernel_constraint=kernel_constraint, bias_constraint=bias_constraint)
             bijectors.append(mafspline)
             bijectors.append(tfb.Permute(permutation=RandomShuffle(ndims)))
             

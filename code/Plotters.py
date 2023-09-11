@@ -58,13 +58,14 @@ def sample_plotter(target_test_data,nf_dist,path_to_plots):
         return
         
         
-def train_plotter(t_losses,v_losses,path_to_plots):
+def train_plotter(t_losses,v_losses,path_to_plots,yscale='log'):
     plt.plot(t_losses,label='train')
     plt.plot(v_losses,label='validation')
     plt.legend()
     plt.title('history')
     plt.xlabel('epochs')
     plt.ylabel('loss')
+    plt.yscale(yscale)
     plt.savefig(path_to_plots+'/loss_plot.pdf')
     plt.close()
     return

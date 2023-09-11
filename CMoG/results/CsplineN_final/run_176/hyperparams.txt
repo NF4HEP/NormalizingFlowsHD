@@ -1,2 +1,0 @@
-run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,spline_knots,range_min,hidden_layers,batch_size,activation,eps_regulariser,regulariser,dist_seed,test_seed,training_device
-176,187,188,16,100000,,10,CsplineN,12,-16,256-256-256,512,relu,0,,0,188,NVIDIA A40
