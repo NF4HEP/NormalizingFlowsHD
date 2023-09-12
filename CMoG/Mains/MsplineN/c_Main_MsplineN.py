@@ -558,7 +558,7 @@ regulariser: Optional[str] = None
 eps_regulariser: float = 0.
 
 ### Initialzie training hyperparameters ###
-epochs_input: int = 5
+epochs_input: int = 1000
 batch_size: int = 512
 nan_threshold: float = 0.01
 max_retry: int = 10
@@ -601,7 +601,7 @@ log_file_name: str = Utils.create_log_file(mother_output_dir, results_dict)
 ####################################### Training loop ########################################
 ##############################################################################################
 run: int = 0
-run_max: int = 0
+run_max: int = 1000
 run_number: int = 0
 n_runs: int = len(ndims_list) * len(seeds_list) * len(nbijectors_list) * len(spline_knots_list) * len(hidden_layers_list)
 start_global: float = timer()

@@ -1,0 +1,6 @@
+MAFspline
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': 'MAFspline', 'range_min': -16, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f1a2045d540>, 'spline_knots': 8}
+permute
+{'permutation': <tf.Tensor: shape=(4,), dtype=int32, numpy=array([2, 3, 0, 1], dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
+MAFspline
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': 'MAFspline', 'range_min': -16, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f1ad7b569b0>, 'spline_knots': 8}
