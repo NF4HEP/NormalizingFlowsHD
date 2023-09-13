@@ -22,7 +22,10 @@ import tensorflow as tf
 import tensorflow_probability as tfp
 tfd = tfp.distributions
 tfb = tfp.bijectors
-from keras.engine.keras_tensor import KerasTensor
+try:
+    from keras.engine.keras_tensor import KerasTensor
+except ImportError:
+    from tensorflow.python.keras.engine.keras_tensor import KerasTensor
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 from corner import corner

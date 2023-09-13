@@ -2,7 +2,7 @@
 ######################################### Initialize #########################################
 ##############################################################################################
 
-visible_devices = [0]
+visible_devices = [3]
 import datetime
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing os...")
 import os
@@ -98,7 +98,8 @@ def get_compiler_kwargs(lr: float,
                         ignore_nans: bool,
                         nan_threshold: float
                        ) -> Dict[str,Any]:
-    compiler_kwargs = {'optimizer': {'class_name': 'Custom>Adam', # this gives the new Adam optimizer
+    compiler_kwargs = {'optimizer': {'class_name': 'Adam', # this gives the new Adam optimizer
+    #compiler_kwargs = {'optimizer': {'class_name': 'Custom>Adam', # this gives the new Adam optimizer
                                      'config': {'learning_rate': lr,
                                                 'beta_1': 0.9,
                                                 'beta_2': 0.999,
@@ -592,7 +593,7 @@ results_dict: Dict[str, Any] = Utils.init_results_dict()
 hyperparams_dict: Dict[str, Any] = Utils.init_hyperparams_dict()
 
 ### Initialize output dir ###
-mother_output_dir: str = Utils.define_dir('../../results/MsplineN_new/')
+mother_output_dir: str = Utils.define_dir('../../results/CsplineN_new/')
 
 ### Create 'log' file ####
 log_file_name: str = Utils.create_log_file(mother_output_dir, results_dict)
