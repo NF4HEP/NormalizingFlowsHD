@@ -55,8 +55,6 @@ print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing c
 
 sys.path.append('../../../code')
 import Bijectors, Distributions, MixtureDistributions, Plotters, Trainer, Utils # type: ignore
-
-sys.path.insert(0,'../../../../')
 import GenerativeModelsMetrics as GMetrics # type: ignore
 
 def get_gpu_info() -> Optional[List[str]]:
@@ -98,8 +96,8 @@ def get_compiler_kwargs(lr: float,
                         ignore_nans: bool,
                         nan_threshold: float
                        ) -> Dict[str,Any]:
-    compiler_kwargs = {'optimizer': {'class_name': 'Adam', # this gives the new Adam optimizer
-    #compiler_kwargs = {'optimizer': {'class_name': 'Custom>Adam', # this gives the new Adam optimizer
+    #compiler_kwargs = {'optimizer': {'class_name': 'Adam', # this gives the new Adam optimizer
+    compiler_kwargs = {'optimizer': {'class_name': 'Custom>Adam', # this gives the new Adam optimizer
                                      'config': {'learning_rate': lr,
                                                 'beta_1': 0.9,
                                                 'beta_2': 0.999,
@@ -327,9 +325,9 @@ def prediction_function(hyperparams_dict: Dict[str, Any],
                         seed_metrics: int,
                         n_iter: int,
                         nsamples_test: int,
-                        batch_size_gen: int,
                         n_slices_factor: int,
                         dtype: type,
+                        max_vectorize: int,
                         mirror_strategy: bool,
                         make_plots: bool,
                         path_to_results: str
@@ -351,8 +349,9 @@ def prediction_function(hyperparams_dict: Dict[str, Any],
                                                                                 dtype_input = dtype,
                                                                                 seed_input = seed_metrics,
                                                                                 use_tf = True,
+                                                                                mirror_strategy = mirror_strategy,
                                                                                 verbose = True)
-        LRMetric: GMetrics.FNMetric = GMetrics.LRMetric(data_input = DataInputs,
+        LRMetric: GMetrics.LRMetric = GMetrics.LRMetric(data_input = DataInputs,
                                                         verbose = True)
         KSTest: GMetrics.KSTest = GMetrics.KSTest(data_input = DataInputs,
                                                   verbose = True)
@@ -361,9 +360,9 @@ def prediction_function(hyperparams_dict: Dict[str, Any],
         FNMetric: GMetrics.FNMetric = GMetrics.FNMetric(data_input = DataInputs,
                                                         verbose = True)
         LRMetric.compute()
-        KSTest.compute()
+        KSTest.compute(max_vectorize = max_vectorize)
         SWDMetric.compute(nslices = n_slices_factor*ndims)
-        FNMetric.compute()
+        FNMetric.compute(max_vectorize = max_vectorize)
         lr_result: Dict[str, np.ndarray] = LRMetric.Results[-1].result_value
         logprob_ref_ref_sum_list = lr_result["logprob_ref_ref_sum_list"].tolist()
         logprob_ref_alt_sum_list = lr_result["logprob_ref_alt_sum_list"].tolist()
@@ -559,7 +558,7 @@ regulariser: Optional[str] = None
 eps_regulariser: float = 0.
 
 ### Initialzie training hyperparameters ###
-epochs_input: int = 5
+epochs_input: int = 1000
 batch_size: int = 512
 nan_threshold: float = 0.01
 max_retry: int = 10
@@ -579,10 +578,10 @@ min_lr: float = 1e-6
 
 ### Initialize parameters for inference ###
 n_iter: int = 10
-batch_size_gen: int = 10000
 n_slices_factor: int = 2
 dtype: type = tf.float32
-mirror_strategy = False
+max_vectorize: int = 1000
+mirror_strategy = True
 make_plots = True
 
 ### Initialize old variables for backward compatibility
@@ -602,7 +601,7 @@ log_file_name: str = Utils.create_log_file(mother_output_dir, results_dict)
 ####################################### Training loop ########################################
 ##############################################################################################
 run: int = 0
-run_max: int = 0
+run_max: int = 1000
 run_number: int = 0
 n_runs: int = len(ndims_list) * len(seeds_list) * len(nbijectors_list) * len(spline_knots_list) * len(hidden_layers_list)
 start_global: float = timer()
@@ -614,7 +613,7 @@ for ndims in ndims_list:
             for spline_knots in spline_knots_list:
                 for hidden_layers in hidden_layers_list:
                     if run > run_max:
-                        raise("Interrupted after one run.")
+                        raise Exception("Interrupted after one run.")
                     start_run: float = timer()
                     hllabel: str = '-'.join(str(e) for e in hidden_layers)
                     run_number = run_number + 1
@@ -628,6 +627,9 @@ for ndims in ndims_list:
                                                                    bkp = False)
                     if to_run:
                         try:
+                            dummy_file_path: str = os.path.join(path_to_results,'running.txt')
+                            with open(dummy_file_path, 'w') as f:
+                                pass
                             path_to_weights: str = Utils.define_dir(os.path.join(path_to_results, 'weights'))
                             checkpoint_path: str = os.path.join(path_to_weights, 'best_weights.h5')
                             ########### Model train ###########
@@ -667,21 +669,21 @@ for ndims in ndims_list:
                             print(f"Model trained in {training_time:.2f} s.\n") # type: ignore
                             ########### Model prediction ###########
                             results_dict, DataInputs, prediction_time, total_time = prediction_function(hyperparams_dict = hyperparams_dict,
-                                                                                            results_dict = results_dict,
-                                                                                            gpu_models = gpu_models,
-                                                                                            NFObject = NFObject, # type: ignore
-                                                                                            ndims = ndims,
-                                                                                            targ_dist = targ_dist,
-                                                                                            seed_test = seed_test,
-                                                                                            seed_metrics = seed_metrics,
-                                                                                            n_iter = n_iter,
-                                                                                            nsamples_test = nsamples_test,
-                                                                                            batch_size_gen = batch_size_gen,
-                                                                                            n_slices_factor = n_slices_factor,
-                                                                                            dtype = dtype,
-                                                                                            mirror_strategy = mirror_strategy,
-                                                                                            make_plots = make_plots,
-                                                                                            path_to_results = path_to_results)
+                                                                                                        results_dict = results_dict,
+                                                                                                        gpu_models = gpu_models,
+                                                                                                        NFObject = NFObject, # type: ignore
+                                                                                                        ndims = ndims,
+                                                                                                        targ_dist = targ_dist,
+                                                                                                        seed_test = seed_test,
+                                                                                                        seed_metrics = seed_metrics,
+                                                                                                        n_iter = n_iter,
+                                                                                                        nsamples_test = nsamples_test,
+                                                                                                        n_slices_factor = n_slices_factor,
+                                                                                                        dtype = dtype,
+                                                                                                        max_vectorize = max_vectorize,
+                                                                                                        mirror_strategy = mirror_strategy,
+                                                                                                        make_plots = make_plots,
+                                                                                                        path_to_results = path_to_results)
                             ########### Save results ###########
                             Utils.save_results_current_run_txt(path_to_results, results_dict)
                             results_dict_txt_saved = True
@@ -693,9 +695,6 @@ for ndims in ndims_list:
                             results_log_saved = True
                             print("Results log saved")
                             print(f"Model predictions computed in {prediction_time:.2f} s.")
-                            dummy_file_path: str = os.path.join(path_to_results,'done.txt')
-                            with open(dummy_file_path, 'w') as f:
-                                pass
                             end_run: float = timer()
                             total_time_run=end_run-start_run
                             print(textwrap.dedent(f"""\
@@ -704,7 +703,18 @@ for ndims in ndims_list:
                                 ===========
                                 """))
                             run = run + 1
+                            try:
+                                os.remove(dummy_file_path)
+                            except:
+                                pass
+                            dummy_file_path = os.path.join(path_to_results,'done.txt')
+                            with open(dummy_file_path, 'w') as f:
+                                pass
                         except Exception as ex:
+                            try:
+                                os.remove(dummy_file_path)
+                            except:
+                                pass
                             # Get current system exception
                             ex_type, ex_value, ex_traceback = sys.exc_info()
                             # Extract unformatter stack traces as tuples
