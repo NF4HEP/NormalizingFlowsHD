@@ -1,0 +1,9 @@
+run_n,seed_train,seed_test,seed_dist,seed_metrics,ndims,nsamples_train,nsamples_val,nsamples_test,correlation,nbijectors,bijector,spline_knots,range_min,hidden_layers,trainable_parameters,non_trainable_parameters,batch_size,activation,regulariser,eps_regulariser,training_device,epochs_input
+260,520,521,0,0,200,100000,30000,100000,,10,RealNVPN,--,-5,256-256-256,2088400,0,256,relu,,0.0,NVIDIA A40,1000
+269,869,870,0,0,200,100000,30000,100000,,5,RealNVPN,--,-5,128-128-128,358760,0,256,relu,,0.0,NVIDIA A40,1000
+278,933,934,0,0,200,100000,30000,100000,,5,RealNVPN,--,-5,256-256-256,1044200,0,256,relu,,0.0,NVIDIA A40,1000
+284,0,1,0,0,400,100000,30000,100000,,10,RealNVPN,--,-5,256-256-256,2858400,0,256,relu,,0.0,NVIDIA A40,1000
+289,377,378,0,0,400,100000,30000,100000,,5,RealNVPN,--,-5,128-128-128,551760,0,256,relu,,0.0,NVIDIA A40,1000
+293,440,441,0,0,400,100000,30000,100000,,5,RealNVPN,--,-5,128-128-128,551760,0,256,relu,,0.0,NVIDIA A40,1000
+297,520,521,0,0,400,100000,30000,100000,,5,RealNVPN,--,-5,128-128-128,551760,0,256,relu,,0.0,NVIDIA A40,1000
+302,541,542,0,0,400,100000,30000,100000,,5,RealNVPN,--,-5,256-256-256,1429200,0,256,relu,,0.0,NVIDIA A40,1000
