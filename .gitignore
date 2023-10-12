@@ -8,7 +8,8 @@ CMoG/Outputs
 CMoG_em/Outputs
 Truncated/Outputs
 UMoG/Outputs
-__pycache__
+*__pycache__*
+*.out
 *.pyc
 *.pdf
 *.png
@@ -17,4 +18,4 @@ __pycache__
 *.h5
 *weights*
 *checkpoin*
-code/__pycache__/
+post-processing/toys
