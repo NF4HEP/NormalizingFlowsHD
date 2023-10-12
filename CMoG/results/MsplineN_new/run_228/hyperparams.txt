@@ -1,0 +1,7 @@
+run_n,seed_train,seed_test,seed_dist,seed_metrics,ndims,nsamples_train,nsamples_val,nsamples_test,correlation,nbijectors,bijector,spline_knots,range_min,hidden_layers,trainable_parameters,non_trainable_parameters,batch_size,activation,regulariser,eps_regulariser,training_device,epochs_input
+183,541,542,0,0,64,100000,30000,100000,,2,MsplineN,12,-16,128-128-128,660608,0,512,relu,,0.0,NVIDIA A40,1000
+218,520,521,0,0,100,100000,30000,100000,,2,MsplineN,8,-16,256-256-256,1497080,0,512,relu,,0.0,NVIDIA A40,1000
+220,520,521,0,0,100,100000,30000,100000,,2,MsplineN,12,-16,256-256-256,2113880,0,512,relu,,0.0,NVIDIA A40,1000
+224,541,542,0,0,100,100000,30000,100000,,2,MsplineN,12,-16,256-256-256,2113880,0,512,relu,,0.0,NVIDIA A40,1000
+226,721,722,0,0,100,100000,30000,100000,,2,MsplineN,8,-16,256-256-256,1497080,0,512,relu,,0.0,NVIDIA A40,1000
+228,721,722,0,0,100,100000,30000,100000,,2,MsplineN,12,-16,256-256-256,2113880,0,512,relu,,0.0,NVIDIA A40,1000
