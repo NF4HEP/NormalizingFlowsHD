@@ -96,8 +96,8 @@ def get_compiler_kwargs(lr: float,
                         ignore_nans: bool,
                         nan_threshold: float
                        ) -> Dict[str,Any]:
-    #compiler_kwargs = {'optimizer': {'class_name': 'Custom>Adam', # this gives the new Adam optimizer
-    compiler_kwargs = {'optimizer': {'class_name': 'Adam', # this gives the new Adam optimizer
+    compiler_kwargs = {'optimizer': {'class_name': 'Custom>Adam', # this gives the new Adam optimizer
+    #compiler_kwargs = {'optimizer': {'class_name': 'Adam', # this gives the new Adam optimizer
                                      'config': {'learning_rate': lr,
                                                 'beta_1': 0.9,
                                                 'beta_2': 0.999,
@@ -580,7 +580,7 @@ min_lr: float = 1e-6
 n_iter: int = 10
 n_slices_factor: int = 2
 dtype: type = tf.float32
-max_vectorize: int = 1000
+max_vectorize: int = 10
 mirror_strategy = True
 make_plots = True
 

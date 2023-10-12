@@ -49,6 +49,7 @@ class TwoSampleTestInputs(object):
         self._dtype_input: tf.DType = dtype_input
         self._seed: int = seed_input or int(np.random.randint(0, 2**32 - 1))
         self._use_tf: bool = use_tf
+        self._mirror_strategy: bool = mirror_strategy
         self.verbose: bool = verbose
         
         # Attributes from preprocessing
@@ -68,7 +69,7 @@ class TwoSampleTestInputs(object):
         self._small_sample: bool
         
         # Preprocessing
-        self.__preprocess(mirror_strategy = mirror_strategy, verbose = verbose)
+        self.__preprocess(verbose = verbose)
             
     @property
     def dist_1_input(self) -> DataDistType:
@@ -176,6 +177,22 @@ class TwoSampleTestInputs(object):
         else:
             raise TypeError("use_tf must be a bool or tf.Tensor with numpy() method returning a np.bool_")
         self.__preprocess(verbose = False)
+        
+    @property
+    def mirror_strategy(self) -> bool:
+        return self._mirror_strategy
+    
+    @mirror_strategy.setter
+    def mirror_strategy(self,
+                        mirror_strategy: BoolType
+                          ) -> None:
+        if isinstance(mirror_strategy, (bool,np.bool_)):
+            self._mirror_strategy = bool(mirror_strategy)
+        elif isinstance(mirror_strategy, tf.Tensor):
+            if isinstance(mirror_strategy.numpy(), np.bool_):
+                self._mirror_strategy = bool(mirror_strategy)
+            else:
+                raise TypeError("mirror_strategy must be a bool or tf.Tensor with numpy() method returning a np.bool_")
         
     @property
     def verbose(self) -> bool: # type: ignore
@@ -466,13 +483,12 @@ class TwoSampleTestInputs(object):
             else:  
                 raise ValueError("dist_2_num should be an instance of np.ndarray or tf.Tensor.")
             
-    def __check_set_distributions_tf(self,
-                                     mirror_strategy: bool = False) -> None:
+    def __check_set_distributions_tf(self) -> None:
         # Utility functions
         def set_dist_num_from_symb(dist: tfp.distributions.Distribution,
                                    seed: int = 0) -> tf.Tensor:
             if isinstance(dist, tfp.distributions.Distribution):
-                dist_num: tf.Tensor = generate_and_clean_data(dist, self.nsamples, self.nsamples, dtype = self.dtype, seed = int(seed), mirror_strategy = mirror_strategy) # type: ignore
+                dist_num: tf.Tensor = generate_and_clean_data(dist, self.nsamples, self.nsamples, dtype = self.dtype, seed = int(seed), mirror_strategy = self.mirror_strategy) # type: ignore
             else:
                 raise ValueError("dist should be an instance of tfp.distributions.Distribution.")
             return dist_num
@@ -502,12 +518,11 @@ class TwoSampleTestInputs(object):
     def __check_set_distributions(self,
                                   mirror_strategy: bool = False) -> None:
         if self.use_tf:
-            self.__check_set_distributions_tf(mirror_strategy = mirror_strategy)
+            self.__check_set_distributions_tf()
         else:
             self.__check_set_distributions_np()
         
     def __preprocess(self, 
-                     mirror_strategy: bool = False,
                      verbose: bool = False) -> None:
         # Reset random seeds
         reset_random_seeds(seed = self.seed)
@@ -528,7 +543,7 @@ class TwoSampleTestInputs(object):
         self.__check_set_small_sample()
 
         # Check and set distributions
-        self.__check_set_distributions(mirror_strategy = mirror_strategy) 
+        self.__check_set_distributions() 
         
     @property
     def param_dict(self) -> Dict[str, Any]:

@@ -1,5 +1,5 @@
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fae9db39840>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f3a16f45ab0>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -81,7 +81,7 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7faa7c449cc0>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f3a16f45210>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -163,7 +163,7 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7faa7c4496c0>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f3a16f44970>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -245,7 +245,7 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7faa7c449090>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f3a16f440d0>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -327,7 +327,7 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7faa7c44aaa0>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f39f1eaf7f0>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -409,7 +409,7 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7faa7c44b3a0>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f39f1eaef50>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -491,7 +491,7 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7faa7c4481c0>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f39f1eae6b0>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -573,7 +573,7 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7faa7c449330>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f39f1ead8a0>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -655,7 +655,7 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fae7bd8d4e0>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f36705f6170>}
 permute
 {'permutation': <tf.Tensor: shape=(1000,), dtype=int32, numpy=
 array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
@@ -737,4 +737,4 @@ array([500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512,
        488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499],
       dtype=int32)>, 'axis': -1, 'validate_args': False, 'name': None}
 masked_autoregressive_flow
-{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7fabf4072da0>}
+{'bijector_fn': None, 'is_constant_jacobian': False, 'validate_args': False, 'unroll_loop': False, 'event_ndims': 1, 'name': None, 'shift_and_log_scale_fn': <tensorflow_probability.python.bijectors.masked_autoregressive.AutoregressiveNetwork object at 0x7f36703376d0>}

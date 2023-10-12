@@ -11,6 +11,7 @@ from tqdm import tqdm # type: ignore
 from .utils import reset_random_seeds
 from .utils import conditional_print
 from .utils import conditional_tf_print
+from .utils import generate_and_clean_data
 from .utils import NumpyDistribution
 from .base import TwoSampleTestInputs
 from .base import TwoSampleTestBase
@@ -76,7 +77,7 @@ def lr_statistic_np(logprob_ref_ref: DataTypeNP,
     
     return logprob_ref_ref_sum, logprob_ref_alt_sum, logprob_alt_alt_sum, lik_ratio, lik_ratio_norm
 
-@tf.function(reduce_retracing = True)
+@tf.function(experimental_compile=True)
 def lr_statistic_tf(logprob_ref_ref: DataTypeTF,
                     logprob_ref_alt: DataTypeTF,
                     logprob_alt_alt: DataTypeTF
@@ -489,13 +490,14 @@ class LRMetric(TwoSampleTestBase):
                                    seed: int = 0
                                   ) -> tf.Tensor:
             nonlocal dtype
-            dist_num: tf.Tensor = tf.cast(dist.sample(nsamples, seed = int(seed)), dtype = dtype) # type: ignore
+            #dist_num: tf.Tensor = tf.cast(dist.sample(nsamples, seed = int(seed)), dtype = dtype) # type: ignore
+            dist_num: tf.Tensor = generate_and_clean_data(dist, nsamples, 100, dtype = self.Inputs.dtype, seed = int(seed), mirror_strategy = self.Inputs.mirror_strategy) # type: ignore
             return dist_num
         
         def return_dist_num(dist_num: tf.Tensor) -> tf.Tensor:
             return dist_num
         
-        @tf.function(reduce_retracing=True)
+        #@tf.function(reduce_retracing=True)
         def compute_test() -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
             # Check if numerical distributions are empty and print a warning if so
             conditional_tf_print(tf.logical_and(tf.equal(tf.shape(dist_1_num[0])[0],0),self.verbose), "The dist_1_num tensor is empty. Batches will be generated 'on-the-fly' from dist_1_symb.") # type: ignore

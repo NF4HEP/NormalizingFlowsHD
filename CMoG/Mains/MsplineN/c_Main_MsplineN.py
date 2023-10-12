@@ -350,28 +350,28 @@ def prediction_function(hyperparams_dict: Dict[str, Any],
                                                                                 use_tf = True,
                                                                                 mirror_strategy = mirror_strategy,
                                                                                 verbose = True)
-        LRMetric: GMetrics.LRMetric = GMetrics.LRMetric(data_input = DataInputs,
-                                                        verbose = True)
+        #LRMetric: GMetrics.LRMetric = GMetrics.LRMetric(data_input = DataInputs,
+        #                                                verbose = True)
         KSTest: GMetrics.KSTest = GMetrics.KSTest(data_input = DataInputs,
                                                   verbose = True)
         SWDMetric: GMetrics.SWDMetric = GMetrics.SWDMetric(data_input = DataInputs,
                                                            verbose = True)
         FNMetric: GMetrics.FNMetric = GMetrics.FNMetric(data_input = DataInputs,
                                                         verbose = True)
-        LRMetric.compute()
+        #LRMetric.compute()
         KSTest.compute(max_vectorize = max_vectorize)
         SWDMetric.compute(nslices = n_slices_factor*ndims)
         FNMetric.compute(max_vectorize = max_vectorize)
-        lr_result: Dict[str, np.ndarray] = LRMetric.Results[-1].result_value
-        logprob_ref_ref_sum_list = lr_result["logprob_ref_ref_sum_list"].tolist()
-        logprob_ref_alt_sum_list = lr_result["logprob_ref_alt_sum_list"].tolist()
-        logprob_alt_alt_sum_list = lr_result["logprob_alt_alt_sum_list"].tolist()
-        lik_ratio_list = lr_result["lik_ratio_list"].tolist()
-        lik_ratio_norm_list = lr_result["lik_ratio_norm_list"].tolist()
+        #lr_result: Dict[str, np.ndarray] = LRMetric.Results[-1].result_value
+        logprob_ref_ref_sum_list = None#lr_result["logprob_ref_ref_sum_list"].tolist()
+        logprob_ref_alt_sum_list = None#lr_result["logprob_ref_alt_sum_list"].tolist()
+        logprob_alt_alt_sum_list = None#lr_result["logprob_alt_alt_sum_list"].tolist()
+        lik_ratio_list = None#lr_result["lik_ratio_list"].tolist()
+        lik_ratio_norm_list = None#lr_result["lik_ratio_norm_list"].tolist()
         ks_result: Dict[str, np.ndarray] = KSTest.Results[-1].result_value
-        ks_lists: List[List[float]] = ks_result["pvalue_lists"].tolist()
-        ks_means: List[float] = ks_result["pvalue_means"].tolist()
-        ks_stds: List[float] = ks_result["pvalue_stds"].tolist()
+        ks_lists: List[List[float]] = ks_result["statistic_lists"].tolist()
+        ks_means: List[float] = ks_result["statistic_means"].tolist()
+        ks_stds: List[float] = ks_result["statistic_stds"].tolist()
         swd_result: Dict[str, np.ndarray] = SWDMetric.Results[-1].result_value
         swd_lists: List[List[float]] = swd_result["metric_lists"].tolist()
         swd_means: List[float] = swd_result["metric_means"].tolist()
@@ -410,9 +410,9 @@ def prediction_function(hyperparams_dict: Dict[str, Any],
                 FNMetric = GMetrics.FNMetric(data_input = DataInputs,
                                              verbose = True)
                 LRMetric.compute()
-                KSTest.compute()
+                KSTest.compute(max_vectorize = max_vectorize)
                 SWDMetric.compute(nslices = n_slices_factor*ndims)
-                FNMetric.compute()
+                FNMetric.compute(max_vectorize = max_vectorize)
                 lr_result = LRMetric.Results[-1].result_value
                 logprob_ref_ref_sum_list = lr_result["logprob_ref_ref_sum_list"].tolist()
                 logprob_ref_alt_sum_list = lr_result["logprob_ref_alt_sum_list"].tolist()
@@ -420,9 +420,9 @@ def prediction_function(hyperparams_dict: Dict[str, Any],
                 lik_ratio_list = lr_result["lik_ratio_list"].tolist()
                 lik_ratio_norm_list = lr_result["lik_ratio_norm_list"].tolist()
                 ks_result = KSTest.Results[-1].result_value
-                ks_lists = ks_result["pvalue_lists"].tolist()
-                ks_means = ks_result["pvalue_means"].tolist()
-                ks_stds = ks_result["pvalue_stds"].tolist()
+                ks_lists = ks_result["statistic_lists"].tolist()
+                ks_means = ks_result["statistic_means"].tolist()
+                ks_stds = ks_result["statistic_stds"].tolist()
                 swd_result = SWDMetric.Results[-1].result_value
                 swd_lists = swd_result["metric_lists"].tolist()
                 swd_means = swd_result["metric_means"].tolist()
@@ -557,7 +557,7 @@ regulariser: Optional[str] = None
 eps_regulariser: float = 0.
 
 ### Initialzie training hyperparameters ###
-epochs_input: int = 1000
+epochs_input: int = 2000
 batch_size: int = 512
 nan_threshold: float = 0.01
 max_retry: int = 10
@@ -579,7 +579,7 @@ min_lr: float = 1e-6
 n_iter: int = 10
 n_slices_factor: int = 2
 dtype: type = tf.float32
-max_vectorize: int = 1000
+max_vectorize: int = 10
 mirror_strategy = True
 make_plots = True
 

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Declare an array of visible devices you'd like to use
-declare -a visible_devices_list=("0")
+declare -a visible_devices_list=("0" "1" "2")
 
 # Declare an array of run numbers
-declare -a run_numbers=("5")
+declare -a run_numbers=("9")
 
 # Loop through arrays and launch jobs
 for run_num in "${run_numbers[@]}"

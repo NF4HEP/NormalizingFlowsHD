@@ -14,6 +14,7 @@ from scipy.stats import ks_2samp # type: ignore
 from .utils import reset_random_seeds
 from .utils import conditional_print
 from .utils import conditional_tf_print
+from .utils import generate_and_clean_data
 from .utils import NumpyDistribution
 from .base import TwoSampleTestInputs
 from .base import TwoSampleTestBase
@@ -23,8 +24,8 @@ from .base import TwoSampleTestResults
 from typing import Tuple, Union, Optional, Type, Dict, Any, List
 from .utils import DTypeType, IntTensor, FloatTensor, BoolTypeTF, BoolTypeNP, IntType, DataTypeTF, DataTypeNP, DataType, DistTypeTF, DistTypeNP, DistType, DataDistTypeNP, DataDistTypeTF, DataDistType, BoolType
 
-
-@tf.function(reduce_retracing = True)
+#@tf.function(reduce_retracing = True)
+@tf.function(experimental_compile=True)
 def ks_2samp_tf(data1: tf.Tensor, 
                 data2: tf.Tensor,
                 alternative: str = 'two-sided',
@@ -69,8 +70,8 @@ def ks_2samp_tf(data1: tf.Tensor,
                                                         verbose = verbose) # type: ignore
     return d, prob, d_location, d_sign
     
-    
-@tf.function(reduce_retracing = True)
+#@tf.function(reduce_retracing = True)
+@tf.function(experimental_compile=True)
 def _ks_2samp_tf_internal(data1: tf.Tensor, 
                           data2: tf.Tensor,
                           alternative_int: int = 0,
@@ -611,13 +612,15 @@ class KSTest(TwoSampleTestBase):
                                    seed: int = 0
                                   ) -> tf.Tensor:
             nonlocal dtype
-            dist_num: tf.Tensor = tf.cast(dist.sample(nsamples, seed = int(seed)), dtype = dtype) # type: ignore
+            #dist_num: tf.Tensor = tf.cast(dist.sample(nsamples, seed = int(seed)), dtype = dtype) # type: ignore
+            dist_num: tf.Tensor = generate_and_clean_data(dist, nsamples, 100, dtype = self.Inputs.dtype, seed = int(seed), mirror_strategy = self.Inputs.mirror_strategy) # type: ignore
             return dist_num
         
         def return_dist_num(dist_num: tf.Tensor) -> tf.Tensor:
             return dist_num
-            
-        @tf.function(reduce_retracing=True)
+        
+        #@tf.function(experimental_compile=True)
+        #@tf.function(reduce_retracing=True)
         def batched_test(start, end):
             conditional_tf_print(tf.logical_and(tf.logical_or(tf.math.logical_not(tf.equal(start,0)),tf.math.logical_not(tf.equal(end,niter))), self.verbose), "Iterating from", start, "to", end, "out of", niter, ".")
             # Define unique constants for the two distributions. It is sufficient that these two are different to get different samples from the two distributions, if they are equal. 
@@ -632,7 +635,7 @@ class KSTest(TwoSampleTestBase):
             dist_2_k: tf.Tensor = tf.cond(tf.equal(tf.shape(dist_1_num[0])[0],0), # type: ignore
                                                true_fn = lambda: set_dist_num_from_symb(dist_2_symb, nsamples = batch_size*(end-start), seed = seed_dist_2),
                                                false_fn = lambda: return_dist_num(dist_2_num[start*batch_size:end*batch_size, :])) # type: ignore
-            
+
             dist_1_k = tf.reshape(dist_1_k, (end-start, batch_size, ndims))
             dist_2_k = tf.reshape(dist_2_k, (end-start, batch_size, ndims))
                 
@@ -671,7 +674,8 @@ class KSTest(TwoSampleTestBase):
         
             return res
 
-        @tf.function(reduce_retracing=True)
+        #@tf.function(experimental_compile=True)
+        #@tf.function(reduce_retracing=True)
         def compute_test(max_vectorize: int = 100) -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor, tf.Tensor, tf.Tensor, tf.Tensor]:
             # Check if numerical distributions are empty and print a warning if so
             conditional_tf_print(tf.logical_and(tf.equal(tf.shape(dist_1_num[0])[0],0),self.verbose), "The dist_1_num tensor is empty. Batches will be generated 'on-the-fly' from dist_1_symb.") # type: ignore

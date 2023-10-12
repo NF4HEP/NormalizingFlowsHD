@@ -580,8 +580,8 @@ min_lr: float = 1e-6
 n_iter: int = 10
 n_slices_factor: int = 2
 dtype: type = tf.float32
-max_vectorize: int = 1000
-mirror_strategy = True
+max_vectorize: int = 10
+mirror_strategy = False
 make_plots = True
 
 ### Initialize old variables for backward compatibility
@@ -665,7 +665,7 @@ for ndims in ndims_list:
                                                                                                    max_retry = max_retry,
                                                                                                    debug_print_mode = debug_print_mode,
                                                                                                    nan_threshold = nan_threshold)
-                            
+
                             print(f"Model trained in {training_time:.2f} s.\n") # type: ignore
                             ########### Model prediction ###########
                             results_dict, DataInputs, prediction_time, total_time = prediction_function(hyperparams_dict = hyperparams_dict,

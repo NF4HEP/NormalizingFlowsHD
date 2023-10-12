@@ -12,6 +12,7 @@ from scipy.stats import wasserstein_distance # type: ignore
 from .utils import reset_random_seeds
 from .utils import conditional_print
 from .utils import conditional_tf_print
+from .utils import generate_and_clean_data
 from .utils import NumpyDistribution
 from .base import TwoSampleTestInputs
 from .base import TwoSampleTestBase
@@ -21,8 +22,7 @@ from .base import TwoSampleTestResults
 from typing import Tuple, Union, Optional, Type, Dict, Any, List
 from .utils import DTypeType, IntTensor, FloatTensor, BoolTypeTF, BoolTypeNP, IntType, DataTypeTF, DataTypeNP, DataType, DistTypeTF, DistTypeNP, DistType, DataDistTypeNP, DataDistTypeTF, DataDistType, BoolType
 
-
-@tf.function(reduce_retracing=True)
+@tf.function(experimental_compile=True)
 def wasserstein_distance_tf(data1: tf.Tensor, 
                             data2: tf.Tensor
                            ) -> tf.Tensor:
@@ -53,8 +53,7 @@ def wasserstein_distance_tf(data1: tf.Tensor,
     wd = tf.reduce_mean(diff)    
     return wd
 
-
-@tf.function(reduce_retracing=True)
+@tf.function(experimental_compile=True)
 def swd_2samp_tf(data1: tf.Tensor, 
                  data2: tf.Tensor,
                  nslices: int = 100
@@ -447,13 +446,14 @@ class SWDMetric(TwoSampleTestBase):
                                    seed: int = 0
                                   ) -> tf.Tensor:
             nonlocal dtype
-            dist_num: tf.Tensor = tf.cast(dist.sample(nsamples, seed = int(seed)), dtype = dtype) # type: ignore
+            #dist_num: tf.Tensor = tf.cast(dist.sample(nsamples, seed = int(seed)), dtype = dtype) # type: ignore
+            dist_num: tf.Tensor = generate_and_clean_data(dist, nsamples, 100, dtype = self.Inputs.dtype, seed = int(seed), mirror_strategy = self.Inputs.mirror_strategy) # type: ignore
             return dist_num
         
         def return_dist_num(dist_num: tf.Tensor) -> tf.Tensor:
             return dist_num
             
-        @tf.function(reduce_retracing=True)
+        #@tf.function(reduce_retracing=True)
         def compute_test() -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
             # Check if numerical distributions are empty and print a warning if so
             conditional_tf_print(tf.logical_and(tf.equal(tf.shape(dist_1_num[0])[0],0),self.verbose), "The dist_1_num tensor is empty. Batches will be generated 'on-the-fly' from dist_1_symb.") # type: ignore

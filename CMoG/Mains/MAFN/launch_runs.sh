@@ -4,7 +4,7 @@
 declare -a visible_devices_list=("1")
 
 # Declare an array of run numbers
-declare -a run_numbers=("4")
+declare -a run_numbers=("8")
 
 # Loop through arrays and launch jobs
 for run_num in "${run_numbers[@]}"

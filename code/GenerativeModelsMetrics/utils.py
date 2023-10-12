@@ -301,37 +301,77 @@ def se_std(data):
     se_std = np.sqrt((mu_4 - mu_2**2) / (4 * mu_2 * n))
     return se_std
 
+#def generate_and_clean_data_simple(dist, n_samples, batch_size, dtype, seed):
+#    if dtype is None:
+#        dtype = tf.float32
+#    X_data = []
+#    total_samples = 0
+#
+#    while total_samples < n_samples:
+#        try:
+#            batch = dist.sample(batch_size, seed=seed)
+#
+#            # Find finite values
+#            finite_indices = tf.reduce_all(tf.math.is_finite(batch), axis=1)
+#
+#            # Warn the user if there are any non-finite values
+#            n_nonfinite = tf.reduce_sum(tf.cast(~finite_indices, tf.int32))
+#            if n_nonfinite > 0:
+#                print(f"Warning: Removed {n_nonfinite} non-finite values from the batch")
+#
+#            # Select only the finite values
+#            finite_batch = batch.numpy()[finite_indices.numpy()].astype(dtype.as_numpy_dtype)
+#
+#            X_data.append(finite_batch)
+#            total_samples += len(finite_batch)
+#        except (RuntimeError, tf.errors.ResourceExhaustedError):
+#            # If a RuntimeError or a ResourceExhaustedError occurs (possibly due to OOM), halve the batch size
+#            batch_size = batch_size // 2
+#            print("Warning: Batch size too large. Halving batch size to {}".format(batch_size),"and retrying.")
+#            if batch_size == 0:
+#                raise RuntimeError("Batch size is zero. Unable to generate samples.")
+#
+#    return np.concatenate(X_data, axis=0)[:n_samples]
+
 def generate_and_clean_data_simple(dist, n_samples, batch_size, dtype, seed):
     if dtype is None:
         dtype = tf.float32
-    X_data = []
-    total_samples = 0
+        
+    # Create a new random generator with a seed
+    rng = tf.random.Generator.from_seed(seed)
 
-    while total_samples < n_samples:
-        try:
-            batch = dist.sample(batch_size, seed=seed)
+    # Initialize a dynamic tensor array to store the samples
+    X_data = tf.TensorArray(dtype, size=0, dynamic_size=True)
+    total_samples = tf.constant(0, dtype=tf.int32)
 
-            # Find finite values
-            finite_indices = tf.reduce_all(tf.math.is_finite(batch), axis=1)
+    for i in tf.range(0, n_samples, delta=batch_size):
+        new_seed = rng.make_seeds(2)[0]
+        new_seed = tf.cast(new_seed, tf.int32)  # Convert the seed to int32
+        current_batch_size = tf.minimum(batch_size, n_samples - i)
+        # Generate samples for the current batch
+        batch = dist.sample(current_batch_size, seed=new_seed)
+        
+        # Find finite values
+        finite_indices = tf.reduce_all(tf.math.is_finite(batch), axis=1)
 
-            # Warn the user if there are any non-finite values
-            n_nonfinite = tf.reduce_sum(tf.cast(~finite_indices, tf.int32))
-            if n_nonfinite > 0:
-                print(f"Warning: Removed {n_nonfinite} non-finite values from the batch")
+        # Warn the user if there are any non-finite values
+        n_nonfinite = tf.reduce_sum(tf.cast(~finite_indices, tf.int32))
+        if n_nonfinite > 0:
+            tf.print(f"Warning: Removed {n_nonfinite} non-finite values from the batch")
 
-            # Select only the finite values
-            finite_batch = batch.numpy()[finite_indices.numpy()].astype(dtype.as_numpy_dtype)
+        # Select only the finite values
+        finite_batch = tf.boolean_mask(batch, finite_indices)
 
-            X_data.append(finite_batch)
-            total_samples += len(finite_batch)
-        except (RuntimeError, tf.errors.ResourceExhaustedError):
-            # If a RuntimeError or a ResourceExhaustedError occurs (possibly due to OOM), halve the batch size
-            batch_size = batch_size // 2
-            print("Warning: Batch size too large. Halving batch size to {}".format(batch_size),"and retrying.")
-            if batch_size == 0:
-                raise RuntimeError("Batch size is zero. Unable to generate samples.")
+        # Store the batch
+        X_data = X_data.write(total_samples, finite_batch)
 
-    return np.concatenate(X_data, axis=0)[:n_samples]
+        total_samples += tf.shape(finite_batch)[0]
+
+    # Concatenate all the stored batches
+    X_data = X_data.stack()
+    X_data = tf.reshape(X_data, [total_samples, -1])
+
+    return X_data
 
 def generate_and_clean_data_mirror(dist, n_samples, batch_size, dtype, seed):
     if dtype is None:

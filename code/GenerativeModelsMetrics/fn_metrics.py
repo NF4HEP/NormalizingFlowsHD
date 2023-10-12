@@ -11,6 +11,7 @@ from tqdm import tqdm # type: ignore
 from .utils import reset_random_seeds
 from .utils import conditional_print
 from .utils import conditional_tf_print
+from .utils import generate_and_clean_data
 from .utils import NumpyDistribution
 from .base import TwoSampleTestInputs
 from .base import TwoSampleTestBase
@@ -45,20 +46,6 @@ def correlation_from_covariance_tf(covariance: tf.Tensor) -> tf.Tensor:
     correlation = tf.where(tf.equal(covariance, 0), tf.constant(0, dtype=correlation.dtype), correlation)
     return correlation
 
-@tf.function(reduce_retracing=True)
-def fn_2samp_tf(data1: tf.Tensor, 
-                data2: tf.Tensor
-               ) -> tf.Tensor:
-    """
-    """
-    dist_1_cov = tfp.stats.covariance(data1, sample_axis=0, event_axis=-1)
-    dist_1_corr = correlation_from_covariance_tf(dist_1_cov)
-    dist_2_cov = tfp.stats.covariance(data2, sample_axis=0, event_axis=-1)
-    dist_2_corr = correlation_from_covariance_tf(dist_2_cov)    
-    matrix_sum = tf.subtract(dist_1_corr, dist_2_corr)
-    frob_norm = tf.norm(matrix_sum, ord='fro', axis=[-2,-1])
-    return frob_norm
-
 def fn_2samp_np(data1: np.ndarray,
                 data2: np.ndarray
                ) -> np.ndarray:
@@ -71,6 +58,20 @@ def fn_2samp_np(data1: np.ndarray,
     matrix_sum = dist_1_corr - dist_2_corr
     frob_norm = np.linalg.norm(matrix_sum, ord='fro')
     return frob_norm # type: ignore
+
+@tf.function(experimental_compile=True)
+def fn_2samp_tf(data1: tf.Tensor, 
+                data2: tf.Tensor
+               ) -> tf.Tensor:
+    """
+    """
+    dist_1_cov = tfp.stats.covariance(data1, sample_axis=0, event_axis=-1)
+    dist_1_corr = correlation_from_covariance_tf(dist_1_cov)
+    dist_2_cov = tfp.stats.covariance(data2, sample_axis=0, event_axis=-1)
+    dist_2_corr = correlation_from_covariance_tf(dist_2_cov)    
+    matrix_sum = tf.subtract(dist_1_corr, dist_2_corr)
+    frob_norm = tf.norm(matrix_sum, ord='fro', axis=[-2,-1])
+    return frob_norm
 
 class FNMetric(TwoSampleTestBase):
     """
@@ -375,19 +376,20 @@ class FNMetric(TwoSampleTestBase):
             self._end = timer()
             elapsed = self.end - self.start
             conditional_tf_print(self.verbose, "FN metric calculation completed in", str(elapsed), "seconds.")
-            
+                    
         def set_dist_num_from_symb(dist: DistTypeTF,
                                    nsamples: int,
                                    seed: int = 0
                                   ) -> tf.Tensor:
             nonlocal dtype
-            dist_num: tf.Tensor = tf.cast(dist.sample(nsamples, seed = int(seed)), dtype = dtype) # type: ignore
+            #dist_num: tf.Tensor = tf.cast(dist.sample(nsamples, seed = int(seed)), dtype = dtype) # type: ignore
+            dist_num: tf.Tensor = generate_and_clean_data(dist, nsamples, 100, dtype = self.Inputs.dtype, seed = int(seed), mirror_strategy = self.Inputs.mirror_strategy) # type: ignore
             return dist_num
         
         def return_dist_num(dist_num: tf.Tensor) -> tf.Tensor:
             return dist_num
             
-        @tf.function(reduce_retracing=True)
+        #@tf.function(reduce_retracing=True)
         def batched_test(start, end):
             conditional_tf_print(tf.logical_and(tf.logical_or(tf.math.logical_not(tf.equal(start,0)),tf.math.logical_not(tf.equal(end,niter))), self.verbose), "Iterating from", start, "to", end, "out of", niter, ".")
             seed_dist_1  = int(1e6)  # Seed for distribution 1
@@ -414,7 +416,7 @@ class FNMetric(TwoSampleTestBase):
 
             return frob_norm_list
         
-        @tf.function(reduce_retracing=True)
+        #@tf.function(reduce_retracing=True)
         def compute_test(max_vectorize: int = 100) -> tf.Tensor:
             # Check if numerical distributions are empty and print a warning if so
             conditional_tf_print(tf.logical_and(tf.equal(tf.shape(dist_1_num[0])[0],0),self.verbose), "The dist_1_num tensor is empty. Batches will be generated 'on-the-fly' from dist_1_symb.") # type: ignore
