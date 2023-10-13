@@ -12,10 +12,20 @@ print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing a
 if not any("ipykernel" in arg for arg in sys.argv):
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("-v", "--visible_devices", help="Set visible devices", nargs='*', type=int, default=visible_devices)
+    parser.add_argument("-v", "--visible_devices", help="Set visible devices", nargs='*', type=list, default=visible_devices)
     args = parser.parse_args()
     visible_devices = args.visible_devices if args.visible_devices else visible_devices
+    if len(visible_devices) == 0:
+        visible_devices = int(visible_devices)
+    elif len(visible_devices) == 1:
+        if len(visible_devices[0]) == 0:
+            visible_devices = int(visible_devices[0])
+        else:
+            visible_devices = [int(i) for i in visible_devices[0]]
+    else:
+        visible_devices = [int(i) for i in visible_devices]
 print("Visible devices:", visible_devices)
+raise Exception("Stop here")
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing timer from timeit...")
 from timeit import default_timer as timer
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Setting env variables for tf import (only device", visible_devices, "will be available)...")
