@@ -8,7 +8,6 @@ CMoG_em/Outputs
 Truncated/Outputs
 UMoG/Outputs
 *__pycache__*
-*.out
 *.pyc
 *.pdf
 *.png

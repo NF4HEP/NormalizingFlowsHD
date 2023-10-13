@@ -1,0 +1,3383 @@
+2023-09-23 15:05:53.178913: Importing os...
+2023-09-23 15:05:53.178967: Importing sys...
+2023-09-23 15:05:53.178977: Importing and initializing argparse...
+Visible devices: [1]
+2023-09-23 15:05:53.191172: Importing timer from timeit...
+2023-09-23 15:05:53.191995: Setting env variables for tf import (only device [1] will be available)...
+2023-09-23 15:05:53.192035: Importing numpy...
+2023-09-23 15:05:53.440820: Importing pandas...
+2023-09-23 15:05:53.735124: Importing shutil...
+2023-09-23 15:05:53.735159: Importing subprocess...
+2023-09-23 15:05:53.735167: Importing tensorflow...
+Tensorflow version: 2.12.0
+2023-09-23 15:05:57.014246: Importing tensorflow_probability...
+Tensorflow probability version: 0.20.1
+2023-09-23 15:05:57.507136: Importing textwrap...
+2023-09-23 15:05:57.507171: Importing timeit...
+2023-09-23 15:05:57.507181: Importing traceback...
+2023-09-23 15:05:57.507188: Importing typing...
+2023-09-23 15:05:57.507198: Setting tf configs...
+2023-09-23 15:06:09.732702: Importing custom module...
+Successfully loaded GPU model: NVIDIA A40
+2023-09-23 15:06:17.139988: All modues imported successfully.
+Directory ../../results/CsplineN_new/ already exists.
+Directory ../../results/CsplineN_new/run_1/ already exists.
+Skipping it.
+===========
+Run 1/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_2/ already exists.
+Skipping it.
+===========
+Run 2/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_3/ already exists.
+Skipping it.
+===========
+Run 3/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_4/ already exists.
+Skipping it.
+===========
+Run 4/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_5/ already exists.
+Skipping it.
+===========
+Run 5/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_6/ already exists.
+Skipping it.
+===========
+Run 6/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_7/ already exists.
+Skipping it.
+===========
+Run 7/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_8/ already exists.
+Skipping it.
+===========
+Run 8/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_9/ already exists.
+Skipping it.
+===========
+Run 9/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_10/ already exists.
+Skipping it.
+===========
+Run 10/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_11/ already exists.
+Skipping it.
+===========
+Run 11/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_12/ already exists.
+Skipping it.
+===========
+Run 12/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_13/ already exists.
+Skipping it.
+===========
+Run 13/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_14/ already exists.
+Skipping it.
+===========
+Run 14/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_15/ already exists.
+Skipping it.
+===========
+Run 15/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_16/ already exists.
+Skipping it.
+===========
+Run 16/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_17/ already exists.
+Skipping it.
+===========
+Run 17/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_18/ already exists.
+Skipping it.
+===========
+Run 18/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_19/ already exists.
+Skipping it.
+===========
+Run 19/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_20/ already exists.
+Skipping it.
+===========
+Run 20/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_21/ already exists.
+Skipping it.
+===========
+Run 21/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_22/ already exists.
+Skipping it.
+===========
+Run 22/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_23/ already exists.
+Skipping it.
+===========
+Run 23/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_24/ already exists.
+Skipping it.
+===========
+Run 24/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_25/ already exists.
+Skipping it.
+===========
+Run 25/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_26/ already exists.
+Skipping it.
+===========
+Run 26/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_27/ already exists.
+Skipping it.
+===========
+Run 27/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_28/ already exists.
+Skipping it.
+===========
+Run 28/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_29/ already exists.
+Skipping it.
+===========
+Run 29/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_30/ already exists.
+Skipping it.
+===========
+Run 30/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_31/ already exists.
+Skipping it.
+===========
+Run 31/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_32/ already exists.
+Skipping it.
+===========
+Run 32/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_33/ already exists.
+Skipping it.
+===========
+Run 33/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_34/ already exists.
+Skipping it.
+===========
+Run 34/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_35/ already exists.
+Skipping it.
+===========
+Run 35/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_36/ already exists.
+Skipping it.
+===========
+Run 36/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_37/ already exists.
+Skipping it.
+===========
+Run 37/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_38/ already exists.
+Skipping it.
+===========
+Run 38/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_39/ already exists.
+Skipping it.
+===========
+Run 39/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_40/ already exists.
+Skipping it.
+===========
+Run 40/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_41/ already exists.
+Skipping it.
+===========
+Run 41/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_42/ already exists.
+Skipping it.
+===========
+Run 42/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_43/ already exists.
+Skipping it.
+===========
+Run 43/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_44/ already exists.
+Skipping it.
+===========
+Run 44/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_45/ already exists.
+Skipping it.
+===========
+Run 45/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_46/ already exists.
+Skipping it.
+===========
+Run 46/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_47/ already exists.
+Skipping it.
+===========
+Run 47/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_48/ already exists.
+Skipping it.
+===========
+Run 48/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_49/ already exists.
+Skipping it.
+===========
+Run 49/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_50/ already exists.
+Skipping it.
+===========
+Run 50/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_51/ already exists.
+Skipping it.
+===========
+Run 51/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_52/ already exists.
+Skipping it.
+===========
+Run 52/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_53/ already exists.
+Skipping it.
+===========
+Run 53/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_54/ already exists.
+Skipping it.
+===========
+Run 54/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_55/ already exists.
+Skipping it.
+===========
+Run 55/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_56/ already exists.
+Skipping it.
+===========
+Run 56/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_57/ already exists.
+Skipping it.
+===========
+Run 57/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_58/ already exists.
+Skipping it.
+===========
+Run 58/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_59/ already exists.
+Skipping it.
+===========
+Run 59/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_60/ already exists.
+Skipping it.
+===========
+Run 60/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_61/ already exists.
+Skipping it.
+===========
+Run 61/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_62/ already exists.
+Skipping it.
+===========
+Run 62/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_63/ already exists.
+Skipping it.
+===========
+Run 63/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_64/ already exists.
+Skipping it.
+===========
+Run 64/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_65/ already exists.
+Skipping it.
+===========
+Run 65/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_66/ already exists.
+Skipping it.
+===========
+Run 66/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_67/ already exists.
+Skipping it.
+===========
+Run 67/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_68/ already exists.
+Skipping it.
+===========
+Run 68/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_69/ already exists.
+Skipping it.
+===========
+Run 69/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_70/ already exists.
+Skipping it.
+===========
+Run 70/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_71/ already exists.
+Skipping it.
+===========
+Run 71/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_72/ already exists.
+Skipping it.
+===========
+Run 72/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_73/ already exists.
+Skipping it.
+===========
+Run 73/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_74/ already exists.
+Skipping it.
+===========
+Run 74/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_75/ already exists.
+Skipping it.
+===========
+Run 75/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_76/ already exists.
+Skipping it.
+===========
+Run 76/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_77/ already exists.
+Skipping it.
+===========
+Run 77/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_78/ already exists.
+Skipping it.
+===========
+Run 78/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_79/ already exists.
+Skipping it.
+===========
+Run 79/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_80/ already exists.
+Skipping it.
+===========
+Run 80/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_81/ already exists.
+Skipping it.
+===========
+Run 81/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_82/ already exists.
+Skipping it.
+===========
+Run 82/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_83/ already exists.
+Skipping it.
+===========
+Run 83/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_84/ already exists.
+Skipping it.
+===========
+Run 84/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_85/ already exists.
+Skipping it.
+===========
+Run 85/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_86/ already exists.
+Skipping it.
+===========
+Run 86/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_87/ already exists.
+Skipping it.
+===========
+Run 87/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_88/ already exists.
+Skipping it.
+===========
+Run 88/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_89/ already exists.
+Skipping it.
+===========
+Run 89/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_90/ already exists.
+Skipping it.
+===========
+Run 90/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_91/ already exists.
+Skipping it.
+===========
+Run 91/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_92/ already exists.
+Skipping it.
+===========
+Run 92/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_93/ already exists.
+Skipping it.
+===========
+Run 93/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_94/ already exists.
+Skipping it.
+===========
+Run 94/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_95/ already exists.
+Skipping it.
+===========
+Run 95/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_96/ already exists.
+Skipping it.
+===========
+Run 96/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_97/ already exists.
+Skipping it.
+===========
+Run 97/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_98/ already exists.
+Skipping it.
+===========
+Run 98/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_99/ already exists.
+Skipping it.
+===========
+Run 99/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_100/ already exists.
+Skipping it.
+===========
+Run 100/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_101/ already exists.
+Skipping it.
+===========
+Run 101/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_102/ already exists.
+Skipping it.
+===========
+Run 102/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_103/ already exists.
+Skipping it.
+===========
+Run 103/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_104/ already exists.
+Skipping it.
+===========
+Run 104/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_105/ already exists.
+Skipping it.
+===========
+Run 105/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_106/ already exists.
+Skipping it.
+===========
+Run 106/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_107/ already exists.
+Skipping it.
+===========
+Run 107/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_108/ already exists.
+Skipping it.
+===========
+Run 108/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_109/ already exists.
+Skipping it.
+===========
+Run 109/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_110/ already exists.
+Skipping it.
+===========
+Run 110/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_111/ already exists.
+Skipping it.
+===========
+Run 111/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_112/ already exists.
+Skipping it.
+===========
+Run 112/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_113/ already exists.
+Skipping it.
+===========
+Run 113/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_114/ already exists.
+Skipping it.
+===========
+Run 114/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_115/ already exists.
+Skipping it.
+===========
+Run 115/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_116/ already exists.
+Skipping it.
+===========
+Run 116/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_117/ already exists.
+Skipping it.
+===========
+Run 117/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_118/ already exists.
+Skipping it.
+===========
+Run 118/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_119/ already exists.
+Skipping it.
+===========
+Run 119/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_120/ already exists.
+Skipping it.
+===========
+Run 120/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_121/ already exists.
+Skipping it.
+===========
+Run 121/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_122/ already exists.
+Skipping it.
+===========
+Run 122/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_123/ already exists.
+Skipping it.
+===========
+Run 123/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_124/ already exists.
+Skipping it.
+===========
+Run 124/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_125/ already exists.
+Skipping it.
+===========
+Run 125/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_126/ already exists.
+Skipping it.
+===========
+Run 126/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_127/ already exists.
+Skipping it.
+===========
+Run 127/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_128/ already exists.
+Skipping it.
+===========
+Run 128/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_129/ already exists.
+Skipping it.
+===========
+Run 129/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_130/ already exists.
+Skipping it.
+===========
+Run 130/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_131/ already exists.
+Skipping it.
+===========
+Run 131/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_132/ already exists.
+Skipping it.
+===========
+Run 132/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_133/ already exists.
+Skipping it.
+===========
+Run 133/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_134/ already exists.
+Skipping it.
+===========
+Run 134/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_135/ already exists.
+Skipping it.
+===========
+Run 135/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_136/ already exists.
+Skipping it.
+===========
+Run 136/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_137/ already exists.
+Skipping it.
+===========
+Run 137/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_138/ already exists.
+Skipping it.
+===========
+Run 138/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_139/ already exists.
+Skipping it.
+===========
+Run 139/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_140/ already exists.
+Skipping it.
+===========
+Run 140/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_141/ already exists.
+Skipping it.
+===========
+Run 141/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_142/ already exists.
+Skipping it.
+===========
+Run 142/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_143/ already exists.
+Skipping it.
+===========
+Run 143/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_144/ already exists.
+Skipping it.
+===========
+Run 144/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_145/ already exists.
+Skipping it.
+===========
+Run 145/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_146/ already exists.
+Skipping it.
+===========
+Run 146/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_147/ already exists.
+Skipping it.
+===========
+Run 147/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_148/ already exists.
+Skipping it.
+===========
+Run 148/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_149/ already exists.
+Skipping it.
+===========
+Run 149/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_150/ already exists.
+Skipping it.
+===========
+Run 150/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_151/ already exists.
+Skipping it.
+===========
+Run 151/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_152/ already exists.
+Skipping it.
+===========
+Run 152/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_153/ already exists.
+Skipping it.
+===========
+Run 153/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_154/ already exists.
+Skipping it.
+===========
+Run 154/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_155/ already exists.
+Skipping it.
+===========
+Run 155/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_156/ already exists.
+Skipping it.
+===========
+Run 156/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_157/ already exists.
+Skipping it.
+===========
+Run 157/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_158/ already exists.
+Skipping it.
+===========
+Run 158/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_159/ already exists.
+Skipping it.
+===========
+Run 159/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_160/ already exists.
+Skipping it.
+===========
+Run 160/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_161/ already exists.
+Skipping it.
+===========
+Run 161/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_162/ already exists.
+Skipping it.
+===========
+Run 162/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_163/ already exists.
+Skipping it.
+===========
+Run 163/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_164/ already exists.
+Skipping it.
+===========
+Run 164/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_165/ already exists.
+Skipping it.
+===========
+Run 165/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_166/ already exists.
+Skipping it.
+===========
+Run 166/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_167/ already exists.
+Skipping it.
+===========
+Run 167/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_168/ already exists.
+Skipping it.
+===========
+Run 168/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_169/ already exists.
+Skipping it.
+===========
+Run 169/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_170/ already exists.
+Skipping it.
+===========
+Run 170/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_171/ already exists.
+Skipping it.
+===========
+Run 171/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_172/ already exists.
+Skipping it.
+===========
+Run 172/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_173/ already exists.
+Skipping it.
+===========
+Run 173/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_174/ already exists.
+Skipping it.
+===========
+Run 174/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_175/ already exists.
+Skipping it.
+===========
+Run 175/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_176/ already exists.
+Skipping it.
+===========
+Run 176/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_177/ already exists.
+Skipping it.
+===========
+Run 177/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_178/ already exists.
+Skipping it.
+===========
+Run 178/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_179/ already exists.
+Skipping it.
+===========
+Run 179/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_180/ already exists.
+Skipping it.
+===========
+Run 180/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_181/ already exists.
+Skipping it.
+===========
+Run 181/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_182/ already exists.
+Skipping it.
+===========
+Run 182/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_183/ already exists.
+Skipping it.
+===========
+Run 183/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_184/ already exists.
+Skipping it.
+===========
+Run 184/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_185/ already exists.
+Skipping it.
+===========
+Run 185/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_186/ already exists.
+Skipping it.
+===========
+Run 186/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_187/ already exists.
+Skipping it.
+===========
+Run 187/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_188/ already exists.
+Skipping it.
+===========
+Run 188/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_189/ already exists.
+Skipping it.
+===========
+Run 189/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_190/ already exists.
+Skipping it.
+===========
+Run 190/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_191/ already exists.
+Skipping it.
+===========
+Run 191/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_192/ already exists.
+Skipping it.
+===========
+Run 192/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_193/ already exists.
+Skipping it.
+===========
+Run 193/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_194/ already exists.
+Skipping it.
+===========
+Run 194/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_195/ already exists.
+Skipping it.
+===========
+Run 195/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_196/ already exists.
+Skipping it.
+===========
+Run 196/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_197/ already exists.
+Skipping it.
+===========
+Run 197/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_198/ already exists.
+Skipping it.
+===========
+Run 198/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_199/ already exists.
+Skipping it.
+===========
+Run 199/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_200/ already exists.
+Skipping it.
+===========
+Run 200/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_201/ already exists.
+Skipping it.
+===========
+Run 201/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_202/ already exists.
+Skipping it.
+===========
+Run 202/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_203/ already exists.
+Skipping it.
+===========
+Run 203/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_204/ already exists.
+Skipping it.
+===========
+Run 204/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_205/ already exists.
+Skipping it.
+===========
+Run 205/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_206/ already exists.
+Skipping it.
+===========
+Run 206/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_207/ already exists.
+Skipping it.
+===========
+Run 207/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_208/ already exists.
+Skipping it.
+===========
+Run 208/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_209/ already exists.
+Skipping it.
+===========
+Run 209/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_210/ already exists.
+Skipping it.
+===========
+Run 210/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_211/ already exists.
+Skipping it.
+===========
+Run 211/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_212/ already exists.
+Skipping it.
+===========
+Run 212/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_213/ already exists.
+Skipping it.
+===========
+Run 213/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_214/ already exists.
+Skipping it.
+===========
+Run 214/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_215/ already exists.
+Skipping it.
+===========
+Run 215/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_216/ already exists.
+Skipping it.
+===========
+Run 216/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_217/ already exists.
+Skipping it.
+===========
+Run 217/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_218/ already exists.
+Skipping it.
+===========
+Run 218/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_219/ already exists.
+Skipping it.
+===========
+Run 219/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_220/ already exists.
+Skipping it.
+===========
+Run 220/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_221/ already exists.
+Skipping it.
+===========
+Run 221/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_222/ already exists.
+Skipping it.
+===========
+Run 222/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_223/ already exists.
+Skipping it.
+===========
+Run 223/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_224/ already exists.
+Skipping it.
+===========
+Run 224/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_225/ already exists.
+Skipping it.
+===========
+Run 225/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_226/ already exists.
+Skipping it.
+===========
+Run 226/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_227/ already exists.
+Skipping it.
+===========
+Run 227/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_228/ already exists.
+Skipping it.
+===========
+Run 228/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_229/ already exists.
+Skipping it.
+===========
+Run 229/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_230/ already exists.
+Skipping it.
+===========
+Run 230/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_231/ already exists.
+Skipping it.
+===========
+Run 231/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_232/ already exists.
+Skipping it.
+===========
+Run 232/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_233/ already exists.
+Skipping it.
+===========
+Run 233/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_234/ already exists.
+Skipping it.
+===========
+Run 234/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_235/ already exists.
+Skipping it.
+===========
+Run 235/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_236/ already exists.
+Skipping it.
+===========
+Run 236/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_237/ already exists.
+Skipping it.
+===========
+Run 237/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_238/ already exists.
+Skipping it.
+===========
+Run 238/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_239/ already exists.
+Skipping it.
+===========
+Run 239/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_240/ already exists.
+Skipping it.
+===========
+Run 240/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_241/ already exists.
+Skipping it.
+===========
+Run 241/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_242/ already exists.
+Skipping it.
+===========
+Run 242/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_243/ already exists.
+Skipping it.
+===========
+Run 243/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_244/ already exists.
+Skipping it.
+===========
+Run 244/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_245/ already exists.
+Skipping it.
+===========
+Run 245/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_246/ already exists.
+Skipping it.
+===========
+Run 246/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_247/ already exists.
+Skipping it.
+===========
+Run 247/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_248/ already exists.
+Skipping it.
+===========
+Run 248/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_249/ already exists.
+Skipping it.
+===========
+Run 249/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_250/ already exists.
+Skipping it.
+===========
+Run 250/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_251/ already exists.
+Skipping it.
+===========
+Run 251/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_252/ already exists.
+Skipping it.
+===========
+Run 252/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_253/ already exists.
+Skipping it.
+===========
+Run 253/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_254/ already exists.
+Skipping it.
+===========
+Run 254/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_255/ already exists.
+Skipping it.
+===========
+Run 255/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_256/ already exists.
+Skipping it.
+===========
+Run 256/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_257/ already exists.
+Skipping it.
+===========
+Run 257/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_258/ already exists.
+Skipping it.
+===========
+Run 258/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_259/ already exists.
+Skipping it.
+===========
+Run 259/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_260/ already exists.
+Skipping it.
+===========
+Run 260/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_261/ already exists.
+Skipping it.
+===========
+Run 261/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_262/ already exists.
+Skipping it.
+===========
+Run 262/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_263/ already exists.
+Skipping it.
+===========
+Run 263/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_264/ already exists.
+Skipping it.
+===========
+Run 264/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_265/ already exists.
+Skipping it.
+===========
+Run 265/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_266/ already exists.
+Skipping it.
+===========
+Run 266/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_267/ already exists.
+Skipping it.
+===========
+Run 267/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_268/ already exists.
+Skipping it.
+===========
+Run 268/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_269/ already exists.
+Skipping it.
+===========
+Run 269/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_270/ already exists.
+Skipping it.
+===========
+Run 270/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_271/ already exists.
+Skipping it.
+===========
+Run 271/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_272/ already exists.
+Skipping it.
+===========
+Run 272/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_273/ already exists.
+Skipping it.
+===========
+Run 273/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_274/ already exists.
+Skipping it.
+===========
+Run 274/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_275/ already exists.
+Skipping it.
+===========
+Run 275/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_276/ already exists.
+Skipping it.
+===========
+Run 276/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_277/ already exists.
+Skipping it.
+===========
+Run 277/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_278/ already exists.
+Skipping it.
+===========
+Run 278/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_279/ already exists.
+Skipping it.
+===========
+Run 279/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_280/ already exists.
+Skipping it.
+===========
+Run 280/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_281/ already exists.
+Skipping it.
+===========
+Run 281/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_282/ already exists.
+Skipping it.
+===========
+Run 282/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_283/ already exists.
+Skipping it.
+===========
+Run 283/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_284/ already exists.
+Skipping it.
+===========
+Run 284/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_285/ already exists.
+Skipping it.
+===========
+Run 285/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_286/ already exists.
+Skipping it.
+===========
+Run 286/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_287/ already exists.
+Skipping it.
+===========
+Run 287/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_288/ already exists.
+Skipping it.
+===========
+Run 288/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_289/ already exists.
+Skipping it.
+===========
+Run 289/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_290/ already exists.
+Skipping it.
+===========
+Run 290/720 already exists. Skipping it.
+===========
+
+Directory ../../results/CsplineN_new/run_291/ already exists.
+Skipping it.
+===========
+Run 291/720 already exists. Skipping it.
+===========
+
+===========
+Generating train data for run 292.
+===========
+Train data generated in 0.28 s.
+
+Building Trainer NFObject.
+
+
+--------------- Debub info ---------------
+Initializing Trainer with following parameters:
+base_distribution: tfp.distributions.Sample("SampleNormal", batch_shape=[], event_shape=[32], dtype=float32)
+flow: tfp.bijectors._Chain("chain_of_cspline_of_permute_of_cspline_of_permute_of_cspline_of_permute_of_cspline_of_permute_of_cspline", batch_shape=[], min_event_ndims=1, bijectors=[Cspline, Permute, Cspline, Permute, Cspline, Permute, Cspline, Permute, Cspline])
+x_data_train shape: (100000, 32)
+y_data_train shape: (100000, 0)
+io_kwargs: {'results_path': '../../results/CsplineN_new/run_292/', 'load_weights': True, 'load_results': True}
+data_kwargs: {'seed': 721}
+compiler_kwargs: {'optimizer': {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}, 'metrics': [{'class_name': 'MinusLogProbMetric', 'config': {'ignore_nans': True, 'debug_print_mode': False}}], 'loss': {'class_name': 'MinusLogProbLoss', 'config': {'name': 'MLP', 'ignore_nans': True, 'nan_threshold': 0.01, 'debug_print_mode': False}}}
+callbacks_kwargs: [{'class_name': 'PrintEpochInfo', 'config': {}}, {'class_name': 'ModelCheckpoint', 'config': {'filepath': '../../results/CsplineN_new/run_292/weights/best_weights.h5', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True, 'verbose': 1, 'mode': 'auto', 'save_freq': 'epoch'}}, {'class_name': 'EarlyStopping', 'config': {'monitor': 'val_loss', 'min_delta': 0.0001, 'patience': 100, 'verbose': 1, 'mode': 'auto', 'baseline': None, 'restore_best_weights': True}}, {'class_name': 'ReduceLROnPlateau', 'config': {'monitor': 'val_loss', 'factor': 0.5, 'min_delta': 0.0001, 'patience': 50, 'min_lr': 1e-06}}, {'class_name': 'TerminateOnNaN', 'config': {}}]
+fit_kwargs: {'batch_size': 512, 'epochs': 1000, 'validation_data': (array([[ 3.3570018 ,  5.6703625 ,  0.48762453, ...,  0.76730525,
+         6.4537516 ,  1.4289263 ],
+       [ 4.8933635 ,  4.954244  , -0.7742728 , ...,  1.033045  ,
+         7.5179    ,  1.3446053 ],
+       [ 2.6192126 ,  3.6659784 ,  9.3581505 , ...,  6.4096394 ,
+         2.8983781 ,  1.8163822 ],
+       ...,
+       [ 4.4286733 ,  5.582822  , -0.08033401, ...,  1.0755457 ,
+         6.482341  ,  1.3259909 ],
+       [ 5.2667904 ,  5.78094   ,  0.52473783, ...,  1.3584392 ,
+         6.6371064 ,  1.4527634 ],
+       [ 1.3711529 ,  3.985786  ,  8.434673  , ...,  6.650886  ,
+         2.8764064 ,  2.071397  ]], dtype=float32), <tf.Tensor: shape=(30000, 0), dtype=float32, numpy=array([], shape=(30000, 0), dtype=float32)>), 'shuffle': True, 'verbose': 2}
+
+--------------- Debub info ---------------
+Defined attributes:
+self.base_dist: tfp.distributions.Sample("SampleNormal", batch_shape=[], event_shape=[32], dtype=float32)
+self.flow: tfp.bijectors._Chain("chain_of_cspline_of_permute_of_cspline_of_permute_of_cspline_of_permute_of_cspline_of_permute_of_cspline", batch_shape=[], min_event_ndims=1, bijectors=[Cspline, Permute, Cspline, Permute, Cspline, Permute, Cspline, Permute, Cspline])
+self.nf_dist: tfp.distributions._TransformedDistribution("chain_of_cspline_of_permute_of_cspline_of_permute_of_cspline_of_permute_of_cspline_of_permute_of_csplineSampleNormal", batch_shape=[], event_shape=[32], dtype=float32)
+self.io_kwargs: {'results_path': '../../results/CsplineN_new/run_292/', 'load_weights': True, 'load_results': True}
+self.results_path: ../../results/CsplineN_new/run_292
+self.data_kwargs: {'seed': 721}
+self.x_data: [[ 5.4479074  7.1622143  6.6614265 ...  3.6775346  2.6042771  7.6607866]
+ [ 1.558796   3.7643342  7.765504  ...  7.3985186  2.2847533  2.1737251]
+ [ 2.023865   3.5498223  9.736043  ...  7.378399   2.9893079  1.7681804]
+ ...
+ [ 3.157689   3.8140697  9.128405  ...  7.3280826  3.3431854  1.6145309]
+ [ 4.9035525  5.63367    1.3061054 ...  1.7336241  7.263643   1.3624198]
+ [ 4.873677   6.0271535 -0.4844559 ...  1.4305246  6.6029577  1.4994687]]
+self.y_data: []
+self.ndims: 32
+Model defined.
+Model: "model_5"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_6 (InputLayer)        [(None, 32)]              0         
+                                                                 
+ log_prob_layer (LogProbLaye  (None,)                  1399280   
+ r)                                                              
+                                                                 
+=================================================================
+Total params: 1,399,280
+Trainable params: 1,399,280
+Non-trainable params: 0
+_________________________________________________________________
+Model summary:  None
+self.log_prob: KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='log_prob_layer/chain_of_cspline_of_permute_of_cspline_of_permute_of_cspline_of_permute_of_cspline_of_permute_of_csplineSampleNormal_CONSTRUCTED_AT_top_level/log_prob/sub:0', description="created by layer 'log_prob_layer'")
+self.model: <keras.engine.functional.Functional object at 0x7f60441778e0>
+self.optimizer_config: {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}
+optimizer: <keras.optimizers.adam.Adam object at 0x7f604457ccd0>
+type(optimizer): <class 'keras.optimizers.adam.Adam'>
+self.optimizer_config: {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}
+self.optimizer: <keras.optimizers.adam.Adam object at 0x7f604457ccd0>
+self.loss_config: {'class_name': 'MinusLogProbLoss', 'config': {'name': 'MLP', 'ignore_nans': True, 'nan_threshold': 0.01, 'debug_print_mode': False}}
+self.loss: <Trainer.MinusLogProbLoss object at 0x7f604457f730>
+self.metrics_configs: [{'class_name': 'MinusLogProbMetric', 'config': {'ignore_nans': True, 'debug_print_mode': False}}]
+self.metrics: [<Trainer.MinusLogProbMetric object at 0x7f604457e620>]
+self.compile_kwargs: {}
+self.callbacks_configs: [{'class_name': 'PrintEpochInfo', 'config': {}}, {'class_name': 'ModelCheckpoint', 'config': {'filepath': '/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True, 'verbose': 1, 'mode': 'auto', 'save_freq': 'epoch'}}, {'class_name': 'EarlyStopping', 'config': {'monitor': 'val_loss', 'min_delta': 0.0001, 'patience': 100, 'verbose': 1, 'mode': 'auto', 'baseline': None, 'restore_best_weights': True}}, {'class_name': 'ReduceLROnPlateau', 'config': {'monitor': 'val_loss', 'factor': 0.5, 'min_delta': 0.0001, 'patience': 50, 'min_lr': 1e-06}}, {'class_name': 'TerminateOnNaN', 'config': {}}]
+self.callbacks: [<keras.callbacks.LambdaCallback object at 0x7f604457e8c0>, <keras.callbacks.ModelCheckpoint object at 0x7f604457c370>, <keras.callbacks.EarlyStopping object at 0x7f604457d390>, <keras.callbacks.ReduceLROnPlateau object at 0x7f604457e2f0>, <keras.callbacks.TerminateOnNaN object at 0x7f604457c430>]
+self.fit_kwargs: {'batch_size': 512, 'epochs': 1000, 'validation_data': (array([[ 3.3570018 ,  5.6703625 ,  0.48762453, ...,  0.76730525,
+         6.4537516 ,  1.4289263 ],
+       [ 4.8933635 ,  4.954244  , -0.7742728 , ...,  1.033045  ,
+         7.5179    ,  1.3446053 ],
+       [ 2.6192126 ,  3.6659784 ,  9.3581505 , ...,  6.4096394 ,
+         2.8983781 ,  1.8163822 ],
+       ...,
+       [ 4.4286733 ,  5.582822  , -0.08033401, ...,  1.0755457 ,
+         6.482341  ,  1.3259909 ],
+       [ 5.2667904 ,  5.78094   ,  0.52473783, ...,  1.3584392 ,
+         6.6371064 ,  1.4527634 ],
+       [ 1.3711529 ,  3.985786  ,  8.434673  , ...,  6.650886  ,
+         2.8764064 ,  2.071397  ]], dtype=float32), <tf.Tensor: shape=(30000, 0), dtype=float32, numpy=array([], shape=(30000, 0), dtype=float32)>), 'shuffle': True, 'verbose': 2}
+self.is_compiled: False
+self.training_time: 0.0
+self.history: {}
+Model successfully compiled.
+No weights found in ../../results/CsplineN_new/run_292/weights/best_weights.h5. Training from scratch.
+No history found. Generating new history.
+===============
+Running 292/720 with hyperparameters:
+timestamp = 2023-09-23 15:06:27.546220
+ndims = 32
+seed_train = 721
+nsamples_train = 100000
+nsamples_val = 30000
+nsamples_test = 100000
+bijector = CsplineN
+nbijectors = 5
+spline_knots = 12
+range_min = -16
+hidden_layers = 256-256-256
+trainable_parameters = 1399280
+epochs_input = 1000
+batch_size = 512
+activation = relu
+training_device = NVIDIA A40
+===============
+
+Training model with initial learning rate 0.001...
+Train first sample: [ 5.4479074  7.1622143  6.6614265  5.4466543  4.679343   6.5534453
+  4.5869303  8.297877   9.431402   3.191049   9.163281   4.112924
+  5.872972  10.008474   0.4502598  1.3920732 -0.6747763  8.487896
+  9.224454   7.913118   8.449968   7.6997313  5.9028535  7.439646
+  2.3174791  6.975212   1.6619607  9.750696   4.816901   3.6775346
+  2.6042771  7.6607866]
+Epoch 1/1000
+2023-09-23 15:08:13.242 
+Epoch 1/1000 
+	 loss: 60.1544, MinusLogProbMetric: 60.1544, val_loss: 25.3902, val_MinusLogProbMetric: 25.3902
+
+Epoch 1: val_loss improved from inf to 25.39017, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 104s - loss: 60.1544 - MinusLogProbMetric: 60.1544 - val_loss: 25.3902 - val_MinusLogProbMetric: 25.3902 - lr: 0.0010 - 104s/epoch - 533ms/step
+Epoch 2/1000
+2023-09-23 15:08:42.842 
+Epoch 2/1000 
+	 loss: 23.8578, MinusLogProbMetric: 23.8578, val_loss: 22.0084, val_MinusLogProbMetric: 22.0084
+
+Epoch 2: val_loss improved from 25.39017 to 22.00842, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 29s - loss: 23.8578 - MinusLogProbMetric: 23.8578 - val_loss: 22.0084 - val_MinusLogProbMetric: 22.0084 - lr: 0.0010 - 29s/epoch - 150ms/step
+Epoch 3/1000
+2023-09-23 15:09:14.486 
+Epoch 3/1000 
+	 loss: 21.9628, MinusLogProbMetric: 21.9628, val_loss: 20.9663, val_MinusLogProbMetric: 20.9663
+
+Epoch 3: val_loss improved from 22.00842 to 20.96628, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 32s - loss: 21.9628 - MinusLogProbMetric: 21.9628 - val_loss: 20.9663 - val_MinusLogProbMetric: 20.9663 - lr: 0.0010 - 32s/epoch - 161ms/step
+Epoch 4/1000
+2023-09-23 15:09:49.209 
+Epoch 4/1000 
+	 loss: 20.9882, MinusLogProbMetric: 20.9882, val_loss: 20.5008, val_MinusLogProbMetric: 20.5008
+
+Epoch 4: val_loss improved from 20.96628 to 20.50077, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 35s - loss: 20.9882 - MinusLogProbMetric: 20.9882 - val_loss: 20.5008 - val_MinusLogProbMetric: 20.5008 - lr: 0.0010 - 35s/epoch - 177ms/step
+Epoch 5/1000
+2023-09-23 15:10:25.920 
+Epoch 5/1000 
+	 loss: 20.0334, MinusLogProbMetric: 20.0334, val_loss: 20.2868, val_MinusLogProbMetric: 20.2868
+
+Epoch 5: val_loss improved from 20.50077 to 20.28680, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 37s - loss: 20.0334 - MinusLogProbMetric: 20.0334 - val_loss: 20.2868 - val_MinusLogProbMetric: 20.2868 - lr: 0.0010 - 37s/epoch - 188ms/step
+Epoch 6/1000
+2023-09-23 15:11:02.347 
+Epoch 6/1000 
+	 loss: 19.6519, MinusLogProbMetric: 19.6519, val_loss: 18.9773, val_MinusLogProbMetric: 18.9773
+
+Epoch 6: val_loss improved from 20.28680 to 18.97733, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 36s - loss: 19.6519 - MinusLogProbMetric: 19.6519 - val_loss: 18.9773 - val_MinusLogProbMetric: 18.9773 - lr: 0.0010 - 36s/epoch - 186ms/step
+Epoch 7/1000
+2023-09-23 15:11:38.659 
+Epoch 7/1000 
+	 loss: 19.1670, MinusLogProbMetric: 19.1670, val_loss: 19.2727, val_MinusLogProbMetric: 19.2727
+
+Epoch 7: val_loss did not improve from 18.97733
+196/196 - 36s - loss: 19.1670 - MinusLogProbMetric: 19.1670 - val_loss: 19.2727 - val_MinusLogProbMetric: 19.2727 - lr: 0.0010 - 36s/epoch - 182ms/step
+Epoch 8/1000
+2023-09-23 15:12:12.379 
+Epoch 8/1000 
+	 loss: 18.9649, MinusLogProbMetric: 18.9649, val_loss: 21.4741, val_MinusLogProbMetric: 21.4741
+
+Epoch 8: val_loss did not improve from 18.97733
+196/196 - 34s - loss: 18.9649 - MinusLogProbMetric: 18.9649 - val_loss: 21.4741 - val_MinusLogProbMetric: 21.4741 - lr: 0.0010 - 34s/epoch - 172ms/step
+Epoch 9/1000
+2023-09-23 15:12:46.257 
+Epoch 9/1000 
+	 loss: 18.8641, MinusLogProbMetric: 18.8641, val_loss: 19.1502, val_MinusLogProbMetric: 19.1502
+
+Epoch 9: val_loss did not improve from 18.97733
+196/196 - 34s - loss: 18.8641 - MinusLogProbMetric: 18.8641 - val_loss: 19.1502 - val_MinusLogProbMetric: 19.1502 - lr: 0.0010 - 34s/epoch - 173ms/step
+Epoch 10/1000
+2023-09-23 15:13:24.907 
+Epoch 10/1000 
+	 loss: 18.6037, MinusLogProbMetric: 18.6037, val_loss: 18.5089, val_MinusLogProbMetric: 18.5089
+
+Epoch 10: val_loss improved from 18.97733 to 18.50887, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 40s - loss: 18.6037 - MinusLogProbMetric: 18.6037 - val_loss: 18.5089 - val_MinusLogProbMetric: 18.5089 - lr: 0.0010 - 40s/epoch - 202ms/step
+Epoch 11/1000
+2023-09-23 15:14:06.513 
+Epoch 11/1000 
+	 loss: 18.4912, MinusLogProbMetric: 18.4912, val_loss: 18.5852, val_MinusLogProbMetric: 18.5852
+
+Epoch 11: val_loss did not improve from 18.50887
+196/196 - 41s - loss: 18.4912 - MinusLogProbMetric: 18.4912 - val_loss: 18.5852 - val_MinusLogProbMetric: 18.5852 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 12/1000
+2023-09-23 15:14:45.380 
+Epoch 12/1000 
+	 loss: 18.2695, MinusLogProbMetric: 18.2695, val_loss: 18.5576, val_MinusLogProbMetric: 18.5576
+
+Epoch 12: val_loss did not improve from 18.50887
+196/196 - 39s - loss: 18.2695 - MinusLogProbMetric: 18.2695 - val_loss: 18.5576 - val_MinusLogProbMetric: 18.5576 - lr: 0.0010 - 39s/epoch - 198ms/step
+Epoch 13/1000
+2023-09-23 15:15:23.335 
+Epoch 13/1000 
+	 loss: 18.1162, MinusLogProbMetric: 18.1162, val_loss: 18.1113, val_MinusLogProbMetric: 18.1113
+
+Epoch 13: val_loss improved from 18.50887 to 18.11129, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 39s - loss: 18.1162 - MinusLogProbMetric: 18.1162 - val_loss: 18.1113 - val_MinusLogProbMetric: 18.1113 - lr: 0.0010 - 39s/epoch - 197ms/step
+Epoch 14/1000
+2023-09-23 15:16:00.392 
+Epoch 14/1000 
+	 loss: 18.0996, MinusLogProbMetric: 18.0996, val_loss: 18.9107, val_MinusLogProbMetric: 18.9107
+
+Epoch 14: val_loss did not improve from 18.11129
+196/196 - 36s - loss: 18.0996 - MinusLogProbMetric: 18.0996 - val_loss: 18.9107 - val_MinusLogProbMetric: 18.9107 - lr: 0.0010 - 36s/epoch - 185ms/step
+Epoch 15/1000
+2023-09-23 15:16:39.289 
+Epoch 15/1000 
+	 loss: 17.9628, MinusLogProbMetric: 17.9628, val_loss: 17.8541, val_MinusLogProbMetric: 17.8541
+
+Epoch 15: val_loss improved from 18.11129 to 17.85413, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 40s - loss: 17.9628 - MinusLogProbMetric: 17.9628 - val_loss: 17.8541 - val_MinusLogProbMetric: 17.8541 - lr: 0.0010 - 40s/epoch - 203ms/step
+Epoch 16/1000
+2023-09-23 15:17:20.922 
+Epoch 16/1000 
+	 loss: 17.9205, MinusLogProbMetric: 17.9205, val_loss: 18.1512, val_MinusLogProbMetric: 18.1512
+
+Epoch 16: val_loss did not improve from 17.85413
+196/196 - 41s - loss: 17.9205 - MinusLogProbMetric: 17.9205 - val_loss: 18.1512 - val_MinusLogProbMetric: 18.1512 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 17/1000
+2023-09-23 15:18:02.401 
+Epoch 17/1000 
+	 loss: 17.7851, MinusLogProbMetric: 17.7851, val_loss: 18.3939, val_MinusLogProbMetric: 18.3939
+
+Epoch 17: val_loss did not improve from 17.85413
+196/196 - 41s - loss: 17.7851 - MinusLogProbMetric: 17.7851 - val_loss: 18.3939 - val_MinusLogProbMetric: 18.3939 - lr: 0.0010 - 41s/epoch - 212ms/step
+Epoch 18/1000
+2023-09-23 15:18:42.961 
+Epoch 18/1000 
+	 loss: 17.6901, MinusLogProbMetric: 17.6901, val_loss: 18.4364, val_MinusLogProbMetric: 18.4364
+
+Epoch 18: val_loss did not improve from 17.85413
+196/196 - 41s - loss: 17.6901 - MinusLogProbMetric: 17.6901 - val_loss: 18.4364 - val_MinusLogProbMetric: 18.4364 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 19/1000
+2023-09-23 15:19:24.278 
+Epoch 19/1000 
+	 loss: 17.6723, MinusLogProbMetric: 17.6723, val_loss: 17.9602, val_MinusLogProbMetric: 17.9602
+
+Epoch 19: val_loss did not improve from 17.85413
+196/196 - 41s - loss: 17.6723 - MinusLogProbMetric: 17.6723 - val_loss: 17.9602 - val_MinusLogProbMetric: 17.9602 - lr: 0.0010 - 41s/epoch - 211ms/step
+Epoch 20/1000
+2023-09-23 15:20:06.226 
+Epoch 20/1000 
+	 loss: 17.6032, MinusLogProbMetric: 17.6032, val_loss: 17.9013, val_MinusLogProbMetric: 17.9013
+
+Epoch 20: val_loss did not improve from 17.85413
+196/196 - 42s - loss: 17.6032 - MinusLogProbMetric: 17.6032 - val_loss: 17.9013 - val_MinusLogProbMetric: 17.9013 - lr: 0.0010 - 42s/epoch - 214ms/step
+Epoch 21/1000
+2023-09-23 15:20:47.418 
+Epoch 21/1000 
+	 loss: 17.5353, MinusLogProbMetric: 17.5353, val_loss: 18.3289, val_MinusLogProbMetric: 18.3289
+
+Epoch 21: val_loss did not improve from 17.85413
+196/196 - 41s - loss: 17.5353 - MinusLogProbMetric: 17.5353 - val_loss: 18.3289 - val_MinusLogProbMetric: 18.3289 - lr: 0.0010 - 41s/epoch - 210ms/step
+Epoch 22/1000
+2023-09-23 15:21:28.559 
+Epoch 22/1000 
+	 loss: 17.4933, MinusLogProbMetric: 17.4933, val_loss: 17.9809, val_MinusLogProbMetric: 17.9809
+
+Epoch 22: val_loss did not improve from 17.85413
+196/196 - 41s - loss: 17.4933 - MinusLogProbMetric: 17.4933 - val_loss: 17.9809 - val_MinusLogProbMetric: 17.9809 - lr: 0.0010 - 41s/epoch - 210ms/step
+Epoch 23/1000
+2023-09-23 15:22:10.135 
+Epoch 23/1000 
+	 loss: 17.4871, MinusLogProbMetric: 17.4871, val_loss: 17.8072, val_MinusLogProbMetric: 17.8072
+
+Epoch 23: val_loss improved from 17.85413 to 17.80722, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 42s - loss: 17.4871 - MinusLogProbMetric: 17.4871 - val_loss: 17.8072 - val_MinusLogProbMetric: 17.8072 - lr: 0.0010 - 42s/epoch - 216ms/step
+Epoch 24/1000
+2023-09-23 15:22:52.852 
+Epoch 24/1000 
+	 loss: 17.4610, MinusLogProbMetric: 17.4610, val_loss: 17.6510, val_MinusLogProbMetric: 17.6510
+
+Epoch 24: val_loss improved from 17.80722 to 17.65100, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 43s - loss: 17.4610 - MinusLogProbMetric: 17.4610 - val_loss: 17.6510 - val_MinusLogProbMetric: 17.6510 - lr: 0.0010 - 43s/epoch - 218ms/step
+Epoch 25/1000
+2023-09-23 15:23:35.075 
+Epoch 25/1000 
+	 loss: 17.3398, MinusLogProbMetric: 17.3398, val_loss: 17.6261, val_MinusLogProbMetric: 17.6261
+
+Epoch 25: val_loss improved from 17.65100 to 17.62612, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 42s - loss: 17.3398 - MinusLogProbMetric: 17.3398 - val_loss: 17.6261 - val_MinusLogProbMetric: 17.6261 - lr: 0.0010 - 42s/epoch - 215ms/step
+Epoch 26/1000
+2023-09-23 15:24:17.535 
+Epoch 26/1000 
+	 loss: 17.3747, MinusLogProbMetric: 17.3747, val_loss: 17.9195, val_MinusLogProbMetric: 17.9195
+
+Epoch 26: val_loss did not improve from 17.62612
+196/196 - 42s - loss: 17.3747 - MinusLogProbMetric: 17.3747 - val_loss: 17.9195 - val_MinusLogProbMetric: 17.9195 - lr: 0.0010 - 42s/epoch - 212ms/step
+Epoch 27/1000
+2023-09-23 15:24:58.539 
+Epoch 27/1000 
+	 loss: 17.3271, MinusLogProbMetric: 17.3271, val_loss: 17.7443, val_MinusLogProbMetric: 17.7443
+
+Epoch 27: val_loss did not improve from 17.62612
+196/196 - 41s - loss: 17.3271 - MinusLogProbMetric: 17.3271 - val_loss: 17.7443 - val_MinusLogProbMetric: 17.7443 - lr: 0.0010 - 41s/epoch - 209ms/step
+Epoch 28/1000
+2023-09-23 15:25:40.123 
+Epoch 28/1000 
+	 loss: 17.2702, MinusLogProbMetric: 17.2702, val_loss: 17.4679, val_MinusLogProbMetric: 17.4679
+
+Epoch 28: val_loss improved from 17.62612 to 17.46794, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 42s - loss: 17.2702 - MinusLogProbMetric: 17.2702 - val_loss: 17.4679 - val_MinusLogProbMetric: 17.4679 - lr: 0.0010 - 42s/epoch - 216ms/step
+Epoch 29/1000
+2023-09-23 15:26:22.411 
+Epoch 29/1000 
+	 loss: 17.2412, MinusLogProbMetric: 17.2412, val_loss: 17.5316, val_MinusLogProbMetric: 17.5316
+
+Epoch 29: val_loss did not improve from 17.46794
+196/196 - 41s - loss: 17.2412 - MinusLogProbMetric: 17.2412 - val_loss: 17.5316 - val_MinusLogProbMetric: 17.5316 - lr: 0.0010 - 41s/epoch - 212ms/step
+Epoch 30/1000
+2023-09-23 15:27:04.449 
+Epoch 30/1000 
+	 loss: 17.2474, MinusLogProbMetric: 17.2474, val_loss: 17.4880, val_MinusLogProbMetric: 17.4880
+
+Epoch 30: val_loss did not improve from 17.46794
+196/196 - 42s - loss: 17.2474 - MinusLogProbMetric: 17.2474 - val_loss: 17.4880 - val_MinusLogProbMetric: 17.4880 - lr: 0.0010 - 42s/epoch - 215ms/step
+Epoch 31/1000
+2023-09-23 15:27:46.168 
+Epoch 31/1000 
+	 loss: 17.2266, MinusLogProbMetric: 17.2266, val_loss: 18.1145, val_MinusLogProbMetric: 18.1145
+
+Epoch 31: val_loss did not improve from 17.46794
+196/196 - 42s - loss: 17.2266 - MinusLogProbMetric: 17.2266 - val_loss: 18.1145 - val_MinusLogProbMetric: 18.1145 - lr: 0.0010 - 42s/epoch - 213ms/step
+Epoch 32/1000
+2023-09-23 15:28:27.087 
+Epoch 32/1000 
+	 loss: 17.2350, MinusLogProbMetric: 17.2350, val_loss: 17.5074, val_MinusLogProbMetric: 17.5074
+
+Epoch 32: val_loss did not improve from 17.46794
+196/196 - 41s - loss: 17.2350 - MinusLogProbMetric: 17.2350 - val_loss: 17.5074 - val_MinusLogProbMetric: 17.5074 - lr: 0.0010 - 41s/epoch - 209ms/step
+Epoch 33/1000
+2023-09-23 15:29:03.482 
+Epoch 33/1000 
+	 loss: 17.1839, MinusLogProbMetric: 17.1839, val_loss: 17.4143, val_MinusLogProbMetric: 17.4143
+
+Epoch 33: val_loss improved from 17.46794 to 17.41429, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 37s - loss: 17.1839 - MinusLogProbMetric: 17.1839 - val_loss: 17.4143 - val_MinusLogProbMetric: 17.4143 - lr: 0.0010 - 37s/epoch - 189ms/step
+Epoch 34/1000
+2023-09-23 15:29:41.073 
+Epoch 34/1000 
+	 loss: 17.1532, MinusLogProbMetric: 17.1532, val_loss: 17.4325, val_MinusLogProbMetric: 17.4325
+
+Epoch 34: val_loss did not improve from 17.41429
+196/196 - 37s - loss: 17.1532 - MinusLogProbMetric: 17.1532 - val_loss: 17.4325 - val_MinusLogProbMetric: 17.4325 - lr: 0.0010 - 37s/epoch - 188ms/step
+Epoch 35/1000
+2023-09-23 15:30:18.549 
+Epoch 35/1000 
+	 loss: 17.1666, MinusLogProbMetric: 17.1666, val_loss: 17.5206, val_MinusLogProbMetric: 17.5206
+
+Epoch 35: val_loss did not improve from 17.41429
+196/196 - 37s - loss: 17.1666 - MinusLogProbMetric: 17.1666 - val_loss: 17.5206 - val_MinusLogProbMetric: 17.5206 - lr: 0.0010 - 37s/epoch - 191ms/step
+Epoch 36/1000
+2023-09-23 15:30:59.191 
+Epoch 36/1000 
+	 loss: 17.1380, MinusLogProbMetric: 17.1380, val_loss: 17.5720, val_MinusLogProbMetric: 17.5720
+
+Epoch 36: val_loss did not improve from 17.41429
+196/196 - 41s - loss: 17.1380 - MinusLogProbMetric: 17.1380 - val_loss: 17.5720 - val_MinusLogProbMetric: 17.5720 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 37/1000
+2023-09-23 15:31:40.729 
+Epoch 37/1000 
+	 loss: 17.1191, MinusLogProbMetric: 17.1191, val_loss: 17.3636, val_MinusLogProbMetric: 17.3636
+
+Epoch 37: val_loss improved from 17.41429 to 17.36355, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 42s - loss: 17.1191 - MinusLogProbMetric: 17.1191 - val_loss: 17.3636 - val_MinusLogProbMetric: 17.3636 - lr: 0.0010 - 42s/epoch - 216ms/step
+Epoch 38/1000
+2023-09-23 15:32:21.485 
+Epoch 38/1000 
+	 loss: 17.0864, MinusLogProbMetric: 17.0864, val_loss: 17.4611, val_MinusLogProbMetric: 17.4611
+
+Epoch 38: val_loss did not improve from 17.36355
+196/196 - 40s - loss: 17.0864 - MinusLogProbMetric: 17.0864 - val_loss: 17.4611 - val_MinusLogProbMetric: 17.4611 - lr: 0.0010 - 40s/epoch - 204ms/step
+Epoch 39/1000
+2023-09-23 15:33:01.957 
+Epoch 39/1000 
+	 loss: 17.0775, MinusLogProbMetric: 17.0775, val_loss: 17.7201, val_MinusLogProbMetric: 17.7201
+
+Epoch 39: val_loss did not improve from 17.36355
+196/196 - 40s - loss: 17.0775 - MinusLogProbMetric: 17.0775 - val_loss: 17.7201 - val_MinusLogProbMetric: 17.7201 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 40/1000
+2023-09-23 15:33:42.797 
+Epoch 40/1000 
+	 loss: 17.0491, MinusLogProbMetric: 17.0491, val_loss: 17.7712, val_MinusLogProbMetric: 17.7712
+
+Epoch 40: val_loss did not improve from 17.36355
+196/196 - 41s - loss: 17.0491 - MinusLogProbMetric: 17.0491 - val_loss: 17.7712 - val_MinusLogProbMetric: 17.7712 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 41/1000
+2023-09-23 15:34:23.174 
+Epoch 41/1000 
+	 loss: 17.0299, MinusLogProbMetric: 17.0299, val_loss: 17.2728, val_MinusLogProbMetric: 17.2728
+
+Epoch 41: val_loss improved from 17.36355 to 17.27284, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 41s - loss: 17.0299 - MinusLogProbMetric: 17.0299 - val_loss: 17.2728 - val_MinusLogProbMetric: 17.2728 - lr: 0.0010 - 41s/epoch - 210ms/step
+Epoch 42/1000
+2023-09-23 15:35:04.751 
+Epoch 42/1000 
+	 loss: 17.0125, MinusLogProbMetric: 17.0125, val_loss: 17.6313, val_MinusLogProbMetric: 17.6313
+
+Epoch 42: val_loss did not improve from 17.27284
+196/196 - 41s - loss: 17.0125 - MinusLogProbMetric: 17.0125 - val_loss: 17.6313 - val_MinusLogProbMetric: 17.6313 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 43/1000
+2023-09-23 15:35:45.829 
+Epoch 43/1000 
+	 loss: 16.9975, MinusLogProbMetric: 16.9975, val_loss: 17.5934, val_MinusLogProbMetric: 17.5934
+
+Epoch 43: val_loss did not improve from 17.27284
+196/196 - 41s - loss: 16.9975 - MinusLogProbMetric: 16.9975 - val_loss: 17.5934 - val_MinusLogProbMetric: 17.5934 - lr: 0.0010 - 41s/epoch - 210ms/step
+Epoch 44/1000
+2023-09-23 15:36:26.701 
+Epoch 44/1000 
+	 loss: 17.0229, MinusLogProbMetric: 17.0229, val_loss: 17.3535, val_MinusLogProbMetric: 17.3535
+
+Epoch 44: val_loss did not improve from 17.27284
+196/196 - 41s - loss: 17.0229 - MinusLogProbMetric: 17.0229 - val_loss: 17.3535 - val_MinusLogProbMetric: 17.3535 - lr: 0.0010 - 41s/epoch - 209ms/step
+Epoch 45/1000
+2023-09-23 15:37:07.146 
+Epoch 45/1000 
+	 loss: 16.9907, MinusLogProbMetric: 16.9907, val_loss: 17.5164, val_MinusLogProbMetric: 17.5164
+
+Epoch 45: val_loss did not improve from 17.27284
+196/196 - 40s - loss: 16.9907 - MinusLogProbMetric: 16.9907 - val_loss: 17.5164 - val_MinusLogProbMetric: 17.5164 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 46/1000
+2023-09-23 15:37:47.510 
+Epoch 46/1000 
+	 loss: 16.9547, MinusLogProbMetric: 16.9547, val_loss: 17.2718, val_MinusLogProbMetric: 17.2718
+
+Epoch 46: val_loss improved from 17.27284 to 17.27179, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 41s - loss: 16.9547 - MinusLogProbMetric: 16.9547 - val_loss: 17.2718 - val_MinusLogProbMetric: 17.2718 - lr: 0.0010 - 41s/epoch - 209ms/step
+Epoch 47/1000
+2023-09-23 15:38:28.864 
+Epoch 47/1000 
+	 loss: 16.9496, MinusLogProbMetric: 16.9496, val_loss: 17.2308, val_MinusLogProbMetric: 17.2308
+
+Epoch 47: val_loss improved from 17.27179 to 17.23077, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 41s - loss: 16.9496 - MinusLogProbMetric: 16.9496 - val_loss: 17.2308 - val_MinusLogProbMetric: 17.2308 - lr: 0.0010 - 41s/epoch - 211ms/step
+Epoch 48/1000
+2023-09-23 15:39:09.872 
+Epoch 48/1000 
+	 loss: 16.9065, MinusLogProbMetric: 16.9065, val_loss: 17.3107, val_MinusLogProbMetric: 17.3107
+
+Epoch 48: val_loss did not improve from 17.23077
+196/196 - 40s - loss: 16.9065 - MinusLogProbMetric: 16.9065 - val_loss: 17.3107 - val_MinusLogProbMetric: 17.3107 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 49/1000
+2023-09-23 15:39:50.104 
+Epoch 49/1000 
+	 loss: 16.9190, MinusLogProbMetric: 16.9190, val_loss: 17.3497, val_MinusLogProbMetric: 17.3497
+
+Epoch 49: val_loss did not improve from 17.23077
+196/196 - 40s - loss: 16.9190 - MinusLogProbMetric: 16.9190 - val_loss: 17.3497 - val_MinusLogProbMetric: 17.3497 - lr: 0.0010 - 40s/epoch - 205ms/step
+Epoch 50/1000
+2023-09-23 15:40:30.553 
+Epoch 50/1000 
+	 loss: 16.9209, MinusLogProbMetric: 16.9209, val_loss: 17.3338, val_MinusLogProbMetric: 17.3338
+
+Epoch 50: val_loss did not improve from 17.23077
+196/196 - 40s - loss: 16.9209 - MinusLogProbMetric: 16.9209 - val_loss: 17.3338 - val_MinusLogProbMetric: 17.3338 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 51/1000
+2023-09-23 15:41:11.259 
+Epoch 51/1000 
+	 loss: 16.8765, MinusLogProbMetric: 16.8765, val_loss: 17.6427, val_MinusLogProbMetric: 17.6427
+
+Epoch 51: val_loss did not improve from 17.23077
+196/196 - 41s - loss: 16.8765 - MinusLogProbMetric: 16.8765 - val_loss: 17.6427 - val_MinusLogProbMetric: 17.6427 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 52/1000
+2023-09-23 15:41:51.607 
+Epoch 52/1000 
+	 loss: 16.8802, MinusLogProbMetric: 16.8802, val_loss: 17.2452, val_MinusLogProbMetric: 17.2452
+
+Epoch 52: val_loss did not improve from 17.23077
+196/196 - 40s - loss: 16.8802 - MinusLogProbMetric: 16.8802 - val_loss: 17.2452 - val_MinusLogProbMetric: 17.2452 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 53/1000
+2023-09-23 15:42:32.133 
+Epoch 53/1000 
+	 loss: 16.8769, MinusLogProbMetric: 16.8769, val_loss: 17.3786, val_MinusLogProbMetric: 17.3786
+
+Epoch 53: val_loss did not improve from 17.23077
+196/196 - 41s - loss: 16.8769 - MinusLogProbMetric: 16.8769 - val_loss: 17.3786 - val_MinusLogProbMetric: 17.3786 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 54/1000
+2023-09-23 15:43:12.579 
+Epoch 54/1000 
+	 loss: 16.8456, MinusLogProbMetric: 16.8456, val_loss: 17.3283, val_MinusLogProbMetric: 17.3283
+
+Epoch 54: val_loss did not improve from 17.23077
+196/196 - 40s - loss: 16.8456 - MinusLogProbMetric: 16.8456 - val_loss: 17.3283 - val_MinusLogProbMetric: 17.3283 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 55/1000
+2023-09-23 15:43:53.016 
+Epoch 55/1000 
+	 loss: 16.8616, MinusLogProbMetric: 16.8616, val_loss: 17.4565, val_MinusLogProbMetric: 17.4565
+
+Epoch 55: val_loss did not improve from 17.23077
+196/196 - 40s - loss: 16.8616 - MinusLogProbMetric: 16.8616 - val_loss: 17.4565 - val_MinusLogProbMetric: 17.4565 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 56/1000
+2023-09-23 15:44:33.527 
+Epoch 56/1000 
+	 loss: 16.8563, MinusLogProbMetric: 16.8563, val_loss: 17.1361, val_MinusLogProbMetric: 17.1361
+
+Epoch 56: val_loss improved from 17.23077 to 17.13611, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 41s - loss: 16.8563 - MinusLogProbMetric: 16.8563 - val_loss: 17.1361 - val_MinusLogProbMetric: 17.1361 - lr: 0.0010 - 41s/epoch - 211ms/step
+Epoch 57/1000
+2023-09-23 15:45:14.910 
+Epoch 57/1000 
+	 loss: 16.8358, MinusLogProbMetric: 16.8358, val_loss: 17.7002, val_MinusLogProbMetric: 17.7002
+
+Epoch 57: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.8358 - MinusLogProbMetric: 16.8358 - val_loss: 17.7002 - val_MinusLogProbMetric: 17.7002 - lr: 0.0010 - 40s/epoch - 207ms/step
+Epoch 58/1000
+2023-09-23 15:45:55.816 
+Epoch 58/1000 
+	 loss: 16.8603, MinusLogProbMetric: 16.8603, val_loss: 17.3457, val_MinusLogProbMetric: 17.3457
+
+Epoch 58: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.8603 - MinusLogProbMetric: 16.8603 - val_loss: 17.3457 - val_MinusLogProbMetric: 17.3457 - lr: 0.0010 - 41s/epoch - 209ms/step
+Epoch 59/1000
+2023-09-23 15:46:36.285 
+Epoch 59/1000 
+	 loss: 16.8047, MinusLogProbMetric: 16.8047, val_loss: 17.4634, val_MinusLogProbMetric: 17.4634
+
+Epoch 59: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.8047 - MinusLogProbMetric: 16.8047 - val_loss: 17.4634 - val_MinusLogProbMetric: 17.4634 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 60/1000
+2023-09-23 15:47:16.581 
+Epoch 60/1000 
+	 loss: 16.8069, MinusLogProbMetric: 16.8069, val_loss: 17.1697, val_MinusLogProbMetric: 17.1697
+
+Epoch 60: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.8069 - MinusLogProbMetric: 16.8069 - val_loss: 17.1697 - val_MinusLogProbMetric: 17.1697 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 61/1000
+2023-09-23 15:47:57.136 
+Epoch 61/1000 
+	 loss: 16.7893, MinusLogProbMetric: 16.7893, val_loss: 17.2990, val_MinusLogProbMetric: 17.2990
+
+Epoch 61: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.7893 - MinusLogProbMetric: 16.7893 - val_loss: 17.2990 - val_MinusLogProbMetric: 17.2990 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 62/1000
+2023-09-23 15:48:37.637 
+Epoch 62/1000 
+	 loss: 16.7564, MinusLogProbMetric: 16.7564, val_loss: 17.2705, val_MinusLogProbMetric: 17.2705
+
+Epoch 62: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.7564 - MinusLogProbMetric: 16.7564 - val_loss: 17.2705 - val_MinusLogProbMetric: 17.2705 - lr: 0.0010 - 40s/epoch - 207ms/step
+Epoch 63/1000
+2023-09-23 15:49:18.116 
+Epoch 63/1000 
+	 loss: 16.7481, MinusLogProbMetric: 16.7481, val_loss: 17.2243, val_MinusLogProbMetric: 17.2243
+
+Epoch 63: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.7481 - MinusLogProbMetric: 16.7481 - val_loss: 17.2243 - val_MinusLogProbMetric: 17.2243 - lr: 0.0010 - 40s/epoch - 207ms/step
+Epoch 64/1000
+2023-09-23 15:49:58.891 
+Epoch 64/1000 
+	 loss: 16.7502, MinusLogProbMetric: 16.7502, val_loss: 17.2253, val_MinusLogProbMetric: 17.2253
+
+Epoch 64: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.7502 - MinusLogProbMetric: 16.7502 - val_loss: 17.2253 - val_MinusLogProbMetric: 17.2253 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 65/1000
+2023-09-23 15:50:39.193 
+Epoch 65/1000 
+	 loss: 16.7668, MinusLogProbMetric: 16.7668, val_loss: 17.1531, val_MinusLogProbMetric: 17.1531
+
+Epoch 65: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.7668 - MinusLogProbMetric: 16.7668 - val_loss: 17.1531 - val_MinusLogProbMetric: 17.1531 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 66/1000
+2023-09-23 15:51:19.728 
+Epoch 66/1000 
+	 loss: 16.7385, MinusLogProbMetric: 16.7385, val_loss: 17.6062, val_MinusLogProbMetric: 17.6062
+
+Epoch 66: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.7385 - MinusLogProbMetric: 16.7385 - val_loss: 17.6062 - val_MinusLogProbMetric: 17.6062 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 67/1000
+2023-09-23 15:52:00.417 
+Epoch 67/1000 
+	 loss: 16.7031, MinusLogProbMetric: 16.7031, val_loss: 17.2871, val_MinusLogProbMetric: 17.2871
+
+Epoch 67: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.7031 - MinusLogProbMetric: 16.7031 - val_loss: 17.2871 - val_MinusLogProbMetric: 17.2871 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 68/1000
+2023-09-23 15:52:41.147 
+Epoch 68/1000 
+	 loss: 16.7057, MinusLogProbMetric: 16.7057, val_loss: 17.3221, val_MinusLogProbMetric: 17.3221
+
+Epoch 68: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.7057 - MinusLogProbMetric: 16.7057 - val_loss: 17.3221 - val_MinusLogProbMetric: 17.3221 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 69/1000
+2023-09-23 15:53:21.554 
+Epoch 69/1000 
+	 loss: 16.7188, MinusLogProbMetric: 16.7188, val_loss: 17.2208, val_MinusLogProbMetric: 17.2208
+
+Epoch 69: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.7188 - MinusLogProbMetric: 16.7188 - val_loss: 17.2208 - val_MinusLogProbMetric: 17.2208 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 70/1000
+2023-09-23 15:54:02.355 
+Epoch 70/1000 
+	 loss: 16.7091, MinusLogProbMetric: 16.7091, val_loss: 17.2870, val_MinusLogProbMetric: 17.2870
+
+Epoch 70: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.7091 - MinusLogProbMetric: 16.7091 - val_loss: 17.2870 - val_MinusLogProbMetric: 17.2870 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 71/1000
+2023-09-23 15:54:42.795 
+Epoch 71/1000 
+	 loss: 16.7134, MinusLogProbMetric: 16.7134, val_loss: 17.3264, val_MinusLogProbMetric: 17.3264
+
+Epoch 71: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.7134 - MinusLogProbMetric: 16.7134 - val_loss: 17.3264 - val_MinusLogProbMetric: 17.3264 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 72/1000
+2023-09-23 15:55:23.320 
+Epoch 72/1000 
+	 loss: 16.7221, MinusLogProbMetric: 16.7221, val_loss: 17.2042, val_MinusLogProbMetric: 17.2042
+
+Epoch 72: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.7221 - MinusLogProbMetric: 16.7221 - val_loss: 17.2042 - val_MinusLogProbMetric: 17.2042 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 73/1000
+2023-09-23 15:56:03.979 
+Epoch 73/1000 
+	 loss: 16.6565, MinusLogProbMetric: 16.6565, val_loss: 17.2582, val_MinusLogProbMetric: 17.2582
+
+Epoch 73: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.6565 - MinusLogProbMetric: 16.6565 - val_loss: 17.2582 - val_MinusLogProbMetric: 17.2582 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 74/1000
+2023-09-23 15:56:44.440 
+Epoch 74/1000 
+	 loss: 16.6624, MinusLogProbMetric: 16.6624, val_loss: 17.2394, val_MinusLogProbMetric: 17.2394
+
+Epoch 74: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.6624 - MinusLogProbMetric: 16.6624 - val_loss: 17.2394 - val_MinusLogProbMetric: 17.2394 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 75/1000
+2023-09-23 15:57:25.074 
+Epoch 75/1000 
+	 loss: 16.6332, MinusLogProbMetric: 16.6332, val_loss: 17.2723, val_MinusLogProbMetric: 17.2723
+
+Epoch 75: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.6332 - MinusLogProbMetric: 16.6332 - val_loss: 17.2723 - val_MinusLogProbMetric: 17.2723 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 76/1000
+2023-09-23 15:58:05.490 
+Epoch 76/1000 
+	 loss: 16.6399, MinusLogProbMetric: 16.6399, val_loss: 17.1837, val_MinusLogProbMetric: 17.1837
+
+Epoch 76: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.6399 - MinusLogProbMetric: 16.6399 - val_loss: 17.1837 - val_MinusLogProbMetric: 17.1837 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 77/1000
+2023-09-23 15:58:46.000 
+Epoch 77/1000 
+	 loss: 16.6170, MinusLogProbMetric: 16.6170, val_loss: 17.2286, val_MinusLogProbMetric: 17.2286
+
+Epoch 77: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.6170 - MinusLogProbMetric: 16.6170 - val_loss: 17.2286 - val_MinusLogProbMetric: 17.2286 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 78/1000
+2023-09-23 15:59:26.702 
+Epoch 78/1000 
+	 loss: 16.6418, MinusLogProbMetric: 16.6418, val_loss: 17.2334, val_MinusLogProbMetric: 17.2334
+
+Epoch 78: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.6418 - MinusLogProbMetric: 16.6418 - val_loss: 17.2334 - val_MinusLogProbMetric: 17.2334 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 79/1000
+2023-09-23 16:00:07.267 
+Epoch 79/1000 
+	 loss: 16.6169, MinusLogProbMetric: 16.6169, val_loss: 17.9085, val_MinusLogProbMetric: 17.9085
+
+Epoch 79: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.6169 - MinusLogProbMetric: 16.6169 - val_loss: 17.9085 - val_MinusLogProbMetric: 17.9085 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 80/1000
+2023-09-23 16:00:47.572 
+Epoch 80/1000 
+	 loss: 16.6204, MinusLogProbMetric: 16.6204, val_loss: 17.1428, val_MinusLogProbMetric: 17.1428
+
+Epoch 80: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.6204 - MinusLogProbMetric: 16.6204 - val_loss: 17.1428 - val_MinusLogProbMetric: 17.1428 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 81/1000
+2023-09-23 16:01:28.268 
+Epoch 81/1000 
+	 loss: 16.5811, MinusLogProbMetric: 16.5811, val_loss: 17.2998, val_MinusLogProbMetric: 17.2998
+
+Epoch 81: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.5811 - MinusLogProbMetric: 16.5811 - val_loss: 17.2998 - val_MinusLogProbMetric: 17.2998 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 82/1000
+2023-09-23 16:02:09.032 
+Epoch 82/1000 
+	 loss: 16.6081, MinusLogProbMetric: 16.6081, val_loss: 17.3099, val_MinusLogProbMetric: 17.3099
+
+Epoch 82: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.6081 - MinusLogProbMetric: 16.6081 - val_loss: 17.3099 - val_MinusLogProbMetric: 17.3099 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 83/1000
+2023-09-23 16:02:49.426 
+Epoch 83/1000 
+	 loss: 16.5980, MinusLogProbMetric: 16.5980, val_loss: 17.4698, val_MinusLogProbMetric: 17.4698
+
+Epoch 83: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.5980 - MinusLogProbMetric: 16.5980 - val_loss: 17.4698 - val_MinusLogProbMetric: 17.4698 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 84/1000
+2023-09-23 16:03:29.963 
+Epoch 84/1000 
+	 loss: 16.5753, MinusLogProbMetric: 16.5753, val_loss: 17.2913, val_MinusLogProbMetric: 17.2913
+
+Epoch 84: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.5753 - MinusLogProbMetric: 16.5753 - val_loss: 17.2913 - val_MinusLogProbMetric: 17.2913 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 85/1000
+2023-09-23 16:04:10.323 
+Epoch 85/1000 
+	 loss: 16.5608, MinusLogProbMetric: 16.5608, val_loss: 17.3615, val_MinusLogProbMetric: 17.3615
+
+Epoch 85: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.5608 - MinusLogProbMetric: 16.5608 - val_loss: 17.3615 - val_MinusLogProbMetric: 17.3615 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 86/1000
+2023-09-23 16:04:50.640 
+Epoch 86/1000 
+	 loss: 16.5503, MinusLogProbMetric: 16.5503, val_loss: 17.2864, val_MinusLogProbMetric: 17.2864
+
+Epoch 86: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.5503 - MinusLogProbMetric: 16.5503 - val_loss: 17.2864 - val_MinusLogProbMetric: 17.2864 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 87/1000
+2023-09-23 16:05:31.462 
+Epoch 87/1000 
+	 loss: 16.5662, MinusLogProbMetric: 16.5662, val_loss: 17.2796, val_MinusLogProbMetric: 17.2796
+
+Epoch 87: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.5662 - MinusLogProbMetric: 16.5662 - val_loss: 17.2796 - val_MinusLogProbMetric: 17.2796 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 88/1000
+2023-09-23 16:06:11.739 
+Epoch 88/1000 
+	 loss: 16.5741, MinusLogProbMetric: 16.5741, val_loss: 17.6241, val_MinusLogProbMetric: 17.6241
+
+Epoch 88: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.5741 - MinusLogProbMetric: 16.5741 - val_loss: 17.6241 - val_MinusLogProbMetric: 17.6241 - lr: 0.0010 - 40s/epoch - 205ms/step
+Epoch 89/1000
+2023-09-23 16:06:52.245 
+Epoch 89/1000 
+	 loss: 16.5429, MinusLogProbMetric: 16.5429, val_loss: 17.3172, val_MinusLogProbMetric: 17.3172
+
+Epoch 89: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.5429 - MinusLogProbMetric: 16.5429 - val_loss: 17.3172 - val_MinusLogProbMetric: 17.3172 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 90/1000
+2023-09-23 16:07:32.802 
+Epoch 90/1000 
+	 loss: 16.5371, MinusLogProbMetric: 16.5371, val_loss: 17.2767, val_MinusLogProbMetric: 17.2767
+
+Epoch 90: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.5371 - MinusLogProbMetric: 16.5371 - val_loss: 17.2767 - val_MinusLogProbMetric: 17.2767 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 91/1000
+2023-09-23 16:08:13.271 
+Epoch 91/1000 
+	 loss: 16.5097, MinusLogProbMetric: 16.5097, val_loss: 17.2162, val_MinusLogProbMetric: 17.2162
+
+Epoch 91: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.5097 - MinusLogProbMetric: 16.5097 - val_loss: 17.2162 - val_MinusLogProbMetric: 17.2162 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 92/1000
+2023-09-23 16:08:53.715 
+Epoch 92/1000 
+	 loss: 16.5091, MinusLogProbMetric: 16.5091, val_loss: 17.2688, val_MinusLogProbMetric: 17.2688
+
+Epoch 92: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.5091 - MinusLogProbMetric: 16.5091 - val_loss: 17.2688 - val_MinusLogProbMetric: 17.2688 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 93/1000
+2023-09-23 16:09:33.826 
+Epoch 93/1000 
+	 loss: 16.5196, MinusLogProbMetric: 16.5196, val_loss: 17.4441, val_MinusLogProbMetric: 17.4441
+
+Epoch 93: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.5196 - MinusLogProbMetric: 16.5196 - val_loss: 17.4441 - val_MinusLogProbMetric: 17.4441 - lr: 0.0010 - 40s/epoch - 205ms/step
+Epoch 94/1000
+2023-09-23 16:10:14.305 
+Epoch 94/1000 
+	 loss: 16.5245, MinusLogProbMetric: 16.5245, val_loss: 17.2337, val_MinusLogProbMetric: 17.2337
+
+Epoch 94: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.5245 - MinusLogProbMetric: 16.5245 - val_loss: 17.2337 - val_MinusLogProbMetric: 17.2337 - lr: 0.0010 - 40s/epoch - 207ms/step
+Epoch 95/1000
+2023-09-23 16:10:54.941 
+Epoch 95/1000 
+	 loss: 16.5006, MinusLogProbMetric: 16.5006, val_loss: 17.4479, val_MinusLogProbMetric: 17.4479
+
+Epoch 95: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.5006 - MinusLogProbMetric: 16.5006 - val_loss: 17.4479 - val_MinusLogProbMetric: 17.4479 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 96/1000
+2023-09-23 16:11:35.240 
+Epoch 96/1000 
+	 loss: 16.4815, MinusLogProbMetric: 16.4815, val_loss: 17.2101, val_MinusLogProbMetric: 17.2101
+
+Epoch 96: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.4815 - MinusLogProbMetric: 16.4815 - val_loss: 17.2101 - val_MinusLogProbMetric: 17.2101 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 97/1000
+2023-09-23 16:12:15.703 
+Epoch 97/1000 
+	 loss: 16.4924, MinusLogProbMetric: 16.4924, val_loss: 17.1683, val_MinusLogProbMetric: 17.1683
+
+Epoch 97: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.4924 - MinusLogProbMetric: 16.4924 - val_loss: 17.1683 - val_MinusLogProbMetric: 17.1683 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 98/1000
+2023-09-23 16:12:56.016 
+Epoch 98/1000 
+	 loss: 16.4766, MinusLogProbMetric: 16.4766, val_loss: 17.2073, val_MinusLogProbMetric: 17.2073
+
+Epoch 98: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.4766 - MinusLogProbMetric: 16.4766 - val_loss: 17.2073 - val_MinusLogProbMetric: 17.2073 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 99/1000
+2023-09-23 16:13:36.531 
+Epoch 99/1000 
+	 loss: 16.4706, MinusLogProbMetric: 16.4706, val_loss: 17.1634, val_MinusLogProbMetric: 17.1634
+
+Epoch 99: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.4706 - MinusLogProbMetric: 16.4706 - val_loss: 17.1634 - val_MinusLogProbMetric: 17.1634 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 100/1000
+2023-09-23 16:14:17.132 
+Epoch 100/1000 
+	 loss: 16.4739, MinusLogProbMetric: 16.4739, val_loss: 17.2235, val_MinusLogProbMetric: 17.2235
+
+Epoch 100: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.4739 - MinusLogProbMetric: 16.4739 - val_loss: 17.2235 - val_MinusLogProbMetric: 17.2235 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 101/1000
+2023-09-23 16:14:57.744 
+Epoch 101/1000 
+	 loss: 16.4582, MinusLogProbMetric: 16.4582, val_loss: 17.3388, val_MinusLogProbMetric: 17.3388
+
+Epoch 101: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.4582 - MinusLogProbMetric: 16.4582 - val_loss: 17.3388 - val_MinusLogProbMetric: 17.3388 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 102/1000
+2023-09-23 16:15:38.261 
+Epoch 102/1000 
+	 loss: 16.4379, MinusLogProbMetric: 16.4379, val_loss: 17.1863, val_MinusLogProbMetric: 17.1863
+
+Epoch 102: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.4379 - MinusLogProbMetric: 16.4379 - val_loss: 17.1863 - val_MinusLogProbMetric: 17.1863 - lr: 0.0010 - 41s/epoch - 207ms/step
+Epoch 103/1000
+2023-09-23 16:16:18.988 
+Epoch 103/1000 
+	 loss: 16.4368, MinusLogProbMetric: 16.4368, val_loss: 17.2270, val_MinusLogProbMetric: 17.2270
+
+Epoch 103: val_loss did not improve from 17.13611
+196/196 - 41s - loss: 16.4368 - MinusLogProbMetric: 16.4368 - val_loss: 17.2270 - val_MinusLogProbMetric: 17.2270 - lr: 0.0010 - 41s/epoch - 208ms/step
+Epoch 104/1000
+2023-09-23 16:16:59.197 
+Epoch 104/1000 
+	 loss: 16.4238, MinusLogProbMetric: 16.4238, val_loss: 17.1877, val_MinusLogProbMetric: 17.1877
+
+Epoch 104: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.4238 - MinusLogProbMetric: 16.4238 - val_loss: 17.1877 - val_MinusLogProbMetric: 17.1877 - lr: 0.0010 - 40s/epoch - 205ms/step
+Epoch 105/1000
+2023-09-23 16:17:39.554 
+Epoch 105/1000 
+	 loss: 16.4162, MinusLogProbMetric: 16.4162, val_loss: 17.3247, val_MinusLogProbMetric: 17.3247
+
+Epoch 105: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.4162 - MinusLogProbMetric: 16.4162 - val_loss: 17.3247 - val_MinusLogProbMetric: 17.3247 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 106/1000
+2023-09-23 16:18:19.872 
+Epoch 106/1000 
+	 loss: 16.4407, MinusLogProbMetric: 16.4407, val_loss: 17.2712, val_MinusLogProbMetric: 17.2712
+
+Epoch 106: val_loss did not improve from 17.13611
+196/196 - 40s - loss: 16.4407 - MinusLogProbMetric: 16.4407 - val_loss: 17.2712 - val_MinusLogProbMetric: 17.2712 - lr: 0.0010 - 40s/epoch - 206ms/step
+Epoch 107/1000
+2023-09-23 16:19:00.182 
+Epoch 107/1000 
+	 loss: 16.2268, MinusLogProbMetric: 16.2268, val_loss: 17.1182, val_MinusLogProbMetric: 17.1182
+
+Epoch 107: val_loss improved from 17.13611 to 17.11815, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/CsplineN_new/run_292/weights/best_weights.h5
+196/196 - 41s - loss: 16.2268 - MinusLogProbMetric: 16.2268 - val_loss: 17.1182 - val_MinusLogProbMetric: 17.1182 - lr: 5.0000e-04 - 41s/epoch - 210ms/step
+Epoch 108/1000
+2023-09-23 16:19:41.501 
+Epoch 108/1000 
+	 loss: 16.2173, MinusLogProbMetric: 16.2173, val_loss: 17.1269, val_MinusLogProbMetric: 17.1269
+
+Epoch 108: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.2173 - MinusLogProbMetric: 16.2173 - val_loss: 17.1269 - val_MinusLogProbMetric: 17.1269 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 109/1000
+2023-09-23 16:20:21.621 
+Epoch 109/1000 
+	 loss: 16.2104, MinusLogProbMetric: 16.2104, val_loss: 17.1700, val_MinusLogProbMetric: 17.1700
+
+Epoch 109: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.2104 - MinusLogProbMetric: 16.2104 - val_loss: 17.1700 - val_MinusLogProbMetric: 17.1700 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 110/1000
+2023-09-23 16:21:02.251 
+Epoch 110/1000 
+	 loss: 16.1995, MinusLogProbMetric: 16.1995, val_loss: 17.1789, val_MinusLogProbMetric: 17.1789
+
+Epoch 110: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.1995 - MinusLogProbMetric: 16.1995 - val_loss: 17.1789 - val_MinusLogProbMetric: 17.1789 - lr: 5.0000e-04 - 41s/epoch - 207ms/step
+Epoch 111/1000
+2023-09-23 16:21:42.251 
+Epoch 111/1000 
+	 loss: 16.2087, MinusLogProbMetric: 16.2087, val_loss: 17.1923, val_MinusLogProbMetric: 17.1923
+
+Epoch 111: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.2087 - MinusLogProbMetric: 16.2087 - val_loss: 17.1923 - val_MinusLogProbMetric: 17.1923 - lr: 5.0000e-04 - 40s/epoch - 204ms/step
+Epoch 112/1000
+2023-09-23 16:22:22.560 
+Epoch 112/1000 
+	 loss: 16.2172, MinusLogProbMetric: 16.2172, val_loss: 17.1686, val_MinusLogProbMetric: 17.1686
+
+Epoch 112: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.2172 - MinusLogProbMetric: 16.2172 - val_loss: 17.1686 - val_MinusLogProbMetric: 17.1686 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 113/1000
+2023-09-23 16:23:03.174 
+Epoch 113/1000 
+	 loss: 16.1911, MinusLogProbMetric: 16.1911, val_loss: 17.1553, val_MinusLogProbMetric: 17.1553
+
+Epoch 113: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.1911 - MinusLogProbMetric: 16.1911 - val_loss: 17.1553 - val_MinusLogProbMetric: 17.1553 - lr: 5.0000e-04 - 41s/epoch - 207ms/step
+Epoch 114/1000
+2023-09-23 16:23:43.545 
+Epoch 114/1000 
+	 loss: 16.1992, MinusLogProbMetric: 16.1992, val_loss: 17.1343, val_MinusLogProbMetric: 17.1343
+
+Epoch 114: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1992 - MinusLogProbMetric: 16.1992 - val_loss: 17.1343 - val_MinusLogProbMetric: 17.1343 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 115/1000
+2023-09-23 16:24:23.712 
+Epoch 115/1000 
+	 loss: 16.1776, MinusLogProbMetric: 16.1776, val_loss: 17.2290, val_MinusLogProbMetric: 17.2290
+
+Epoch 115: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1776 - MinusLogProbMetric: 16.1776 - val_loss: 17.2290 - val_MinusLogProbMetric: 17.2290 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 116/1000
+2023-09-23 16:25:04.086 
+Epoch 116/1000 
+	 loss: 16.2014, MinusLogProbMetric: 16.2014, val_loss: 17.2750, val_MinusLogProbMetric: 17.2750
+
+Epoch 116: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.2014 - MinusLogProbMetric: 16.2014 - val_loss: 17.2750 - val_MinusLogProbMetric: 17.2750 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 117/1000
+2023-09-23 16:25:44.076 
+Epoch 117/1000 
+	 loss: 16.1784, MinusLogProbMetric: 16.1784, val_loss: 17.1960, val_MinusLogProbMetric: 17.1960
+
+Epoch 117: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1784 - MinusLogProbMetric: 16.1784 - val_loss: 17.1960 - val_MinusLogProbMetric: 17.1960 - lr: 5.0000e-04 - 40s/epoch - 204ms/step
+Epoch 118/1000
+2023-09-23 16:26:24.210 
+Epoch 118/1000 
+	 loss: 16.1871, MinusLogProbMetric: 16.1871, val_loss: 17.2045, val_MinusLogProbMetric: 17.2045
+
+Epoch 118: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1871 - MinusLogProbMetric: 16.1871 - val_loss: 17.2045 - val_MinusLogProbMetric: 17.2045 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 119/1000
+2023-09-23 16:27:04.580 
+Epoch 119/1000 
+	 loss: 16.1820, MinusLogProbMetric: 16.1820, val_loss: 17.1914, val_MinusLogProbMetric: 17.1914
+
+Epoch 119: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1820 - MinusLogProbMetric: 16.1820 - val_loss: 17.1914 - val_MinusLogProbMetric: 17.1914 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 120/1000
+2023-09-23 16:27:44.711 
+Epoch 120/1000 
+	 loss: 16.1674, MinusLogProbMetric: 16.1674, val_loss: 17.2758, val_MinusLogProbMetric: 17.2758
+
+Epoch 120: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1674 - MinusLogProbMetric: 16.1674 - val_loss: 17.2758 - val_MinusLogProbMetric: 17.2758 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 121/1000
+2023-09-23 16:28:24.912 
+Epoch 121/1000 
+	 loss: 16.1597, MinusLogProbMetric: 16.1597, val_loss: 17.1718, val_MinusLogProbMetric: 17.1718
+
+Epoch 121: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1597 - MinusLogProbMetric: 16.1597 - val_loss: 17.1718 - val_MinusLogProbMetric: 17.1718 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 122/1000
+2023-09-23 16:29:05.419 
+Epoch 122/1000 
+	 loss: 16.1592, MinusLogProbMetric: 16.1592, val_loss: 17.2367, val_MinusLogProbMetric: 17.2367
+
+Epoch 122: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.1592 - MinusLogProbMetric: 16.1592 - val_loss: 17.2367 - val_MinusLogProbMetric: 17.2367 - lr: 5.0000e-04 - 41s/epoch - 207ms/step
+Epoch 123/1000
+2023-09-23 16:29:45.803 
+Epoch 123/1000 
+	 loss: 16.1828, MinusLogProbMetric: 16.1828, val_loss: 17.1943, val_MinusLogProbMetric: 17.1943
+
+Epoch 123: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1828 - MinusLogProbMetric: 16.1828 - val_loss: 17.1943 - val_MinusLogProbMetric: 17.1943 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 124/1000
+2023-09-23 16:30:26.200 
+Epoch 124/1000 
+	 loss: 16.1721, MinusLogProbMetric: 16.1721, val_loss: 17.2016, val_MinusLogProbMetric: 17.2016
+
+Epoch 124: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1721 - MinusLogProbMetric: 16.1721 - val_loss: 17.2016 - val_MinusLogProbMetric: 17.2016 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 125/1000
+2023-09-23 16:31:06.435 
+Epoch 125/1000 
+	 loss: 16.1635, MinusLogProbMetric: 16.1635, val_loss: 17.2053, val_MinusLogProbMetric: 17.2053
+
+Epoch 125: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1635 - MinusLogProbMetric: 16.1635 - val_loss: 17.2053 - val_MinusLogProbMetric: 17.2053 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 126/1000
+2023-09-23 16:31:46.878 
+Epoch 126/1000 
+	 loss: 16.1585, MinusLogProbMetric: 16.1585, val_loss: 17.1542, val_MinusLogProbMetric: 17.1542
+
+Epoch 126: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1585 - MinusLogProbMetric: 16.1585 - val_loss: 17.1542 - val_MinusLogProbMetric: 17.1542 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 127/1000
+2023-09-23 16:32:27.363 
+Epoch 127/1000 
+	 loss: 16.1548, MinusLogProbMetric: 16.1548, val_loss: 17.2249, val_MinusLogProbMetric: 17.2249
+
+Epoch 127: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1548 - MinusLogProbMetric: 16.1548 - val_loss: 17.2249 - val_MinusLogProbMetric: 17.2249 - lr: 5.0000e-04 - 40s/epoch - 207ms/step
+Epoch 128/1000
+2023-09-23 16:33:07.076 
+Epoch 128/1000 
+	 loss: 16.1482, MinusLogProbMetric: 16.1482, val_loss: 17.2177, val_MinusLogProbMetric: 17.2177
+
+Epoch 128: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1482 - MinusLogProbMetric: 16.1482 - val_loss: 17.2177 - val_MinusLogProbMetric: 17.2177 - lr: 5.0000e-04 - 40s/epoch - 203ms/step
+Epoch 129/1000
+2023-09-23 16:33:47.228 
+Epoch 129/1000 
+	 loss: 16.1420, MinusLogProbMetric: 16.1420, val_loss: 17.1734, val_MinusLogProbMetric: 17.1734
+
+Epoch 129: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1420 - MinusLogProbMetric: 16.1420 - val_loss: 17.1734 - val_MinusLogProbMetric: 17.1734 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 130/1000
+2023-09-23 16:34:27.703 
+Epoch 130/1000 
+	 loss: 16.1384, MinusLogProbMetric: 16.1384, val_loss: 17.2647, val_MinusLogProbMetric: 17.2647
+
+Epoch 130: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1384 - MinusLogProbMetric: 16.1384 - val_loss: 17.2647 - val_MinusLogProbMetric: 17.2647 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 131/1000
+2023-09-23 16:35:06.213 
+Epoch 131/1000 
+	 loss: 16.1264, MinusLogProbMetric: 16.1264, val_loss: 17.2487, val_MinusLogProbMetric: 17.2487
+
+Epoch 131: val_loss did not improve from 17.11815
+196/196 - 39s - loss: 16.1264 - MinusLogProbMetric: 16.1264 - val_loss: 17.2487 - val_MinusLogProbMetric: 17.2487 - lr: 5.0000e-04 - 39s/epoch - 196ms/step
+Epoch 132/1000
+2023-09-23 16:35:42.220 
+Epoch 132/1000 
+	 loss: 16.1410, MinusLogProbMetric: 16.1410, val_loss: 17.2271, val_MinusLogProbMetric: 17.2271
+
+Epoch 132: val_loss did not improve from 17.11815
+196/196 - 36s - loss: 16.1410 - MinusLogProbMetric: 16.1410 - val_loss: 17.2271 - val_MinusLogProbMetric: 17.2271 - lr: 5.0000e-04 - 36s/epoch - 184ms/step
+Epoch 133/1000
+2023-09-23 16:36:18.221 
+Epoch 133/1000 
+	 loss: 16.1284, MinusLogProbMetric: 16.1284, val_loss: 17.2366, val_MinusLogProbMetric: 17.2366
+
+Epoch 133: val_loss did not improve from 17.11815
+196/196 - 36s - loss: 16.1284 - MinusLogProbMetric: 16.1284 - val_loss: 17.2366 - val_MinusLogProbMetric: 17.2366 - lr: 5.0000e-04 - 36s/epoch - 184ms/step
+Epoch 134/1000
+2023-09-23 16:36:55.809 
+Epoch 134/1000 
+	 loss: 16.1186, MinusLogProbMetric: 16.1186, val_loss: 17.2353, val_MinusLogProbMetric: 17.2353
+
+Epoch 134: val_loss did not improve from 17.11815
+196/196 - 38s - loss: 16.1186 - MinusLogProbMetric: 16.1186 - val_loss: 17.2353 - val_MinusLogProbMetric: 17.2353 - lr: 5.0000e-04 - 38s/epoch - 192ms/step
+Epoch 135/1000
+2023-09-23 16:37:35.467 
+Epoch 135/1000 
+	 loss: 16.1191, MinusLogProbMetric: 16.1191, val_loss: 17.2824, val_MinusLogProbMetric: 17.2824
+
+Epoch 135: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1191 - MinusLogProbMetric: 16.1191 - val_loss: 17.2824 - val_MinusLogProbMetric: 17.2824 - lr: 5.0000e-04 - 40s/epoch - 202ms/step
+Epoch 136/1000
+2023-09-23 16:38:15.940 
+Epoch 136/1000 
+	 loss: 16.1203, MinusLogProbMetric: 16.1203, val_loss: 17.2551, val_MinusLogProbMetric: 17.2551
+
+Epoch 136: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1203 - MinusLogProbMetric: 16.1203 - val_loss: 17.2551 - val_MinusLogProbMetric: 17.2551 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 137/1000
+2023-09-23 16:38:55.557 
+Epoch 137/1000 
+	 loss: 16.1205, MinusLogProbMetric: 16.1205, val_loss: 17.2845, val_MinusLogProbMetric: 17.2845
+
+Epoch 137: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.1205 - MinusLogProbMetric: 16.1205 - val_loss: 17.2845 - val_MinusLogProbMetric: 17.2845 - lr: 5.0000e-04 - 40s/epoch - 202ms/step
+Epoch 138/1000
+2023-09-23 16:39:35.745 
+Epoch 138/1000 
+	 loss: 16.0983, MinusLogProbMetric: 16.0983, val_loss: 17.3100, val_MinusLogProbMetric: 17.3100
+
+Epoch 138: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0983 - MinusLogProbMetric: 16.0983 - val_loss: 17.3100 - val_MinusLogProbMetric: 17.3100 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 139/1000
+2023-09-23 16:40:16.420 
+Epoch 139/1000 
+	 loss: 16.1164, MinusLogProbMetric: 16.1164, val_loss: 17.2500, val_MinusLogProbMetric: 17.2500
+
+Epoch 139: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.1164 - MinusLogProbMetric: 16.1164 - val_loss: 17.2500 - val_MinusLogProbMetric: 17.2500 - lr: 5.0000e-04 - 41s/epoch - 208ms/step
+Epoch 140/1000
+2023-09-23 16:40:57.199 
+Epoch 140/1000 
+	 loss: 16.1005, MinusLogProbMetric: 16.1005, val_loss: 17.2871, val_MinusLogProbMetric: 17.2871
+
+Epoch 140: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.1005 - MinusLogProbMetric: 16.1005 - val_loss: 17.2871 - val_MinusLogProbMetric: 17.2871 - lr: 5.0000e-04 - 41s/epoch - 208ms/step
+Epoch 141/1000
+2023-09-23 16:41:38.108 
+Epoch 141/1000 
+	 loss: 16.1087, MinusLogProbMetric: 16.1087, val_loss: 17.2887, val_MinusLogProbMetric: 17.2887
+
+Epoch 141: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.1087 - MinusLogProbMetric: 16.1087 - val_loss: 17.2887 - val_MinusLogProbMetric: 17.2887 - lr: 5.0000e-04 - 41s/epoch - 209ms/step
+Epoch 142/1000
+2023-09-23 16:42:18.399 
+Epoch 142/1000 
+	 loss: 16.0986, MinusLogProbMetric: 16.0986, val_loss: 17.2930, val_MinusLogProbMetric: 17.2930
+
+Epoch 142: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0986 - MinusLogProbMetric: 16.0986 - val_loss: 17.2930 - val_MinusLogProbMetric: 17.2930 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 143/1000
+2023-09-23 16:42:58.885 
+Epoch 143/1000 
+	 loss: 16.0886, MinusLogProbMetric: 16.0886, val_loss: 17.2619, val_MinusLogProbMetric: 17.2619
+
+Epoch 143: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0886 - MinusLogProbMetric: 16.0886 - val_loss: 17.2619 - val_MinusLogProbMetric: 17.2619 - lr: 5.0000e-04 - 40s/epoch - 207ms/step
+Epoch 144/1000
+2023-09-23 16:43:39.221 
+Epoch 144/1000 
+	 loss: 16.0991, MinusLogProbMetric: 16.0991, val_loss: 17.3448, val_MinusLogProbMetric: 17.3448
+
+Epoch 144: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0991 - MinusLogProbMetric: 16.0991 - val_loss: 17.3448 - val_MinusLogProbMetric: 17.3448 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 145/1000
+2023-09-23 16:44:19.164 
+Epoch 145/1000 
+	 loss: 16.0856, MinusLogProbMetric: 16.0856, val_loss: 17.2670, val_MinusLogProbMetric: 17.2670
+
+Epoch 145: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0856 - MinusLogProbMetric: 16.0856 - val_loss: 17.2670 - val_MinusLogProbMetric: 17.2670 - lr: 5.0000e-04 - 40s/epoch - 204ms/step
+Epoch 146/1000
+2023-09-23 16:44:59.333 
+Epoch 146/1000 
+	 loss: 16.0834, MinusLogProbMetric: 16.0834, val_loss: 17.3530, val_MinusLogProbMetric: 17.3530
+
+Epoch 146: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0834 - MinusLogProbMetric: 16.0834 - val_loss: 17.3530 - val_MinusLogProbMetric: 17.3530 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 147/1000
+2023-09-23 16:45:39.929 
+Epoch 147/1000 
+	 loss: 16.0762, MinusLogProbMetric: 16.0762, val_loss: 17.3270, val_MinusLogProbMetric: 17.3270
+
+Epoch 147: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.0762 - MinusLogProbMetric: 16.0762 - val_loss: 17.3270 - val_MinusLogProbMetric: 17.3270 - lr: 5.0000e-04 - 41s/epoch - 207ms/step
+Epoch 148/1000
+2023-09-23 16:46:20.211 
+Epoch 148/1000 
+	 loss: 16.0778, MinusLogProbMetric: 16.0778, val_loss: 17.2629, val_MinusLogProbMetric: 17.2629
+
+Epoch 148: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0778 - MinusLogProbMetric: 16.0778 - val_loss: 17.2629 - val_MinusLogProbMetric: 17.2629 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 149/1000
+2023-09-23 16:47:00.526 
+Epoch 149/1000 
+	 loss: 16.0713, MinusLogProbMetric: 16.0713, val_loss: 17.3423, val_MinusLogProbMetric: 17.3423
+
+Epoch 149: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0713 - MinusLogProbMetric: 16.0713 - val_loss: 17.3423 - val_MinusLogProbMetric: 17.3423 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 150/1000
+2023-09-23 16:47:40.720 
+Epoch 150/1000 
+	 loss: 16.0717, MinusLogProbMetric: 16.0717, val_loss: 17.3867, val_MinusLogProbMetric: 17.3867
+
+Epoch 150: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0717 - MinusLogProbMetric: 16.0717 - val_loss: 17.3867 - val_MinusLogProbMetric: 17.3867 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 151/1000
+2023-09-23 16:48:20.831 
+Epoch 151/1000 
+	 loss: 16.0726, MinusLogProbMetric: 16.0726, val_loss: 17.2826, val_MinusLogProbMetric: 17.2826
+
+Epoch 151: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0726 - MinusLogProbMetric: 16.0726 - val_loss: 17.2826 - val_MinusLogProbMetric: 17.2826 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 152/1000
+2023-09-23 16:49:01.497 
+Epoch 152/1000 
+	 loss: 16.0557, MinusLogProbMetric: 16.0557, val_loss: 17.3024, val_MinusLogProbMetric: 17.3024
+
+Epoch 152: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.0557 - MinusLogProbMetric: 16.0557 - val_loss: 17.3024 - val_MinusLogProbMetric: 17.3024 - lr: 5.0000e-04 - 41s/epoch - 207ms/step
+Epoch 153/1000
+2023-09-23 16:49:42.073 
+Epoch 153/1000 
+	 loss: 16.0617, MinusLogProbMetric: 16.0617, val_loss: 17.3750, val_MinusLogProbMetric: 17.3750
+
+Epoch 153: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.0617 - MinusLogProbMetric: 16.0617 - val_loss: 17.3750 - val_MinusLogProbMetric: 17.3750 - lr: 5.0000e-04 - 41s/epoch - 207ms/step
+Epoch 154/1000
+2023-09-23 16:50:22.346 
+Epoch 154/1000 
+	 loss: 16.0525, MinusLogProbMetric: 16.0525, val_loss: 17.3084, val_MinusLogProbMetric: 17.3084
+
+Epoch 154: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0525 - MinusLogProbMetric: 16.0525 - val_loss: 17.3084 - val_MinusLogProbMetric: 17.3084 - lr: 5.0000e-04 - 40s/epoch - 205ms/step
+Epoch 155/1000
+2023-09-23 16:51:02.744 
+Epoch 155/1000 
+	 loss: 16.0493, MinusLogProbMetric: 16.0493, val_loss: 17.3504, val_MinusLogProbMetric: 17.3504
+
+Epoch 155: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 16.0493 - MinusLogProbMetric: 16.0493 - val_loss: 17.3504 - val_MinusLogProbMetric: 17.3504 - lr: 5.0000e-04 - 40s/epoch - 206ms/step
+Epoch 156/1000
+2023-09-23 16:51:43.458 
+Epoch 156/1000 
+	 loss: 16.0435, MinusLogProbMetric: 16.0435, val_loss: 17.3278, val_MinusLogProbMetric: 17.3278
+
+Epoch 156: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.0435 - MinusLogProbMetric: 16.0435 - val_loss: 17.3278 - val_MinusLogProbMetric: 17.3278 - lr: 5.0000e-04 - 41s/epoch - 208ms/step
+Epoch 157/1000
+2023-09-23 16:52:23.968 
+Epoch 157/1000 
+	 loss: 16.0413, MinusLogProbMetric: 16.0413, val_loss: 17.3944, val_MinusLogProbMetric: 17.3944
+
+Epoch 157: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 16.0413 - MinusLogProbMetric: 16.0413 - val_loss: 17.3944 - val_MinusLogProbMetric: 17.3944 - lr: 5.0000e-04 - 41s/epoch - 207ms/step
+Epoch 158/1000
+2023-09-23 16:53:04.436 
+Epoch 158/1000 
+	 loss: 15.9536, MinusLogProbMetric: 15.9536, val_loss: 17.2967, val_MinusLogProbMetric: 17.2967
+
+Epoch 158: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9536 - MinusLogProbMetric: 15.9536 - val_loss: 17.2967 - val_MinusLogProbMetric: 17.2967 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 159/1000
+2023-09-23 16:53:45.037 
+Epoch 159/1000 
+	 loss: 15.9398, MinusLogProbMetric: 15.9398, val_loss: 17.2741, val_MinusLogProbMetric: 17.2741
+
+Epoch 159: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9398 - MinusLogProbMetric: 15.9398 - val_loss: 17.2741 - val_MinusLogProbMetric: 17.2741 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 160/1000
+2023-09-23 16:54:25.466 
+Epoch 160/1000 
+	 loss: 15.9348, MinusLogProbMetric: 15.9348, val_loss: 17.3306, val_MinusLogProbMetric: 17.3306
+
+Epoch 160: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9348 - MinusLogProbMetric: 15.9348 - val_loss: 17.3306 - val_MinusLogProbMetric: 17.3306 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 161/1000
+2023-09-23 16:55:06.119 
+Epoch 161/1000 
+	 loss: 15.9452, MinusLogProbMetric: 15.9452, val_loss: 17.3126, val_MinusLogProbMetric: 17.3126
+
+Epoch 161: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9452 - MinusLogProbMetric: 15.9452 - val_loss: 17.3126 - val_MinusLogProbMetric: 17.3126 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 162/1000
+2023-09-23 16:55:46.570 
+Epoch 162/1000 
+	 loss: 15.9323, MinusLogProbMetric: 15.9323, val_loss: 17.2965, val_MinusLogProbMetric: 17.2965
+
+Epoch 162: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9323 - MinusLogProbMetric: 15.9323 - val_loss: 17.2965 - val_MinusLogProbMetric: 17.2965 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 163/1000
+2023-09-23 16:56:27.048 
+Epoch 163/1000 
+	 loss: 15.9227, MinusLogProbMetric: 15.9227, val_loss: 17.2911, val_MinusLogProbMetric: 17.2911
+
+Epoch 163: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9227 - MinusLogProbMetric: 15.9227 - val_loss: 17.2911 - val_MinusLogProbMetric: 17.2911 - lr: 2.5000e-04 - 40s/epoch - 207ms/step
+Epoch 164/1000
+2023-09-23 16:57:08.215 
+Epoch 164/1000 
+	 loss: 15.9234, MinusLogProbMetric: 15.9234, val_loss: 17.3098, val_MinusLogProbMetric: 17.3098
+
+Epoch 164: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9234 - MinusLogProbMetric: 15.9234 - val_loss: 17.3098 - val_MinusLogProbMetric: 17.3098 - lr: 2.5000e-04 - 41s/epoch - 210ms/step
+Epoch 165/1000
+2023-09-23 16:57:49.157 
+Epoch 165/1000 
+	 loss: 15.9288, MinusLogProbMetric: 15.9288, val_loss: 17.3309, val_MinusLogProbMetric: 17.3309
+
+Epoch 165: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9288 - MinusLogProbMetric: 15.9288 - val_loss: 17.3309 - val_MinusLogProbMetric: 17.3309 - lr: 2.5000e-04 - 41s/epoch - 209ms/step
+Epoch 166/1000
+2023-09-23 16:58:29.944 
+Epoch 166/1000 
+	 loss: 15.9322, MinusLogProbMetric: 15.9322, val_loss: 17.3018, val_MinusLogProbMetric: 17.3018
+
+Epoch 166: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9322 - MinusLogProbMetric: 15.9322 - val_loss: 17.3018 - val_MinusLogProbMetric: 17.3018 - lr: 2.5000e-04 - 41s/epoch - 208ms/step
+Epoch 167/1000
+2023-09-23 16:59:10.535 
+Epoch 167/1000 
+	 loss: 15.9186, MinusLogProbMetric: 15.9186, val_loss: 17.3175, val_MinusLogProbMetric: 17.3175
+
+Epoch 167: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9186 - MinusLogProbMetric: 15.9186 - val_loss: 17.3175 - val_MinusLogProbMetric: 17.3175 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 168/1000
+2023-09-23 16:59:51.155 
+Epoch 168/1000 
+	 loss: 15.9169, MinusLogProbMetric: 15.9169, val_loss: 17.3131, val_MinusLogProbMetric: 17.3131
+
+Epoch 168: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9169 - MinusLogProbMetric: 15.9169 - val_loss: 17.3131 - val_MinusLogProbMetric: 17.3131 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 169/1000
+2023-09-23 17:00:31.562 
+Epoch 169/1000 
+	 loss: 15.9190, MinusLogProbMetric: 15.9190, val_loss: 17.3119, val_MinusLogProbMetric: 17.3119
+
+Epoch 169: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9190 - MinusLogProbMetric: 15.9190 - val_loss: 17.3119 - val_MinusLogProbMetric: 17.3119 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 170/1000
+2023-09-23 17:01:12.365 
+Epoch 170/1000 
+	 loss: 15.9135, MinusLogProbMetric: 15.9135, val_loss: 17.3164, val_MinusLogProbMetric: 17.3164
+
+Epoch 170: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9135 - MinusLogProbMetric: 15.9135 - val_loss: 17.3164 - val_MinusLogProbMetric: 17.3164 - lr: 2.5000e-04 - 41s/epoch - 208ms/step
+Epoch 171/1000
+2023-09-23 17:01:52.676 
+Epoch 171/1000 
+	 loss: 15.9089, MinusLogProbMetric: 15.9089, val_loss: 17.3211, val_MinusLogProbMetric: 17.3211
+
+Epoch 171: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9089 - MinusLogProbMetric: 15.9089 - val_loss: 17.3211 - val_MinusLogProbMetric: 17.3211 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 172/1000
+2023-09-23 17:02:33.076 
+Epoch 172/1000 
+	 loss: 15.9146, MinusLogProbMetric: 15.9146, val_loss: 17.3281, val_MinusLogProbMetric: 17.3281
+
+Epoch 172: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9146 - MinusLogProbMetric: 15.9146 - val_loss: 17.3281 - val_MinusLogProbMetric: 17.3281 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 173/1000
+2023-09-23 17:03:14.109 
+Epoch 173/1000 
+	 loss: 15.9075, MinusLogProbMetric: 15.9075, val_loss: 17.3169, val_MinusLogProbMetric: 17.3169
+
+Epoch 173: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9075 - MinusLogProbMetric: 15.9075 - val_loss: 17.3169 - val_MinusLogProbMetric: 17.3169 - lr: 2.5000e-04 - 41s/epoch - 209ms/step
+Epoch 174/1000
+2023-09-23 17:03:54.679 
+Epoch 174/1000 
+	 loss: 15.9001, MinusLogProbMetric: 15.9001, val_loss: 17.3564, val_MinusLogProbMetric: 17.3564
+
+Epoch 174: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9001 - MinusLogProbMetric: 15.9001 - val_loss: 17.3564 - val_MinusLogProbMetric: 17.3564 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 175/1000
+2023-09-23 17:04:35.375 
+Epoch 175/1000 
+	 loss: 15.9128, MinusLogProbMetric: 15.9128, val_loss: 17.3229, val_MinusLogProbMetric: 17.3229
+
+Epoch 175: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9128 - MinusLogProbMetric: 15.9128 - val_loss: 17.3229 - val_MinusLogProbMetric: 17.3229 - lr: 2.5000e-04 - 41s/epoch - 208ms/step
+Epoch 176/1000
+2023-09-23 17:05:15.987 
+Epoch 176/1000 
+	 loss: 15.9020, MinusLogProbMetric: 15.9020, val_loss: 17.3299, val_MinusLogProbMetric: 17.3299
+
+Epoch 176: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.9020 - MinusLogProbMetric: 15.9020 - val_loss: 17.3299 - val_MinusLogProbMetric: 17.3299 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 177/1000
+2023-09-23 17:05:56.365 
+Epoch 177/1000 
+	 loss: 15.9000, MinusLogProbMetric: 15.9000, val_loss: 17.3549, val_MinusLogProbMetric: 17.3549
+
+Epoch 177: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9000 - MinusLogProbMetric: 15.9000 - val_loss: 17.3549 - val_MinusLogProbMetric: 17.3549 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 178/1000
+2023-09-23 17:06:36.817 
+Epoch 178/1000 
+	 loss: 15.8934, MinusLogProbMetric: 15.8934, val_loss: 17.3657, val_MinusLogProbMetric: 17.3657
+
+Epoch 178: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8934 - MinusLogProbMetric: 15.8934 - val_loss: 17.3657 - val_MinusLogProbMetric: 17.3657 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 179/1000
+2023-09-23 17:07:17.189 
+Epoch 179/1000 
+	 loss: 15.9007, MinusLogProbMetric: 15.9007, val_loss: 17.3214, val_MinusLogProbMetric: 17.3214
+
+Epoch 179: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.9007 - MinusLogProbMetric: 15.9007 - val_loss: 17.3214 - val_MinusLogProbMetric: 17.3214 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 180/1000
+2023-09-23 17:07:57.830 
+Epoch 180/1000 
+	 loss: 15.8912, MinusLogProbMetric: 15.8912, val_loss: 17.3421, val_MinusLogProbMetric: 17.3421
+
+Epoch 180: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8912 - MinusLogProbMetric: 15.8912 - val_loss: 17.3421 - val_MinusLogProbMetric: 17.3421 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 181/1000
+2023-09-23 17:08:38.006 
+Epoch 181/1000 
+	 loss: 15.8976, MinusLogProbMetric: 15.8976, val_loss: 17.3302, val_MinusLogProbMetric: 17.3302
+
+Epoch 181: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8976 - MinusLogProbMetric: 15.8976 - val_loss: 17.3302 - val_MinusLogProbMetric: 17.3302 - lr: 2.5000e-04 - 40s/epoch - 205ms/step
+Epoch 182/1000
+2023-09-23 17:09:18.601 
+Epoch 182/1000 
+	 loss: 15.8871, MinusLogProbMetric: 15.8871, val_loss: 17.3588, val_MinusLogProbMetric: 17.3588
+
+Epoch 182: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8871 - MinusLogProbMetric: 15.8871 - val_loss: 17.3588 - val_MinusLogProbMetric: 17.3588 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 183/1000
+2023-09-23 17:09:58.856 
+Epoch 183/1000 
+	 loss: 15.8899, MinusLogProbMetric: 15.8899, val_loss: 17.3518, val_MinusLogProbMetric: 17.3518
+
+Epoch 183: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8899 - MinusLogProbMetric: 15.8899 - val_loss: 17.3518 - val_MinusLogProbMetric: 17.3518 - lr: 2.5000e-04 - 40s/epoch - 205ms/step
+Epoch 184/1000
+2023-09-23 17:10:39.349 
+Epoch 184/1000 
+	 loss: 15.8829, MinusLogProbMetric: 15.8829, val_loss: 17.3537, val_MinusLogProbMetric: 17.3537
+
+Epoch 184: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8829 - MinusLogProbMetric: 15.8829 - val_loss: 17.3537 - val_MinusLogProbMetric: 17.3537 - lr: 2.5000e-04 - 40s/epoch - 207ms/step
+Epoch 185/1000
+2023-09-23 17:11:19.702 
+Epoch 185/1000 
+	 loss: 15.8935, MinusLogProbMetric: 15.8935, val_loss: 17.3946, val_MinusLogProbMetric: 17.3946
+
+Epoch 185: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8935 - MinusLogProbMetric: 15.8935 - val_loss: 17.3946 - val_MinusLogProbMetric: 17.3946 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 186/1000
+2023-09-23 17:12:00.131 
+Epoch 186/1000 
+	 loss: 15.8827, MinusLogProbMetric: 15.8827, val_loss: 17.3920, val_MinusLogProbMetric: 17.3920
+
+Epoch 186: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8827 - MinusLogProbMetric: 15.8827 - val_loss: 17.3920 - val_MinusLogProbMetric: 17.3920 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 187/1000
+2023-09-23 17:12:40.875 
+Epoch 187/1000 
+	 loss: 15.8791, MinusLogProbMetric: 15.8791, val_loss: 17.3620, val_MinusLogProbMetric: 17.3620
+
+Epoch 187: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8791 - MinusLogProbMetric: 15.8791 - val_loss: 17.3620 - val_MinusLogProbMetric: 17.3620 - lr: 2.5000e-04 - 41s/epoch - 208ms/step
+Epoch 188/1000
+2023-09-23 17:13:21.518 
+Epoch 188/1000 
+	 loss: 15.8792, MinusLogProbMetric: 15.8792, val_loss: 17.3594, val_MinusLogProbMetric: 17.3594
+
+Epoch 188: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8792 - MinusLogProbMetric: 15.8792 - val_loss: 17.3594 - val_MinusLogProbMetric: 17.3594 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 189/1000
+2023-09-23 17:14:02.105 
+Epoch 189/1000 
+	 loss: 15.8788, MinusLogProbMetric: 15.8788, val_loss: 17.3578, val_MinusLogProbMetric: 17.3578
+
+Epoch 189: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8788 - MinusLogProbMetric: 15.8788 - val_loss: 17.3578 - val_MinusLogProbMetric: 17.3578 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 190/1000
+2023-09-23 17:14:42.154 
+Epoch 190/1000 
+	 loss: 15.8799, MinusLogProbMetric: 15.8799, val_loss: 17.3886, val_MinusLogProbMetric: 17.3886
+
+Epoch 190: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8799 - MinusLogProbMetric: 15.8799 - val_loss: 17.3886 - val_MinusLogProbMetric: 17.3886 - lr: 2.5000e-04 - 40s/epoch - 204ms/step
+Epoch 191/1000
+2023-09-23 17:15:22.914 
+Epoch 191/1000 
+	 loss: 15.8685, MinusLogProbMetric: 15.8685, val_loss: 17.3734, val_MinusLogProbMetric: 17.3734
+
+Epoch 191: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8685 - MinusLogProbMetric: 15.8685 - val_loss: 17.3734 - val_MinusLogProbMetric: 17.3734 - lr: 2.5000e-04 - 41s/epoch - 208ms/step
+Epoch 192/1000
+2023-09-23 17:16:03.517 
+Epoch 192/1000 
+	 loss: 15.8660, MinusLogProbMetric: 15.8660, val_loss: 17.4031, val_MinusLogProbMetric: 17.4031
+
+Epoch 192: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8660 - MinusLogProbMetric: 15.8660 - val_loss: 17.4031 - val_MinusLogProbMetric: 17.4031 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 193/1000
+2023-09-23 17:16:43.887 
+Epoch 193/1000 
+	 loss: 15.8718, MinusLogProbMetric: 15.8718, val_loss: 17.3860, val_MinusLogProbMetric: 17.3860
+
+Epoch 193: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8718 - MinusLogProbMetric: 15.8718 - val_loss: 17.3860 - val_MinusLogProbMetric: 17.3860 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 194/1000
+2023-09-23 17:17:24.285 
+Epoch 194/1000 
+	 loss: 15.8760, MinusLogProbMetric: 15.8760, val_loss: 17.3838, val_MinusLogProbMetric: 17.3838
+
+Epoch 194: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8760 - MinusLogProbMetric: 15.8760 - val_loss: 17.3838 - val_MinusLogProbMetric: 17.3838 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 195/1000
+2023-09-23 17:18:04.926 
+Epoch 195/1000 
+	 loss: 15.8621, MinusLogProbMetric: 15.8621, val_loss: 17.3887, val_MinusLogProbMetric: 17.3887
+
+Epoch 195: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8621 - MinusLogProbMetric: 15.8621 - val_loss: 17.3887 - val_MinusLogProbMetric: 17.3887 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 196/1000
+2023-09-23 17:18:45.393 
+Epoch 196/1000 
+	 loss: 15.8642, MinusLogProbMetric: 15.8642, val_loss: 17.3730, val_MinusLogProbMetric: 17.3730
+
+Epoch 196: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8642 - MinusLogProbMetric: 15.8642 - val_loss: 17.3730 - val_MinusLogProbMetric: 17.3730 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 197/1000
+2023-09-23 17:19:25.724 
+Epoch 197/1000 
+	 loss: 15.8620, MinusLogProbMetric: 15.8620, val_loss: 17.3820, val_MinusLogProbMetric: 17.3820
+
+Epoch 197: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8620 - MinusLogProbMetric: 15.8620 - val_loss: 17.3820 - val_MinusLogProbMetric: 17.3820 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 198/1000
+2023-09-23 17:20:06.279 
+Epoch 198/1000 
+	 loss: 15.8549, MinusLogProbMetric: 15.8549, val_loss: 17.4042, val_MinusLogProbMetric: 17.4042
+
+Epoch 198: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8549 - MinusLogProbMetric: 15.8549 - val_loss: 17.4042 - val_MinusLogProbMetric: 17.4042 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 199/1000
+2023-09-23 17:20:46.708 
+Epoch 199/1000 
+	 loss: 15.8651, MinusLogProbMetric: 15.8651, val_loss: 17.3755, val_MinusLogProbMetric: 17.3755
+
+Epoch 199: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8651 - MinusLogProbMetric: 15.8651 - val_loss: 17.3755 - val_MinusLogProbMetric: 17.3755 - lr: 2.5000e-04 - 40s/epoch - 206ms/step
+Epoch 200/1000
+2023-09-23 17:21:27.529 
+Epoch 200/1000 
+	 loss: 15.8563, MinusLogProbMetric: 15.8563, val_loss: 17.4049, val_MinusLogProbMetric: 17.4049
+
+Epoch 200: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8563 - MinusLogProbMetric: 15.8563 - val_loss: 17.4049 - val_MinusLogProbMetric: 17.4049 - lr: 2.5000e-04 - 41s/epoch - 208ms/step
+Epoch 201/1000
+2023-09-23 17:22:08.172 
+Epoch 201/1000 
+	 loss: 15.8525, MinusLogProbMetric: 15.8525, val_loss: 17.3833, val_MinusLogProbMetric: 17.3833
+
+Epoch 201: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8525 - MinusLogProbMetric: 15.8525 - val_loss: 17.3833 - val_MinusLogProbMetric: 17.3833 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 202/1000
+2023-09-23 17:22:48.328 
+Epoch 202/1000 
+	 loss: 15.8494, MinusLogProbMetric: 15.8494, val_loss: 17.4254, val_MinusLogProbMetric: 17.4254
+
+Epoch 202: val_loss did not improve from 17.11815
+196/196 - 40s - loss: 15.8494 - MinusLogProbMetric: 15.8494 - val_loss: 17.4254 - val_MinusLogProbMetric: 17.4254 - lr: 2.5000e-04 - 40s/epoch - 205ms/step
+Epoch 203/1000
+2023-09-23 17:23:28.920 
+Epoch 203/1000 
+	 loss: 15.8523, MinusLogProbMetric: 15.8523, val_loss: 17.3957, val_MinusLogProbMetric: 17.3957
+
+Epoch 203: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8523 - MinusLogProbMetric: 15.8523 - val_loss: 17.3957 - val_MinusLogProbMetric: 17.3957 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 204/1000
+2023-09-23 17:24:09.681 
+Epoch 204/1000 
+	 loss: 15.8436, MinusLogProbMetric: 15.8436, val_loss: 17.4318, val_MinusLogProbMetric: 17.4318
+
+Epoch 204: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8436 - MinusLogProbMetric: 15.8436 - val_loss: 17.4318 - val_MinusLogProbMetric: 17.4318 - lr: 2.5000e-04 - 41s/epoch - 208ms/step
+Epoch 205/1000
+2023-09-23 17:24:50.248 
+Epoch 205/1000 
+	 loss: 15.8413, MinusLogProbMetric: 15.8413, val_loss: 17.4029, val_MinusLogProbMetric: 17.4029
+
+Epoch 205: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8413 - MinusLogProbMetric: 15.8413 - val_loss: 17.4029 - val_MinusLogProbMetric: 17.4029 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 206/1000
+2023-09-23 17:25:30.864 
+Epoch 206/1000 
+	 loss: 15.8442, MinusLogProbMetric: 15.8442, val_loss: 17.4197, val_MinusLogProbMetric: 17.4197
+
+Epoch 206: val_loss did not improve from 17.11815
+196/196 - 41s - loss: 15.8442 - MinusLogProbMetric: 15.8442 - val_loss: 17.4197 - val_MinusLogProbMetric: 17.4197 - lr: 2.5000e-04 - 41s/epoch - 207ms/step
+Epoch 207/1000
+2023-09-23 17:26:11.451 
+Epoch 207/1000 
+	 loss: 15.8432, MinusLogProbMetric: 15.8432, val_loss: 17.4094, val_MinusLogProbMetric: 17.4094
+
+Epoch 207: val_loss did not improve from 17.11815
+Restoring model weights from the end of the best epoch: 107.
+196/196 - 41s - loss: 15.8432 - MinusLogProbMetric: 15.8432 - val_loss: 17.4094 - val_MinusLogProbMetric: 17.4094 - lr: 2.5000e-04 - 41s/epoch - 209ms/step
+Epoch 207: early stopping
+Parsing input distribution...
+Input distribution is a tfp.distributions.Distribution object.
+Parsing input distribution...
+Input distribution is a tfp.distributions.Distribution object.
+
+------------------------------------------
+Starting LR metric calculation...
+Running TF LR calculation...
+niter = 10
+batch_size = 100000
+The dist_1_num tensor is empty. Batches will be generated 'on-the-fly' from dist_1_symb.
+The dist_2_num tensor is empty. Batches will be generated 'on-the-fly' from dist_2_symb.
+LR metric calculation completed in 16.427543892999893 seconds.
+
+------------------------------------------
+Starting KS tests calculation...
+Running TF KS tests...
+niter = 10
+batch_size = 100000
+Parsing input distribution...
+Input distribution is a tfp.distributions.Distribution object.
+Parsing input distribution...
+Input distribution is a tfp.distributions.Distribution object.
+
+------------------------------------------
+Starting LR metric calculation...
+Running TF LR calculation...
+niter = 10
+batch_size = 100000
+The dist_1_num tensor is empty. Batches will be generated 'on-the-fly' from dist_1_symb.
+The dist_2_num tensor is empty. Batches will be generated 'on-the-fly' from dist_2_symb.
+LR metric calculation completed in 39.36429796000084 seconds.
+
+------------------------------------------
+Starting KS tests calculation...
+Running TF KS tests...
+niter = 10
+batch_size = 100000

@@ -1,0 +1,3346 @@
+2023-09-13 09:47:33.970725: Importing os...
+2023-09-13 09:47:33.970801: Importing sys...
+2023-09-13 09:47:33.970815: Importing and initializing argparse...
+Visible devices: [1]
+2023-09-13 09:47:33.989903: Importing timer from timeit...
+2023-09-13 09:47:33.990502: Setting env variables for tf import (only device [1] will be available)...
+2023-09-13 09:47:33.990551: Importing numpy...
+2023-09-13 09:47:34.146324: Importing pandas...
+2023-09-13 09:47:34.369367: Importing shutil...
+2023-09-13 09:47:34.369403: Importing subprocess...
+2023-09-13 09:47:34.369411: Importing tensorflow...
+Tensorflow version: 2.12.0
+2023-09-13 09:47:36.948455: Importing tensorflow_probability...
+Tensorflow probability version: 0.20.1
+2023-09-13 09:47:37.371808: Importing textwrap...
+2023-09-13 09:47:37.371846: Importing timeit...
+2023-09-13 09:47:37.371857: Importing traceback...
+2023-09-13 09:47:37.371864: Importing typing...
+2023-09-13 09:47:37.371876: Setting tf configs...
+2023-09-13 09:47:37.663886: Importing custom module...
+Successfully loaded GPU model: NVIDIA A40
+2023-09-13 09:47:39.155696: All modues imported successfully.
+Directory ../../results/MsplineN_new/ already exists.
+Directory ../../results/MsplineN_new/run_1/ already exists.
+Skipping it.
+===========
+Run 1/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_2/ already exists.
+Skipping it.
+===========
+Run 2/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_3/ already exists.
+Skipping it.
+===========
+Run 3/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_4/ already exists.
+Skipping it.
+===========
+Run 4/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_5/ already exists.
+Skipping it.
+===========
+Run 5/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_6/ already exists.
+Skipping it.
+===========
+Run 6/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_7/ already exists.
+Skipping it.
+===========
+Run 7/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_8/ already exists.
+Skipping it.
+===========
+Run 8/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_9/ already exists.
+Skipping it.
+===========
+Run 9/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_10/ already exists.
+Skipping it.
+===========
+Run 10/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_11/ already exists.
+Skipping it.
+===========
+Run 11/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_12/ already exists.
+Skipping it.
+===========
+Run 12/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_13/ already exists.
+Skipping it.
+===========
+Run 13/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_14/ already exists.
+Skipping it.
+===========
+Run 14/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_15/ already exists.
+Skipping it.
+===========
+Run 15/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_16/ already exists.
+Skipping it.
+===========
+Run 16/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_17/ already exists.
+Skipping it.
+===========
+Run 17/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_18/ already exists.
+Skipping it.
+===========
+Run 18/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_19/ already exists.
+Skipping it.
+===========
+Run 19/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_20/ already exists.
+Skipping it.
+===========
+Run 20/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_21/ already exists.
+Skipping it.
+===========
+Run 21/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_22/ already exists.
+Skipping it.
+===========
+Run 22/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_23/ already exists.
+Skipping it.
+===========
+Run 23/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_24/ already exists.
+Skipping it.
+===========
+Run 24/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_25/ already exists.
+Skipping it.
+===========
+Run 25/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_26/ already exists.
+Skipping it.
+===========
+Run 26/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_27/ already exists.
+Skipping it.
+===========
+Run 27/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_28/ already exists.
+Skipping it.
+===========
+Run 28/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_29/ already exists.
+Skipping it.
+===========
+Run 29/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_30/ already exists.
+Skipping it.
+===========
+Run 30/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_31/ already exists.
+Skipping it.
+===========
+Run 31/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_32/ already exists.
+Skipping it.
+===========
+Run 32/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_33/ already exists.
+Skipping it.
+===========
+Run 33/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_34/ already exists.
+Skipping it.
+===========
+Run 34/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_35/ already exists.
+Skipping it.
+===========
+Run 35/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_36/ already exists.
+Skipping it.
+===========
+Run 36/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_37/ already exists.
+Skipping it.
+===========
+Run 37/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_38/ already exists.
+Skipping it.
+===========
+Run 38/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_39/ already exists.
+Skipping it.
+===========
+Run 39/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_40/ already exists.
+Skipping it.
+===========
+Run 40/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_41/ already exists.
+Skipping it.
+===========
+Run 41/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_42/ already exists.
+Skipping it.
+===========
+Run 42/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_43/ already exists.
+Skipping it.
+===========
+Run 43/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_44/ already exists.
+Skipping it.
+===========
+Run 44/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_45/ already exists.
+Skipping it.
+===========
+Run 45/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_46/ already exists.
+Skipping it.
+===========
+Run 46/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_47/ already exists.
+Skipping it.
+===========
+Run 47/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_48/ already exists.
+Skipping it.
+===========
+Run 48/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_49/ already exists.
+Skipping it.
+===========
+Run 49/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_50/ already exists.
+Skipping it.
+===========
+Run 50/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_51/ already exists.
+Skipping it.
+===========
+Run 51/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_52/ already exists.
+Skipping it.
+===========
+Run 52/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_53/ already exists.
+Skipping it.
+===========
+Run 53/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_54/ already exists.
+Skipping it.
+===========
+Run 54/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_55/ already exists.
+Skipping it.
+===========
+Run 55/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_56/ already exists.
+Skipping it.
+===========
+Run 56/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_57/ already exists.
+Skipping it.
+===========
+Run 57/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_58/ already exists.
+Skipping it.
+===========
+Run 58/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_59/ already exists.
+Skipping it.
+===========
+Run 59/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_60/ already exists.
+Skipping it.
+===========
+Run 60/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_61/ already exists.
+Skipping it.
+===========
+Run 61/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_62/ already exists.
+Skipping it.
+===========
+Run 62/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_63/ already exists.
+Skipping it.
+===========
+Run 63/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_64/ already exists.
+Skipping it.
+===========
+Run 64/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_65/ already exists.
+Skipping it.
+===========
+Run 65/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_66/ already exists.
+Skipping it.
+===========
+Run 66/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_67/ already exists.
+Skipping it.
+===========
+Run 67/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_68/ already exists.
+Skipping it.
+===========
+Run 68/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_69/ already exists.
+Skipping it.
+===========
+Run 69/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_70/ already exists.
+Skipping it.
+===========
+Run 70/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_71/ already exists.
+Skipping it.
+===========
+Run 71/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_72/ already exists.
+Skipping it.
+===========
+Run 72/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_73/ already exists.
+Skipping it.
+===========
+Run 73/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_74/ already exists.
+Skipping it.
+===========
+Run 74/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_75/ already exists.
+Skipping it.
+===========
+Run 75/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_76/ already exists.
+Skipping it.
+===========
+Run 76/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_77/ already exists.
+Skipping it.
+===========
+Run 77/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_78/ already exists.
+Skipping it.
+===========
+Run 78/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_79/ already exists.
+Skipping it.
+===========
+Run 79/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_80/ already exists.
+Skipping it.
+===========
+Run 80/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_81/ already exists.
+Skipping it.
+===========
+Run 81/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_82/ already exists.
+Skipping it.
+===========
+Run 82/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_83/ already exists.
+Skipping it.
+===========
+Run 83/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_84/ already exists.
+Skipping it.
+===========
+Run 84/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_85/ already exists.
+Skipping it.
+===========
+Run 85/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_86/ already exists.
+Skipping it.
+===========
+Run 86/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_87/ already exists.
+Skipping it.
+===========
+Run 87/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_88/ already exists.
+Skipping it.
+===========
+Run 88/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_89/ already exists.
+Skipping it.
+===========
+Run 89/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_90/ already exists.
+Skipping it.
+===========
+Run 90/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_91/ already exists.
+Skipping it.
+===========
+Run 91/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_92/ already exists.
+Skipping it.
+===========
+Run 92/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_93/ already exists.
+Skipping it.
+===========
+Run 93/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_94/ already exists.
+Skipping it.
+===========
+Run 94/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_95/ already exists.
+Skipping it.
+===========
+Run 95/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_96/ already exists.
+Skipping it.
+===========
+Run 96/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_97/ already exists.
+Skipping it.
+===========
+Run 97/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_98/ already exists.
+Skipping it.
+===========
+Run 98/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_99/ already exists.
+Skipping it.
+===========
+Run 99/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_100/ already exists.
+Skipping it.
+===========
+Run 100/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_101/ already exists.
+Skipping it.
+===========
+Run 101/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_102/ already exists.
+Skipping it.
+===========
+Run 102/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_103/ already exists.
+Skipping it.
+===========
+Run 103/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_104/ already exists.
+Skipping it.
+===========
+Run 104/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_105/ already exists.
+Skipping it.
+===========
+Run 105/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_106/ already exists.
+Skipping it.
+===========
+Run 106/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_107/ already exists.
+Skipping it.
+===========
+Run 107/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_108/ already exists.
+Skipping it.
+===========
+Run 108/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_109/ already exists.
+Skipping it.
+===========
+Run 109/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_110/ already exists.
+Skipping it.
+===========
+Run 110/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_111/ already exists.
+Skipping it.
+===========
+Run 111/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_112/ already exists.
+Skipping it.
+===========
+Run 112/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_113/ already exists.
+Skipping it.
+===========
+Run 113/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_114/ already exists.
+Skipping it.
+===========
+Run 114/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_115/ already exists.
+Skipping it.
+===========
+Run 115/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_116/ already exists.
+Skipping it.
+===========
+Run 116/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_117/ already exists.
+Skipping it.
+===========
+Run 117/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_118/ already exists.
+Skipping it.
+===========
+Run 118/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_119/ already exists.
+Skipping it.
+===========
+Run 119/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_120/ already exists.
+Skipping it.
+===========
+Run 120/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_121/ already exists.
+Skipping it.
+===========
+Run 121/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_122/ already exists.
+Skipping it.
+===========
+Run 122/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_123/ already exists.
+Skipping it.
+===========
+Run 123/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_124/ already exists.
+Skipping it.
+===========
+Run 124/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_125/ already exists.
+Skipping it.
+===========
+Run 125/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_126/ already exists.
+Skipping it.
+===========
+Run 126/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_127/ already exists.
+Skipping it.
+===========
+Run 127/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_128/ already exists.
+Skipping it.
+===========
+Run 128/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_129/ already exists.
+Skipping it.
+===========
+Run 129/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_130/ already exists.
+Skipping it.
+===========
+Run 130/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_131/ already exists.
+Skipping it.
+===========
+Run 131/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_132/ already exists.
+Skipping it.
+===========
+Run 132/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_133/ already exists.
+Skipping it.
+===========
+Run 133/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_134/ already exists.
+Skipping it.
+===========
+Run 134/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_135/ already exists.
+Skipping it.
+===========
+Run 135/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_136/ already exists.
+Skipping it.
+===========
+Run 136/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_137/ already exists.
+Skipping it.
+===========
+Run 137/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_138/ already exists.
+Skipping it.
+===========
+Run 138/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_139/ already exists.
+Skipping it.
+===========
+Run 139/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_140/ already exists.
+Skipping it.
+===========
+Run 140/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_141/ already exists.
+Skipping it.
+===========
+Run 141/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_142/ already exists.
+Skipping it.
+===========
+Run 142/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_143/ already exists.
+Skipping it.
+===========
+Run 143/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_144/ already exists.
+Skipping it.
+===========
+Run 144/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_145/ already exists.
+Skipping it.
+===========
+Run 145/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_146/ already exists.
+Skipping it.
+===========
+Run 146/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_147/ already exists.
+Skipping it.
+===========
+Run 147/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_148/ already exists.
+Skipping it.
+===========
+Run 148/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_149/ already exists.
+Skipping it.
+===========
+Run 149/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_150/ already exists.
+Skipping it.
+===========
+Run 150/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_151/ already exists.
+Skipping it.
+===========
+Run 151/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_152/ already exists.
+Skipping it.
+===========
+Run 152/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_153/ already exists.
+Skipping it.
+===========
+Run 153/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_154/ already exists.
+Skipping it.
+===========
+Run 154/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_155/ already exists.
+Skipping it.
+===========
+Run 155/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_156/ already exists.
+Skipping it.
+===========
+Run 156/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_157/ already exists.
+Skipping it.
+===========
+Run 157/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_158/ already exists.
+Skipping it.
+===========
+Run 158/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_159/ already exists.
+Skipping it.
+===========
+Run 159/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_160/ already exists.
+Skipping it.
+===========
+Run 160/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_161/ already exists.
+Skipping it.
+===========
+Run 161/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_162/ already exists.
+Skipping it.
+===========
+Run 162/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_163/ already exists.
+Skipping it.
+===========
+Run 163/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_164/ already exists.
+Skipping it.
+===========
+Run 164/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_165/ already exists.
+Skipping it.
+===========
+Run 165/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_166/ already exists.
+Skipping it.
+===========
+Run 166/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_167/ already exists.
+Skipping it.
+===========
+Run 167/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_168/ already exists.
+Skipping it.
+===========
+Run 168/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_169/ already exists.
+Skipping it.
+===========
+Run 169/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_170/ already exists.
+Skipping it.
+===========
+Run 170/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_171/ already exists.
+Skipping it.
+===========
+Run 171/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_172/ already exists.
+Skipping it.
+===========
+Run 172/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_173/ already exists.
+Skipping it.
+===========
+Run 173/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_174/ already exists.
+Skipping it.
+===========
+Run 174/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_175/ already exists.
+Skipping it.
+===========
+Run 175/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_176/ already exists.
+Skipping it.
+===========
+Run 176/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_177/ already exists.
+Skipping it.
+===========
+Run 177/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_178/ already exists.
+Skipping it.
+===========
+Run 178/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_179/ already exists.
+Skipping it.
+===========
+Run 179/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_180/ already exists.
+Skipping it.
+===========
+Run 180/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_181/ already exists.
+Skipping it.
+===========
+Run 181/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_182/ already exists.
+Skipping it.
+===========
+Run 182/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_183/ already exists.
+Skipping it.
+===========
+Run 183/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_184/ already exists.
+Skipping it.
+===========
+Run 184/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_185/ already exists.
+Skipping it.
+===========
+Run 185/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_186/ already exists.
+Skipping it.
+===========
+Run 186/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_187/ already exists.
+Skipping it.
+===========
+Run 187/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_188/ already exists.
+Skipping it.
+===========
+Run 188/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_189/ already exists.
+Skipping it.
+===========
+Run 189/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_190/ already exists.
+Skipping it.
+===========
+Run 190/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_191/ already exists.
+Skipping it.
+===========
+Run 191/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_192/ already exists.
+Skipping it.
+===========
+Run 192/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_193/ already exists.
+Skipping it.
+===========
+Run 193/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_194/ already exists.
+Skipping it.
+===========
+Run 194/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_195/ already exists.
+Skipping it.
+===========
+Run 195/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_196/ already exists.
+Skipping it.
+===========
+Run 196/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_197/ already exists.
+Skipping it.
+===========
+Run 197/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_198/ already exists.
+Skipping it.
+===========
+Run 198/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_199/ already exists.
+Skipping it.
+===========
+Run 199/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_200/ already exists.
+Skipping it.
+===========
+Run 200/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_201/ already exists.
+Skipping it.
+===========
+Run 201/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_202/ already exists.
+Skipping it.
+===========
+Run 202/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_203/ already exists.
+Skipping it.
+===========
+Run 203/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_204/ already exists.
+Skipping it.
+===========
+Run 204/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_205/ already exists.
+Skipping it.
+===========
+Run 205/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_206/ already exists.
+Skipping it.
+===========
+Run 206/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_207/ already exists.
+Skipping it.
+===========
+Run 207/360 already exists. Skipping it.
+===========
+
+===========
+Generating train data for run 208.
+===========
+Train data generated in 0.34 s.
+
+Building Trainer NFObject.
+
+
+--------------- Debub info ---------------
+Initializing Trainer with following parameters:
+base_distribution: tfp.distributions.Sample("SampleNormal", batch_shape=[], event_shape=[100], dtype=float32)
+flow: tfp.bijectors._Chain("chain_of_MAFspline_of_permute_of_MAFspline", batch_shape=[], min_event_ndims=1, bijectors=[MaskedAutoregressiveFlow, Permute, MaskedAutoregressiveFlow])
+x_data_train shape: (100000, 100)
+y_data_train shape: (100000, 0)
+io_kwargs: {'results_path': '../../results/MsplineN_new/run_208/', 'load_weights': True, 'load_results': True}
+data_kwargs: {'seed': 187}
+compiler_kwargs: {'optimizer': {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}, 'metrics': [{'class_name': 'MinusLogProbMetric', 'config': {'ignore_nans': True, 'debug_print_mode': False}}], 'loss': {'class_name': 'MinusLogProbLoss', 'config': {'name': 'MLP', 'ignore_nans': True, 'nan_threshold': 0.01, 'debug_print_mode': False}}}
+callbacks_kwargs: [{'class_name': 'PrintEpochInfo', 'config': {}}, {'class_name': 'ModelCheckpoint', 'config': {'filepath': '../../results/MsplineN_new/run_208/weights/best_weights.h5', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True, 'verbose': 1, 'mode': 'auto', 'save_freq': 'epoch'}}, {'class_name': 'EarlyStopping', 'config': {'monitor': 'val_loss', 'min_delta': 0.0001, 'patience': 100, 'verbose': 1, 'mode': 'auto', 'baseline': None, 'restore_best_weights': True}}, {'class_name': 'ReduceLROnPlateau', 'config': {'monitor': 'val_loss', 'factor': 0.5, 'min_delta': 0.0001, 'patience': 50, 'min_lr': 1e-06}}, {'class_name': 'TerminateOnNaN', 'config': {}}]
+fit_kwargs: {'batch_size': 512, 'epochs': 1000, 'validation_data': (array([[ 6.4419913 ,  1.5360464 ,  7.4556723 , ...,  2.6291485 ,
+         0.51444   ,  4.109222  ],
+       [ 3.153259  ,  6.8511314 ,  3.8978415 , ...,  9.545169  ,
+        10.074345  ,  8.361531  ],
+       [ 5.988738  ,  7.1984186 ,  6.0094676 , ..., -0.12096485,
+         8.301349  , -0.19920124],
+       ...,
+       [ 6.81505   ,  0.92492115,  7.338936  , ...,  3.3879175 ,
+         0.16174722,  3.00487   ],
+       [ 2.5060794 ,  7.3628144 ,  3.204593  , ...,  8.143249  ,
+         9.353718  , 10.2199135 ],
+       [ 3.285063  ,  6.913296  ,  4.502696  , ...,  9.038563  ,
+         9.846277  ,  9.374819  ]], dtype=float32), <tf.Tensor: shape=(30000, 0), dtype=float32, numpy=array([], shape=(30000, 0), dtype=float32)>), 'shuffle': True, 'verbose': 2}
+
+--------------- Debub info ---------------
+Defined attributes:
+self.base_dist: tfp.distributions.Sample("SampleNormal", batch_shape=[], event_shape=[100], dtype=float32)
+self.flow: tfp.bijectors._Chain("chain_of_MAFspline_of_permute_of_MAFspline", batch_shape=[], min_event_ndims=1, bijectors=[MaskedAutoregressiveFlow, Permute, MaskedAutoregressiveFlow])
+self.nf_dist: tfp.distributions._TransformedDistribution("chain_of_MAFspline_of_permute_of_MAFsplineSampleNormal", batch_shape=[], event_shape=[100], dtype=float32)
+self.io_kwargs: {'results_path': '../../results/MsplineN_new/run_208/', 'load_weights': True, 'load_results': True}
+self.results_path: ../../results/MsplineN_new/run_208
+self.data_kwargs: {'seed': 187}
+self.x_data: [[ 3.363249    6.7996144   3.7558484  ...  8.487494    9.4672365
+   8.406783  ]
+ [ 6.429963    1.6688861   7.1802053  ...  2.2553494   0.6794903
+   4.4349604 ]
+ [ 6.456467    3.3944483   7.3872457  ...  2.453699    0.87060153
+   4.491277  ]
+ ...
+ [ 5.9895535   1.3493791   7.20848    ...  1.7700427   0.7181699
+   3.9588675 ]
+ [ 3.903314    7.1540666   4.520662   ...  7.9577374   9.63259
+  10.554146  ]
+ [ 7.108661    3.9697583   7.446551   ...  2.5551188   0.477225
+   4.0121694 ]]
+self.y_data: []
+self.ndims: 100
+Model defined.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 100)]             0         
+                                                                 
+ log_prob_layer (LogProbLaye  (None,)                  2113880   
+ r)                                                              
+                                                                 
+=================================================================
+Total params: 2,113,880
+Trainable params: 2,113,880
+Non-trainable params: 0
+_________________________________________________________________
+Model summary:  None
+self.log_prob: KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='log_prob_layer/chain_of_MAFspline_of_permute_of_MAFsplineSampleNormal_CONSTRUCTED_AT_top_level/log_prob/sub:0', description="created by layer 'log_prob_layer'")
+self.model: <keras.engine.functional.Functional object at 0x7f0772c01210>
+self.optimizer_config: {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}
+optimizer: <keras.optimizers.adam.Adam object at 0x7f0768191600>
+type(optimizer): <class 'keras.optimizers.adam.Adam'>
+self.optimizer_config: {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}
+self.optimizer: <keras.optimizers.adam.Adam object at 0x7f0768191600>
+self.loss_config: {'class_name': 'MinusLogProbLoss', 'config': {'name': 'MLP', 'ignore_nans': True, 'nan_threshold': 0.01, 'debug_print_mode': False}}
+self.loss: <Trainer.MinusLogProbLoss object at 0x7f0768191ed0>
+self.metrics_configs: [{'class_name': 'MinusLogProbMetric', 'config': {'ignore_nans': True, 'debug_print_mode': False}}]
+self.metrics: [<Trainer.MinusLogProbMetric object at 0x7f0768192b90>]
+self.compile_kwargs: {}
+self.callbacks_configs: [{'class_name': 'PrintEpochInfo', 'config': {}}, {'class_name': 'ModelCheckpoint', 'config': {'filepath': '/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True, 'verbose': 1, 'mode': 'auto', 'save_freq': 'epoch'}}, {'class_name': 'EarlyStopping', 'config': {'monitor': 'val_loss', 'min_delta': 0.0001, 'patience': 100, 'verbose': 1, 'mode': 'auto', 'baseline': None, 'restore_best_weights': True}}, {'class_name': 'ReduceLROnPlateau', 'config': {'monitor': 'val_loss', 'factor': 0.5, 'min_delta': 0.0001, 'patience': 50, 'min_lr': 1e-06}}, {'class_name': 'TerminateOnNaN', 'config': {}}]
+self.callbacks: [<keras.callbacks.LambdaCallback object at 0x7f0768193100>, <keras.callbacks.ModelCheckpoint object at 0x7f0768193250>, <keras.callbacks.EarlyStopping object at 0x7f0768193460>, <keras.callbacks.ReduceLROnPlateau object at 0x7f0768193490>, <keras.callbacks.TerminateOnNaN object at 0x7f07681931c0>]
+self.fit_kwargs: {'batch_size': 512, 'epochs': 1000, 'validation_data': (array([[ 6.4419913 ,  1.5360464 ,  7.4556723 , ...,  2.6291485 ,
+         0.51444   ,  4.109222  ],
+       [ 3.153259  ,  6.8511314 ,  3.8978415 , ...,  9.545169  ,
+        10.074345  ,  8.361531  ],
+       [ 5.988738  ,  7.1984186 ,  6.0094676 , ..., -0.12096485,
+         8.301349  , -0.19920124],
+       ...,
+       [ 6.81505   ,  0.92492115,  7.338936  , ...,  3.3879175 ,
+         0.16174722,  3.00487   ],
+       [ 2.5060794 ,  7.3628144 ,  3.204593  , ...,  8.143249  ,
+         9.353718  , 10.2199135 ],
+       [ 3.285063  ,  6.913296  ,  4.502696  , ...,  9.038563  ,
+         9.846277  ,  9.374819  ]], dtype=float32), <tf.Tensor: shape=(30000, 0), dtype=float32, numpy=array([], shape=(30000, 0), dtype=float32)>), 'shuffle': True, 'verbose': 2}
+self.is_compiled: False
+self.training_time: 0.0
+self.history: {}
+Model successfully compiled.
+No weights found in ../../results/MsplineN_new/run_208/weights/best_weights.h5. Training from scratch.
+No history found. Generating new history.
+===============
+Running 208/360 with hyperparameters:
+timestamp = 2023-09-13 09:47:42.620166
+ndims = 100
+seed_train = 187
+nsamples_train = 100000
+nsamples_val = 30000
+nsamples_test = 100000
+bijector = MsplineN
+nbijectors = 2
+spline_knots = 12
+range_min = -16
+hidden_layers = 256-256-256
+trainable_parameters = 2113880
+epochs_input = 1000
+batch_size = 512
+activation = relu
+training_device = NVIDIA A40
+===============
+
+Training model with initial learning rate 0.001...
+Train first sample: [ 3.363249    6.7996144   3.7558484   1.6905175   0.59504455  1.3572187
+  8.552164    4.573737    5.622487    8.850269    9.919881    2.442041
+  6.4713607   2.4110885   0.582009    6.8260555   3.2736723   4.1556153
+  6.284559    9.342276    6.8533273   8.768529    2.7136652   6.8141527
+  1.8623005   9.99699     7.2033806   1.5403578   9.54195     7.607635
+  2.5313134   2.061085    5.972526    0.7375989   1.931644    4.2606106
+  3.528998    5.132032    4.133215    6.4308267   8.643526    0.59724224
+  5.238656    0.6318855   5.801837    3.9359124   5.668258    2.8762863
+  2.2584295   5.26404     4.043352    9.504596    7.6159754   7.311254
+  8.6322365   0.7895291   5.4676733   5.602808   10.294471    4.03677
+  2.139928    0.72304964 -1.6175498   8.732431    7.1576815   5.355942
+  2.7106154   6.013588   -0.08663982  3.5826845   9.295919    8.744785
+  3.5537617   9.7776165   1.4147863   9.605443    9.551717    8.587783
+  5.6122823   8.676071    3.0853114   8.1522255   6.511031    0.04184827
+  4.384617    1.688982    9.852707    4.786712    4.9854093   6.8219695
+  3.8010216   2.489355    7.8810973   2.4671822   5.09907     2.941558
+  0.59668285  8.487494    9.4672365   8.406783  ]
+Epoch 1/1000
+2023-09-13 09:48:15.280 
+Epoch 1/1000 
+	 loss: 131.2387, MinusLogProbMetric: 131.2387, val_loss: 51.3258, val_MinusLogProbMetric: 51.3258
+
+Epoch 1: val_loss improved from inf to 51.32579, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 33s - loss: 131.2387 - MinusLogProbMetric: 131.2387 - val_loss: 51.3258 - val_MinusLogProbMetric: 51.3258 - lr: 0.0010 - 33s/epoch - 167ms/step
+Epoch 2/1000
+2023-09-13 09:48:25.138 
+Epoch 2/1000 
+	 loss: 48.3866, MinusLogProbMetric: 48.3866, val_loss: 46.0027, val_MinusLogProbMetric: 46.0027
+
+Epoch 2: val_loss improved from 51.32579 to 46.00274, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 10s - loss: 48.3866 - MinusLogProbMetric: 48.3866 - val_loss: 46.0027 - val_MinusLogProbMetric: 46.0027 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 3/1000
+2023-09-13 09:48:36.077 
+Epoch 3/1000 
+	 loss: 45.1272, MinusLogProbMetric: 45.1272, val_loss: 44.2719, val_MinusLogProbMetric: 44.2719
+
+Epoch 3: val_loss improved from 46.00274 to 44.27187, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 45.1272 - MinusLogProbMetric: 45.1272 - val_loss: 44.2719 - val_MinusLogProbMetric: 44.2719 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 4/1000
+2023-09-13 09:48:46.864 
+Epoch 4/1000 
+	 loss: 43.9983, MinusLogProbMetric: 43.9983, val_loss: 43.0792, val_MinusLogProbMetric: 43.0792
+
+Epoch 4: val_loss improved from 44.27187 to 43.07920, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 43.9983 - MinusLogProbMetric: 43.9983 - val_loss: 43.0792 - val_MinusLogProbMetric: 43.0792 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 5/1000
+2023-09-13 09:48:57.901 
+Epoch 5/1000 
+	 loss: 43.2404, MinusLogProbMetric: 43.2404, val_loss: 42.7478, val_MinusLogProbMetric: 42.7478
+
+Epoch 5: val_loss improved from 43.07920 to 42.74775, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 43.2404 - MinusLogProbMetric: 43.2404 - val_loss: 42.7478 - val_MinusLogProbMetric: 42.7478 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 6/1000
+2023-09-13 09:49:07.739 
+Epoch 6/1000 
+	 loss: 43.2511, MinusLogProbMetric: 43.2511, val_loss: 43.0279, val_MinusLogProbMetric: 43.0279
+
+Epoch 6: val_loss did not improve from 42.74775
+196/196 - 10s - loss: 43.2511 - MinusLogProbMetric: 43.2511 - val_loss: 43.0279 - val_MinusLogProbMetric: 43.0279 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 7/1000
+2023-09-13 09:49:18.319 
+Epoch 7/1000 
+	 loss: 42.5264, MinusLogProbMetric: 42.5264, val_loss: 42.6167, val_MinusLogProbMetric: 42.6167
+
+Epoch 7: val_loss improved from 42.74775 to 42.61674, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 42.5264 - MinusLogProbMetric: 42.5264 - val_loss: 42.6167 - val_MinusLogProbMetric: 42.6167 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 8/1000
+2023-09-13 09:49:29.303 
+Epoch 8/1000 
+	 loss: 42.4900, MinusLogProbMetric: 42.4900, val_loss: 41.8098, val_MinusLogProbMetric: 41.8098
+
+Epoch 8: val_loss improved from 42.61674 to 41.80978, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 42.4900 - MinusLogProbMetric: 42.4900 - val_loss: 41.8098 - val_MinusLogProbMetric: 41.8098 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 9/1000
+2023-09-13 09:49:40.390 
+Epoch 9/1000 
+	 loss: 42.5710, MinusLogProbMetric: 42.5710, val_loss: 42.2656, val_MinusLogProbMetric: 42.2656
+
+Epoch 9: val_loss did not improve from 41.80978
+196/196 - 11s - loss: 42.5710 - MinusLogProbMetric: 42.5710 - val_loss: 42.2656 - val_MinusLogProbMetric: 42.2656 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 10/1000
+2023-09-13 09:49:50.988 
+Epoch 10/1000 
+	 loss: 41.9346, MinusLogProbMetric: 41.9346, val_loss: 41.9408, val_MinusLogProbMetric: 41.9408
+
+Epoch 10: val_loss did not improve from 41.80978
+196/196 - 11s - loss: 41.9346 - MinusLogProbMetric: 41.9346 - val_loss: 41.9408 - val_MinusLogProbMetric: 41.9408 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 11/1000
+2023-09-13 09:50:01.447 
+Epoch 11/1000 
+	 loss: 42.1051, MinusLogProbMetric: 42.1051, val_loss: 43.0616, val_MinusLogProbMetric: 43.0616
+
+Epoch 11: val_loss did not improve from 41.80978
+196/196 - 10s - loss: 42.1051 - MinusLogProbMetric: 42.1051 - val_loss: 43.0616 - val_MinusLogProbMetric: 43.0616 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 12/1000
+2023-09-13 09:50:12.068 
+Epoch 12/1000 
+	 loss: 41.9175, MinusLogProbMetric: 41.9175, val_loss: 41.7763, val_MinusLogProbMetric: 41.7763
+
+Epoch 12: val_loss improved from 41.80978 to 41.77626, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 41.9175 - MinusLogProbMetric: 41.9175 - val_loss: 41.7763 - val_MinusLogProbMetric: 41.7763 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 13/1000
+2023-09-13 09:50:22.928 
+Epoch 13/1000 
+	 loss: 41.5796, MinusLogProbMetric: 41.5796, val_loss: 41.3117, val_MinusLogProbMetric: 41.3117
+
+Epoch 13: val_loss improved from 41.77626 to 41.31170, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 41.5796 - MinusLogProbMetric: 41.5796 - val_loss: 41.3117 - val_MinusLogProbMetric: 41.3117 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 14/1000
+2023-09-13 09:50:33.405 
+Epoch 14/1000 
+	 loss: 41.5455, MinusLogProbMetric: 41.5455, val_loss: 43.4569, val_MinusLogProbMetric: 43.4569
+
+Epoch 14: val_loss did not improve from 41.31170
+196/196 - 10s - loss: 41.5455 - MinusLogProbMetric: 41.5455 - val_loss: 43.4569 - val_MinusLogProbMetric: 43.4569 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 15/1000
+2023-09-13 09:50:44.109 
+Epoch 15/1000 
+	 loss: 41.5233, MinusLogProbMetric: 41.5233, val_loss: 41.3604, val_MinusLogProbMetric: 41.3604
+
+Epoch 15: val_loss did not improve from 41.31170
+196/196 - 11s - loss: 41.5233 - MinusLogProbMetric: 41.5233 - val_loss: 41.3604 - val_MinusLogProbMetric: 41.3604 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 16/1000
+2023-09-13 09:50:55.108 
+Epoch 16/1000 
+	 loss: 41.3860, MinusLogProbMetric: 41.3860, val_loss: 41.2411, val_MinusLogProbMetric: 41.2411
+
+Epoch 16: val_loss improved from 41.31170 to 41.24110, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 41.3860 - MinusLogProbMetric: 41.3860 - val_loss: 41.2411 - val_MinusLogProbMetric: 41.2411 - lr: 0.0010 - 11s/epoch - 57ms/step
+Epoch 17/1000
+2023-09-13 09:51:05.830 
+Epoch 17/1000 
+	 loss: 41.4110, MinusLogProbMetric: 41.4110, val_loss: 41.3199, val_MinusLogProbMetric: 41.3199
+
+Epoch 17: val_loss did not improve from 41.24110
+196/196 - 11s - loss: 41.4110 - MinusLogProbMetric: 41.4110 - val_loss: 41.3199 - val_MinusLogProbMetric: 41.3199 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 18/1000
+2023-09-13 09:51:16.671 
+Epoch 18/1000 
+	 loss: 41.2868, MinusLogProbMetric: 41.2868, val_loss: 41.0103, val_MinusLogProbMetric: 41.0103
+
+Epoch 18: val_loss improved from 41.24110 to 41.01025, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 41.2868 - MinusLogProbMetric: 41.2868 - val_loss: 41.0103 - val_MinusLogProbMetric: 41.0103 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 19/1000
+2023-09-13 09:51:27.710 
+Epoch 19/1000 
+	 loss: 41.2099, MinusLogProbMetric: 41.2099, val_loss: 40.9347, val_MinusLogProbMetric: 40.9347
+
+Epoch 19: val_loss improved from 41.01025 to 40.93472, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 41.2099 - MinusLogProbMetric: 41.2099 - val_loss: 40.9347 - val_MinusLogProbMetric: 40.9347 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 20/1000
+2023-09-13 09:51:38.562 
+Epoch 20/1000 
+	 loss: 42.4137, MinusLogProbMetric: 42.4137, val_loss: 42.1833, val_MinusLogProbMetric: 42.1833
+
+Epoch 20: val_loss did not improve from 40.93472
+196/196 - 11s - loss: 42.4137 - MinusLogProbMetric: 42.4137 - val_loss: 42.1833 - val_MinusLogProbMetric: 42.1833 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 21/1000
+2023-09-13 09:51:49.175 
+Epoch 21/1000 
+	 loss: 41.6580, MinusLogProbMetric: 41.6580, val_loss: 41.4554, val_MinusLogProbMetric: 41.4554
+
+Epoch 21: val_loss did not improve from 40.93472
+196/196 - 11s - loss: 41.6580 - MinusLogProbMetric: 41.6580 - val_loss: 41.4554 - val_MinusLogProbMetric: 41.4554 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 22/1000
+2023-09-13 09:51:59.994 
+Epoch 22/1000 
+	 loss: 41.3257, MinusLogProbMetric: 41.3257, val_loss: 41.1495, val_MinusLogProbMetric: 41.1495
+
+Epoch 22: val_loss did not improve from 40.93472
+196/196 - 11s - loss: 41.3257 - MinusLogProbMetric: 41.3257 - val_loss: 41.1495 - val_MinusLogProbMetric: 41.1495 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 23/1000
+2023-09-13 09:52:11.386 
+Epoch 23/1000 
+	 loss: 41.2504, MinusLogProbMetric: 41.2504, val_loss: 40.9274, val_MinusLogProbMetric: 40.9274
+
+Epoch 23: val_loss improved from 40.93472 to 40.92742, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 12s - loss: 41.2504 - MinusLogProbMetric: 41.2504 - val_loss: 40.9274 - val_MinusLogProbMetric: 40.9274 - lr: 0.0010 - 12s/epoch - 59ms/step
+Epoch 24/1000
+2023-09-13 09:52:22.412 
+Epoch 24/1000 
+	 loss: 41.0436, MinusLogProbMetric: 41.0436, val_loss: 40.8475, val_MinusLogProbMetric: 40.8475
+
+Epoch 24: val_loss improved from 40.92742 to 40.84754, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 41.0436 - MinusLogProbMetric: 41.0436 - val_loss: 40.8475 - val_MinusLogProbMetric: 40.8475 - lr: 0.0010 - 11s/epoch - 57ms/step
+Epoch 25/1000
+2023-09-13 09:52:33.526 
+Epoch 25/1000 
+	 loss: 40.8894, MinusLogProbMetric: 40.8894, val_loss: 41.4583, val_MinusLogProbMetric: 41.4583
+
+Epoch 25: val_loss did not improve from 40.84754
+196/196 - 11s - loss: 40.8894 - MinusLogProbMetric: 40.8894 - val_loss: 41.4583 - val_MinusLogProbMetric: 41.4583 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 26/1000
+2023-09-13 09:52:44.509 
+Epoch 26/1000 
+	 loss: 40.8361, MinusLogProbMetric: 40.8361, val_loss: 41.2894, val_MinusLogProbMetric: 41.2894
+
+Epoch 26: val_loss did not improve from 40.84754
+196/196 - 11s - loss: 40.8361 - MinusLogProbMetric: 40.8361 - val_loss: 41.2894 - val_MinusLogProbMetric: 41.2894 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 27/1000
+2023-09-13 09:52:55.358 
+Epoch 27/1000 
+	 loss: 40.8195, MinusLogProbMetric: 40.8195, val_loss: 41.3608, val_MinusLogProbMetric: 41.3608
+
+Epoch 27: val_loss did not improve from 40.84754
+196/196 - 11s - loss: 40.8195 - MinusLogProbMetric: 40.8195 - val_loss: 41.3608 - val_MinusLogProbMetric: 41.3608 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 28/1000
+2023-09-13 09:53:06.229 
+Epoch 28/1000 
+	 loss: 40.7061, MinusLogProbMetric: 40.7061, val_loss: 41.8437, val_MinusLogProbMetric: 41.8437
+
+Epoch 28: val_loss did not improve from 40.84754
+196/196 - 11s - loss: 40.7061 - MinusLogProbMetric: 40.7061 - val_loss: 41.8437 - val_MinusLogProbMetric: 41.8437 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 29/1000
+2023-09-13 09:53:17.049 
+Epoch 29/1000 
+	 loss: 40.7086, MinusLogProbMetric: 40.7086, val_loss: 40.7820, val_MinusLogProbMetric: 40.7820
+
+Epoch 29: val_loss improved from 40.84754 to 40.78196, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 40.7086 - MinusLogProbMetric: 40.7086 - val_loss: 40.7820 - val_MinusLogProbMetric: 40.7820 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 30/1000
+2023-09-13 09:53:27.989 
+Epoch 30/1000 
+	 loss: 40.9574, MinusLogProbMetric: 40.9574, val_loss: 42.1816, val_MinusLogProbMetric: 42.1816
+
+Epoch 30: val_loss did not improve from 40.78196
+196/196 - 11s - loss: 40.9574 - MinusLogProbMetric: 40.9574 - val_loss: 42.1816 - val_MinusLogProbMetric: 42.1816 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 31/1000
+2023-09-13 09:53:37.536 
+Epoch 31/1000 
+	 loss: 40.7355, MinusLogProbMetric: 40.7355, val_loss: 40.9114, val_MinusLogProbMetric: 40.9114
+
+Epoch 31: val_loss did not improve from 40.78196
+196/196 - 10s - loss: 40.7355 - MinusLogProbMetric: 40.7355 - val_loss: 40.9114 - val_MinusLogProbMetric: 40.9114 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 32/1000
+2023-09-13 09:53:47.098 
+Epoch 32/1000 
+	 loss: 40.6304, MinusLogProbMetric: 40.6304, val_loss: 40.8881, val_MinusLogProbMetric: 40.8881
+
+Epoch 32: val_loss did not improve from 40.78196
+196/196 - 10s - loss: 40.6304 - MinusLogProbMetric: 40.6304 - val_loss: 40.8881 - val_MinusLogProbMetric: 40.8881 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 33/1000
+2023-09-13 09:53:56.480 
+Epoch 33/1000 
+	 loss: 40.6181, MinusLogProbMetric: 40.6181, val_loss: 40.7189, val_MinusLogProbMetric: 40.7189
+
+Epoch 33: val_loss improved from 40.78196 to 40.71892, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 10s - loss: 40.6181 - MinusLogProbMetric: 40.6181 - val_loss: 40.7189 - val_MinusLogProbMetric: 40.7189 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 34/1000
+2023-09-13 09:54:06.363 
+Epoch 34/1000 
+	 loss: 40.6079, MinusLogProbMetric: 40.6079, val_loss: 40.8176, val_MinusLogProbMetric: 40.8176
+
+Epoch 34: val_loss did not improve from 40.71892
+196/196 - 10s - loss: 40.6079 - MinusLogProbMetric: 40.6079 - val_loss: 40.8176 - val_MinusLogProbMetric: 40.8176 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 35/1000
+2023-09-13 09:54:16.900 
+Epoch 35/1000 
+	 loss: 40.5925, MinusLogProbMetric: 40.5925, val_loss: 40.7094, val_MinusLogProbMetric: 40.7094
+
+Epoch 35: val_loss improved from 40.71892 to 40.70945, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 40.5925 - MinusLogProbMetric: 40.5925 - val_loss: 40.7094 - val_MinusLogProbMetric: 40.7094 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 36/1000
+2023-09-13 09:54:27.983 
+Epoch 36/1000 
+	 loss: 40.5536, MinusLogProbMetric: 40.5536, val_loss: 40.6115, val_MinusLogProbMetric: 40.6115
+
+Epoch 36: val_loss improved from 40.70945 to 40.61153, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 40.5536 - MinusLogProbMetric: 40.5536 - val_loss: 40.6115 - val_MinusLogProbMetric: 40.6115 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 37/1000
+2023-09-13 09:54:38.179 
+Epoch 37/1000 
+	 loss: 40.5814, MinusLogProbMetric: 40.5814, val_loss: 40.6608, val_MinusLogProbMetric: 40.6608
+
+Epoch 37: val_loss did not improve from 40.61153
+196/196 - 10s - loss: 40.5814 - MinusLogProbMetric: 40.5814 - val_loss: 40.6608 - val_MinusLogProbMetric: 40.6608 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 38/1000
+2023-09-13 09:54:47.882 
+Epoch 38/1000 
+	 loss: 40.6634, MinusLogProbMetric: 40.6634, val_loss: 40.6878, val_MinusLogProbMetric: 40.6878
+
+Epoch 38: val_loss did not improve from 40.61153
+196/196 - 10s - loss: 40.6634 - MinusLogProbMetric: 40.6634 - val_loss: 40.6878 - val_MinusLogProbMetric: 40.6878 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 39/1000
+2023-09-13 09:54:58.607 
+Epoch 39/1000 
+	 loss: 40.4967, MinusLogProbMetric: 40.4967, val_loss: 40.4195, val_MinusLogProbMetric: 40.4195
+
+Epoch 39: val_loss improved from 40.61153 to 40.41945, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 40.4967 - MinusLogProbMetric: 40.4967 - val_loss: 40.4195 - val_MinusLogProbMetric: 40.4195 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 40/1000
+2023-09-13 09:55:08.354 
+Epoch 40/1000 
+	 loss: 40.6214, MinusLogProbMetric: 40.6214, val_loss: 40.6479, val_MinusLogProbMetric: 40.6479
+
+Epoch 40: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.6214 - MinusLogProbMetric: 40.6214 - val_loss: 40.6479 - val_MinusLogProbMetric: 40.6479 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 41/1000
+2023-09-13 09:55:17.923 
+Epoch 41/1000 
+	 loss: 40.5308, MinusLogProbMetric: 40.5308, val_loss: 40.7935, val_MinusLogProbMetric: 40.7935
+
+Epoch 41: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.5308 - MinusLogProbMetric: 40.5308 - val_loss: 40.7935 - val_MinusLogProbMetric: 40.7935 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 42/1000
+2023-09-13 09:55:27.570 
+Epoch 42/1000 
+	 loss: 40.4921, MinusLogProbMetric: 40.4921, val_loss: 40.5277, val_MinusLogProbMetric: 40.5277
+
+Epoch 42: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.4921 - MinusLogProbMetric: 40.4921 - val_loss: 40.5277 - val_MinusLogProbMetric: 40.5277 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 43/1000
+2023-09-13 09:55:38.160 
+Epoch 43/1000 
+	 loss: 40.5754, MinusLogProbMetric: 40.5754, val_loss: 40.4852, val_MinusLogProbMetric: 40.4852
+
+Epoch 43: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.5754 - MinusLogProbMetric: 40.5754 - val_loss: 40.4852 - val_MinusLogProbMetric: 40.4852 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 44/1000
+2023-09-13 09:55:48.849 
+Epoch 44/1000 
+	 loss: 40.4349, MinusLogProbMetric: 40.4349, val_loss: 40.7774, val_MinusLogProbMetric: 40.7774
+
+Epoch 44: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.4349 - MinusLogProbMetric: 40.4349 - val_loss: 40.7774 - val_MinusLogProbMetric: 40.7774 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 45/1000
+2023-09-13 09:55:58.996 
+Epoch 45/1000 
+	 loss: 40.4421, MinusLogProbMetric: 40.4421, val_loss: 40.7839, val_MinusLogProbMetric: 40.7839
+
+Epoch 45: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.4421 - MinusLogProbMetric: 40.4421 - val_loss: 40.7839 - val_MinusLogProbMetric: 40.7839 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 46/1000
+2023-09-13 09:56:09.122 
+Epoch 46/1000 
+	 loss: 40.4265, MinusLogProbMetric: 40.4265, val_loss: 40.9829, val_MinusLogProbMetric: 40.9829
+
+Epoch 46: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.4265 - MinusLogProbMetric: 40.4265 - val_loss: 40.9829 - val_MinusLogProbMetric: 40.9829 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 47/1000
+2023-09-13 09:56:20.012 
+Epoch 47/1000 
+	 loss: 40.4276, MinusLogProbMetric: 40.4276, val_loss: 40.6031, val_MinusLogProbMetric: 40.6031
+
+Epoch 47: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.4276 - MinusLogProbMetric: 40.4276 - val_loss: 40.6031 - val_MinusLogProbMetric: 40.6031 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 48/1000
+2023-09-13 09:56:30.289 
+Epoch 48/1000 
+	 loss: 40.3885, MinusLogProbMetric: 40.3885, val_loss: 40.4772, val_MinusLogProbMetric: 40.4772
+
+Epoch 48: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.3885 - MinusLogProbMetric: 40.3885 - val_loss: 40.4772 - val_MinusLogProbMetric: 40.4772 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 49/1000
+2023-09-13 09:56:40.146 
+Epoch 49/1000 
+	 loss: 40.3914, MinusLogProbMetric: 40.3914, val_loss: 40.4806, val_MinusLogProbMetric: 40.4806
+
+Epoch 49: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.3914 - MinusLogProbMetric: 40.3914 - val_loss: 40.4806 - val_MinusLogProbMetric: 40.4806 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 50/1000
+2023-09-13 09:56:49.871 
+Epoch 50/1000 
+	 loss: 40.3856, MinusLogProbMetric: 40.3856, val_loss: 40.5888, val_MinusLogProbMetric: 40.5888
+
+Epoch 50: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.3856 - MinusLogProbMetric: 40.3856 - val_loss: 40.5888 - val_MinusLogProbMetric: 40.5888 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 51/1000
+2023-09-13 09:57:00.493 
+Epoch 51/1000 
+	 loss: 40.3986, MinusLogProbMetric: 40.3986, val_loss: 40.5717, val_MinusLogProbMetric: 40.5717
+
+Epoch 51: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.3986 - MinusLogProbMetric: 40.3986 - val_loss: 40.5717 - val_MinusLogProbMetric: 40.5717 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 52/1000
+2023-09-13 09:57:10.776 
+Epoch 52/1000 
+	 loss: 40.4394, MinusLogProbMetric: 40.4394, val_loss: 42.3052, val_MinusLogProbMetric: 42.3052
+
+Epoch 52: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.4394 - MinusLogProbMetric: 40.4394 - val_loss: 42.3052 - val_MinusLogProbMetric: 42.3052 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 53/1000
+2023-09-13 09:57:21.493 
+Epoch 53/1000 
+	 loss: 40.6916, MinusLogProbMetric: 40.6916, val_loss: 40.4837, val_MinusLogProbMetric: 40.4837
+
+Epoch 53: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.6916 - MinusLogProbMetric: 40.6916 - val_loss: 40.4837 - val_MinusLogProbMetric: 40.4837 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 54/1000
+2023-09-13 09:57:32.101 
+Epoch 54/1000 
+	 loss: 40.3707, MinusLogProbMetric: 40.3707, val_loss: 40.5301, val_MinusLogProbMetric: 40.5301
+
+Epoch 54: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.3707 - MinusLogProbMetric: 40.3707 - val_loss: 40.5301 - val_MinusLogProbMetric: 40.5301 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 55/1000
+2023-09-13 09:57:41.856 
+Epoch 55/1000 
+	 loss: 40.3447, MinusLogProbMetric: 40.3447, val_loss: 40.7031, val_MinusLogProbMetric: 40.7031
+
+Epoch 55: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.3447 - MinusLogProbMetric: 40.3447 - val_loss: 40.7031 - val_MinusLogProbMetric: 40.7031 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 56/1000
+2023-09-13 09:57:51.451 
+Epoch 56/1000 
+	 loss: 40.3364, MinusLogProbMetric: 40.3364, val_loss: 40.4672, val_MinusLogProbMetric: 40.4672
+
+Epoch 56: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.3364 - MinusLogProbMetric: 40.3364 - val_loss: 40.4672 - val_MinusLogProbMetric: 40.4672 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 57/1000
+2023-09-13 09:58:01.159 
+Epoch 57/1000 
+	 loss: 40.3096, MinusLogProbMetric: 40.3096, val_loss: 40.6166, val_MinusLogProbMetric: 40.6166
+
+Epoch 57: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.3096 - MinusLogProbMetric: 40.3096 - val_loss: 40.6166 - val_MinusLogProbMetric: 40.6166 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 58/1000
+2023-09-13 09:58:10.710 
+Epoch 58/1000 
+	 loss: 40.3200, MinusLogProbMetric: 40.3200, val_loss: 40.9780, val_MinusLogProbMetric: 40.9780
+
+Epoch 58: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.3200 - MinusLogProbMetric: 40.3200 - val_loss: 40.9780 - val_MinusLogProbMetric: 40.9780 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 59/1000
+2023-09-13 09:58:20.641 
+Epoch 59/1000 
+	 loss: 40.3348, MinusLogProbMetric: 40.3348, val_loss: 40.4632, val_MinusLogProbMetric: 40.4632
+
+Epoch 59: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.3348 - MinusLogProbMetric: 40.3348 - val_loss: 40.4632 - val_MinusLogProbMetric: 40.4632 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 60/1000
+2023-09-13 09:58:30.539 
+Epoch 60/1000 
+	 loss: 40.2667, MinusLogProbMetric: 40.2667, val_loss: 40.8139, val_MinusLogProbMetric: 40.8139
+
+Epoch 60: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.2667 - MinusLogProbMetric: 40.2667 - val_loss: 40.8139 - val_MinusLogProbMetric: 40.8139 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 61/1000
+2023-09-13 09:58:40.293 
+Epoch 61/1000 
+	 loss: 40.2622, MinusLogProbMetric: 40.2622, val_loss: 40.4984, val_MinusLogProbMetric: 40.4984
+
+Epoch 61: val_loss did not improve from 40.41945
+196/196 - 10s - loss: 40.2622 - MinusLogProbMetric: 40.2622 - val_loss: 40.4984 - val_MinusLogProbMetric: 40.4984 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 62/1000
+2023-09-13 09:58:50.982 
+Epoch 62/1000 
+	 loss: 40.2938, MinusLogProbMetric: 40.2938, val_loss: 40.8926, val_MinusLogProbMetric: 40.8926
+
+Epoch 62: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.2938 - MinusLogProbMetric: 40.2938 - val_loss: 40.8926 - val_MinusLogProbMetric: 40.8926 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 63/1000
+2023-09-13 09:59:01.820 
+Epoch 63/1000 
+	 loss: 40.3347, MinusLogProbMetric: 40.3347, val_loss: 40.6639, val_MinusLogProbMetric: 40.6639
+
+Epoch 63: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.3347 - MinusLogProbMetric: 40.3347 - val_loss: 40.6639 - val_MinusLogProbMetric: 40.6639 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 64/1000
+2023-09-13 09:59:12.618 
+Epoch 64/1000 
+	 loss: 40.3231, MinusLogProbMetric: 40.3231, val_loss: 40.4626, val_MinusLogProbMetric: 40.4626
+
+Epoch 64: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.3231 - MinusLogProbMetric: 40.3231 - val_loss: 40.4626 - val_MinusLogProbMetric: 40.4626 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 65/1000
+2023-09-13 09:59:23.382 
+Epoch 65/1000 
+	 loss: 40.2589, MinusLogProbMetric: 40.2589, val_loss: 40.6325, val_MinusLogProbMetric: 40.6325
+
+Epoch 65: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.2589 - MinusLogProbMetric: 40.2589 - val_loss: 40.6325 - val_MinusLogProbMetric: 40.6325 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 66/1000
+2023-09-13 09:59:33.969 
+Epoch 66/1000 
+	 loss: 40.6142, MinusLogProbMetric: 40.6142, val_loss: 40.4906, val_MinusLogProbMetric: 40.4906
+
+Epoch 66: val_loss did not improve from 40.41945
+196/196 - 11s - loss: 40.6142 - MinusLogProbMetric: 40.6142 - val_loss: 40.4906 - val_MinusLogProbMetric: 40.4906 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 67/1000
+2023-09-13 09:59:44.011 
+Epoch 67/1000 
+	 loss: 40.2270, MinusLogProbMetric: 40.2270, val_loss: 40.3922, val_MinusLogProbMetric: 40.3922
+
+Epoch 67: val_loss improved from 40.41945 to 40.39219, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 10s - loss: 40.2270 - MinusLogProbMetric: 40.2270 - val_loss: 40.3922 - val_MinusLogProbMetric: 40.3922 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 68/1000
+2023-09-13 09:59:54.117 
+Epoch 68/1000 
+	 loss: 40.2450, MinusLogProbMetric: 40.2450, val_loss: 40.4023, val_MinusLogProbMetric: 40.4023
+
+Epoch 68: val_loss did not improve from 40.39219
+196/196 - 10s - loss: 40.2450 - MinusLogProbMetric: 40.2450 - val_loss: 40.4023 - val_MinusLogProbMetric: 40.4023 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 69/1000
+2023-09-13 10:00:04.304 
+Epoch 69/1000 
+	 loss: 40.2597, MinusLogProbMetric: 40.2597, val_loss: 40.3978, val_MinusLogProbMetric: 40.3978
+
+Epoch 69: val_loss did not improve from 40.39219
+196/196 - 10s - loss: 40.2597 - MinusLogProbMetric: 40.2597 - val_loss: 40.3978 - val_MinusLogProbMetric: 40.3978 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 70/1000
+2023-09-13 10:00:13.739 
+Epoch 70/1000 
+	 loss: 40.2563, MinusLogProbMetric: 40.2563, val_loss: 40.5014, val_MinusLogProbMetric: 40.5014
+
+Epoch 70: val_loss did not improve from 40.39219
+196/196 - 9s - loss: 40.2563 - MinusLogProbMetric: 40.2563 - val_loss: 40.5014 - val_MinusLogProbMetric: 40.5014 - lr: 0.0010 - 9s/epoch - 48ms/step
+Epoch 71/1000
+2023-09-13 10:00:23.786 
+Epoch 71/1000 
+	 loss: 40.2759, MinusLogProbMetric: 40.2759, val_loss: 40.3786, val_MinusLogProbMetric: 40.3786
+
+Epoch 71: val_loss improved from 40.39219 to 40.37860, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 10s - loss: 40.2759 - MinusLogProbMetric: 40.2759 - val_loss: 40.3786 - val_MinusLogProbMetric: 40.3786 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 72/1000
+2023-09-13 10:00:34.671 
+Epoch 72/1000 
+	 loss: 40.2498, MinusLogProbMetric: 40.2498, val_loss: 40.3769, val_MinusLogProbMetric: 40.3769
+
+Epoch 72: val_loss improved from 40.37860 to 40.37691, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 40.2498 - MinusLogProbMetric: 40.2498 - val_loss: 40.3769 - val_MinusLogProbMetric: 40.3769 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 73/1000
+2023-09-13 10:00:45.664 
+Epoch 73/1000 
+	 loss: 40.2539, MinusLogProbMetric: 40.2539, val_loss: 40.3688, val_MinusLogProbMetric: 40.3688
+
+Epoch 73: val_loss improved from 40.37691 to 40.36883, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 40.2539 - MinusLogProbMetric: 40.2539 - val_loss: 40.3688 - val_MinusLogProbMetric: 40.3688 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 74/1000
+2023-09-13 10:00:56.665 
+Epoch 74/1000 
+	 loss: 40.2057, MinusLogProbMetric: 40.2057, val_loss: 40.3902, val_MinusLogProbMetric: 40.3902
+
+Epoch 74: val_loss did not improve from 40.36883
+196/196 - 11s - loss: 40.2057 - MinusLogProbMetric: 40.2057 - val_loss: 40.3902 - val_MinusLogProbMetric: 40.3902 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 75/1000
+2023-09-13 10:01:07.524 
+Epoch 75/1000 
+	 loss: 40.1897, MinusLogProbMetric: 40.1897, val_loss: 40.3827, val_MinusLogProbMetric: 40.3827
+
+Epoch 75: val_loss did not improve from 40.36883
+196/196 - 11s - loss: 40.1897 - MinusLogProbMetric: 40.1897 - val_loss: 40.3827 - val_MinusLogProbMetric: 40.3827 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 76/1000
+2023-09-13 10:01:18.248 
+Epoch 76/1000 
+	 loss: 40.1926, MinusLogProbMetric: 40.1926, val_loss: 40.3886, val_MinusLogProbMetric: 40.3886
+
+Epoch 76: val_loss did not improve from 40.36883
+196/196 - 11s - loss: 40.1926 - MinusLogProbMetric: 40.1926 - val_loss: 40.3886 - val_MinusLogProbMetric: 40.3886 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 77/1000
+2023-09-13 10:01:28.992 
+Epoch 77/1000 
+	 loss: 40.1979, MinusLogProbMetric: 40.1979, val_loss: 40.4012, val_MinusLogProbMetric: 40.4012
+
+Epoch 77: val_loss did not improve from 40.36883
+196/196 - 11s - loss: 40.1979 - MinusLogProbMetric: 40.1979 - val_loss: 40.4012 - val_MinusLogProbMetric: 40.4012 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 78/1000
+2023-09-13 10:01:39.483 
+Epoch 78/1000 
+	 loss: 40.1821, MinusLogProbMetric: 40.1821, val_loss: 40.3506, val_MinusLogProbMetric: 40.3506
+
+Epoch 78: val_loss improved from 40.36883 to 40.35055, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 40.1821 - MinusLogProbMetric: 40.1821 - val_loss: 40.3506 - val_MinusLogProbMetric: 40.3506 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 79/1000
+2023-09-13 10:01:49.996 
+Epoch 79/1000 
+	 loss: 40.1895, MinusLogProbMetric: 40.1895, val_loss: 40.4051, val_MinusLogProbMetric: 40.4051
+
+Epoch 79: val_loss did not improve from 40.35055
+196/196 - 10s - loss: 40.1895 - MinusLogProbMetric: 40.1895 - val_loss: 40.4051 - val_MinusLogProbMetric: 40.4051 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 80/1000
+2023-09-13 10:02:00.177 
+Epoch 80/1000 
+	 loss: 40.1659, MinusLogProbMetric: 40.1659, val_loss: 40.6051, val_MinusLogProbMetric: 40.6051
+
+Epoch 80: val_loss did not improve from 40.35055
+196/196 - 10s - loss: 40.1659 - MinusLogProbMetric: 40.1659 - val_loss: 40.6051 - val_MinusLogProbMetric: 40.6051 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 81/1000
+2023-09-13 10:02:09.621 
+Epoch 81/1000 
+	 loss: 40.1528, MinusLogProbMetric: 40.1528, val_loss: 40.3273, val_MinusLogProbMetric: 40.3273
+
+Epoch 81: val_loss improved from 40.35055 to 40.32730, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 10s - loss: 40.1528 - MinusLogProbMetric: 40.1528 - val_loss: 40.3273 - val_MinusLogProbMetric: 40.3273 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 82/1000
+2023-09-13 10:02:20.023 
+Epoch 82/1000 
+	 loss: 40.1847, MinusLogProbMetric: 40.1847, val_loss: 40.4912, val_MinusLogProbMetric: 40.4912
+
+Epoch 82: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.1847 - MinusLogProbMetric: 40.1847 - val_loss: 40.4912 - val_MinusLogProbMetric: 40.4912 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 83/1000
+2023-09-13 10:02:30.742 
+Epoch 83/1000 
+	 loss: 40.1471, MinusLogProbMetric: 40.1471, val_loss: 40.4578, val_MinusLogProbMetric: 40.4578
+
+Epoch 83: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.1471 - MinusLogProbMetric: 40.1471 - val_loss: 40.4578 - val_MinusLogProbMetric: 40.4578 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 84/1000
+2023-09-13 10:02:41.451 
+Epoch 84/1000 
+	 loss: 40.1428, MinusLogProbMetric: 40.1428, val_loss: 40.9986, val_MinusLogProbMetric: 40.9986
+
+Epoch 84: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.1428 - MinusLogProbMetric: 40.1428 - val_loss: 40.9986 - val_MinusLogProbMetric: 40.9986 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 85/1000
+2023-09-13 10:02:51.496 
+Epoch 85/1000 
+	 loss: 40.1449, MinusLogProbMetric: 40.1449, val_loss: 40.4116, val_MinusLogProbMetric: 40.4116
+
+Epoch 85: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.1449 - MinusLogProbMetric: 40.1449 - val_loss: 40.4116 - val_MinusLogProbMetric: 40.4116 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 86/1000
+2023-09-13 10:03:01.697 
+Epoch 86/1000 
+	 loss: 40.1552, MinusLogProbMetric: 40.1552, val_loss: 40.4152, val_MinusLogProbMetric: 40.4152
+
+Epoch 86: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.1552 - MinusLogProbMetric: 40.1552 - val_loss: 40.4152 - val_MinusLogProbMetric: 40.4152 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 87/1000
+2023-09-13 10:03:11.539 
+Epoch 87/1000 
+	 loss: 40.1287, MinusLogProbMetric: 40.1287, val_loss: 40.8089, val_MinusLogProbMetric: 40.8089
+
+Epoch 87: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.1287 - MinusLogProbMetric: 40.1287 - val_loss: 40.8089 - val_MinusLogProbMetric: 40.8089 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 88/1000
+2023-09-13 10:03:22.254 
+Epoch 88/1000 
+	 loss: 40.1508, MinusLogProbMetric: 40.1508, val_loss: 40.5244, val_MinusLogProbMetric: 40.5244
+
+Epoch 88: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.1508 - MinusLogProbMetric: 40.1508 - val_loss: 40.5244 - val_MinusLogProbMetric: 40.5244 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 89/1000
+2023-09-13 10:03:31.834 
+Epoch 89/1000 
+	 loss: 40.0999, MinusLogProbMetric: 40.0999, val_loss: 40.4190, val_MinusLogProbMetric: 40.4190
+
+Epoch 89: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0999 - MinusLogProbMetric: 40.0999 - val_loss: 40.4190 - val_MinusLogProbMetric: 40.4190 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 90/1000
+2023-09-13 10:03:42.549 
+Epoch 90/1000 
+	 loss: 40.1219, MinusLogProbMetric: 40.1219, val_loss: 40.5266, val_MinusLogProbMetric: 40.5266
+
+Epoch 90: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.1219 - MinusLogProbMetric: 40.1219 - val_loss: 40.5266 - val_MinusLogProbMetric: 40.5266 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 91/1000
+2023-09-13 10:03:53.261 
+Epoch 91/1000 
+	 loss: 40.1318, MinusLogProbMetric: 40.1318, val_loss: 40.4883, val_MinusLogProbMetric: 40.4883
+
+Epoch 91: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.1318 - MinusLogProbMetric: 40.1318 - val_loss: 40.4883 - val_MinusLogProbMetric: 40.4883 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 92/1000
+2023-09-13 10:04:03.825 
+Epoch 92/1000 
+	 loss: 40.1553, MinusLogProbMetric: 40.1553, val_loss: 40.7493, val_MinusLogProbMetric: 40.7493
+
+Epoch 92: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.1553 - MinusLogProbMetric: 40.1553 - val_loss: 40.7493 - val_MinusLogProbMetric: 40.7493 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 93/1000
+2023-09-13 10:04:13.309 
+Epoch 93/1000 
+	 loss: 40.1236, MinusLogProbMetric: 40.1236, val_loss: 40.6993, val_MinusLogProbMetric: 40.6993
+
+Epoch 93: val_loss did not improve from 40.32730
+196/196 - 9s - loss: 40.1236 - MinusLogProbMetric: 40.1236 - val_loss: 40.6993 - val_MinusLogProbMetric: 40.6993 - lr: 0.0010 - 9s/epoch - 48ms/step
+Epoch 94/1000
+2023-09-13 10:04:22.712 
+Epoch 94/1000 
+	 loss: 40.1118, MinusLogProbMetric: 40.1118, val_loss: 40.4172, val_MinusLogProbMetric: 40.4172
+
+Epoch 94: val_loss did not improve from 40.32730
+196/196 - 9s - loss: 40.1118 - MinusLogProbMetric: 40.1118 - val_loss: 40.4172 - val_MinusLogProbMetric: 40.4172 - lr: 0.0010 - 9s/epoch - 48ms/step
+Epoch 95/1000
+2023-09-13 10:04:33.329 
+Epoch 95/1000 
+	 loss: 40.0976, MinusLogProbMetric: 40.0976, val_loss: 40.3338, val_MinusLogProbMetric: 40.3338
+
+Epoch 95: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.0976 - MinusLogProbMetric: 40.0976 - val_loss: 40.3338 - val_MinusLogProbMetric: 40.3338 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 96/1000
+2023-09-13 10:04:44.013 
+Epoch 96/1000 
+	 loss: 40.1144, MinusLogProbMetric: 40.1144, val_loss: 40.5385, val_MinusLogProbMetric: 40.5385
+
+Epoch 96: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.1144 - MinusLogProbMetric: 40.1144 - val_loss: 40.5385 - val_MinusLogProbMetric: 40.5385 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 97/1000
+2023-09-13 10:04:53.582 
+Epoch 97/1000 
+	 loss: 40.1290, MinusLogProbMetric: 40.1290, val_loss: 40.4402, val_MinusLogProbMetric: 40.4402
+
+Epoch 97: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.1290 - MinusLogProbMetric: 40.1290 - val_loss: 40.4402 - val_MinusLogProbMetric: 40.4402 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 98/1000
+2023-09-13 10:05:03.136 
+Epoch 98/1000 
+	 loss: 40.0666, MinusLogProbMetric: 40.0666, val_loss: 40.5819, val_MinusLogProbMetric: 40.5819
+
+Epoch 98: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0666 - MinusLogProbMetric: 40.0666 - val_loss: 40.5819 - val_MinusLogProbMetric: 40.5819 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 99/1000
+2023-09-13 10:05:12.787 
+Epoch 99/1000 
+	 loss: 40.0877, MinusLogProbMetric: 40.0877, val_loss: 40.3695, val_MinusLogProbMetric: 40.3695
+
+Epoch 99: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0877 - MinusLogProbMetric: 40.0877 - val_loss: 40.3695 - val_MinusLogProbMetric: 40.3695 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 100/1000
+2023-09-13 10:05:22.373 
+Epoch 100/1000 
+	 loss: 40.0996, MinusLogProbMetric: 40.0996, val_loss: 40.4816, val_MinusLogProbMetric: 40.4816
+
+Epoch 100: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0996 - MinusLogProbMetric: 40.0996 - val_loss: 40.4816 - val_MinusLogProbMetric: 40.4816 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 101/1000
+2023-09-13 10:05:32.508 
+Epoch 101/1000 
+	 loss: 40.0805, MinusLogProbMetric: 40.0805, val_loss: 40.5205, val_MinusLogProbMetric: 40.5205
+
+Epoch 101: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0805 - MinusLogProbMetric: 40.0805 - val_loss: 40.5205 - val_MinusLogProbMetric: 40.5205 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 102/1000
+2023-09-13 10:05:43.270 
+Epoch 102/1000 
+	 loss: 40.0477, MinusLogProbMetric: 40.0477, val_loss: 40.4644, val_MinusLogProbMetric: 40.4644
+
+Epoch 102: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.0477 - MinusLogProbMetric: 40.0477 - val_loss: 40.4644 - val_MinusLogProbMetric: 40.4644 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 103/1000
+2023-09-13 10:05:53.478 
+Epoch 103/1000 
+	 loss: 40.0828, MinusLogProbMetric: 40.0828, val_loss: 40.8061, val_MinusLogProbMetric: 40.8061
+
+Epoch 103: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0828 - MinusLogProbMetric: 40.0828 - val_loss: 40.8061 - val_MinusLogProbMetric: 40.8061 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 104/1000
+2023-09-13 10:06:03.447 
+Epoch 104/1000 
+	 loss: 40.0986, MinusLogProbMetric: 40.0986, val_loss: 40.3815, val_MinusLogProbMetric: 40.3815
+
+Epoch 104: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0986 - MinusLogProbMetric: 40.0986 - val_loss: 40.3815 - val_MinusLogProbMetric: 40.3815 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 105/1000
+2023-09-13 10:06:12.955 
+Epoch 105/1000 
+	 loss: 40.0897, MinusLogProbMetric: 40.0897, val_loss: 40.3921, val_MinusLogProbMetric: 40.3921
+
+Epoch 105: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0897 - MinusLogProbMetric: 40.0897 - val_loss: 40.3921 - val_MinusLogProbMetric: 40.3921 - lr: 0.0010 - 10s/epoch - 48ms/step
+Epoch 106/1000
+2023-09-13 10:06:22.502 
+Epoch 106/1000 
+	 loss: 40.0183, MinusLogProbMetric: 40.0183, val_loss: 40.4588, val_MinusLogProbMetric: 40.4588
+
+Epoch 106: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0183 - MinusLogProbMetric: 40.0183 - val_loss: 40.4588 - val_MinusLogProbMetric: 40.4588 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 107/1000
+2023-09-13 10:06:32.064 
+Epoch 107/1000 
+	 loss: 40.0677, MinusLogProbMetric: 40.0677, val_loss: 41.1210, val_MinusLogProbMetric: 41.1210
+
+Epoch 107: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0677 - MinusLogProbMetric: 40.0677 - val_loss: 41.1210 - val_MinusLogProbMetric: 41.1210 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 108/1000
+2023-09-13 10:06:42.690 
+Epoch 108/1000 
+	 loss: 40.0652, MinusLogProbMetric: 40.0652, val_loss: 40.4546, val_MinusLogProbMetric: 40.4546
+
+Epoch 108: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.0652 - MinusLogProbMetric: 40.0652 - val_loss: 40.4546 - val_MinusLogProbMetric: 40.4546 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 109/1000
+2023-09-13 10:06:53.554 
+Epoch 109/1000 
+	 loss: 40.0575, MinusLogProbMetric: 40.0575, val_loss: 40.3895, val_MinusLogProbMetric: 40.3895
+
+Epoch 109: val_loss did not improve from 40.32730
+196/196 - 11s - loss: 40.0575 - MinusLogProbMetric: 40.0575 - val_loss: 40.3895 - val_MinusLogProbMetric: 40.3895 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 110/1000
+2023-09-13 10:07:03.146 
+Epoch 110/1000 
+	 loss: 40.0108, MinusLogProbMetric: 40.0108, val_loss: 40.3689, val_MinusLogProbMetric: 40.3689
+
+Epoch 110: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0108 - MinusLogProbMetric: 40.0108 - val_loss: 40.3689 - val_MinusLogProbMetric: 40.3689 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 111/1000
+2023-09-13 10:07:12.738 
+Epoch 111/1000 
+	 loss: 40.0140, MinusLogProbMetric: 40.0140, val_loss: 40.4521, val_MinusLogProbMetric: 40.4521
+
+Epoch 111: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0140 - MinusLogProbMetric: 40.0140 - val_loss: 40.4521 - val_MinusLogProbMetric: 40.4521 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 112/1000
+2023-09-13 10:07:22.561 
+Epoch 112/1000 
+	 loss: 40.0191, MinusLogProbMetric: 40.0191, val_loss: 40.3890, val_MinusLogProbMetric: 40.3890
+
+Epoch 112: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0191 - MinusLogProbMetric: 40.0191 - val_loss: 40.3890 - val_MinusLogProbMetric: 40.3890 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 113/1000
+2023-09-13 10:07:32.588 
+Epoch 113/1000 
+	 loss: 40.0339, MinusLogProbMetric: 40.0339, val_loss: 40.3624, val_MinusLogProbMetric: 40.3624
+
+Epoch 113: val_loss did not improve from 40.32730
+196/196 - 10s - loss: 40.0339 - MinusLogProbMetric: 40.0339 - val_loss: 40.3624 - val_MinusLogProbMetric: 40.3624 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 114/1000
+2023-09-13 10:07:42.058 
+Epoch 114/1000 
+	 loss: 40.0195, MinusLogProbMetric: 40.0195, val_loss: 40.3454, val_MinusLogProbMetric: 40.3454
+
+Epoch 114: val_loss did not improve from 40.32730
+196/196 - 9s - loss: 40.0195 - MinusLogProbMetric: 40.0195 - val_loss: 40.3454 - val_MinusLogProbMetric: 40.3454 - lr: 0.0010 - 9s/epoch - 48ms/step
+Epoch 115/1000
+2023-09-13 10:07:51.566 
+Epoch 115/1000 
+	 loss: 40.0208, MinusLogProbMetric: 40.0208, val_loss: 40.3229, val_MinusLogProbMetric: 40.3229
+
+Epoch 115: val_loss improved from 40.32730 to 40.32286, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 10s - loss: 40.0208 - MinusLogProbMetric: 40.0208 - val_loss: 40.3229 - val_MinusLogProbMetric: 40.3229 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 116/1000
+2023-09-13 10:08:01.230 
+Epoch 116/1000 
+	 loss: 40.0123, MinusLogProbMetric: 40.0123, val_loss: 40.4839, val_MinusLogProbMetric: 40.4839
+
+Epoch 116: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 40.0123 - MinusLogProbMetric: 40.0123 - val_loss: 40.4839 - val_MinusLogProbMetric: 40.4839 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 117/1000
+2023-09-13 10:08:11.027 
+Epoch 117/1000 
+	 loss: 40.0003, MinusLogProbMetric: 40.0003, val_loss: 40.3776, val_MinusLogProbMetric: 40.3776
+
+Epoch 117: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 40.0003 - MinusLogProbMetric: 40.0003 - val_loss: 40.3776 - val_MinusLogProbMetric: 40.3776 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 118/1000
+2023-09-13 10:08:21.149 
+Epoch 118/1000 
+	 loss: 39.9941, MinusLogProbMetric: 39.9941, val_loss: 40.5456, val_MinusLogProbMetric: 40.5456
+
+Epoch 118: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9941 - MinusLogProbMetric: 39.9941 - val_loss: 40.5456 - val_MinusLogProbMetric: 40.5456 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 119/1000
+2023-09-13 10:08:31.724 
+Epoch 119/1000 
+	 loss: 39.9778, MinusLogProbMetric: 39.9778, val_loss: 40.6814, val_MinusLogProbMetric: 40.6814
+
+Epoch 119: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.9778 - MinusLogProbMetric: 39.9778 - val_loss: 40.6814 - val_MinusLogProbMetric: 40.6814 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 120/1000
+2023-09-13 10:08:42.238 
+Epoch 120/1000 
+	 loss: 39.9747, MinusLogProbMetric: 39.9747, val_loss: 40.4952, val_MinusLogProbMetric: 40.4952
+
+Epoch 120: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.9747 - MinusLogProbMetric: 39.9747 - val_loss: 40.4952 - val_MinusLogProbMetric: 40.4952 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 121/1000
+2023-09-13 10:08:52.214 
+Epoch 121/1000 
+	 loss: 40.0141, MinusLogProbMetric: 40.0141, val_loss: 40.4089, val_MinusLogProbMetric: 40.4089
+
+Epoch 121: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 40.0141 - MinusLogProbMetric: 40.0141 - val_loss: 40.4089 - val_MinusLogProbMetric: 40.4089 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 122/1000
+2023-09-13 10:09:02.792 
+Epoch 122/1000 
+	 loss: 40.0180, MinusLogProbMetric: 40.0180, val_loss: 40.5026, val_MinusLogProbMetric: 40.5026
+
+Epoch 122: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 40.0180 - MinusLogProbMetric: 40.0180 - val_loss: 40.5026 - val_MinusLogProbMetric: 40.5026 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 123/1000
+2023-09-13 10:09:13.467 
+Epoch 123/1000 
+	 loss: 40.0000, MinusLogProbMetric: 40.0000, val_loss: 40.4474, val_MinusLogProbMetric: 40.4474
+
+Epoch 123: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 40.0000 - MinusLogProbMetric: 40.0000 - val_loss: 40.4474 - val_MinusLogProbMetric: 40.4474 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 124/1000
+2023-09-13 10:09:24.471 
+Epoch 124/1000 
+	 loss: 39.9987, MinusLogProbMetric: 39.9987, val_loss: 40.7156, val_MinusLogProbMetric: 40.7156
+
+Epoch 124: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.9987 - MinusLogProbMetric: 39.9987 - val_loss: 40.7156 - val_MinusLogProbMetric: 40.7156 - lr: 0.0010 - 11s/epoch - 56ms/step
+Epoch 125/1000
+2023-09-13 10:09:33.887 
+Epoch 125/1000 
+	 loss: 39.9848, MinusLogProbMetric: 39.9848, val_loss: 40.4309, val_MinusLogProbMetric: 40.4309
+
+Epoch 125: val_loss did not improve from 40.32286
+196/196 - 9s - loss: 39.9848 - MinusLogProbMetric: 39.9848 - val_loss: 40.4309 - val_MinusLogProbMetric: 40.4309 - lr: 0.0010 - 9s/epoch - 48ms/step
+Epoch 126/1000
+2023-09-13 10:09:43.599 
+Epoch 126/1000 
+	 loss: 39.9617, MinusLogProbMetric: 39.9617, val_loss: 40.4249, val_MinusLogProbMetric: 40.4249
+
+Epoch 126: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9617 - MinusLogProbMetric: 39.9617 - val_loss: 40.4249 - val_MinusLogProbMetric: 40.4249 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 127/1000
+2023-09-13 10:09:54.184 
+Epoch 127/1000 
+	 loss: 39.9706, MinusLogProbMetric: 39.9706, val_loss: 40.5901, val_MinusLogProbMetric: 40.5901
+
+Epoch 127: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.9706 - MinusLogProbMetric: 39.9706 - val_loss: 40.5901 - val_MinusLogProbMetric: 40.5901 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 128/1000
+2023-09-13 10:10:03.846 
+Epoch 128/1000 
+	 loss: 39.9595, MinusLogProbMetric: 39.9595, val_loss: 40.4675, val_MinusLogProbMetric: 40.4675
+
+Epoch 128: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9595 - MinusLogProbMetric: 39.9595 - val_loss: 40.4675 - val_MinusLogProbMetric: 40.4675 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 129/1000
+2023-09-13 10:10:14.047 
+Epoch 129/1000 
+	 loss: 40.0120, MinusLogProbMetric: 40.0120, val_loss: 40.4740, val_MinusLogProbMetric: 40.4740
+
+Epoch 129: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 40.0120 - MinusLogProbMetric: 40.0120 - val_loss: 40.4740 - val_MinusLogProbMetric: 40.4740 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 130/1000
+2023-09-13 10:10:24.390 
+Epoch 130/1000 
+	 loss: 39.9911, MinusLogProbMetric: 39.9911, val_loss: 40.4323, val_MinusLogProbMetric: 40.4323
+
+Epoch 130: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9911 - MinusLogProbMetric: 39.9911 - val_loss: 40.4323 - val_MinusLogProbMetric: 40.4323 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 131/1000
+2023-09-13 10:10:35.212 
+Epoch 131/1000 
+	 loss: 39.9807, MinusLogProbMetric: 39.9807, val_loss: 40.4471, val_MinusLogProbMetric: 40.4471
+
+Epoch 131: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.9807 - MinusLogProbMetric: 39.9807 - val_loss: 40.4471 - val_MinusLogProbMetric: 40.4471 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 132/1000
+2023-09-13 10:10:45.395 
+Epoch 132/1000 
+	 loss: 39.9587, MinusLogProbMetric: 39.9587, val_loss: 40.4441, val_MinusLogProbMetric: 40.4441
+
+Epoch 132: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9587 - MinusLogProbMetric: 39.9587 - val_loss: 40.4441 - val_MinusLogProbMetric: 40.4441 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 133/1000
+2023-09-13 10:10:55.812 
+Epoch 133/1000 
+	 loss: 39.9406, MinusLogProbMetric: 39.9406, val_loss: 40.5176, val_MinusLogProbMetric: 40.5176
+
+Epoch 133: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9406 - MinusLogProbMetric: 39.9406 - val_loss: 40.5176 - val_MinusLogProbMetric: 40.5176 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 134/1000
+2023-09-13 10:11:05.693 
+Epoch 134/1000 
+	 loss: 39.9702, MinusLogProbMetric: 39.9702, val_loss: 40.5297, val_MinusLogProbMetric: 40.5297
+
+Epoch 134: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9702 - MinusLogProbMetric: 39.9702 - val_loss: 40.5297 - val_MinusLogProbMetric: 40.5297 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 135/1000
+2023-09-13 10:11:16.062 
+Epoch 135/1000 
+	 loss: 39.9445, MinusLogProbMetric: 39.9445, val_loss: 40.4035, val_MinusLogProbMetric: 40.4035
+
+Epoch 135: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9445 - MinusLogProbMetric: 39.9445 - val_loss: 40.4035 - val_MinusLogProbMetric: 40.4035 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 136/1000
+2023-09-13 10:11:25.558 
+Epoch 136/1000 
+	 loss: 39.9264, MinusLogProbMetric: 39.9264, val_loss: 40.3861, val_MinusLogProbMetric: 40.3861
+
+Epoch 136: val_loss did not improve from 40.32286
+196/196 - 9s - loss: 39.9264 - MinusLogProbMetric: 39.9264 - val_loss: 40.3861 - val_MinusLogProbMetric: 40.3861 - lr: 0.0010 - 9s/epoch - 48ms/step
+Epoch 137/1000
+2023-09-13 10:11:36.361 
+Epoch 137/1000 
+	 loss: 39.9500, MinusLogProbMetric: 39.9500, val_loss: 40.9789, val_MinusLogProbMetric: 40.9789
+
+Epoch 137: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.9500 - MinusLogProbMetric: 39.9500 - val_loss: 40.9789 - val_MinusLogProbMetric: 40.9789 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 138/1000
+2023-09-13 10:11:46.882 
+Epoch 138/1000 
+	 loss: 39.9724, MinusLogProbMetric: 39.9724, val_loss: 40.4414, val_MinusLogProbMetric: 40.4414
+
+Epoch 138: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.9724 - MinusLogProbMetric: 39.9724 - val_loss: 40.4414 - val_MinusLogProbMetric: 40.4414 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 139/1000
+2023-09-13 10:11:57.367 
+Epoch 139/1000 
+	 loss: 39.9245, MinusLogProbMetric: 39.9245, val_loss: 40.3322, val_MinusLogProbMetric: 40.3322
+
+Epoch 139: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9245 - MinusLogProbMetric: 39.9245 - val_loss: 40.3322 - val_MinusLogProbMetric: 40.3322 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 140/1000
+2023-09-13 10:12:07.870 
+Epoch 140/1000 
+	 loss: 39.9193, MinusLogProbMetric: 39.9193, val_loss: 40.3996, val_MinusLogProbMetric: 40.3996
+
+Epoch 140: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9193 - MinusLogProbMetric: 39.9193 - val_loss: 40.3996 - val_MinusLogProbMetric: 40.3996 - lr: 0.0010 - 10s/epoch - 54ms/step
+Epoch 141/1000
+2023-09-13 10:12:17.694 
+Epoch 141/1000 
+	 loss: 39.9514, MinusLogProbMetric: 39.9514, val_loss: 40.4880, val_MinusLogProbMetric: 40.4880
+
+Epoch 141: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9514 - MinusLogProbMetric: 39.9514 - val_loss: 40.4880 - val_MinusLogProbMetric: 40.4880 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 142/1000
+2023-09-13 10:12:28.184 
+Epoch 142/1000 
+	 loss: 39.9151, MinusLogProbMetric: 39.9151, val_loss: 40.5221, val_MinusLogProbMetric: 40.5221
+
+Epoch 142: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9151 - MinusLogProbMetric: 39.9151 - val_loss: 40.5221 - val_MinusLogProbMetric: 40.5221 - lr: 0.0010 - 10s/epoch - 54ms/step
+Epoch 143/1000
+2023-09-13 10:12:37.597 
+Epoch 143/1000 
+	 loss: 39.9274, MinusLogProbMetric: 39.9274, val_loss: 40.4669, val_MinusLogProbMetric: 40.4669
+
+Epoch 143: val_loss did not improve from 40.32286
+196/196 - 9s - loss: 39.9274 - MinusLogProbMetric: 39.9274 - val_loss: 40.4669 - val_MinusLogProbMetric: 40.4669 - lr: 0.0010 - 9s/epoch - 48ms/step
+Epoch 144/1000
+2023-09-13 10:12:47.998 
+Epoch 144/1000 
+	 loss: 39.9170, MinusLogProbMetric: 39.9170, val_loss: 40.4284, val_MinusLogProbMetric: 40.4284
+
+Epoch 144: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9170 - MinusLogProbMetric: 39.9170 - val_loss: 40.4284 - val_MinusLogProbMetric: 40.4284 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 145/1000
+2023-09-13 10:12:58.488 
+Epoch 145/1000 
+	 loss: 39.9140, MinusLogProbMetric: 39.9140, val_loss: 40.3589, val_MinusLogProbMetric: 40.3589
+
+Epoch 145: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9140 - MinusLogProbMetric: 39.9140 - val_loss: 40.3589 - val_MinusLogProbMetric: 40.3589 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 146/1000
+2023-09-13 10:13:08.876 
+Epoch 146/1000 
+	 loss: 39.8972, MinusLogProbMetric: 39.8972, val_loss: 40.5904, val_MinusLogProbMetric: 40.5904
+
+Epoch 146: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8972 - MinusLogProbMetric: 39.8972 - val_loss: 40.5904 - val_MinusLogProbMetric: 40.5904 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 147/1000
+2023-09-13 10:13:18.877 
+Epoch 147/1000 
+	 loss: 39.9023, MinusLogProbMetric: 39.9023, val_loss: 40.4146, val_MinusLogProbMetric: 40.4146
+
+Epoch 147: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9023 - MinusLogProbMetric: 39.9023 - val_loss: 40.4146 - val_MinusLogProbMetric: 40.4146 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 148/1000
+2023-09-13 10:13:29.114 
+Epoch 148/1000 
+	 loss: 39.8816, MinusLogProbMetric: 39.8816, val_loss: 40.3561, val_MinusLogProbMetric: 40.3561
+
+Epoch 148: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8816 - MinusLogProbMetric: 39.8816 - val_loss: 40.3561 - val_MinusLogProbMetric: 40.3561 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 149/1000
+2023-09-13 10:13:38.805 
+Epoch 149/1000 
+	 loss: 39.9064, MinusLogProbMetric: 39.9064, val_loss: 40.5546, val_MinusLogProbMetric: 40.5546
+
+Epoch 149: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9064 - MinusLogProbMetric: 39.9064 - val_loss: 40.5546 - val_MinusLogProbMetric: 40.5546 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 150/1000
+2023-09-13 10:13:49.158 
+Epoch 150/1000 
+	 loss: 39.9086, MinusLogProbMetric: 39.9086, val_loss: 40.4194, val_MinusLogProbMetric: 40.4194
+
+Epoch 150: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9086 - MinusLogProbMetric: 39.9086 - val_loss: 40.4194 - val_MinusLogProbMetric: 40.4194 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 151/1000
+2023-09-13 10:13:58.879 
+Epoch 151/1000 
+	 loss: 39.8719, MinusLogProbMetric: 39.8719, val_loss: 40.4015, val_MinusLogProbMetric: 40.4015
+
+Epoch 151: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8719 - MinusLogProbMetric: 39.8719 - val_loss: 40.4015 - val_MinusLogProbMetric: 40.4015 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 152/1000
+2023-09-13 10:14:08.596 
+Epoch 152/1000 
+	 loss: 39.8919, MinusLogProbMetric: 39.8919, val_loss: 40.3686, val_MinusLogProbMetric: 40.3686
+
+Epoch 152: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8919 - MinusLogProbMetric: 39.8919 - val_loss: 40.3686 - val_MinusLogProbMetric: 40.3686 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 153/1000
+2023-09-13 10:14:19.293 
+Epoch 153/1000 
+	 loss: 39.9356, MinusLogProbMetric: 39.9356, val_loss: 40.6897, val_MinusLogProbMetric: 40.6897
+
+Epoch 153: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.9356 - MinusLogProbMetric: 39.9356 - val_loss: 40.6897 - val_MinusLogProbMetric: 40.6897 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 154/1000
+2023-09-13 10:14:29.075 
+Epoch 154/1000 
+	 loss: 39.8796, MinusLogProbMetric: 39.8796, val_loss: 40.3802, val_MinusLogProbMetric: 40.3802
+
+Epoch 154: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8796 - MinusLogProbMetric: 39.8796 - val_loss: 40.3802 - val_MinusLogProbMetric: 40.3802 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 155/1000
+2023-09-13 10:14:39.465 
+Epoch 155/1000 
+	 loss: 39.8668, MinusLogProbMetric: 39.8668, val_loss: 40.6563, val_MinusLogProbMetric: 40.6563
+
+Epoch 155: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8668 - MinusLogProbMetric: 39.8668 - val_loss: 40.6563 - val_MinusLogProbMetric: 40.6563 - lr: 0.0010 - 10s/epoch - 53ms/step
+Epoch 156/1000
+2023-09-13 10:14:49.338 
+Epoch 156/1000 
+	 loss: 39.9081, MinusLogProbMetric: 39.9081, val_loss: 40.4695, val_MinusLogProbMetric: 40.4695
+
+Epoch 156: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.9081 - MinusLogProbMetric: 39.9081 - val_loss: 40.4695 - val_MinusLogProbMetric: 40.4695 - lr: 0.0010 - 10s/epoch - 50ms/step
+Epoch 157/1000
+2023-09-13 10:14:59.269 
+Epoch 157/1000 
+	 loss: 39.8646, MinusLogProbMetric: 39.8646, val_loss: 40.3736, val_MinusLogProbMetric: 40.3736
+
+Epoch 157: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8646 - MinusLogProbMetric: 39.8646 - val_loss: 40.3736 - val_MinusLogProbMetric: 40.3736 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 158/1000
+2023-09-13 10:15:09.413 
+Epoch 158/1000 
+	 loss: 39.8469, MinusLogProbMetric: 39.8469, val_loss: 40.5358, val_MinusLogProbMetric: 40.5358
+
+Epoch 158: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8469 - MinusLogProbMetric: 39.8469 - val_loss: 40.5358 - val_MinusLogProbMetric: 40.5358 - lr: 0.0010 - 10s/epoch - 52ms/step
+Epoch 159/1000
+2023-09-13 10:15:20.100 
+Epoch 159/1000 
+	 loss: 39.8613, MinusLogProbMetric: 39.8613, val_loss: 40.4882, val_MinusLogProbMetric: 40.4882
+
+Epoch 159: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.8613 - MinusLogProbMetric: 39.8613 - val_loss: 40.4882 - val_MinusLogProbMetric: 40.4882 - lr: 0.0010 - 11s/epoch - 55ms/step
+Epoch 160/1000
+2023-09-13 10:15:30.598 
+Epoch 160/1000 
+	 loss: 39.8764, MinusLogProbMetric: 39.8764, val_loss: 40.4187, val_MinusLogProbMetric: 40.4187
+
+Epoch 160: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8764 - MinusLogProbMetric: 39.8764 - val_loss: 40.4187 - val_MinusLogProbMetric: 40.4187 - lr: 0.0010 - 10s/epoch - 54ms/step
+Epoch 161/1000
+2023-09-13 10:15:40.687 
+Epoch 161/1000 
+	 loss: 39.8502, MinusLogProbMetric: 39.8502, val_loss: 40.4316, val_MinusLogProbMetric: 40.4316
+
+Epoch 161: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8502 - MinusLogProbMetric: 39.8502 - val_loss: 40.4316 - val_MinusLogProbMetric: 40.4316 - lr: 0.0010 - 10s/epoch - 51ms/step
+Epoch 162/1000
+2023-09-13 10:15:50.358 
+Epoch 162/1000 
+	 loss: 39.8487, MinusLogProbMetric: 39.8487, val_loss: 40.4185, val_MinusLogProbMetric: 40.4185
+
+Epoch 162: val_loss did not improve from 40.32286
+196/196 - 10s - loss: 39.8487 - MinusLogProbMetric: 39.8487 - val_loss: 40.4185 - val_MinusLogProbMetric: 40.4185 - lr: 0.0010 - 10s/epoch - 49ms/step
+Epoch 163/1000
+2023-09-13 10:15:59.266 
+Epoch 163/1000 
+	 loss: 39.8892, MinusLogProbMetric: 39.8892, val_loss: 40.4452, val_MinusLogProbMetric: 40.4452
+
+Epoch 163: val_loss did not improve from 40.32286
+196/196 - 9s - loss: 39.8892 - MinusLogProbMetric: 39.8892 - val_loss: 40.4452 - val_MinusLogProbMetric: 40.4452 - lr: 0.0010 - 9s/epoch - 45ms/step
+Epoch 164/1000
+2023-09-13 10:16:09.798 
+Epoch 164/1000 
+	 loss: 39.8543, MinusLogProbMetric: 39.8543, val_loss: 40.4185, val_MinusLogProbMetric: 40.4185
+
+Epoch 164: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.8543 - MinusLogProbMetric: 39.8543 - val_loss: 40.4185 - val_MinusLogProbMetric: 40.4185 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 165/1000
+2023-09-13 10:16:20.450 
+Epoch 165/1000 
+	 loss: 39.8247, MinusLogProbMetric: 39.8247, val_loss: 40.3944, val_MinusLogProbMetric: 40.3944
+
+Epoch 165: val_loss did not improve from 40.32286
+196/196 - 11s - loss: 39.8247 - MinusLogProbMetric: 39.8247 - val_loss: 40.3944 - val_MinusLogProbMetric: 40.3944 - lr: 0.0010 - 11s/epoch - 54ms/step
+Epoch 166/1000
+2023-09-13 10:16:30.766 
+Epoch 166/1000 
+	 loss: 39.6534, MinusLogProbMetric: 39.6534, val_loss: 40.3075, val_MinusLogProbMetric: 40.3075
+
+Epoch 166: val_loss improved from 40.32286 to 40.30749, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 10s - loss: 39.6534 - MinusLogProbMetric: 39.6534 - val_loss: 40.3075 - val_MinusLogProbMetric: 40.3075 - lr: 5.0000e-04 - 10s/epoch - 53ms/step
+Epoch 167/1000
+2023-09-13 10:16:39.767 
+Epoch 167/1000 
+	 loss: 39.6482, MinusLogProbMetric: 39.6482, val_loss: 40.3129, val_MinusLogProbMetric: 40.3129
+
+Epoch 167: val_loss did not improve from 40.30749
+196/196 - 9s - loss: 39.6482 - MinusLogProbMetric: 39.6482 - val_loss: 40.3129 - val_MinusLogProbMetric: 40.3129 - lr: 5.0000e-04 - 9s/epoch - 45ms/step
+Epoch 168/1000
+2023-09-13 10:16:50.257 
+Epoch 168/1000 
+	 loss: 39.6469, MinusLogProbMetric: 39.6469, val_loss: 40.3019, val_MinusLogProbMetric: 40.3019
+
+Epoch 168: val_loss improved from 40.30749 to 40.30194, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 39.6469 - MinusLogProbMetric: 39.6469 - val_loss: 40.3019 - val_MinusLogProbMetric: 40.3019 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 169/1000
+2023-09-13 10:17:00.843 
+Epoch 169/1000 
+	 loss: 39.6416, MinusLogProbMetric: 39.6416, val_loss: 40.3468, val_MinusLogProbMetric: 40.3468
+
+Epoch 169: val_loss did not improve from 40.30194
+196/196 - 10s - loss: 39.6416 - MinusLogProbMetric: 39.6416 - val_loss: 40.3468 - val_MinusLogProbMetric: 40.3468 - lr: 5.0000e-04 - 10s/epoch - 53ms/step
+Epoch 170/1000
+2023-09-13 10:17:10.490 
+Epoch 170/1000 
+	 loss: 39.6504, MinusLogProbMetric: 39.6504, val_loss: 40.3156, val_MinusLogProbMetric: 40.3156
+
+Epoch 170: val_loss did not improve from 40.30194
+196/196 - 10s - loss: 39.6504 - MinusLogProbMetric: 39.6504 - val_loss: 40.3156 - val_MinusLogProbMetric: 40.3156 - lr: 5.0000e-04 - 10s/epoch - 49ms/step
+Epoch 171/1000
+2023-09-13 10:17:20.815 
+Epoch 171/1000 
+	 loss: 39.6451, MinusLogProbMetric: 39.6451, val_loss: 40.3663, val_MinusLogProbMetric: 40.3663
+
+Epoch 171: val_loss did not improve from 40.30194
+196/196 - 10s - loss: 39.6451 - MinusLogProbMetric: 39.6451 - val_loss: 40.3663 - val_MinusLogProbMetric: 40.3663 - lr: 5.0000e-04 - 10s/epoch - 53ms/step
+Epoch 172/1000
+2023-09-13 10:17:31.291 
+Epoch 172/1000 
+	 loss: 39.6314, MinusLogProbMetric: 39.6314, val_loss: 40.3895, val_MinusLogProbMetric: 40.3895
+
+Epoch 172: val_loss did not improve from 40.30194
+196/196 - 10s - loss: 39.6314 - MinusLogProbMetric: 39.6314 - val_loss: 40.3895 - val_MinusLogProbMetric: 40.3895 - lr: 5.0000e-04 - 10s/epoch - 53ms/step
+Epoch 173/1000
+2023-09-13 10:17:41.516 
+Epoch 173/1000 
+	 loss: 39.6371, MinusLogProbMetric: 39.6371, val_loss: 40.3725, val_MinusLogProbMetric: 40.3725
+
+Epoch 173: val_loss did not improve from 40.30194
+196/196 - 10s - loss: 39.6371 - MinusLogProbMetric: 39.6371 - val_loss: 40.3725 - val_MinusLogProbMetric: 40.3725 - lr: 5.0000e-04 - 10s/epoch - 52ms/step
+Epoch 174/1000
+2023-09-13 10:17:51.373 
+Epoch 174/1000 
+	 loss: 39.6283, MinusLogProbMetric: 39.6283, val_loss: 40.3294, val_MinusLogProbMetric: 40.3294
+
+Epoch 174: val_loss did not improve from 40.30194
+196/196 - 10s - loss: 39.6283 - MinusLogProbMetric: 39.6283 - val_loss: 40.3294 - val_MinusLogProbMetric: 40.3294 - lr: 5.0000e-04 - 10s/epoch - 50ms/step
+Epoch 175/1000
+2023-09-13 10:18:01.373 
+Epoch 175/1000 
+	 loss: 39.6362, MinusLogProbMetric: 39.6362, val_loss: 40.3605, val_MinusLogProbMetric: 40.3605
+
+Epoch 175: val_loss did not improve from 40.30194
+196/196 - 10s - loss: 39.6362 - MinusLogProbMetric: 39.6362 - val_loss: 40.3605 - val_MinusLogProbMetric: 40.3605 - lr: 5.0000e-04 - 10s/epoch - 51ms/step
+Epoch 176/1000
+2023-09-13 10:18:11.831 
+Epoch 176/1000 
+	 loss: 39.6317, MinusLogProbMetric: 39.6317, val_loss: 40.3017, val_MinusLogProbMetric: 40.3017
+
+Epoch 176: val_loss improved from 40.30194 to 40.30168, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_208/weights/best_weights.h5
+196/196 - 11s - loss: 39.6317 - MinusLogProbMetric: 39.6317 - val_loss: 40.3017 - val_MinusLogProbMetric: 40.3017 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 177/1000
+2023-09-13 10:18:22.647 
+Epoch 177/1000 
+	 loss: 39.6232, MinusLogProbMetric: 39.6232, val_loss: 40.3758, val_MinusLogProbMetric: 40.3758
+
+Epoch 177: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.6232 - MinusLogProbMetric: 39.6232 - val_loss: 40.3758 - val_MinusLogProbMetric: 40.3758 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 178/1000
+2023-09-13 10:18:33.047 
+Epoch 178/1000 
+	 loss: 39.6180, MinusLogProbMetric: 39.6180, val_loss: 40.3202, val_MinusLogProbMetric: 40.3202
+
+Epoch 178: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6180 - MinusLogProbMetric: 39.6180 - val_loss: 40.3202 - val_MinusLogProbMetric: 40.3202 - lr: 5.0000e-04 - 10s/epoch - 53ms/step
+Epoch 179/1000
+2023-09-13 10:18:42.654 
+Epoch 179/1000 
+	 loss: 39.6193, MinusLogProbMetric: 39.6193, val_loss: 40.4080, val_MinusLogProbMetric: 40.4080
+
+Epoch 179: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6193 - MinusLogProbMetric: 39.6193 - val_loss: 40.4080 - val_MinusLogProbMetric: 40.4080 - lr: 5.0000e-04 - 10s/epoch - 49ms/step
+Epoch 180/1000
+2023-09-13 10:18:52.977 
+Epoch 180/1000 
+	 loss: 39.6221, MinusLogProbMetric: 39.6221, val_loss: 40.3540, val_MinusLogProbMetric: 40.3540
+
+Epoch 180: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6221 - MinusLogProbMetric: 39.6221 - val_loss: 40.3540 - val_MinusLogProbMetric: 40.3540 - lr: 5.0000e-04 - 10s/epoch - 53ms/step
+Epoch 181/1000
+2023-09-13 10:19:03.718 
+Epoch 181/1000 
+	 loss: 39.6296, MinusLogProbMetric: 39.6296, val_loss: 40.3458, val_MinusLogProbMetric: 40.3458
+
+Epoch 181: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.6296 - MinusLogProbMetric: 39.6296 - val_loss: 40.3458 - val_MinusLogProbMetric: 40.3458 - lr: 5.0000e-04 - 11s/epoch - 55ms/step
+Epoch 182/1000
+2023-09-13 10:19:13.918 
+Epoch 182/1000 
+	 loss: 39.6238, MinusLogProbMetric: 39.6238, val_loss: 40.3465, val_MinusLogProbMetric: 40.3465
+
+Epoch 182: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6238 - MinusLogProbMetric: 39.6238 - val_loss: 40.3465 - val_MinusLogProbMetric: 40.3465 - lr: 5.0000e-04 - 10s/epoch - 52ms/step
+Epoch 183/1000
+2023-09-13 10:19:23.790 
+Epoch 183/1000 
+	 loss: 39.6105, MinusLogProbMetric: 39.6105, val_loss: 40.3817, val_MinusLogProbMetric: 40.3817
+
+Epoch 183: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6105 - MinusLogProbMetric: 39.6105 - val_loss: 40.3817 - val_MinusLogProbMetric: 40.3817 - lr: 5.0000e-04 - 10s/epoch - 50ms/step
+Epoch 184/1000
+2023-09-13 10:19:34.374 
+Epoch 184/1000 
+	 loss: 39.6198, MinusLogProbMetric: 39.6198, val_loss: 40.3293, val_MinusLogProbMetric: 40.3293
+
+Epoch 184: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.6198 - MinusLogProbMetric: 39.6198 - val_loss: 40.3293 - val_MinusLogProbMetric: 40.3293 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 185/1000
+2023-09-13 10:19:44.923 
+Epoch 185/1000 
+	 loss: 39.6117, MinusLogProbMetric: 39.6117, val_loss: 40.3336, val_MinusLogProbMetric: 40.3336
+
+Epoch 185: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.6117 - MinusLogProbMetric: 39.6117 - val_loss: 40.3336 - val_MinusLogProbMetric: 40.3336 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 186/1000
+2023-09-13 10:19:54.465 
+Epoch 186/1000 
+	 loss: 39.6153, MinusLogProbMetric: 39.6153, val_loss: 40.3119, val_MinusLogProbMetric: 40.3119
+
+Epoch 186: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6153 - MinusLogProbMetric: 39.6153 - val_loss: 40.3119 - val_MinusLogProbMetric: 40.3119 - lr: 5.0000e-04 - 10s/epoch - 49ms/step
+Epoch 187/1000
+2023-09-13 10:20:04.187 
+Epoch 187/1000 
+	 loss: 39.6171, MinusLogProbMetric: 39.6171, val_loss: 40.3484, val_MinusLogProbMetric: 40.3484
+
+Epoch 187: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6171 - MinusLogProbMetric: 39.6171 - val_loss: 40.3484 - val_MinusLogProbMetric: 40.3484 - lr: 5.0000e-04 - 10s/epoch - 50ms/step
+Epoch 188/1000
+2023-09-13 10:20:14.795 
+Epoch 188/1000 
+	 loss: 39.6076, MinusLogProbMetric: 39.6076, val_loss: 40.3865, val_MinusLogProbMetric: 40.3865
+
+Epoch 188: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.6076 - MinusLogProbMetric: 39.6076 - val_loss: 40.3865 - val_MinusLogProbMetric: 40.3865 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 189/1000
+2023-09-13 10:20:24.179 
+Epoch 189/1000 
+	 loss: 39.6146, MinusLogProbMetric: 39.6146, val_loss: 40.3430, val_MinusLogProbMetric: 40.3430
+
+Epoch 189: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.6146 - MinusLogProbMetric: 39.6146 - val_loss: 40.3430 - val_MinusLogProbMetric: 40.3430 - lr: 5.0000e-04 - 9s/epoch - 48ms/step
+Epoch 190/1000
+2023-09-13 10:20:34.183 
+Epoch 190/1000 
+	 loss: 39.6026, MinusLogProbMetric: 39.6026, val_loss: 40.3955, val_MinusLogProbMetric: 40.3955
+
+Epoch 190: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6026 - MinusLogProbMetric: 39.6026 - val_loss: 40.3955 - val_MinusLogProbMetric: 40.3955 - lr: 5.0000e-04 - 10s/epoch - 51ms/step
+Epoch 191/1000
+2023-09-13 10:20:44.823 
+Epoch 191/1000 
+	 loss: 39.6122, MinusLogProbMetric: 39.6122, val_loss: 40.3731, val_MinusLogProbMetric: 40.3731
+
+Epoch 191: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.6122 - MinusLogProbMetric: 39.6122 - val_loss: 40.3731 - val_MinusLogProbMetric: 40.3731 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 192/1000
+2023-09-13 10:20:54.574 
+Epoch 192/1000 
+	 loss: 39.6067, MinusLogProbMetric: 39.6067, val_loss: 40.3764, val_MinusLogProbMetric: 40.3764
+
+Epoch 192: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6067 - MinusLogProbMetric: 39.6067 - val_loss: 40.3764 - val_MinusLogProbMetric: 40.3764 - lr: 5.0000e-04 - 10s/epoch - 50ms/step
+Epoch 193/1000
+2023-09-13 10:21:03.442 
+Epoch 193/1000 
+	 loss: 39.6026, MinusLogProbMetric: 39.6026, val_loss: 40.4170, val_MinusLogProbMetric: 40.4170
+
+Epoch 193: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.6026 - MinusLogProbMetric: 39.6026 - val_loss: 40.4170 - val_MinusLogProbMetric: 40.4170 - lr: 5.0000e-04 - 9s/epoch - 45ms/step
+Epoch 194/1000
+2023-09-13 10:21:13.004 
+Epoch 194/1000 
+	 loss: 39.6059, MinusLogProbMetric: 39.6059, val_loss: 40.3444, val_MinusLogProbMetric: 40.3444
+
+Epoch 194: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6059 - MinusLogProbMetric: 39.6059 - val_loss: 40.3444 - val_MinusLogProbMetric: 40.3444 - lr: 5.0000e-04 - 10s/epoch - 49ms/step
+Epoch 195/1000
+2023-09-13 10:21:22.916 
+Epoch 195/1000 
+	 loss: 39.5952, MinusLogProbMetric: 39.5952, val_loss: 40.4350, val_MinusLogProbMetric: 40.4350
+
+Epoch 195: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5952 - MinusLogProbMetric: 39.5952 - val_loss: 40.4350 - val_MinusLogProbMetric: 40.4350 - lr: 5.0000e-04 - 10s/epoch - 51ms/step
+Epoch 196/1000
+2023-09-13 10:21:33.850 
+Epoch 196/1000 
+	 loss: 39.6039, MinusLogProbMetric: 39.6039, val_loss: 40.3512, val_MinusLogProbMetric: 40.3512
+
+Epoch 196: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.6039 - MinusLogProbMetric: 39.6039 - val_loss: 40.3512 - val_MinusLogProbMetric: 40.3512 - lr: 5.0000e-04 - 11s/epoch - 56ms/step
+Epoch 197/1000
+2023-09-13 10:21:44.038 
+Epoch 197/1000 
+	 loss: 39.5952, MinusLogProbMetric: 39.5952, val_loss: 40.4306, val_MinusLogProbMetric: 40.4306
+
+Epoch 197: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5952 - MinusLogProbMetric: 39.5952 - val_loss: 40.4306 - val_MinusLogProbMetric: 40.4306 - lr: 5.0000e-04 - 10s/epoch - 52ms/step
+Epoch 198/1000
+2023-09-13 10:21:54.110 
+Epoch 198/1000 
+	 loss: 39.6058, MinusLogProbMetric: 39.6058, val_loss: 40.3608, val_MinusLogProbMetric: 40.3608
+
+Epoch 198: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.6058 - MinusLogProbMetric: 39.6058 - val_loss: 40.3608 - val_MinusLogProbMetric: 40.3608 - lr: 5.0000e-04 - 10s/epoch - 51ms/step
+Epoch 199/1000
+2023-09-13 10:22:03.793 
+Epoch 199/1000 
+	 loss: 39.5971, MinusLogProbMetric: 39.5971, val_loss: 40.3855, val_MinusLogProbMetric: 40.3855
+
+Epoch 199: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5971 - MinusLogProbMetric: 39.5971 - val_loss: 40.3855 - val_MinusLogProbMetric: 40.3855 - lr: 5.0000e-04 - 10s/epoch - 49ms/step
+Epoch 200/1000
+2023-09-13 10:22:13.679 
+Epoch 200/1000 
+	 loss: 39.5881, MinusLogProbMetric: 39.5881, val_loss: 40.3937, val_MinusLogProbMetric: 40.3937
+
+Epoch 200: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5881 - MinusLogProbMetric: 39.5881 - val_loss: 40.3937 - val_MinusLogProbMetric: 40.3937 - lr: 5.0000e-04 - 10s/epoch - 50ms/step
+Epoch 201/1000
+2023-09-13 10:22:23.222 
+Epoch 201/1000 
+	 loss: 39.5922, MinusLogProbMetric: 39.5922, val_loss: 40.4755, val_MinusLogProbMetric: 40.4755
+
+Epoch 201: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5922 - MinusLogProbMetric: 39.5922 - val_loss: 40.4755 - val_MinusLogProbMetric: 40.4755 - lr: 5.0000e-04 - 10s/epoch - 49ms/step
+Epoch 202/1000
+2023-09-13 10:22:32.663 
+Epoch 202/1000 
+	 loss: 39.5925, MinusLogProbMetric: 39.5925, val_loss: 40.3556, val_MinusLogProbMetric: 40.3556
+
+Epoch 202: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.5925 - MinusLogProbMetric: 39.5925 - val_loss: 40.3556 - val_MinusLogProbMetric: 40.3556 - lr: 5.0000e-04 - 9s/epoch - 48ms/step
+Epoch 203/1000
+2023-09-13 10:22:42.877 
+Epoch 203/1000 
+	 loss: 39.5978, MinusLogProbMetric: 39.5978, val_loss: 40.4415, val_MinusLogProbMetric: 40.4415
+
+Epoch 203: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5978 - MinusLogProbMetric: 39.5978 - val_loss: 40.4415 - val_MinusLogProbMetric: 40.4415 - lr: 5.0000e-04 - 10s/epoch - 52ms/step
+Epoch 204/1000
+2023-09-13 10:22:51.640 
+Epoch 204/1000 
+	 loss: 39.5845, MinusLogProbMetric: 39.5845, val_loss: 40.4500, val_MinusLogProbMetric: 40.4500
+
+Epoch 204: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.5845 - MinusLogProbMetric: 39.5845 - val_loss: 40.4500 - val_MinusLogProbMetric: 40.4500 - lr: 5.0000e-04 - 9s/epoch - 45ms/step
+Epoch 205/1000
+2023-09-13 10:23:01.445 
+Epoch 205/1000 
+	 loss: 39.5958, MinusLogProbMetric: 39.5958, val_loss: 40.4364, val_MinusLogProbMetric: 40.4364
+
+Epoch 205: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5958 - MinusLogProbMetric: 39.5958 - val_loss: 40.4364 - val_MinusLogProbMetric: 40.4364 - lr: 5.0000e-04 - 10s/epoch - 50ms/step
+Epoch 206/1000
+2023-09-13 10:23:12.125 
+Epoch 206/1000 
+	 loss: 39.5744, MinusLogProbMetric: 39.5744, val_loss: 40.3725, val_MinusLogProbMetric: 40.3725
+
+Epoch 206: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5744 - MinusLogProbMetric: 39.5744 - val_loss: 40.3725 - val_MinusLogProbMetric: 40.3725 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 207/1000
+2023-09-13 10:23:22.806 
+Epoch 207/1000 
+	 loss: 39.5858, MinusLogProbMetric: 39.5858, val_loss: 40.4134, val_MinusLogProbMetric: 40.4134
+
+Epoch 207: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5858 - MinusLogProbMetric: 39.5858 - val_loss: 40.4134 - val_MinusLogProbMetric: 40.4134 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 208/1000
+2023-09-13 10:23:32.423 
+Epoch 208/1000 
+	 loss: 39.5804, MinusLogProbMetric: 39.5804, val_loss: 40.3756, val_MinusLogProbMetric: 40.3756
+
+Epoch 208: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5804 - MinusLogProbMetric: 39.5804 - val_loss: 40.3756 - val_MinusLogProbMetric: 40.3756 - lr: 5.0000e-04 - 10s/epoch - 49ms/step
+Epoch 209/1000
+2023-09-13 10:23:43.027 
+Epoch 209/1000 
+	 loss: 39.5878, MinusLogProbMetric: 39.5878, val_loss: 40.3556, val_MinusLogProbMetric: 40.3556
+
+Epoch 209: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5878 - MinusLogProbMetric: 39.5878 - val_loss: 40.3556 - val_MinusLogProbMetric: 40.3556 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 210/1000
+2023-09-13 10:23:53.745 
+Epoch 210/1000 
+	 loss: 39.5842, MinusLogProbMetric: 39.5842, val_loss: 40.4385, val_MinusLogProbMetric: 40.4385
+
+Epoch 210: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5842 - MinusLogProbMetric: 39.5842 - val_loss: 40.4385 - val_MinusLogProbMetric: 40.4385 - lr: 5.0000e-04 - 11s/epoch - 55ms/step
+Epoch 211/1000
+2023-09-13 10:24:04.392 
+Epoch 211/1000 
+	 loss: 39.5757, MinusLogProbMetric: 39.5757, val_loss: 40.3588, val_MinusLogProbMetric: 40.3588
+
+Epoch 211: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5757 - MinusLogProbMetric: 39.5757 - val_loss: 40.3588 - val_MinusLogProbMetric: 40.3588 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 212/1000
+2023-09-13 10:24:15.113 
+Epoch 212/1000 
+	 loss: 39.5791, MinusLogProbMetric: 39.5791, val_loss: 40.5024, val_MinusLogProbMetric: 40.5024
+
+Epoch 212: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5791 - MinusLogProbMetric: 39.5791 - val_loss: 40.5024 - val_MinusLogProbMetric: 40.5024 - lr: 5.0000e-04 - 11s/epoch - 55ms/step
+Epoch 213/1000
+2023-09-13 10:24:24.325 
+Epoch 213/1000 
+	 loss: 39.5817, MinusLogProbMetric: 39.5817, val_loss: 40.4054, val_MinusLogProbMetric: 40.4054
+
+Epoch 213: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.5817 - MinusLogProbMetric: 39.5817 - val_loss: 40.4054 - val_MinusLogProbMetric: 40.4054 - lr: 5.0000e-04 - 9s/epoch - 47ms/step
+Epoch 214/1000
+2023-09-13 10:24:33.379 
+Epoch 214/1000 
+	 loss: 39.5817, MinusLogProbMetric: 39.5817, val_loss: 40.3699, val_MinusLogProbMetric: 40.3699
+
+Epoch 214: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.5817 - MinusLogProbMetric: 39.5817 - val_loss: 40.3699 - val_MinusLogProbMetric: 40.3699 - lr: 5.0000e-04 - 9s/epoch - 46ms/step
+Epoch 215/1000
+2023-09-13 10:24:43.915 
+Epoch 215/1000 
+	 loss: 39.5686, MinusLogProbMetric: 39.5686, val_loss: 40.3778, val_MinusLogProbMetric: 40.3778
+
+Epoch 215: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5686 - MinusLogProbMetric: 39.5686 - val_loss: 40.3778 - val_MinusLogProbMetric: 40.3778 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 216/1000
+2023-09-13 10:24:54.596 
+Epoch 216/1000 
+	 loss: 39.5792, MinusLogProbMetric: 39.5792, val_loss: 40.3941, val_MinusLogProbMetric: 40.3941
+
+Epoch 216: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5792 - MinusLogProbMetric: 39.5792 - val_loss: 40.3941 - val_MinusLogProbMetric: 40.3941 - lr: 5.0000e-04 - 11s/epoch - 54ms/step
+Epoch 217/1000
+2023-09-13 10:25:05.528 
+Epoch 217/1000 
+	 loss: 39.5752, MinusLogProbMetric: 39.5752, val_loss: 40.3893, val_MinusLogProbMetric: 40.3893
+
+Epoch 217: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5752 - MinusLogProbMetric: 39.5752 - val_loss: 40.3893 - val_MinusLogProbMetric: 40.3893 - lr: 5.0000e-04 - 11s/epoch - 56ms/step
+Epoch 218/1000
+2023-09-13 10:25:16.278 
+Epoch 218/1000 
+	 loss: 39.5664, MinusLogProbMetric: 39.5664, val_loss: 40.4099, val_MinusLogProbMetric: 40.4099
+
+Epoch 218: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5664 - MinusLogProbMetric: 39.5664 - val_loss: 40.4099 - val_MinusLogProbMetric: 40.4099 - lr: 5.0000e-04 - 11s/epoch - 55ms/step
+Epoch 219/1000
+2023-09-13 10:25:26.448 
+Epoch 219/1000 
+	 loss: 39.5630, MinusLogProbMetric: 39.5630, val_loss: 40.4126, val_MinusLogProbMetric: 40.4126
+
+Epoch 219: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5630 - MinusLogProbMetric: 39.5630 - val_loss: 40.4126 - val_MinusLogProbMetric: 40.4126 - lr: 5.0000e-04 - 10s/epoch - 52ms/step
+Epoch 220/1000
+2023-09-13 10:25:36.833 
+Epoch 220/1000 
+	 loss: 39.5701, MinusLogProbMetric: 39.5701, val_loss: 40.4482, val_MinusLogProbMetric: 40.4482
+
+Epoch 220: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5701 - MinusLogProbMetric: 39.5701 - val_loss: 40.4482 - val_MinusLogProbMetric: 40.4482 - lr: 5.0000e-04 - 10s/epoch - 53ms/step
+Epoch 221/1000
+2023-09-13 10:25:47.650 
+Epoch 221/1000 
+	 loss: 39.5689, MinusLogProbMetric: 39.5689, val_loss: 40.4036, val_MinusLogProbMetric: 40.4036
+
+Epoch 221: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5689 - MinusLogProbMetric: 39.5689 - val_loss: 40.4036 - val_MinusLogProbMetric: 40.4036 - lr: 5.0000e-04 - 11s/epoch - 55ms/step
+Epoch 222/1000
+2023-09-13 10:25:58.401 
+Epoch 222/1000 
+	 loss: 39.5582, MinusLogProbMetric: 39.5582, val_loss: 40.3960, val_MinusLogProbMetric: 40.3960
+
+Epoch 222: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.5582 - MinusLogProbMetric: 39.5582 - val_loss: 40.3960 - val_MinusLogProbMetric: 40.3960 - lr: 5.0000e-04 - 11s/epoch - 55ms/step
+Epoch 223/1000
+2023-09-13 10:26:08.226 
+Epoch 223/1000 
+	 loss: 39.5628, MinusLogProbMetric: 39.5628, val_loss: 40.4377, val_MinusLogProbMetric: 40.4377
+
+Epoch 223: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5628 - MinusLogProbMetric: 39.5628 - val_loss: 40.4377 - val_MinusLogProbMetric: 40.4377 - lr: 5.0000e-04 - 10s/epoch - 50ms/step
+Epoch 224/1000
+2023-09-13 10:26:17.786 
+Epoch 224/1000 
+	 loss: 39.5669, MinusLogProbMetric: 39.5669, val_loss: 40.4241, val_MinusLogProbMetric: 40.4241
+
+Epoch 224: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5669 - MinusLogProbMetric: 39.5669 - val_loss: 40.4241 - val_MinusLogProbMetric: 40.4241 - lr: 5.0000e-04 - 10s/epoch - 49ms/step
+Epoch 225/1000
+2023-09-13 10:26:27.720 
+Epoch 225/1000 
+	 loss: 39.5621, MinusLogProbMetric: 39.5621, val_loss: 40.4306, val_MinusLogProbMetric: 40.4306
+
+Epoch 225: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5621 - MinusLogProbMetric: 39.5621 - val_loss: 40.4306 - val_MinusLogProbMetric: 40.4306 - lr: 5.0000e-04 - 10s/epoch - 51ms/step
+Epoch 226/1000
+2023-09-13 10:26:37.961 
+Epoch 226/1000 
+	 loss: 39.5695, MinusLogProbMetric: 39.5695, val_loss: 40.4431, val_MinusLogProbMetric: 40.4431
+
+Epoch 226: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.5695 - MinusLogProbMetric: 39.5695 - val_loss: 40.4431 - val_MinusLogProbMetric: 40.4431 - lr: 5.0000e-04 - 10s/epoch - 52ms/step
+Epoch 227/1000
+2023-09-13 10:26:48.289 
+Epoch 227/1000 
+	 loss: 39.4793, MinusLogProbMetric: 39.4793, val_loss: 40.3621, val_MinusLogProbMetric: 40.3621
+
+Epoch 227: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4793 - MinusLogProbMetric: 39.4793 - val_loss: 40.3621 - val_MinusLogProbMetric: 40.3621 - lr: 2.5000e-04 - 10s/epoch - 53ms/step
+Epoch 228/1000
+2023-09-13 10:26:59.120 
+Epoch 228/1000 
+	 loss: 39.4721, MinusLogProbMetric: 39.4721, val_loss: 40.3637, val_MinusLogProbMetric: 40.3637
+
+Epoch 228: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.4721 - MinusLogProbMetric: 39.4721 - val_loss: 40.3637 - val_MinusLogProbMetric: 40.3637 - lr: 2.5000e-04 - 11s/epoch - 55ms/step
+Epoch 229/1000
+2023-09-13 10:27:08.802 
+Epoch 229/1000 
+	 loss: 39.4674, MinusLogProbMetric: 39.4674, val_loss: 40.3628, val_MinusLogProbMetric: 40.3628
+
+Epoch 229: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4674 - MinusLogProbMetric: 39.4674 - val_loss: 40.3628 - val_MinusLogProbMetric: 40.3628 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 230/1000
+2023-09-13 10:27:18.428 
+Epoch 230/1000 
+	 loss: 39.4643, MinusLogProbMetric: 39.4643, val_loss: 40.3849, val_MinusLogProbMetric: 40.3849
+
+Epoch 230: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4643 - MinusLogProbMetric: 39.4643 - val_loss: 40.3849 - val_MinusLogProbMetric: 40.3849 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 231/1000
+2023-09-13 10:27:28.122 
+Epoch 231/1000 
+	 loss: 39.4660, MinusLogProbMetric: 39.4660, val_loss: 40.3698, val_MinusLogProbMetric: 40.3698
+
+Epoch 231: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4660 - MinusLogProbMetric: 39.4660 - val_loss: 40.3698 - val_MinusLogProbMetric: 40.3698 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 232/1000
+2023-09-13 10:27:37.753 
+Epoch 232/1000 
+	 loss: 39.4669, MinusLogProbMetric: 39.4669, val_loss: 40.3759, val_MinusLogProbMetric: 40.3759
+
+Epoch 232: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4669 - MinusLogProbMetric: 39.4669 - val_loss: 40.3759 - val_MinusLogProbMetric: 40.3759 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 233/1000
+2023-09-13 10:27:47.356 
+Epoch 233/1000 
+	 loss: 39.4607, MinusLogProbMetric: 39.4607, val_loss: 40.4049, val_MinusLogProbMetric: 40.4049
+
+Epoch 233: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4607 - MinusLogProbMetric: 39.4607 - val_loss: 40.4049 - val_MinusLogProbMetric: 40.4049 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 234/1000
+2023-09-13 10:27:56.917 
+Epoch 234/1000 
+	 loss: 39.4607, MinusLogProbMetric: 39.4607, val_loss: 40.3774, val_MinusLogProbMetric: 40.3774
+
+Epoch 234: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4607 - MinusLogProbMetric: 39.4607 - val_loss: 40.3774 - val_MinusLogProbMetric: 40.3774 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 235/1000
+2023-09-13 10:28:06.554 
+Epoch 235/1000 
+	 loss: 39.4609, MinusLogProbMetric: 39.4609, val_loss: 40.3829, val_MinusLogProbMetric: 40.3829
+
+Epoch 235: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4609 - MinusLogProbMetric: 39.4609 - val_loss: 40.3829 - val_MinusLogProbMetric: 40.3829 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 236/1000
+2023-09-13 10:28:16.132 
+Epoch 236/1000 
+	 loss: 39.4597, MinusLogProbMetric: 39.4597, val_loss: 40.3801, val_MinusLogProbMetric: 40.3801
+
+Epoch 236: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4597 - MinusLogProbMetric: 39.4597 - val_loss: 40.3801 - val_MinusLogProbMetric: 40.3801 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 237/1000
+2023-09-13 10:28:25.680 
+Epoch 237/1000 
+	 loss: 39.4584, MinusLogProbMetric: 39.4584, val_loss: 40.3779, val_MinusLogProbMetric: 40.3779
+
+Epoch 237: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4584 - MinusLogProbMetric: 39.4584 - val_loss: 40.3779 - val_MinusLogProbMetric: 40.3779 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 238/1000
+2023-09-13 10:28:36.206 
+Epoch 238/1000 
+	 loss: 39.4603, MinusLogProbMetric: 39.4603, val_loss: 40.4061, val_MinusLogProbMetric: 40.4061
+
+Epoch 238: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.4603 - MinusLogProbMetric: 39.4603 - val_loss: 40.4061 - val_MinusLogProbMetric: 40.4061 - lr: 2.5000e-04 - 11s/epoch - 54ms/step
+Epoch 239/1000
+2023-09-13 10:28:46.802 
+Epoch 239/1000 
+	 loss: 39.4554, MinusLogProbMetric: 39.4554, val_loss: 40.3859, val_MinusLogProbMetric: 40.3859
+
+Epoch 239: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.4554 - MinusLogProbMetric: 39.4554 - val_loss: 40.3859 - val_MinusLogProbMetric: 40.3859 - lr: 2.5000e-04 - 11s/epoch - 54ms/step
+Epoch 240/1000
+2023-09-13 10:28:56.537 
+Epoch 240/1000 
+	 loss: 39.4578, MinusLogProbMetric: 39.4578, val_loss: 40.3986, val_MinusLogProbMetric: 40.3986
+
+Epoch 240: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4578 - MinusLogProbMetric: 39.4578 - val_loss: 40.3986 - val_MinusLogProbMetric: 40.3986 - lr: 2.5000e-04 - 10s/epoch - 50ms/step
+Epoch 241/1000
+2023-09-13 10:29:06.027 
+Epoch 241/1000 
+	 loss: 39.4570, MinusLogProbMetric: 39.4570, val_loss: 40.4091, val_MinusLogProbMetric: 40.4091
+
+Epoch 241: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4570 - MinusLogProbMetric: 39.4570 - val_loss: 40.4091 - val_MinusLogProbMetric: 40.4091 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 242/1000
+2023-09-13 10:29:16.657 
+Epoch 242/1000 
+	 loss: 39.4583, MinusLogProbMetric: 39.4583, val_loss: 40.3802, val_MinusLogProbMetric: 40.3802
+
+Epoch 242: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.4583 - MinusLogProbMetric: 39.4583 - val_loss: 40.3802 - val_MinusLogProbMetric: 40.3802 - lr: 2.5000e-04 - 11s/epoch - 54ms/step
+Epoch 243/1000
+2023-09-13 10:29:26.481 
+Epoch 243/1000 
+	 loss: 39.4552, MinusLogProbMetric: 39.4552, val_loss: 40.3929, val_MinusLogProbMetric: 40.3929
+
+Epoch 243: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4552 - MinusLogProbMetric: 39.4552 - val_loss: 40.3929 - val_MinusLogProbMetric: 40.3929 - lr: 2.5000e-04 - 10s/epoch - 50ms/step
+Epoch 244/1000
+2023-09-13 10:29:36.643 
+Epoch 244/1000 
+	 loss: 39.4534, MinusLogProbMetric: 39.4534, val_loss: 40.4077, val_MinusLogProbMetric: 40.4077
+
+Epoch 244: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4534 - MinusLogProbMetric: 39.4534 - val_loss: 40.4077 - val_MinusLogProbMetric: 40.4077 - lr: 2.5000e-04 - 10s/epoch - 52ms/step
+Epoch 245/1000
+2023-09-13 10:29:46.203 
+Epoch 245/1000 
+	 loss: 39.4534, MinusLogProbMetric: 39.4534, val_loss: 40.3980, val_MinusLogProbMetric: 40.3980
+
+Epoch 245: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4534 - MinusLogProbMetric: 39.4534 - val_loss: 40.3980 - val_MinusLogProbMetric: 40.3980 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 246/1000
+2023-09-13 10:29:55.696 
+Epoch 246/1000 
+	 loss: 39.4540, MinusLogProbMetric: 39.4540, val_loss: 40.3802, val_MinusLogProbMetric: 40.3802
+
+Epoch 246: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4540 - MinusLogProbMetric: 39.4540 - val_loss: 40.3802 - val_MinusLogProbMetric: 40.3802 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 247/1000
+2023-09-13 10:30:05.366 
+Epoch 247/1000 
+	 loss: 39.4521, MinusLogProbMetric: 39.4521, val_loss: 40.4225, val_MinusLogProbMetric: 40.4225
+
+Epoch 247: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4521 - MinusLogProbMetric: 39.4521 - val_loss: 40.4225 - val_MinusLogProbMetric: 40.4225 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 248/1000
+2023-09-13 10:30:15.061 
+Epoch 248/1000 
+	 loss: 39.4569, MinusLogProbMetric: 39.4569, val_loss: 40.4153, val_MinusLogProbMetric: 40.4153
+
+Epoch 248: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4569 - MinusLogProbMetric: 39.4569 - val_loss: 40.4153 - val_MinusLogProbMetric: 40.4153 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 249/1000
+2023-09-13 10:30:24.795 
+Epoch 249/1000 
+	 loss: 39.4520, MinusLogProbMetric: 39.4520, val_loss: 40.4188, val_MinusLogProbMetric: 40.4188
+
+Epoch 249: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4520 - MinusLogProbMetric: 39.4520 - val_loss: 40.4188 - val_MinusLogProbMetric: 40.4188 - lr: 2.5000e-04 - 10s/epoch - 50ms/step
+Epoch 250/1000
+2023-09-13 10:30:34.229 
+Epoch 250/1000 
+	 loss: 39.4516, MinusLogProbMetric: 39.4516, val_loss: 40.4014, val_MinusLogProbMetric: 40.4014
+
+Epoch 250: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4516 - MinusLogProbMetric: 39.4516 - val_loss: 40.4014 - val_MinusLogProbMetric: 40.4014 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 251/1000
+2023-09-13 10:30:43.696 
+Epoch 251/1000 
+	 loss: 39.4484, MinusLogProbMetric: 39.4484, val_loss: 40.4084, val_MinusLogProbMetric: 40.4084
+
+Epoch 251: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4484 - MinusLogProbMetric: 39.4484 - val_loss: 40.4084 - val_MinusLogProbMetric: 40.4084 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 252/1000
+2023-09-13 10:30:53.216 
+Epoch 252/1000 
+	 loss: 39.4484, MinusLogProbMetric: 39.4484, val_loss: 40.4176, val_MinusLogProbMetric: 40.4176
+
+Epoch 252: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4484 - MinusLogProbMetric: 39.4484 - val_loss: 40.4176 - val_MinusLogProbMetric: 40.4176 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 253/1000
+2023-09-13 10:31:02.755 
+Epoch 253/1000 
+	 loss: 39.4487, MinusLogProbMetric: 39.4487, val_loss: 40.4350, val_MinusLogProbMetric: 40.4350
+
+Epoch 253: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4487 - MinusLogProbMetric: 39.4487 - val_loss: 40.4350 - val_MinusLogProbMetric: 40.4350 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 254/1000
+2023-09-13 10:31:12.250 
+Epoch 254/1000 
+	 loss: 39.4470, MinusLogProbMetric: 39.4470, val_loss: 40.4582, val_MinusLogProbMetric: 40.4582
+
+Epoch 254: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4470 - MinusLogProbMetric: 39.4470 - val_loss: 40.4582 - val_MinusLogProbMetric: 40.4582 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 255/1000
+2023-09-13 10:31:22.149 
+Epoch 255/1000 
+	 loss: 39.4474, MinusLogProbMetric: 39.4474, val_loss: 40.3886, val_MinusLogProbMetric: 40.3886
+
+Epoch 255: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4474 - MinusLogProbMetric: 39.4474 - val_loss: 40.3886 - val_MinusLogProbMetric: 40.3886 - lr: 2.5000e-04 - 10s/epoch - 50ms/step
+Epoch 256/1000
+2023-09-13 10:31:32.026 
+Epoch 256/1000 
+	 loss: 39.4431, MinusLogProbMetric: 39.4431, val_loss: 40.4148, val_MinusLogProbMetric: 40.4148
+
+Epoch 256: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4431 - MinusLogProbMetric: 39.4431 - val_loss: 40.4148 - val_MinusLogProbMetric: 40.4148 - lr: 2.5000e-04 - 10s/epoch - 50ms/step
+Epoch 257/1000
+2023-09-13 10:31:41.721 
+Epoch 257/1000 
+	 loss: 39.4488, MinusLogProbMetric: 39.4488, val_loss: 40.4256, val_MinusLogProbMetric: 40.4256
+
+Epoch 257: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4488 - MinusLogProbMetric: 39.4488 - val_loss: 40.4256 - val_MinusLogProbMetric: 40.4256 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 258/1000
+2023-09-13 10:31:51.730 
+Epoch 258/1000 
+	 loss: 39.4449, MinusLogProbMetric: 39.4449, val_loss: 40.4149, val_MinusLogProbMetric: 40.4149
+
+Epoch 258: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4449 - MinusLogProbMetric: 39.4449 - val_loss: 40.4149 - val_MinusLogProbMetric: 40.4149 - lr: 2.5000e-04 - 10s/epoch - 51ms/step
+Epoch 259/1000
+2023-09-13 10:32:02.402 
+Epoch 259/1000 
+	 loss: 39.4486, MinusLogProbMetric: 39.4486, val_loss: 40.4131, val_MinusLogProbMetric: 40.4131
+
+Epoch 259: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.4486 - MinusLogProbMetric: 39.4486 - val_loss: 40.4131 - val_MinusLogProbMetric: 40.4131 - lr: 2.5000e-04 - 11s/epoch - 54ms/step
+Epoch 260/1000
+2023-09-13 10:32:12.752 
+Epoch 260/1000 
+	 loss: 39.4403, MinusLogProbMetric: 39.4403, val_loss: 40.4168, val_MinusLogProbMetric: 40.4168
+
+Epoch 260: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4403 - MinusLogProbMetric: 39.4403 - val_loss: 40.4168 - val_MinusLogProbMetric: 40.4168 - lr: 2.5000e-04 - 10s/epoch - 53ms/step
+Epoch 261/1000
+2023-09-13 10:32:21.660 
+Epoch 261/1000 
+	 loss: 39.4425, MinusLogProbMetric: 39.4425, val_loss: 40.4142, val_MinusLogProbMetric: 40.4142
+
+Epoch 261: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4425 - MinusLogProbMetric: 39.4425 - val_loss: 40.4142 - val_MinusLogProbMetric: 40.4142 - lr: 2.5000e-04 - 9s/epoch - 45ms/step
+Epoch 262/1000
+2023-09-13 10:32:31.084 
+Epoch 262/1000 
+	 loss: 39.4373, MinusLogProbMetric: 39.4373, val_loss: 40.4296, val_MinusLogProbMetric: 40.4296
+
+Epoch 262: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4373 - MinusLogProbMetric: 39.4373 - val_loss: 40.4296 - val_MinusLogProbMetric: 40.4296 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 263/1000
+2023-09-13 10:32:41.374 
+Epoch 263/1000 
+	 loss: 39.4389, MinusLogProbMetric: 39.4389, val_loss: 40.4383, val_MinusLogProbMetric: 40.4383
+
+Epoch 263: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4389 - MinusLogProbMetric: 39.4389 - val_loss: 40.4383 - val_MinusLogProbMetric: 40.4383 - lr: 2.5000e-04 - 10s/epoch - 52ms/step
+Epoch 264/1000
+2023-09-13 10:32:51.212 
+Epoch 264/1000 
+	 loss: 39.4413, MinusLogProbMetric: 39.4413, val_loss: 40.4211, val_MinusLogProbMetric: 40.4211
+
+Epoch 264: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4413 - MinusLogProbMetric: 39.4413 - val_loss: 40.4211 - val_MinusLogProbMetric: 40.4211 - lr: 2.5000e-04 - 10s/epoch - 50ms/step
+Epoch 265/1000
+2023-09-13 10:33:00.815 
+Epoch 265/1000 
+	 loss: 39.4351, MinusLogProbMetric: 39.4351, val_loss: 40.4437, val_MinusLogProbMetric: 40.4437
+
+Epoch 265: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4351 - MinusLogProbMetric: 39.4351 - val_loss: 40.4437 - val_MinusLogProbMetric: 40.4437 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 266/1000
+2023-09-13 10:33:10.164 
+Epoch 266/1000 
+	 loss: 39.4343, MinusLogProbMetric: 39.4343, val_loss: 40.4361, val_MinusLogProbMetric: 40.4361
+
+Epoch 266: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4343 - MinusLogProbMetric: 39.4343 - val_loss: 40.4361 - val_MinusLogProbMetric: 40.4361 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 267/1000
+2023-09-13 10:33:19.477 
+Epoch 267/1000 
+	 loss: 39.4375, MinusLogProbMetric: 39.4375, val_loss: 40.4235, val_MinusLogProbMetric: 40.4235
+
+Epoch 267: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4375 - MinusLogProbMetric: 39.4375 - val_loss: 40.4235 - val_MinusLogProbMetric: 40.4235 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 268/1000
+2023-09-13 10:33:28.893 
+Epoch 268/1000 
+	 loss: 39.4343, MinusLogProbMetric: 39.4343, val_loss: 40.4260, val_MinusLogProbMetric: 40.4260
+
+Epoch 268: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4343 - MinusLogProbMetric: 39.4343 - val_loss: 40.4260 - val_MinusLogProbMetric: 40.4260 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 269/1000
+2023-09-13 10:33:38.580 
+Epoch 269/1000 
+	 loss: 39.4311, MinusLogProbMetric: 39.4311, val_loss: 40.4239, val_MinusLogProbMetric: 40.4239
+
+Epoch 269: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4311 - MinusLogProbMetric: 39.4311 - val_loss: 40.4239 - val_MinusLogProbMetric: 40.4239 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 270/1000
+2023-09-13 10:33:48.104 
+Epoch 270/1000 
+	 loss: 39.4358, MinusLogProbMetric: 39.4358, val_loss: 40.4545, val_MinusLogProbMetric: 40.4545
+
+Epoch 270: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4358 - MinusLogProbMetric: 39.4358 - val_loss: 40.4545 - val_MinusLogProbMetric: 40.4545 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 271/1000
+2023-09-13 10:33:57.454 
+Epoch 271/1000 
+	 loss: 39.4344, MinusLogProbMetric: 39.4344, val_loss: 40.4388, val_MinusLogProbMetric: 40.4388
+
+Epoch 271: val_loss did not improve from 40.30168
+196/196 - 9s - loss: 39.4344 - MinusLogProbMetric: 39.4344 - val_loss: 40.4388 - val_MinusLogProbMetric: 40.4388 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 272/1000
+2023-09-13 10:34:07.025 
+Epoch 272/1000 
+	 loss: 39.4308, MinusLogProbMetric: 39.4308, val_loss: 40.4365, val_MinusLogProbMetric: 40.4365
+
+Epoch 272: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4308 - MinusLogProbMetric: 39.4308 - val_loss: 40.4365 - val_MinusLogProbMetric: 40.4365 - lr: 2.5000e-04 - 10s/epoch - 49ms/step
+Epoch 273/1000
+2023-09-13 10:34:17.228 
+Epoch 273/1000 
+	 loss: 39.4320, MinusLogProbMetric: 39.4320, val_loss: 40.4235, val_MinusLogProbMetric: 40.4235
+
+Epoch 273: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4320 - MinusLogProbMetric: 39.4320 - val_loss: 40.4235 - val_MinusLogProbMetric: 40.4235 - lr: 2.5000e-04 - 10s/epoch - 52ms/step
+Epoch 274/1000
+2023-09-13 10:34:27.535 
+Epoch 274/1000 
+	 loss: 39.4313, MinusLogProbMetric: 39.4313, val_loss: 40.4422, val_MinusLogProbMetric: 40.4422
+
+Epoch 274: val_loss did not improve from 40.30168
+196/196 - 10s - loss: 39.4313 - MinusLogProbMetric: 39.4313 - val_loss: 40.4422 - val_MinusLogProbMetric: 40.4422 - lr: 2.5000e-04 - 10s/epoch - 53ms/step
+Epoch 275/1000
+2023-09-13 10:34:38.233 
+Epoch 275/1000 
+	 loss: 39.4307, MinusLogProbMetric: 39.4307, val_loss: 40.4311, val_MinusLogProbMetric: 40.4311
+
+Epoch 275: val_loss did not improve from 40.30168
+196/196 - 11s - loss: 39.4307 - MinusLogProbMetric: 39.4307 - val_loss: 40.4311 - val_MinusLogProbMetric: 40.4311 - lr: 2.5000e-04 - 11s/epoch - 55ms/step
+Epoch 276/1000
+2023-09-13 10:34:47.655 
+Epoch 276/1000 
+	 loss: 39.4300, MinusLogProbMetric: 39.4300, val_loss: 40.4577, val_MinusLogProbMetric: 40.4577
+
+Epoch 276: val_loss did not improve from 40.30168
+Restoring model weights from the end of the best epoch: 176.
+196/196 - 9s - loss: 39.4300 - MinusLogProbMetric: 39.4300 - val_loss: 40.4577 - val_MinusLogProbMetric: 40.4577 - lr: 2.5000e-04 - 9s/epoch - 48ms/step
+Epoch 276: early stopping
+Parsing input distribution...
+Input distribution is a tfp.distributions.Distribution object.
+Parsing input distribution...
+Input distribution is a tfp.distributions.Distribution object.
+2023-09-13 10:34:53.567633: F ./tensorflow/core/util/gpu_launch_config.h:160] Check failed: work_element_count > 0 (0 vs. -794967296)

@@ -1,0 +1,102 @@
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=0
+Script string: nohup python c_Main_MAFN.py --visible_devices 0 >> ../../Outputs/MAFN/run_gpu_0_replica_1.out 2>&1 &
+Launched with PID 68071
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_1.out 2>&1 &
+Launched with PID 68471
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=2
+Script string: nohup python c_Main_MAFN.py --visible_devices 2 >> ../../Outputs/MAFN/run_gpu_2_replica_1.out 2>&1 &
+Launched with PID 68994
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_1.out 2>&1 &
+Launched with PID 69654
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=0
+Script string: nohup python c_Main_MAFN.py --visible_devices 0 >> ../../Outputs/MAFN/run_gpu_0_replica_2.out 2>&1 &
+Launched with PID 70311
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_2.out 2>&1 &
+Launched with PID 71596
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=2
+Script string: nohup python c_Main_MAFN.py --visible_devices 2 >> ../../Outputs/MAFN/run_gpu_2_replica_2.out 2>&1 &
+Launched with PID 72739
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_2.out 2>&1 &
+Launched with PID 73866
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=0
+Script string: nohup python c_Main_MAFN.py --visible_devices 0 >> ../../Outputs/MAFN/run_gpu_0_replica_1.out 2>&1 &
+Launched with PID 14667
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_1.out 2>&1 &
+Launched with PID 14992
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=2
+Script string: nohup python c_Main_MAFN.py --visible_devices 2 >> ../../Outputs/MAFN/run_gpu_2_replica_1.out 2>&1 &
+Launched with PID 15463
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_1.out 2>&1 &
+Launched with PID 15953
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=0
+Script string: nohup python c_Main_MAFN.py --visible_devices 0 >> ../../Outputs/MAFN/run_gpu_0_replica_2.out 2>&1 &
+Launched with PID 16882
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_2.out 2>&1 &
+Launched with PID 17722
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=2
+Script string: nohup python c_Main_MAFN.py --visible_devices 2 >> ../../Outputs/MAFN/run_gpu_2_replica_2.out 2>&1 &
+Launched with PID 18440
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_2.out 2>&1 &
+Launched with PID 19501
+Launching run RUN_NUMBER=5 on device VISIBLE_DEVICES=0
+Script string: nohup python c_Main_MAFN.py --visible_devices 0 >> ../../Outputs/MAFN/run_gpu_0_replica_5.out 2>&1 &
+Launched with PID 33186
+Launching run RUN_NUMBER=5 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_5.out 2>&1 &
+Launched with PID 33420
+Launching run RUN_NUMBER=6 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_6.out 2>&1 &
+Launched with PID 35444
+Launching run RUN_NUMBER=3 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_3.out 2>&1 &
+Launched with PID 73338
+Launching run RUN_NUMBER=3 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_3.out 2>&1 &
+Launched with PID 76137
+Launching run RUN_NUMBER=3 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_3.out 2>&1 &
+Launched with PID 78033
+Launching run RUN_NUMBER=4 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_4.out 2>&1 &
+Launched with PID 4181
+Launching run RUN_NUMBER=3 on device VISIBLE_DEVICES=0
+Script string: nohup python c_Main_MAFN.py --visible_devices 0 >> ../../Outputs/MAFN/run_gpu_0_replica_3.out 2>&1 &
+Launched with PID 60796
+Launching run RUN_NUMBER=3 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_3.out 2>&1 &
+Launched with PID 60944
+Launching run RUN_NUMBER=3 on device VISIBLE_DEVICES=2
+Script string: nohup python c_Main_MAFN.py --visible_devices 2 >> ../../Outputs/MAFN/run_gpu_2_replica_3.out 2>&1 &
+Launched with PID 61399
+Launching run RUN_NUMBER=4 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_4.out 2>&1 &
+Launched with PID 40187
+Launching run RUN_NUMBER=4 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_4.out 2>&1 &
+Launched with PID 40587
+Launching run RUN_NUMBER=7 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_7.out 2>&1 &
+Launched with PID 49995
+Launching run RUN_NUMBER=7 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_7.out 2>&1 &
+Launched with PID 50144
+Launching run RUN_NUMBER=7 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_7.out 2>&1 &
+Launched with PID 51196
+Launching run RUN_NUMBER=7 on device VISIBLE_DEVICES=3
+Script string: nohup python c_Main_MAFN.py --visible_devices 3 >> ../../Outputs/MAFN/run_gpu_3_replica_7.out 2>&1 &
+Launched with PID 51354
+Launching run RUN_NUMBER=8 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_8.out 2>&1 &
+Launched with PID 49873
+Launching run RUN_NUMBER=8 on device VISIBLE_DEVICES=1
+Script string: nohup python c_Main_MAFN.py --visible_devices 1 >> ../../Outputs/MAFN/run_gpu_1_replica_8.out 2>&1 &
+Launched with PID 81191
