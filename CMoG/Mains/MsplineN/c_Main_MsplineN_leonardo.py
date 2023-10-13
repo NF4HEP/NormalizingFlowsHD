@@ -53,7 +53,7 @@ for gpu_device in gpu_devices:
 
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing custom module...")
 
-sys.path.append('../../../code')
+sys.path.append('/leonardo/home/userexternal/rtorre00/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/code')
 import Bijectors, Distributions, MixtureDistributions, Plotters, Trainer, Utils # type: ignore
 import GenerativeModelsMetrics as GMetrics # type: ignore
 
@@ -593,7 +593,7 @@ results_dict: Dict[str, Any] = Utils.init_results_dict()
 hyperparams_dict: Dict[str, Any] = Utils.init_hyperparams_dict()
 
 ### Initialize output dir ###
-mother_output_dir: str = Utils.define_dir('../../results/MsplineN_new/')
+mother_output_dir: str = Utils.define_dir('/leonardo/home/userexternal/rtorre00/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG//results/MsplineN_new/')
 
 ### Create 'log' file ####
 log_file_name: str = Utils.create_log_file(mother_output_dir, results_dict)
