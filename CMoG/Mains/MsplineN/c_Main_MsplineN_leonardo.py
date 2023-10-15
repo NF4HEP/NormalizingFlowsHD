@@ -2,7 +2,7 @@
 ######################################### Initialize #########################################
 ##############################################################################################
 
-visible_devices = [0,1,2,3]
+visible_devices = [0]
 import datetime
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing os...")
 import os
@@ -25,7 +25,6 @@ if not any("ipykernel" in arg for arg in sys.argv):
     else:
         visible_devices = [int(i) for i in visible_devices]
 print("Visible devices:", visible_devices)
-raise Exception("Stop here")
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing timer from timeit...")
 from timeit import default_timer as timer
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Setting env variables for tf import (only device", visible_devices, "will be available)...")
@@ -348,129 +347,132 @@ def prediction_function(hyperparams_dict: Dict[str, Any],
     lr_all: list = list(NFObject.history['lr']) # type: ignore
     epochs_output: int = len(t_losses_all)
     training_time: float = NFObject.training_time # type: ignore
-    try:
-        print("===========\nComputing predictions\n===========\n")
-        print("Computing metrics...")
-        start = timer()
-        DataInputs: GMetrics.TwoSampleTestInputs = GMetrics.TwoSampleTestInputs(dist_1_input = targ_dist,
-                                                                                dist_2_input = NFObject.nf_dist,
-                                                                                niter = n_iter,
-                                                                                batch_size = nsamples_test,
-                                                                                dtype_input = dtype,
-                                                                                seed_input = seed_metrics,
-                                                                                use_tf = True,
-                                                                                mirror_strategy = mirror_strategy,
-                                                                                verbose = True)
-        #LRMetric: GMetrics.LRMetric = GMetrics.LRMetric(data_input = DataInputs,
-        #                                                verbose = True)
-        KSTest: GMetrics.KSTest = GMetrics.KSTest(data_input = DataInputs,
-                                                  verbose = True)
-        SWDMetric: GMetrics.SWDMetric = GMetrics.SWDMetric(data_input = DataInputs,
-                                                           verbose = True)
-        FNMetric: GMetrics.FNMetric = GMetrics.FNMetric(data_input = DataInputs,
-                                                        verbose = True)
-        #LRMetric.compute()
-        KSTest.compute(max_vectorize = max_vectorize)
-        SWDMetric.compute(nslices = n_slices_factor*ndims)
-        FNMetric.compute(max_vectorize = max_vectorize)
-        #lr_result: Dict[str, np.ndarray] = LRMetric.Results[-1].result_value
-        logprob_ref_ref_sum_list = None#lr_result["logprob_ref_ref_sum_list"].tolist()
-        logprob_ref_alt_sum_list = None#lr_result["logprob_ref_alt_sum_list"].tolist()
-        logprob_alt_alt_sum_list = None#lr_result["logprob_alt_alt_sum_list"].tolist()
-        lik_ratio_list = None#lr_result["lik_ratio_list"].tolist()
-        lik_ratio_norm_list = None#lr_result["lik_ratio_norm_list"].tolist()
-        ks_result: Dict[str, np.ndarray] = KSTest.Results[-1].result_value
-        ks_lists: List[List[float]] = ks_result["statistic_lists"].tolist()
-        ks_means: List[float] = ks_result["statistic_means"].tolist()
-        ks_stds: List[float] = ks_result["statistic_stds"].tolist()
-        swd_result: Dict[str, np.ndarray] = SWDMetric.Results[-1].result_value
-        swd_lists: List[List[float]] = swd_result["metric_lists"].tolist()
-        swd_means: List[float] = swd_result["metric_means"].tolist()
-        swd_stds: List[float] = swd_result["metric_stds"].tolist()
-        fn_result: Dict[str, np.ndarray] = FNMetric.Results[-1].result_value
-        fn_list: List[float] = fn_result["metric_list"].tolist()
-        ad_lists: Optional[List[List[float]]] = None
-        ad_means: Optional[List[float]] = None
-        ad_stds: Optional[List[float]] = None
-        wd_lists: Optional[List[List[float]]] = None
-        wd_means: Optional[List[float]] = None
-        wd_stds: Optional[List[float]] = None
-        end = timer()
-        metrics_time = end - start
-        print(f"Metrics computed in {metrics_time:.2f} s.")
-    except:
-        raise Exception("Failed computing metrics")
-        try:
-            print("===========\nFailed on GPU, re-trying on CPU\n===========\n")
-            with tf.device('/device:CPU:0'): # type: ignore
-                print("Computing metrics...")
-                start = timer()
-                DataInputs = GMetrics.TwoSampleTestInputs(dist_1_input = targ_dist,
-                                                          dist_2_input = NFObject.nf_dist,
-                                                          niter = n_iter,
-                                                          batch_size = nsamples_test,
-                                                          dtype_input = dtype,
-                                                          seed_input = seed_metrics,
-                                                          use_tf = True,
-                                                          verbose = True)
-                LRMetric = GMetrics.LRMetric(data_input = DataInputs,
-                                             verbose = True)
-                KSTest = GMetrics.KSTest(data_input = DataInputs,
-                                         verbose = True)
-                SWDMetric = GMetrics.SWDMetric(data_input = DataInputs,
-                                               verbose = True)
-                FNMetric = GMetrics.FNMetric(data_input = DataInputs,
-                                             verbose = True)
-                LRMetric.compute()
-                KSTest.compute(max_vectorize = max_vectorize)
-                SWDMetric.compute(nslices = n_slices_factor*ndims)
-                FNMetric.compute(max_vectorize = max_vectorize)
-                lr_result = LRMetric.Results[-1].result_value
-                logprob_ref_ref_sum_list = lr_result["logprob_ref_ref_sum_list"].tolist()
-                logprob_ref_alt_sum_list = lr_result["logprob_ref_alt_sum_list"].tolist()
-                logprob_alt_alt_sum_list = lr_result["logprob_alt_alt_sum_list"].tolist()
-                lik_ratio_list = lr_result["lik_ratio_list"].tolist()
-                lik_ratio_norm_list = lr_result["lik_ratio_norm_list"].tolist()
-                ks_result = KSTest.Results[-1].result_value
-                ks_lists = ks_result["statistic_lists"].tolist()
-                ks_means = ks_result["statistic_means"].tolist()
-                ks_stds = ks_result["statistic_stds"].tolist()
-                swd_result = SWDMetric.Results[-1].result_value
-                swd_lists = swd_result["metric_lists"].tolist()
-                swd_means = swd_result["metric_means"].tolist()
-                swd_stds = swd_result["metric_stds"].tolist()
-                fn_result = FNMetric.Results[-1].result_value
-                fn_list = fn_result["metric_list"].tolist()
-                ad_lists = None
-                ad_means = None
-                ad_stds = None
-                wd_lists = None
-                wd_means = None
-                wd_stds = None
-                end = timer()
-                metrics_time = end - start
-                print(f"Metrics computed in {metrics_time:.2f} s.")
-        except:
-            print("===========\nFailed computing metrics\n===========\n")
-            logprob_ref_ref_sum_list = []
-            logprob_ref_alt_sum_list = []
-            logprob_alt_alt_sum_list = []
-            lik_ratio_list = []
-            lik_ratio_norm_list = []
-            ks_means = []
-            ks_stds = []
-            ks_lists = []
-            ad_means = []
-            ad_stds = []
-            ad_lists = []
-            fn_list = []
-            wd_means = []
-            wd_stds = []
-            wd_lists = []
-            swd_means = []
-            swd_stds = []
-            swd_lists = []
-            metrics_time = 0.
+    #try:
+    print("===========\nComputing predictions\n===========\n")
+    print("Computing metrics...")
+    start = timer()
+    DataInputs: GMetrics.TwoSampleTestInputs = GMetrics.TwoSampleTestInputs(dist_1_input = targ_dist,
+                                                                            dist_2_input = NFObject.nf_dist,
+                                                                            niter = n_iter,
+                                                                            batch_size = nsamples_test,
+                                                                            dtype_input = dtype,
+                                                                            seed_input = seed_metrics,
+                                                                            use_tf = True,
+                                                                            mirror_strategy = mirror_strategy,
+                                                                            verbose = True)
+    #LRMetric: GMetrics.LRMetric = GMetrics.LRMetric(data_input = DataInputs,
+    #                                                verbose = True)
+    KSTest: GMetrics.KSTest = GMetrics.KSTest(data_input = DataInputs,
+                                              verbose = True)
+    SWDMetric: GMetrics.SWDMetric = GMetrics.SWDMetric(data_input = DataInputs,
+                                                       verbose = True)
+    FNMetric: GMetrics.FNMetric = GMetrics.FNMetric(data_input = DataInputs,
+                                                    verbose = True)
+    #LRMetric.compute()
+    KSTest.compute(max_vectorize = max_vectorize)
+    SWDMetric.compute(nslices = n_slices_factor*ndims)
+    FNMetric.compute(max_vectorize = max_vectorize)
+    #lr_result: Dict[str, np.ndarray] = LRMetric.Results[-1].result_value
+    logprob_ref_ref_sum_list = None#lr_result["logprob_ref_ref_sum_list"].tolist()
+    logprob_ref_alt_sum_list = None#lr_result["logprob_ref_alt_sum_list"].tolist()
+    logprob_alt_alt_sum_list = None#lr_result["logprob_alt_alt_sum_list"].tolist()
+    lik_ratio_list = None#lr_result["lik_ratio_list"].tolist()
+    lik_ratio_norm_list = None#lr_result["lik_ratio_norm_list"].tolist()
+    ks_result: Dict[str, np.ndarray] = KSTest.Results[-1].result_value
+    ks_lists: List[List[float]] = ks_result["statistic_lists"].tolist()
+    ks_means: List[float] = ks_result["statistic_means"].tolist()
+    ks_stds: List[float] = ks_result["statistic_stds"].tolist()
+    #ks_lists = None
+    #ks_means = None
+    #ks_stds = None
+    swd_result: Dict[str, np.ndarray] = SWDMetric.Results[-1].result_value
+    swd_lists: List[List[float]] = swd_result["metric_lists"].tolist()
+    swd_means: List[float] = swd_result["metric_means"].tolist()
+    swd_stds: List[float] = swd_result["metric_stds"].tolist()
+    fn_result: Dict[str, np.ndarray] = FNMetric.Results[-1].result_value
+    fn_list: List[float] = fn_result["metric_list"].tolist()
+    ad_lists: Optional[List[List[float]]] = None
+    ad_means: Optional[List[float]] = None
+    ad_stds: Optional[List[float]] = None
+    wd_lists: Optional[List[List[float]]] = None
+    wd_means: Optional[List[float]] = None
+    wd_stds: Optional[List[float]] = None
+    end = timer()
+    metrics_time = end - start
+    print(f"Metrics computed in {metrics_time:.2f} s.")
+    #except:
+    #    raise Exception("Failed computing metrics")
+    #    try:
+    #        print("===========\nFailed on GPU, re-trying on CPU\n===========\n")
+    #        with tf.device('/device:CPU:0'): # type: ignore
+    #            print("Computing metrics...")
+    #            start = timer()
+    #            DataInputs = GMetrics.TwoSampleTestInputs(dist_1_input = targ_dist,
+    #                                                      dist_2_input = NFObject.nf_dist,
+    #                                                      niter = n_iter,
+    #                                                      batch_size = nsamples_test,
+    #                                                      dtype_input = dtype,
+    #                                                      seed_input = seed_metrics,
+    #                                                      use_tf = True,
+    #                                                      verbose = True)
+    #            LRMetric = GMetrics.LRMetric(data_input = DataInputs,
+    #                                         verbose = True)
+    #            KSTest = GMetrics.KSTest(data_input = DataInputs,
+    #                                     verbose = True)
+    #            SWDMetric = GMetrics.SWDMetric(data_input = DataInputs,
+    #                                           verbose = True)
+    #            FNMetric = GMetrics.FNMetric(data_input = DataInputs,
+    #                                         verbose = True)
+    #            LRMetric.compute()
+    #            KSTest.compute(max_vectorize = max_vectorize)
+    #            SWDMetric.compute(nslices = n_slices_factor*ndims)
+    #            FNMetric.compute(max_vectorize = max_vectorize)
+    #            lr_result = LRMetric.Results[-1].result_value
+    #            logprob_ref_ref_sum_list = lr_result["logprob_ref_ref_sum_list"].tolist()
+    #            logprob_ref_alt_sum_list = lr_result["logprob_ref_alt_sum_list"].tolist()
+    #            logprob_alt_alt_sum_list = lr_result["logprob_alt_alt_sum_list"].tolist()
+    #            lik_ratio_list = lr_result["lik_ratio_list"].tolist()
+    #            lik_ratio_norm_list = lr_result["lik_ratio_norm_list"].tolist()
+    #            ks_result = KSTest.Results[-1].result_value
+    #            ks_lists = ks_result["statistic_lists"].tolist()
+    #            ks_means = ks_result["statistic_means"].tolist()
+    #            ks_stds = ks_result["statistic_stds"].tolist()
+    #            swd_result = SWDMetric.Results[-1].result_value
+    #            swd_lists = swd_result["metric_lists"].tolist()
+    #            swd_means = swd_result["metric_means"].tolist()
+    #            swd_stds = swd_result["metric_stds"].tolist()
+    #            fn_result = FNMetric.Results[-1].result_value
+    #            fn_list = fn_result["metric_list"].tolist()
+    #            ad_lists = None
+    #            ad_means = None
+    #            ad_stds = None
+    #            wd_lists = None
+    #            wd_means = None
+    #            wd_stds = None
+    #            end = timer()
+    #            metrics_time = end - start
+    #            print(f"Metrics computed in {metrics_time:.2f} s.")
+    #    except:
+    #        print("===========\nFailed computing metrics\n===========\n")
+    #        logprob_ref_ref_sum_list = []
+    #        logprob_ref_alt_sum_list = []
+    #        logprob_alt_alt_sum_list = []
+    #        lik_ratio_list = []
+    #        lik_ratio_norm_list = []
+    #        ks_means = []
+    #        ks_stds = []
+    #        ks_lists = []
+    #        ad_means = []
+    #        ad_stds = []
+    #        ad_lists = []
+    #        fn_list = []
+    #        wd_means = []
+    #        wd_stds = []
+    #        wd_lists = []
+    #        swd_means = []
+    #        swd_stds = []
+    #        swd_lists = []
+    #        metrics_time = 0.
     if make_plots:
         try:
             start = timer()
@@ -569,7 +571,7 @@ regulariser: Optional[str] = None
 eps_regulariser: float = 0.
 
 ### Initialzie training hyperparameters ###
-epochs_input: int = 1000
+epochs_input: int = 10
 batch_size: int = 512
 nan_threshold: float = 0.01
 max_retry: int = 10
@@ -638,8 +640,8 @@ for ndims in ndims_list:
                                                                    bkp = False)
                     if to_run:
                         try:
-                            dummy_file_path: str = os.path.join(path_to_results,'running.txt')
-                            with open(dummy_file_path, 'w') as f:
+                            running_file_path: str = os.path.join(path_to_results,'running.txt')
+                            with open(running_file_path, 'w') as f:
                                 pass
                             path_to_weights: str = Utils.define_dir(os.path.join(path_to_results, 'weights'))
                             checkpoint_path: str = os.path.join(path_to_weights, 'best_weights.h5')
@@ -715,15 +717,18 @@ for ndims in ndims_list:
                                 """))
                             run = run + 1
                             try:
-                                os.remove(dummy_file_path)
+                                os.remove(running_file_path)
                             except:
                                 pass
-                            dummy_file_path = os.path.join(path_to_results,'done.txt')
-                            with open(dummy_file_path, 'w') as f:
+                            done_file_path = os.path.join(path_to_results,'done.txt')
+                            with open(done_file_path, 'w') as f:
+                                pass
+                            done_new_file_path = os.path.join(path_to_results,'done_new.txt')
+                            with open(done_new_file_path, 'w') as f:
                                 pass
                         except Exception as ex:
                             try:
-                                os.remove(dummy_file_path)
+                                os.remove(running_file_path)
                             except:
                                 pass
                             # Get current system exception
