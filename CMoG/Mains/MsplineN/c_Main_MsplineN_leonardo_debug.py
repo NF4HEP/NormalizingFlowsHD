@@ -2,7 +2,7 @@
 ######################################### Initialize #########################################
 ##############################################################################################
 
-visible_devices = [0]
+visible_devices = [0,1]
 import datetime
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing os...")
 import os
@@ -62,7 +62,7 @@ for gpu_device in gpu_devices:
 
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing custom module...")
 
-sys.path.append('/leonardo/home/userexternal/rtorre00/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/code')
+sys.path.append('../../../code')
 import Bijectors, Distributions, MixtureDistributions, Plotters, Trainer, Utils # type: ignore
 import GenerativeModelsMetrics as GMetrics # type: ignore
 
@@ -590,7 +590,7 @@ lr_reduce_factor_on_nan: float = float(1/3)
 min_lr: float = 1e-6
 
 ### Initialize parameters for inference ###
-n_iter: int = 10
+n_iter: int = 3
 n_slices_factor: int = 2
 dtype: type = tf.float32
 max_vectorize: int = 10
@@ -605,7 +605,7 @@ results_dict: Dict[str, Any] = Utils.init_results_dict()
 hyperparams_dict: Dict[str, Any] = Utils.init_hyperparams_dict()
 
 ### Initialize output dir ###
-mother_output_dir: str = Utils.define_dir('/leonardo/home/userexternal/rtorre00/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG//results/MsplineN_new/')
+mother_output_dir: str = Utils.define_dir('../../results/MsplineN_new/')
 
 ### Create 'log' file ####
 log_file_name: str = Utils.create_log_file(mother_output_dir, results_dict)
