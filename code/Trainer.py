@@ -1038,8 +1038,9 @@ class Trainer(Debugger):
         
     @log_prob.setter
     def log_prob(self, value: Union[tf.Tensor, KerasTensor]) -> None:
-        if not isinstance(value, (tf.Tensor, KerasTensor)):
-            raise ValueError("value is not of type tf.Tensor.")
+        #if not isinstance(value, (tf.Tensor, KerasTensor)):
+        #    print(f"type of log_prob: {type(value)}")
+        #    raise ValueError("value is not of type tf.Tensor.")
         try:
             _ = self._log_prob
             raise ValueError("log_prob can only be set at init time and can not be changed.")
