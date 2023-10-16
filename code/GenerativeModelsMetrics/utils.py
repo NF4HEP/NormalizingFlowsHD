@@ -405,7 +405,7 @@ def generate_and_clean_data_mirror(dist, n_samples, batch_size, dtype, seed):
                 per_replica_samples_concat = tf.concat(strategy.experimental_local_results(per_replica_samples), axis=0)
                 samples.append(per_replica_samples_concat)
                 total_samples += strategy.reduce(tf.distribute.ReduceOp.SUM, per_replica_sample_count, axis=None)
-                #print("Generated {} samples".format(total_samples))
+                print(f"Generated {total_samples} samples")
             except (RuntimeError, tf.errors.ResourceExhaustedError):
                 # If a RuntimeError or a ResourceExhaustedError occurs (possibly due to OOM), halve the batch size
                 global_batch_size = global_batch_size // 2

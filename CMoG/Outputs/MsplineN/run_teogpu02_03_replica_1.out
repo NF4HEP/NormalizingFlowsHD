@@ -2373,3 +2373,136 @@ Epoch 8/1000
 Epoch 8: val_loss improved from 422.01987 to 420.50146, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
 196/196 - 20s - loss: 420.9341 - MinusLogProbMetric: 420.9341 - val_loss: 420.5015 - val_MinusLogProbMetric: 420.5015 - lr: 0.0010 - 20s/epoch - 101ms/step
 Epoch 9/1000
+2023-10-16 09:18:09.639 
+Epoch 9/1000 
+	 loss: 418.2714, MinusLogProbMetric: 418.2714, val_loss: 424.3832, val_MinusLogProbMetric: 424.3832
+
+Epoch 9: val_loss did not improve from 420.50146
+196/196 - 22s - loss: 418.2714 - MinusLogProbMetric: 418.2714 - val_loss: 424.3832 - val_MinusLogProbMetric: 424.3832 - lr: 0.0010 - 22s/epoch - 110ms/step
+Epoch 10/1000
+2023-10-16 09:18:31.880 
+Epoch 10/1000 
+	 loss: 416.9705, MinusLogProbMetric: 416.9705, val_loss: 419.4263, val_MinusLogProbMetric: 419.4263
+
+Epoch 10: val_loss improved from 420.50146 to 419.42627, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 23s - loss: 416.9705 - MinusLogProbMetric: 416.9705 - val_loss: 419.4263 - val_MinusLogProbMetric: 419.4263 - lr: 0.0010 - 23s/epoch - 115ms/step
+Epoch 11/1000
+2023-10-16 09:18:54.384 
+Epoch 11/1000 
+	 loss: 414.7903, MinusLogProbMetric: 414.7903, val_loss: 414.5081, val_MinusLogProbMetric: 414.5081
+
+Epoch 11: val_loss improved from 419.42627 to 414.50806, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 23s - loss: 414.7903 - MinusLogProbMetric: 414.7903 - val_loss: 414.5081 - val_MinusLogProbMetric: 414.5081 - lr: 0.0010 - 23s/epoch - 115ms/step
+Epoch 12/1000
+2023-10-16 09:19:22.011 
+Epoch 12/1000 
+	 loss: 412.9243, MinusLogProbMetric: 412.9243, val_loss: 413.7959, val_MinusLogProbMetric: 413.7959
+
+Epoch 12: val_loss improved from 414.50806 to 413.79593, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 28s - loss: 412.9243 - MinusLogProbMetric: 412.9243 - val_loss: 413.7959 - val_MinusLogProbMetric: 413.7959 - lr: 0.0010 - 28s/epoch - 140ms/step
+Epoch 13/1000
+2023-10-16 09:19:46.719 
+Epoch 13/1000 
+	 loss: 424.6409, MinusLogProbMetric: 424.6409, val_loss: 429.8159, val_MinusLogProbMetric: 429.8159
+
+Epoch 13: val_loss did not improve from 413.79593
+196/196 - 24s - loss: 424.6409 - MinusLogProbMetric: 424.6409 - val_loss: 429.8159 - val_MinusLogProbMetric: 429.8159 - lr: 0.0010 - 24s/epoch - 125ms/step
+Epoch 14/1000
+2023-10-16 09:20:11.066 
+Epoch 14/1000 
+	 loss: 412.9080, MinusLogProbMetric: 412.9080, val_loss: 415.7914, val_MinusLogProbMetric: 415.7914
+
+Epoch 14: val_loss did not improve from 413.79593
+196/196 - 24s - loss: 412.9080 - MinusLogProbMetric: 412.9080 - val_loss: 415.7914 - val_MinusLogProbMetric: 415.7914 - lr: 0.0010 - 24s/epoch - 124ms/step
+Epoch 15/1000
+2023-10-16 09:20:35.526 
+Epoch 15/1000 
+	 loss: 409.8672, MinusLogProbMetric: 409.8672, val_loss: 418.4262, val_MinusLogProbMetric: 418.4262
+
+Epoch 15: val_loss did not improve from 413.79593
+196/196 - 24s - loss: 409.8672 - MinusLogProbMetric: 409.8672 - val_loss: 418.4262 - val_MinusLogProbMetric: 418.4262 - lr: 0.0010 - 24s/epoch - 125ms/step
+Epoch 16/1000
+2023-10-16 09:21:00.117 
+Epoch 16/1000 
+	 loss: 409.4396, MinusLogProbMetric: 409.4396, val_loss: 411.0819, val_MinusLogProbMetric: 411.0819
+
+Epoch 16: val_loss improved from 413.79593 to 411.08191, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 25s - loss: 409.4396 - MinusLogProbMetric: 409.4396 - val_loss: 411.0819 - val_MinusLogProbMetric: 411.0819 - lr: 0.0010 - 25s/epoch - 127ms/step
+Epoch 17/1000
+2023-10-16 09:21:25.107 
+Epoch 17/1000 
+	 loss: 407.7032, MinusLogProbMetric: 407.7032, val_loss: 410.3547, val_MinusLogProbMetric: 410.3547
+
+Epoch 17: val_loss improved from 411.08191 to 410.35474, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 25s - loss: 407.7032 - MinusLogProbMetric: 407.7032 - val_loss: 410.3547 - val_MinusLogProbMetric: 410.3547 - lr: 0.0010 - 25s/epoch - 127ms/step
+Epoch 18/1000
+2023-10-16 09:21:50.251 
+Epoch 18/1000 
+	 loss: 407.0901, MinusLogProbMetric: 407.0901, val_loss: 407.3067, val_MinusLogProbMetric: 407.3067
+
+Epoch 18: val_loss improved from 410.35474 to 407.30667, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 25s - loss: 407.0901 - MinusLogProbMetric: 407.0901 - val_loss: 407.3067 - val_MinusLogProbMetric: 407.3067 - lr: 0.0010 - 25s/epoch - 128ms/step
+Epoch 19/1000
+2023-10-16 09:22:15.504 
+Epoch 19/1000 
+	 loss: 406.4607, MinusLogProbMetric: 406.4607, val_loss: 409.5449, val_MinusLogProbMetric: 409.5449
+
+Epoch 19: val_loss did not improve from 407.30667
+196/196 - 25s - loss: 406.4607 - MinusLogProbMetric: 406.4607 - val_loss: 409.5449 - val_MinusLogProbMetric: 409.5449 - lr: 0.0010 - 25s/epoch - 127ms/step
+Epoch 20/1000
+2023-10-16 09:22:40.558 
+Epoch 20/1000 
+	 loss: 405.6698, MinusLogProbMetric: 405.6698, val_loss: 405.7829, val_MinusLogProbMetric: 405.7829
+
+Epoch 20: val_loss improved from 407.30667 to 405.78287, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 25s - loss: 405.6698 - MinusLogProbMetric: 405.6698 - val_loss: 405.7829 - val_MinusLogProbMetric: 405.7829 - lr: 0.0010 - 25s/epoch - 129ms/step
+Epoch 21/1000
+2023-10-16 09:23:05.871 
+Epoch 21/1000 
+	 loss: 405.3238, MinusLogProbMetric: 405.3238, val_loss: 404.2612, val_MinusLogProbMetric: 404.2612
+
+Epoch 21: val_loss improved from 405.78287 to 404.26120, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 25s - loss: 405.3238 - MinusLogProbMetric: 405.3238 - val_loss: 404.2612 - val_MinusLogProbMetric: 404.2612 - lr: 0.0010 - 25s/epoch - 130ms/step
+Epoch 22/1000
+2023-10-16 09:23:31.420 
+Epoch 22/1000 
+	 loss: 404.8685, MinusLogProbMetric: 404.8685, val_loss: 408.2635, val_MinusLogProbMetric: 408.2635
+
+Epoch 22: val_loss did not improve from 404.26120
+196/196 - 25s - loss: 404.8685 - MinusLogProbMetric: 404.8685 - val_loss: 408.2635 - val_MinusLogProbMetric: 408.2635 - lr: 0.0010 - 25s/epoch - 129ms/step
+Epoch 23/1000
+2023-10-16 09:23:56.213 
+Epoch 23/1000 
+	 loss: 404.2796, MinusLogProbMetric: 404.2796, val_loss: 403.6821, val_MinusLogProbMetric: 403.6821
+
+Epoch 23: val_loss improved from 404.26120 to 403.68207, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 25s - loss: 404.2796 - MinusLogProbMetric: 404.2796 - val_loss: 403.6821 - val_MinusLogProbMetric: 403.6821 - lr: 0.0010 - 25s/epoch - 128ms/step
+Epoch 24/1000
+2023-10-16 09:24:27.743 
+Epoch 24/1000 
+	 loss: 404.5030, MinusLogProbMetric: 404.5030, val_loss: 402.8655, val_MinusLogProbMetric: 402.8655
+
+Epoch 24: val_loss improved from 403.68207 to 402.86551, saving model to /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_322/weights/best_weights.h5
+196/196 - 32s - loss: 404.5030 - MinusLogProbMetric: 404.5030 - val_loss: 402.8655 - val_MinusLogProbMetric: 402.8655 - lr: 0.0010 - 32s/epoch - 161ms/step
+Epoch 25/1000
+2023-10-16 09:24:52.848 
+Epoch 25/1000 
+	 loss: 403.7705, MinusLogProbMetric: 403.7705, val_loss: 405.7867, val_MinusLogProbMetric: 405.7867
+
+Epoch 25: val_loss did not improve from 402.86551
+196/196 - 25s - loss: 403.7705 - MinusLogProbMetric: 403.7705 - val_loss: 405.7867 - val_MinusLogProbMetric: 405.7867 - lr: 0.0010 - 25s/epoch - 126ms/step
+Epoch 26/1000
+2023-10-16 09:25:17.696 
+Epoch 26/1000 
+	 loss: 403.2532, MinusLogProbMetric: 403.2532, val_loss: 405.9164, val_MinusLogProbMetric: 405.9164
+
+Epoch 26: val_loss did not improve from 402.86551
+196/196 - 25s - loss: 403.2532 - MinusLogProbMetric: 403.2532 - val_loss: 405.9164 - val_MinusLogProbMetric: 405.9164 - lr: 0.0010 - 25s/epoch - 127ms/step
+Epoch 27/1000
+2023-10-16 09:25:42.930 
+Epoch 27/1000 
+	 loss: 402.7698, MinusLogProbMetric: 402.7698, val_loss: 403.1750, val_MinusLogProbMetric: 403.1750
+
+Epoch 27: val_loss did not improve from 402.86551
+196/196 - 25s - loss: 402.7698 - MinusLogProbMetric: 402.7698 - val_loss: 403.1750 - val_MinusLogProbMetric: 403.1750 - lr: 0.0010 - 25s/epoch - 129ms/step
+Epoch 28/1000
