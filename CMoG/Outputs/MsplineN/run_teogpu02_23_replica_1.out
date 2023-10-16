@@ -1,0 +1,2331 @@
+2023-10-16 09:16:46.401111: Importing os...
+2023-10-16 09:16:46.401194: Importing sys...
+2023-10-16 09:16:46.401208: Importing and initializing argparse...
+Visible devices: [2, 3]
+2023-10-16 09:16:46.423349: Importing timer from timeit...
+2023-10-16 09:16:46.423963: Setting env variables for tf import (only device [2, 3] will be available)...
+2023-10-16 09:16:46.424011: Importing numpy...
+2023-10-16 09:16:46.617790: Importing pandas...
+2023-10-16 09:16:46.843352: Importing shutil...
+2023-10-16 09:16:46.843386: Importing subprocess...
+2023-10-16 09:16:46.843393: Importing tensorflow...
+Tensorflow version: 2.12.0
+2023-10-16 09:16:49.646006: Importing tensorflow_probability...
+Tensorflow probability version: 0.20.1
+2023-10-16 09:16:50.157195: Importing textwrap...
+2023-10-16 09:16:50.157235: Importing timeit...
+2023-10-16 09:16:50.157248: Importing traceback...
+2023-10-16 09:16:50.157256: Importing typing...
+2023-10-16 09:16:50.157270: Setting tf configs...
+2023-10-16 09:16:50.531062: Importing custom module...
+Successfully loaded GPU model: NVIDIA A40
+2023-10-16 09:16:52.048539: All modues imported successfully.
+Directory ../../results/MsplineN_new/ already exists.
+Directory ../../results/MsplineN_new/run_1/ already exists.
+Skipping it.
+===========
+Run 1/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_2/ already exists.
+Skipping it.
+===========
+Run 2/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_3/ already exists.
+Skipping it.
+===========
+Run 3/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_4/ already exists.
+Skipping it.
+===========
+Run 4/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_5/ already exists.
+Skipping it.
+===========
+Run 5/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_6/ already exists.
+Skipping it.
+===========
+Run 6/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_7/ already exists.
+Skipping it.
+===========
+Run 7/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_8/ already exists.
+Skipping it.
+===========
+Run 8/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_9/ already exists.
+Skipping it.
+===========
+Run 9/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_10/ already exists.
+Skipping it.
+===========
+Run 10/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_11/ already exists.
+Skipping it.
+===========
+Run 11/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_12/ already exists.
+Skipping it.
+===========
+Run 12/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_13/ already exists.
+Skipping it.
+===========
+Run 13/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_14/ already exists.
+Skipping it.
+===========
+Run 14/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_15/ already exists.
+Skipping it.
+===========
+Run 15/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_16/ already exists.
+Skipping it.
+===========
+Run 16/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_17/ already exists.
+Skipping it.
+===========
+Run 17/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_18/ already exists.
+Skipping it.
+===========
+Run 18/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_19/ already exists.
+Skipping it.
+===========
+Run 19/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_20/ already exists.
+Skipping it.
+===========
+Run 20/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_21/ already exists.
+Skipping it.
+===========
+Run 21/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_22/ already exists.
+Skipping it.
+===========
+Run 22/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_23/ already exists.
+Skipping it.
+===========
+Run 23/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_24/ already exists.
+Skipping it.
+===========
+Run 24/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_25/ already exists.
+Skipping it.
+===========
+Run 25/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_26/ already exists.
+Skipping it.
+===========
+Run 26/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_27/ already exists.
+Skipping it.
+===========
+Run 27/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_28/ already exists.
+Skipping it.
+===========
+Run 28/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_29/ already exists.
+Skipping it.
+===========
+Run 29/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_30/ already exists.
+Skipping it.
+===========
+Run 30/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_31/ already exists.
+Skipping it.
+===========
+Run 31/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_32/ already exists.
+Skipping it.
+===========
+Run 32/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_33/ already exists.
+Skipping it.
+===========
+Run 33/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_34/ already exists.
+Skipping it.
+===========
+Run 34/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_35/ already exists.
+Skipping it.
+===========
+Run 35/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_36/ already exists.
+Skipping it.
+===========
+Run 36/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_37/ already exists.
+Skipping it.
+===========
+Run 37/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_38/ already exists.
+Skipping it.
+===========
+Run 38/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_39/ already exists.
+Skipping it.
+===========
+Run 39/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_40/ already exists.
+Skipping it.
+===========
+Run 40/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_41/ already exists.
+Skipping it.
+===========
+Run 41/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_42/ already exists.
+Skipping it.
+===========
+Run 42/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_43/ already exists.
+Skipping it.
+===========
+Run 43/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_44/ already exists.
+Skipping it.
+===========
+Run 44/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_45/ already exists.
+Skipping it.
+===========
+Run 45/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_46/ already exists.
+Skipping it.
+===========
+Run 46/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_47/ already exists.
+Skipping it.
+===========
+Run 47/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_48/ already exists.
+Skipping it.
+===========
+Run 48/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_49/ already exists.
+Skipping it.
+===========
+Run 49/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_50/ already exists.
+Skipping it.
+===========
+Run 50/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_51/ already exists.
+Skipping it.
+===========
+Run 51/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_52/ already exists.
+Skipping it.
+===========
+Run 52/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_53/ already exists.
+Skipping it.
+===========
+Run 53/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_54/ already exists.
+Skipping it.
+===========
+Run 54/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_55/ already exists.
+Skipping it.
+===========
+Run 55/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_56/ already exists.
+Skipping it.
+===========
+Run 56/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_57/ already exists.
+Skipping it.
+===========
+Run 57/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_58/ already exists.
+Skipping it.
+===========
+Run 58/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_59/ already exists.
+Skipping it.
+===========
+Run 59/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_60/ already exists.
+Skipping it.
+===========
+Run 60/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_61/ already exists.
+Skipping it.
+===========
+Run 61/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_62/ already exists.
+Skipping it.
+===========
+Run 62/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_63/ already exists.
+Skipping it.
+===========
+Run 63/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_64/ already exists.
+Skipping it.
+===========
+Run 64/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_65/ already exists.
+Skipping it.
+===========
+Run 65/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_66/ already exists.
+Skipping it.
+===========
+Run 66/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_67/ already exists.
+Skipping it.
+===========
+Run 67/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_68/ already exists.
+Skipping it.
+===========
+Run 68/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_69/ already exists.
+Skipping it.
+===========
+Run 69/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_70/ already exists.
+Skipping it.
+===========
+Run 70/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_71/ already exists.
+Skipping it.
+===========
+Run 71/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_72/ already exists.
+Skipping it.
+===========
+Run 72/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_73/ already exists.
+Skipping it.
+===========
+Run 73/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_74/ already exists.
+Skipping it.
+===========
+Run 74/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_75/ already exists.
+Skipping it.
+===========
+Run 75/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_76/ already exists.
+Skipping it.
+===========
+Run 76/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_77/ already exists.
+Skipping it.
+===========
+Run 77/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_78/ already exists.
+Skipping it.
+===========
+Run 78/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_79/ already exists.
+Skipping it.
+===========
+Run 79/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_80/ already exists.
+Skipping it.
+===========
+Run 80/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_81/ already exists.
+Skipping it.
+===========
+Run 81/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_82/ already exists.
+Skipping it.
+===========
+Run 82/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_83/ already exists.
+Skipping it.
+===========
+Run 83/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_84/ already exists.
+Skipping it.
+===========
+Run 84/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_85/ already exists.
+Skipping it.
+===========
+Run 85/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_86/ already exists.
+Skipping it.
+===========
+Run 86/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_87/ already exists.
+Skipping it.
+===========
+Run 87/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_88/ already exists.
+Skipping it.
+===========
+Run 88/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_89/ already exists.
+Skipping it.
+===========
+Run 89/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_90/ already exists.
+Skipping it.
+===========
+Run 90/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_91/ already exists.
+Skipping it.
+===========
+Run 91/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_92/ already exists.
+Skipping it.
+===========
+Run 92/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_93/ already exists.
+Skipping it.
+===========
+Run 93/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_94/ already exists.
+Skipping it.
+===========
+Run 94/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_95/ already exists.
+Skipping it.
+===========
+Run 95/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_96/ already exists.
+Skipping it.
+===========
+Run 96/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_97/ already exists.
+Skipping it.
+===========
+Run 97/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_98/ already exists.
+Skipping it.
+===========
+Run 98/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_99/ already exists.
+Skipping it.
+===========
+Run 99/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_100/ already exists.
+Skipping it.
+===========
+Run 100/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_101/ already exists.
+Skipping it.
+===========
+Run 101/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_102/ already exists.
+Skipping it.
+===========
+Run 102/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_103/ already exists.
+Skipping it.
+===========
+Run 103/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_104/ already exists.
+Skipping it.
+===========
+Run 104/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_105/ already exists.
+Skipping it.
+===========
+Run 105/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_106/ already exists.
+Skipping it.
+===========
+Run 106/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_107/ already exists.
+Skipping it.
+===========
+Run 107/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_108/ already exists.
+Skipping it.
+===========
+Run 108/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_109/ already exists.
+Skipping it.
+===========
+Run 109/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_110/ already exists.
+Skipping it.
+===========
+Run 110/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_111/ already exists.
+Skipping it.
+===========
+Run 111/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_112/ already exists.
+Skipping it.
+===========
+Run 112/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_113/ already exists.
+Skipping it.
+===========
+Run 113/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_114/ already exists.
+Skipping it.
+===========
+Run 114/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_115/ already exists.
+Skipping it.
+===========
+Run 115/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_116/ already exists.
+Skipping it.
+===========
+Run 116/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_117/ already exists.
+Skipping it.
+===========
+Run 117/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_118/ already exists.
+Skipping it.
+===========
+Run 118/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_119/ already exists.
+Skipping it.
+===========
+Run 119/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_120/ already exists.
+Skipping it.
+===========
+Run 120/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_121/ already exists.
+Skipping it.
+===========
+Run 121/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_122/ already exists.
+Skipping it.
+===========
+Run 122/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_123/ already exists.
+Skipping it.
+===========
+Run 123/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_124/ already exists.
+Skipping it.
+===========
+Run 124/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_125/ already exists.
+Skipping it.
+===========
+Run 125/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_126/ already exists.
+Skipping it.
+===========
+Run 126/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_127/ already exists.
+Skipping it.
+===========
+Run 127/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_128/ already exists.
+Skipping it.
+===========
+Run 128/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_129/ already exists.
+Skipping it.
+===========
+Run 129/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_130/ already exists.
+Skipping it.
+===========
+Run 130/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_131/ already exists.
+Skipping it.
+===========
+Run 131/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_132/ already exists.
+Skipping it.
+===========
+Run 132/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_133/ already exists.
+Skipping it.
+===========
+Run 133/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_134/ already exists.
+Skipping it.
+===========
+Run 134/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_135/ already exists.
+Skipping it.
+===========
+Run 135/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_136/ already exists.
+Skipping it.
+===========
+Run 136/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_137/ already exists.
+Skipping it.
+===========
+Run 137/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_138/ already exists.
+Skipping it.
+===========
+Run 138/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_139/ already exists.
+Skipping it.
+===========
+Run 139/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_140/ already exists.
+Skipping it.
+===========
+Run 140/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_141/ already exists.
+Skipping it.
+===========
+Run 141/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_142/ already exists.
+Skipping it.
+===========
+Run 142/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_143/ already exists.
+Skipping it.
+===========
+Run 143/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_144/ already exists.
+Skipping it.
+===========
+Run 144/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_145/ already exists.
+Skipping it.
+===========
+Run 145/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_146/ already exists.
+Skipping it.
+===========
+Run 146/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_147/ already exists.
+Skipping it.
+===========
+Run 147/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_148/ already exists.
+Skipping it.
+===========
+Run 148/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_149/ already exists.
+Skipping it.
+===========
+Run 149/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_150/ already exists.
+Skipping it.
+===========
+Run 150/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_151/ already exists.
+Skipping it.
+===========
+Run 151/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_152/ already exists.
+Skipping it.
+===========
+Run 152/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_153/ already exists.
+Skipping it.
+===========
+Run 153/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_154/ already exists.
+Skipping it.
+===========
+Run 154/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_155/ already exists.
+Skipping it.
+===========
+Run 155/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_156/ already exists.
+Skipping it.
+===========
+Run 156/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_157/ already exists.
+Skipping it.
+===========
+Run 157/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_158/ already exists.
+Skipping it.
+===========
+Run 158/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_159/ already exists.
+Skipping it.
+===========
+Run 159/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_160/ already exists.
+Skipping it.
+===========
+Run 160/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_161/ already exists.
+Skipping it.
+===========
+Run 161/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_162/ already exists.
+Skipping it.
+===========
+Run 162/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_163/ already exists.
+Skipping it.
+===========
+Run 163/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_164/ already exists.
+Skipping it.
+===========
+Run 164/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_165/ already exists.
+Skipping it.
+===========
+Run 165/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_166/ already exists.
+Skipping it.
+===========
+Run 166/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_167/ already exists.
+Skipping it.
+===========
+Run 167/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_168/ already exists.
+Skipping it.
+===========
+Run 168/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_169/ already exists.
+Skipping it.
+===========
+Run 169/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_170/ already exists.
+Skipping it.
+===========
+Run 170/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_171/ already exists.
+Skipping it.
+===========
+Run 171/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_172/ already exists.
+Skipping it.
+===========
+Run 172/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_173/ already exists.
+Skipping it.
+===========
+Run 173/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_174/ already exists.
+Skipping it.
+===========
+Run 174/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_175/ already exists.
+Skipping it.
+===========
+Run 175/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_176/ already exists.
+Skipping it.
+===========
+Run 176/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_177/ already exists.
+Skipping it.
+===========
+Run 177/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_178/ already exists.
+Skipping it.
+===========
+Run 178/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_179/ already exists.
+Skipping it.
+===========
+Run 179/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_180/ already exists.
+Skipping it.
+===========
+Run 180/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_181/ already exists.
+Skipping it.
+===========
+Run 181/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_182/ already exists.
+Skipping it.
+===========
+Run 182/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_183/ already exists.
+Skipping it.
+===========
+Run 183/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_184/ already exists.
+Skipping it.
+===========
+Run 184/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_185/ already exists.
+Skipping it.
+===========
+Run 185/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_186/ already exists.
+Skipping it.
+===========
+Run 186/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_187/ already exists.
+Skipping it.
+===========
+Run 187/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_188/ already exists.
+Skipping it.
+===========
+Run 188/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_189/ already exists.
+Skipping it.
+===========
+Run 189/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_190/ already exists.
+Skipping it.
+===========
+Run 190/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_191/ already exists.
+Skipping it.
+===========
+Run 191/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_192/ already exists.
+Skipping it.
+===========
+Run 192/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_193/ already exists.
+Skipping it.
+===========
+Run 193/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_194/ already exists.
+Skipping it.
+===========
+Run 194/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_195/ already exists.
+Skipping it.
+===========
+Run 195/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_196/ already exists.
+Skipping it.
+===========
+Run 196/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_197/ already exists.
+Skipping it.
+===========
+Run 197/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_198/ already exists.
+Skipping it.
+===========
+Run 198/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_199/ already exists.
+Skipping it.
+===========
+Run 199/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_200/ already exists.
+Skipping it.
+===========
+Run 200/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_201/ already exists.
+Skipping it.
+===========
+Run 201/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_202/ already exists.
+Skipping it.
+===========
+Run 202/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_203/ already exists.
+Skipping it.
+===========
+Run 203/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_204/ already exists.
+Skipping it.
+===========
+Run 204/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_205/ already exists.
+Skipping it.
+===========
+Run 205/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_206/ already exists.
+Skipping it.
+===========
+Run 206/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_207/ already exists.
+Skipping it.
+===========
+Run 207/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_208/ already exists.
+Skipping it.
+===========
+Run 208/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_209/ already exists.
+Skipping it.
+===========
+Run 209/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_210/ already exists.
+Skipping it.
+===========
+Run 210/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_211/ already exists.
+Skipping it.
+===========
+Run 211/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_212/ already exists.
+Skipping it.
+===========
+Run 212/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_213/ already exists.
+Skipping it.
+===========
+Run 213/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_214/ already exists.
+Skipping it.
+===========
+Run 214/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_215/ already exists.
+Skipping it.
+===========
+Run 215/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_216/ already exists.
+Skipping it.
+===========
+Run 216/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_217/ already exists.
+Skipping it.
+===========
+Run 217/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_218/ already exists.
+Skipping it.
+===========
+Run 218/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_219/ already exists.
+Skipping it.
+===========
+Run 219/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_220/ already exists.
+Skipping it.
+===========
+Run 220/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_221/ already exists.
+Skipping it.
+===========
+Run 221/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_222/ already exists.
+Skipping it.
+===========
+Run 222/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_223/ already exists.
+Skipping it.
+===========
+Run 223/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_224/ already exists.
+Skipping it.
+===========
+Run 224/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_225/ already exists.
+Skipping it.
+===========
+Run 225/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_226/ already exists.
+Skipping it.
+===========
+Run 226/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_227/ already exists.
+Skipping it.
+===========
+Run 227/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_228/ already exists.
+Skipping it.
+===========
+Run 228/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_229/ already exists.
+Skipping it.
+===========
+Run 229/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_230/ already exists.
+Skipping it.
+===========
+Run 230/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_231/ already exists.
+Skipping it.
+===========
+Run 231/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_232/ already exists.
+Skipping it.
+===========
+Run 232/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_233/ already exists.
+Skipping it.
+===========
+Run 233/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_234/ already exists.
+Skipping it.
+===========
+Run 234/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_235/ already exists.
+Skipping it.
+===========
+Run 235/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_236/ already exists.
+Skipping it.
+===========
+Run 236/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_237/ already exists.
+Skipping it.
+===========
+Run 237/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_238/ already exists.
+Skipping it.
+===========
+Run 238/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_239/ already exists.
+Skipping it.
+===========
+Run 239/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_240/ already exists.
+Skipping it.
+===========
+Run 240/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_241/ already exists.
+Skipping it.
+===========
+Run 241/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_242/ already exists.
+Skipping it.
+===========
+Run 242/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_243/ already exists.
+Skipping it.
+===========
+Run 243/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_244/ already exists.
+Skipping it.
+===========
+Run 244/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_245/ already exists.
+Skipping it.
+===========
+Run 245/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_246/ already exists.
+Skipping it.
+===========
+Run 246/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_247/ already exists.
+Skipping it.
+===========
+Run 247/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_248/ already exists.
+Skipping it.
+===========
+Run 248/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_249/ already exists.
+Skipping it.
+===========
+Run 249/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_250/ already exists.
+Skipping it.
+===========
+Run 250/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_251/ already exists.
+Skipping it.
+===========
+Run 251/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_252/ already exists.
+Skipping it.
+===========
+Run 252/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_253/ already exists.
+Skipping it.
+===========
+Run 253/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_254/ already exists.
+Skipping it.
+===========
+Run 254/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_255/ already exists.
+Skipping it.
+===========
+Run 255/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_256/ already exists.
+Skipping it.
+===========
+Run 256/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_257/ already exists.
+Skipping it.
+===========
+Run 257/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_258/ already exists.
+Skipping it.
+===========
+Run 258/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_259/ already exists.
+Skipping it.
+===========
+Run 259/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_260/ already exists.
+Skipping it.
+===========
+Run 260/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_261/ already exists.
+Skipping it.
+===========
+Run 261/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_262/ already exists.
+Skipping it.
+===========
+Run 262/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_263/ already exists.
+Skipping it.
+===========
+Run 263/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_264/ already exists.
+Skipping it.
+===========
+Run 264/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_265/ already exists.
+Skipping it.
+===========
+Run 265/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_266/ already exists.
+Skipping it.
+===========
+Run 266/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_267/ already exists.
+Skipping it.
+===========
+Run 267/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_268/ already exists.
+Skipping it.
+===========
+Run 268/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_269/ already exists.
+Skipping it.
+===========
+Run 269/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_270/ already exists.
+Skipping it.
+===========
+Run 270/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_271/ already exists.
+Skipping it.
+===========
+Run 271/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_272/ already exists.
+Skipping it.
+===========
+Run 272/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_273/ already exists.
+Skipping it.
+===========
+Run 273/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_274/ already exists.
+Skipping it.
+===========
+Run 274/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_275/ already exists.
+Skipping it.
+===========
+Run 275/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_276/ already exists.
+Skipping it.
+===========
+Run 276/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_277/ already exists.
+Skipping it.
+===========
+Run 277/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_278/ already exists.
+Skipping it.
+===========
+Run 278/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_279/ already exists.
+Skipping it.
+===========
+Run 279/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_280/ already exists.
+Skipping it.
+===========
+Run 280/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_281/ already exists.
+Skipping it.
+===========
+Run 281/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_282/ already exists.
+Skipping it.
+===========
+Run 282/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_283/ already exists.
+Skipping it.
+===========
+Run 283/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_284/ already exists.
+Skipping it.
+===========
+Run 284/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_285/ already exists.
+Skipping it.
+===========
+Run 285/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_286/ already exists.
+Skipping it.
+===========
+Run 286/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_287/ already exists.
+Skipping it.
+===========
+Run 287/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_288/ already exists.
+Skipping it.
+===========
+Run 288/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_289/ already exists.
+Skipping it.
+===========
+Run 289/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_290/ already exists.
+Skipping it.
+===========
+Run 290/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_291/ already exists.
+Skipping it.
+===========
+Run 291/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_292/ already exists.
+Skipping it.
+===========
+Run 292/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_293/ already exists.
+Skipping it.
+===========
+Run 293/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_294/ already exists.
+Skipping it.
+===========
+Run 294/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_295/ already exists.
+Skipping it.
+===========
+Run 295/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_296/ already exists.
+Skipping it.
+===========
+Run 296/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_297/ already exists.
+Skipping it.
+===========
+Run 297/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_298/ already exists.
+Skipping it.
+===========
+Run 298/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_299/ already exists.
+Skipping it.
+===========
+Run 299/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_300/ already exists.
+Skipping it.
+===========
+Run 300/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_301/ already exists.
+Skipping it.
+===========
+Run 301/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_302/ already exists.
+Skipping it.
+===========
+Run 302/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_303/ already exists.
+Skipping it.
+===========
+Run 303/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_304/ already exists.
+Skipping it.
+===========
+Run 304/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_305/ already exists.
+Skipping it.
+===========
+Run 305/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_306/ already exists.
+Skipping it.
+===========
+Run 306/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_307/ already exists.
+Skipping it.
+===========
+Run 307/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_308/ already exists.
+Skipping it.
+===========
+Run 308/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_309/ already exists.
+Skipping it.
+===========
+Run 309/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_310/ already exists.
+Skipping it.
+===========
+Run 310/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_311/ already exists.
+Skipping it.
+===========
+Run 311/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_312/ already exists.
+Skipping it.
+===========
+Run 312/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_313/ already exists.
+Skipping it.
+===========
+Run 313/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_314/ already exists.
+Skipping it.
+===========
+Run 314/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_315/ already exists.
+Skipping it.
+===========
+Run 315/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_316/ already exists.
+Skipping it.
+===========
+Run 316/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_317/ already exists.
+Skipping it.
+===========
+Run 317/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_318/ already exists.
+Skipping it.
+===========
+Run 318/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_319/ already exists.
+Skipping it.
+===========
+Run 319/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_320/ already exists.
+Skipping it.
+===========
+Run 320/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_321/ already exists.
+Skipping it.
+===========
+Run 321/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_322/ already exists.
+Skipping it.
+===========
+Run 322/360 already exists. Skipping it.
+===========
+
+Directory ../../results/MsplineN_new/run_323/ already exists.
+Skipping it.
+===========
+Run 323/360 already exists. Skipping it.
+===========
+
+===========
+Generating train data for run 324.
+===========
+Train data generated in 1.43 s.
+
+Building Trainer NFObject.
+
+
+--------------- Debub info ---------------
+Initializing Trainer with following parameters:
+base_distribution: tfp.distributions.Sample("SampleNormal", batch_shape=[], event_shape=[1000], dtype=float32)
+flow: tfp.bijectors._Chain("chain_of_MAFspline_of_permute_of_MAFspline", batch_shape=[], min_event_ndims=1, bijectors=[MaskedAutoregressiveFlow, Permute, MaskedAutoregressiveFlow])
+x_data_train shape: (100000, 1000)
+y_data_train shape: (100000, 0)
+io_kwargs: {'results_path': '../../results/MsplineN_new/run_324/', 'load_weights': True, 'load_results': True}
+data_kwargs: {'seed': 0}
+compiler_kwargs: {'optimizer': {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}, 'metrics': [{'class_name': 'MinusLogProbMetric', 'config': {'ignore_nans': True, 'debug_print_mode': False}}], 'loss': {'class_name': 'MinusLogProbLoss', 'config': {'name': 'MLP', 'ignore_nans': True, 'nan_threshold': 0.01, 'debug_print_mode': False}}}
+callbacks_kwargs: [{'class_name': 'PrintEpochInfo', 'config': {}}, {'class_name': 'ModelCheckpoint', 'config': {'filepath': '../../results/MsplineN_new/run_324/weights/best_weights.h5', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True, 'verbose': 1, 'mode': 'auto', 'save_freq': 'epoch'}}, {'class_name': 'EarlyStopping', 'config': {'monitor': 'val_loss', 'min_delta': 0.0001, 'patience': 100, 'verbose': 1, 'mode': 'auto', 'baseline': None, 'restore_best_weights': True}}, {'class_name': 'ReduceLROnPlateau', 'config': {'monitor': 'val_loss', 'factor': 0.5, 'min_delta': 0.0001, 'patience': 50, 'min_lr': 1e-06}}, {'class_name': 'TerminateOnNaN', 'config': {}}]
+fit_kwargs: {'batch_size': 512, 'epochs': 1000, 'validation_data': (array([[6.277253 , 6.974316 , 5.431759 , ..., 8.818214 , 1.8372726,
+        6.879843 ],
+       [8.248872 , 4.6043487, 5.1827307, ..., 2.8883853, 8.569977 ,
+        6.566897 ],
+       [7.511346 , 4.894093 , 5.228927 , ..., 2.959833 , 8.1193695,
+        7.606636 ],
+       ...,
+       [5.4142895, 7.32243  , 7.81261  , ..., 9.441056 , 0.9493766,
+        6.7277093],
+       [5.4575763, 6.765944 , 6.234851 , ..., 9.695062 , 1.5681067,
+        6.672586 ],
+       [5.466369 , 6.341171 , 6.2548084, ..., 9.017296 , 2.8553374,
+        6.70359  ]], dtype=float32), <tf.Tensor: shape=(30000, 0), dtype=float32, numpy=array([], shape=(30000, 0), dtype=float32)>), 'shuffle': True, 'verbose': 2}
+
+--------------- Debub info ---------------
+Defined attributes:
+self.base_dist: tfp.distributions.Sample("SampleNormal", batch_shape=[], event_shape=[1000], dtype=float32)
+self.flow: tfp.bijectors._Chain("chain_of_MAFspline_of_permute_of_MAFspline", batch_shape=[], min_event_ndims=1, bijectors=[MaskedAutoregressiveFlow, Permute, MaskedAutoregressiveFlow])
+self.nf_dist: tfp.distributions._TransformedDistribution("chain_of_MAFspline_of_permute_of_MAFsplineSampleNormal", batch_shape=[], event_shape=[1000], dtype=float32)
+self.io_kwargs: {'results_path': '../../results/MsplineN_new/run_324/', 'load_weights': True, 'load_results': True}
+self.results_path: ../../results/MsplineN_new/run_324
+self.data_kwargs: {'seed': 0}
+self.x_data: [[8.210789   4.3589015  5.1949253  ... 2.1186912  8.28666    6.44192   ]
+ [5.776202   0.0413513  4.6274076  ... 4.7782993  6.688914   5.570342  ]
+ [5.7263374  6.2561994  5.7377024  ... 8.820506   0.58727944 6.515802  ]
+ ...
+ [5.7884197  0.56533414 4.7867274  ... 4.878848   6.0022035  4.9900055 ]
+ [5.9892163  0.222366   4.8566475  ... 4.5662537  6.433208   4.1020565 ]
+ [7.8653784  4.6189337  5.157348   ... 2.6189103  7.542449   6.328924  ]]
+self.y_data: []
+self.ndims: 1000
+Model defined.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 1000)]            0         
+                                                                 
+ log_prob_layer (LogProbLaye  (None,)                  18765680  
+ r)                                                              
+                                                                 
+=================================================================
+Total params: 18,765,680
+Trainable params: 18,765,680
+Non-trainable params: 0
+_________________________________________________________________
+Model summary:  None
+self.log_prob: KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), name='log_prob_layer/chain_of_MAFspline_of_permute_of_MAFsplineSampleNormal_CONSTRUCTED_AT_top_level/log_prob/sub:0', description="created by layer 'log_prob_layer'")
+self.model: <keras.engine.functional.Functional object at 0x7f4f80780460>
+self.optimizer_config: {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}
+optimizer: <keras.optimizers.adam.Adam object at 0x7f4f640dcbb0>
+type(optimizer): <class 'keras.optimizers.adam.Adam'>
+self.optimizer_config: {'class_name': 'Custom>Adam', 'config': {'learning_rate': 0.001, 'beta_1': 0.9, 'beta_2': 0.999, 'epsilon': 1e-07, 'amsgrad': True}}
+self.optimizer: <keras.optimizers.adam.Adam object at 0x7f4f640dcbb0>
+self.loss_config: {'class_name': 'MinusLogProbLoss', 'config': {'name': 'MLP', 'ignore_nans': True, 'nan_threshold': 0.01, 'debug_print_mode': False}}
+self.loss: <Trainer.MinusLogProbLoss object at 0x7f4f640dd480>
+self.metrics_configs: [{'class_name': 'MinusLogProbMetric', 'config': {'ignore_nans': True, 'debug_print_mode': False}}]
+self.metrics: [<Trainer.MinusLogProbMetric object at 0x7f4f640de140>]
+self.compile_kwargs: {}
+self.callbacks_configs: [{'class_name': 'PrintEpochInfo', 'config': {}}, {'class_name': 'ModelCheckpoint', 'config': {'filepath': '/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/results/MsplineN_new/run_324/weights/best_weights.h5', 'monitor': 'val_loss', 'save_best_only': True, 'save_weights_only': True, 'verbose': 1, 'mode': 'auto', 'save_freq': 'epoch'}}, {'class_name': 'EarlyStopping', 'config': {'monitor': 'val_loss', 'min_delta': 0.0001, 'patience': 100, 'verbose': 1, 'mode': 'auto', 'baseline': None, 'restore_best_weights': True}}, {'class_name': 'ReduceLROnPlateau', 'config': {'monitor': 'val_loss', 'factor': 0.5, 'min_delta': 0.0001, 'patience': 50, 'min_lr': 1e-06}}, {'class_name': 'TerminateOnNaN', 'config': {}}]
+self.callbacks: [<keras.callbacks.LambdaCallback object at 0x7f4f640de6b0>, <keras.callbacks.ModelCheckpoint object at 0x7f4f640de800>, <keras.callbacks.EarlyStopping object at 0x7f4f640dea10>, <keras.callbacks.ReduceLROnPlateau object at 0x7f4f640dea40>, <keras.callbacks.TerminateOnNaN object at 0x7f4f640de770>]
+self.fit_kwargs: {'batch_size': 512, 'epochs': 1000, 'validation_data': (array([[6.277253 , 6.974316 , 5.431759 , ..., 8.818214 , 1.8372726,
+        6.879843 ],
+       [8.248872 , 4.6043487, 5.1827307, ..., 2.8883853, 8.569977 ,
+        6.566897 ],
+       [7.511346 , 4.894093 , 5.228927 , ..., 2.959833 , 8.1193695,
+        7.606636 ],
+       ...,
+       [5.4142895, 7.32243  , 7.81261  , ..., 9.441056 , 0.9493766,
+        6.7277093],
+       [5.4575763, 6.765944 , 6.234851 , ..., 9.695062 , 1.5681067,
+        6.672586 ],
+       [5.466369 , 6.341171 , 6.2548084, ..., 9.017296 , 2.8553374,
+        6.70359  ]], dtype=float32), <tf.Tensor: shape=(30000, 0), dtype=float32, numpy=array([], shape=(30000, 0), dtype=float32)>), 'shuffle': True, 'verbose': 2}
+self.is_compiled: False
+self.training_time: 0.0
+self.history: {}
+Model successfully compiled.
+No weights found in ../../results/MsplineN_new/run_324/weights/best_weights.h5. Training from scratch.
+No history found. Generating new history.
+===============
+Running 324/360 with hyperparameters:
+timestamp = 2023-10-16 09:16:58.204069
+ndims = 1000
+seed_train = 0
+nsamples_train = 100000
+nsamples_val = 30000
+nsamples_test = 100000
+bijector = MsplineN
+nbijectors = 2
+spline_knots = 12
+range_min = -16
+hidden_layers = 256-256-256
+trainable_parameters = 18765680
+epochs_input = 1000
+batch_size = 512
+activation = relu
+training_device = NVIDIA A40
+===============
+
+Training model with initial learning rate 0.001...
+Train first sample: [ 8.21078873e+00  4.35890150e+00  5.19492531e+00  2.84795880e+00
+  6.23694658e+00  2.48332572e+00  6.01452780e+00  1.49544990e+00
+  1.56305087e+00  4.33542109e+00  3.63919592e+00  2.33469009e+00
+  7.12970674e-01  4.46248204e-01  1.55621916e-01  3.05101776e+00
+  4.20721769e+00  7.49161625e+00  3.96869850e+00  9.05481625e+00
+  4.47121114e-01  2.05655861e+00  3.52404070e+00  5.90453529e+00
+  8.73787975e+00  3.53096032e+00  2.76253247e+00  6.50554955e-01
+  8.03491688e+00  3.65929008e+00  4.93096781e+00  1.00386086e+01
+  5.29845119e-01  1.22730446e+00  7.25914860e+00  7.58729315e+00
+  7.71210337e+00  5.14168453e+00  9.58227444e+00  4.79759741e+00
+  6.05360174e+00 -3.22920084e-03  4.30121565e+00  7.28324509e+00
+  2.30840397e+00  9.72805214e+00  7.01551247e+00  3.15825868e+00
+  7.77309942e+00  1.27091324e+00  9.88113785e+00  5.76226175e-01
+  9.93493366e+00  6.19022250e-01  7.72215176e+00  1.45727849e+00
+  2.63241100e+00  7.56394577e+00  4.26764488e+00  1.30306756e+00
+  4.47696209e+00  4.10884666e+00  6.25260830e+00  7.17153311e+00
+  7.79660606e+00  4.86149597e+00  4.01030636e+00  1.48931491e+00
+  8.25993347e+00  6.99169493e+00  4.15396929e+00  5.40362930e+00
+  6.69921494e+00  1.80113685e+00 -2.28963286e-01  3.53704309e+00
+  5.97519684e+00  5.03495884e+00  5.96093559e+00  8.27530861e+00
+  5.11110401e+00  1.71916723e-01  1.00485516e+01  5.39971399e+00
+  6.97965956e+00  6.67698717e+00  9.53224850e+00  2.60424829e+00
+  6.92656088e+00  2.48836160e+00  1.50950837e+00  3.11806774e+00
+  3.62086797e+00  9.48242664e+00  2.35715413e+00  1.47683930e+00
+  6.57032585e+00  2.31288910e+00  5.07415724e+00  8.22896194e+00
+  2.67307043e+00  4.70531940e+00  5.81045723e+00  3.97613907e+00
+  1.00836468e+01  6.80917358e+00  7.91102648e+00  9.83973694e+00
+  3.97975469e+00  2.81087971e+00  6.61194921e-01  2.09042239e+00
+  1.80242181e+00  2.45311332e+00  7.75794411e+00  5.35263777e+00
+  6.36038160e+00  8.03104973e+00  2.23086929e+00  3.26186609e+00
+  7.10611820e+00  4.36860800e+00  5.38674593e-01  5.03258133e+00
+  8.79059315e+00  4.12663126e+00  2.96597481e+00  9.92143154e+00
+  6.63155603e+00  2.29087067e+00  9.67418194e-01  8.54019165e+00
+  7.32748413e+00  9.67831326e+00  3.08930302e+00  1.43350685e+00
+  7.23957300e+00  2.06572795e+00  1.31994998e+00  2.38906145e+00
+  8.15470123e+00  4.92610788e+00  4.60461289e-01  4.69264269e+00
+  7.11180496e+00  6.15540504e+00  5.58532810e+00  1.97622848e+00
+  8.55810928e+00  5.60682297e+00  6.50732088e+00  9.74595356e+00
+  3.70203424e+00  8.65994740e+00  3.66820455e-01 -1.19887441e-01
+  5.62859249e+00  3.21332264e+00  2.41353798e+00  2.97626567e+00
+  3.33519387e+00  7.60388327e+00  5.94638872e+00  7.90076303e+00
+  8.14614868e+00  8.43794918e+00  5.11629820e+00  4.45509529e+00
+  8.96594524e+00  6.83408117e+00  5.29020429e-01  5.47313118e+00
+  3.56114149e+00  9.86122417e+00 -8.47060025e-01  5.97660685e+00
+  7.56903505e+00  3.27315211e+00  9.39664459e+00  9.18616390e+00
+  9.16251087e+00  3.12576860e-01  5.81769562e+00  2.36430216e+00
+  8.91152668e+00  6.80723286e+00  5.49286032e+00  1.25512540e+00
+  6.51518726e+00  6.32031965e+00  9.03301430e+00  5.99218893e+00
+  9.68340588e+00  9.75206280e+00  6.48233700e+00  5.02287769e+00
+  4.40520668e+00  8.71606636e+00  1.15936518e-01  1.15061617e+00
+  1.13465822e+00  7.72926044e+00  3.59013176e+00  6.88610840e+00
+  6.62146950e+00  3.82466817e+00  5.06336927e+00  6.39645910e+00
+  9.77296638e+00  6.23589993e+00  6.13958120e+00  6.46353066e-01
+  7.98168039e+00  5.24744987e+00  8.84934807e+00  7.04309762e-01
+  4.59585285e+00  2.57471061e+00  2.76045990e+00  7.58923578e+00
+  6.31161690e+00  3.93680930e+00  3.41281295e-03  9.66006947e+00
+  9.57943439e+00  2.44953036e+00  7.60993719e-01  5.62422276e+00
+  9.45851040e+00  9.12294960e+00  5.39434481e+00  2.33969688e+00
+  3.87983751e+00  8.94526768e+00  4.94882011e+00  7.46908426e-01
+  3.23506546e+00  2.77883267e+00  1.57590222e+00  5.10829020e+00
+  9.52500534e+00  6.17966223e+00  1.10281193e+00  5.18856943e-01
+  2.46926522e+00  3.78143835e+00  6.96128178e+00  1.00144138e+01
+  3.66667557e+00  5.97449923e+00  9.95713520e+00  7.44061518e+00
+  6.02692795e+00  7.26248920e-01  3.43354082e+00  1.11553822e+01
+  1.09044552e+00  8.32242012e+00  7.46725512e+00  3.50707126e+00
+  4.66837549e+00  6.27135944e+00  7.01602077e+00  4.99376917e+00
+  1.22947979e+00  6.21938133e+00  4.57749987e+00  9.84504700e+00
+  3.30335212e+00  2.10937715e+00  8.59310150e-01  5.95748758e+00
+  7.51813459e+00  1.18187451e+00  3.30510187e+00  6.36148548e+00
+  4.50776958e+00  4.50498581e+00  1.05220985e+01  9.05682564e+00
+  6.02789402e+00  7.13881588e+00  7.25975084e+00  6.13174152e+00
+  2.50386310e+00  6.21227741e+00  6.38945484e+00  8.56712151e+00
+  3.63186836e-01  9.32480907e+00  5.54315186e+00 -3.98739636e-01
+  3.37429929e+00  7.95210361e+00  5.01406813e+00  9.63213921e+00
+  3.99637389e+00  2.97415352e+00  8.29203606e+00  6.00829792e+00
+  6.21376610e+00  7.23727989e+00  6.71069527e+00  5.01448536e+00
+  9.13507938e-01  6.87569332e+00  9.86827469e+00  4.45279694e+00
+  8.80540848e+00  5.50182295e+00  6.56988764e+00  8.22664070e+00
+  6.11226082e+00  9.90539372e-01  8.70905399e+00  2.35227823e+00
+  6.95939922e+00  4.88893890e+00  4.05508137e+00  1.27094746e+00
+  7.41610336e+00  9.57014084e-01  1.03208637e+01  8.77536011e+00
+  5.40437126e+00  3.66490221e+00  1.92103791e+00  5.05432844e+00
+  6.88084650e+00  2.36994123e+00  4.34519386e+00  1.71688604e+00
+  3.39162683e+00  1.85334861e+00  9.56473351e+00  6.55594063e+00
+  7.24569368e+00  9.57989931e-01  3.30405354e+00  8.91251564e+00
+  9.43958402e-01  2.91835928e+00  6.76908159e+00  6.41434669e+00
+  8.02711487e+00  8.37068748e+00  1.76286387e+00  2.83487058e+00
+  4.26155806e+00 -1.64624956e-02  5.80787063e-02  2.90215087e+00
+  4.82958937e+00  2.67308688e+00  8.74459743e+00  3.35418940e+00
+  9.50176620e+00  9.24923992e+00  5.82722712e+00  3.35397267e+00
+  3.11244607e+00  7.65114069e+00  2.58552289e+00  3.75996971e+00
+  5.17049551e+00  5.17774963e+00  9.58946896e+00  2.46264791e+00
+  4.03688717e+00  2.72447777e+00  2.75106120e+00  1.24247396e+00
+  2.18880701e+00  8.80450439e+00  2.16815996e+00  4.50869846e+00
+  9.47779369e+00  6.92755127e+00  5.21426487e+00  7.63384438e+00
+  1.33627713e+00  5.05314064e+00  8.01588058e-01  2.33411765e+00
+  2.04597259e+00  3.71735334e+00  3.99399781e+00  9.83961201e+00
+  2.91163659e+00  3.73780441e+00  7.86999273e+00  7.62870979e+00
+  7.85087109e+00  2.87814641e+00  5.46488953e+00  1.44017196e+00
+  2.16978312e+00  4.34651899e+00  7.40160513e+00  5.01842690e+00
+  8.79978561e+00  8.01273918e+00  6.23900414e-01  5.34396315e+00
+  5.84303570e+00  9.49287987e+00 -2.03253716e-01  5.55819988e+00
+  2.56452465e+00  5.52358687e-01  5.80285740e+00  8.33415508e+00
+  8.18197632e+00 -8.59678984e-02  3.97874522e+00  4.08348382e-01
+  2.77977419e+00  2.01314735e+00  2.23359156e+00  3.15110850e+00
+  3.16415262e+00  9.69314194e+00  3.46537042e+00  8.90620518e+00
+  1.80000591e+00  6.60689974e+00 -7.20865309e-01  4.78756142e+00
+ -1.09752685e-01  9.03241920e+00  8.91885853e+00  6.74625039e-01
+  9.64687729e+00  5.28304863e+00  3.44711399e+00  9.08611012e+00
+  3.02275133e+00  4.11477327e+00  1.01315606e+00  7.55140066e+00
+  7.66734123e-01  4.76552486e+00  6.70099640e+00  7.79399300e+00
+  1.63697755e+00  6.94904470e+00  6.56399965e+00  4.96204281e+00
+  5.89378309e+00  5.83356380e-01  6.12774992e+00  4.05969334e+00
+  8.60876942e+00  3.77930760e+00  5.77260780e+00  4.28877592e+00
+  9.17067528e+00  2.55027103e+00  1.33500242e+00  8.23266697e+00
+  4.27657557e+00  5.92882109e+00  3.65143597e-01  1.05127277e+01
+  9.12497520e+00  4.73808956e+00  1.15415120e+00  4.24439526e+00
+  9.80254364e+00  7.13764381e+00  2.21075535e+00  4.46259594e+00
+  9.60248947e+00  6.37608194e+00  3.89600515e-01  6.30370569e+00
+  2.47006059e+00  9.89494145e-01  4.10520649e+00  5.44608831e+00
+  5.12012959e-01  4.04597473e+00  5.92461109e+00  8.09785938e+00
+  5.32709646e+00  5.15376234e+00  7.13395691e+00  8.32365990e+00
+  4.20349646e+00  6.05286407e+00  6.26060724e+00  6.60055876e-03
+  8.09364128e+00  3.49219418e+00  7.10890245e+00  4.91867685e+00
+  7.30661583e+00  6.67151976e+00  2.00603342e+00  6.53424406e+00
+  8.17309189e+00  2.37493563e+00  7.19742537e+00  6.21698093e+00
+  1.02654848e+01  4.02459478e+00  2.00096679e+00  3.60146332e+00
+  2.72641587e+00  7.55267096e+00  7.33097744e+00  6.48247480e+00
+  1.84161115e+00  8.67273045e+00  1.03891554e+01  5.11711931e+00
+  6.14349842e+00  4.63130045e+00  1.04338384e+00  3.16097307e+00
+  2.48957181e+00  2.08219433e+00  9.02428818e+00  7.58692598e+00
+  3.53382182e+00  2.87967825e+00  9.43597221e+00  1.85656917e+00
+  5.57112312e+00  9.00374889e-01  1.43457806e+00  5.70213127e+00
+  6.18463993e+00  5.21287870e+00  8.30662155e+00  9.78884792e+00
+  8.07082462e+00  4.94385624e+00  9.57595062e+00  4.81561422e-01
+  5.93677044e+00  6.03051233e+00  1.27146268e+00  9.59977341e+00
+  3.53188229e+00  5.92599010e+00  8.90297794e+00  5.73115826e+00
+  8.29036653e-01  6.28442287e+00  4.10012245e+00  8.16020679e+00
+  9.57242489e+00  8.73237801e+00  3.82743692e+00  7.33982182e+00
+  9.39437389e+00  5.32039928e+00  4.49351358e+00  7.41679072e-01
+  7.33104944e+00  8.68616486e+00  2.54391122e+00  2.88136458e+00
+  5.05854321e+00  4.12581384e-01  7.20838428e-01  4.39249325e+00
+  2.12579203e+00  5.69973421e+00  3.94032979e+00  1.01283722e+01
+  9.79717064e+00  2.52009940e+00  8.86107635e+00  8.79512429e-01
+  4.84236622e+00  1.72291732e+00  3.82897258e+00  6.94665861e+00
+  4.18651247e+00  8.54575062e+00  7.19269276e+00  9.72444630e+00
+  5.51988173e+00  8.01771069e+00  3.28205919e+00  3.97813463e+00
+  4.18136644e+00  5.16412115e+00  1.75697100e+00  5.15417719e+00
+  1.50469279e+00  9.25226021e+00  4.35976595e-01  4.19854736e+00
+  3.64054823e+00  1.06782198e-01  8.30288601e+00  7.06305122e+00
+  1.87979758e+00  6.35672998e+00  8.16109753e+00  6.51096630e+00
+  5.61127961e-01  6.76316595e+00  6.57550716e+00  7.76742983e+00
+  5.40051842e+00  4.99695921e+00  1.05247574e+01  7.60159779e+00
+  5.60209799e+00  3.34395909e+00  9.19912910e+00  4.68194294e+00
+  1.00466835e+00  5.51672554e+00  8.06357193e+00  4.60604143e+00
+  7.99039245e-01  6.11217165e+00  9.98776340e+00  7.64210176e+00
+  6.11796856e+00  9.89960003e+00  7.96584511e+00  6.26075697e+00
+  4.63107634e+00  7.38753414e+00  6.49842548e+00  7.23403335e-01
+  7.84123564e+00  3.43258095e+00  5.87750053e+00  8.16937256e+00
+  4.84820747e+00  1.59829724e+00  4.18775225e+00  1.30482543e+00
+  6.89824677e+00  9.70094967e+00  7.83443594e+00  4.79529858e+00
+  6.26568747e+00  3.08977580e+00  5.72115278e+00  2.92952847e+00
+  7.45006084e+00  2.38916183e+00  9.71957111e+00  6.54768562e+00
+  6.25139415e-01 -2.21325979e-02  1.01162004e+01  1.64097524e+00
+  3.30466270e+00  2.32712507e+00  9.82605267e+00  5.42485619e+00
+  4.57557726e+00  5.65397930e+00  2.95226574e+00  6.00716829e+00
+  4.69566488e+00  1.86493647e+00  5.55787706e+00  4.29599905e+00
+  8.97355652e+00  4.49551582e+00  5.21416712e+00  7.87060261e+00
+  4.67125940e+00  9.76075363e+00  8.19973755e+00  8.41541100e+00
+  9.90537739e+00  2.93996453e+00  5.85271358e+00  7.30432892e+00
+  7.22648525e+00  9.17044544e+00  2.83920431e+00  3.20150447e+00
+  8.31029034e+00  7.78128242e+00  2.25734663e+00  5.91900253e+00
+  7.87056684e+00  3.05571938e+00  3.93086529e+00  5.76315022e+00
+  5.30861235e+00  7.55313301e+00 -1.47460684e-01  4.09288597e+00
+  1.74171937e+00  4.78674221e+00  7.88887119e+00  7.54741371e-01
+  1.54648781e+00  7.28928089e+00  7.57703447e+00  5.61207056e+00
+  9.85756111e+00  4.10112953e+00  1.57129598e+00  6.85865021e+00
+  6.33887672e+00  6.33726215e+00  5.35512924e+00  8.78589249e+00
+  8.93958569e-01 -1.22548640e-01  1.54779208e+00  2.83668208e+00
+  5.92615891e+00  5.92532015e+00  2.29801345e+00  4.49938583e+00
+  4.36498499e+00  5.37602377e+00  8.03752041e+00  5.66677046e+00
+  8.83142376e+00  1.65858328e+00  5.42761660e+00  8.26859760e+00
+  1.79626775e+00  4.40248251e+00  5.96399355e+00  2.07387352e+00
+  7.58685493e+00  6.19924068e-01  9.63695049e+00  4.80245113e+00
+  2.84362292e+00  1.11408031e+00  4.65407324e+00  6.60547924e+00
+  1.22691751e+00  3.05578947e+00  1.09281607e+01  6.40130091e+00
+  2.10371280e+00  1.27200794e+00  8.89848232e+00  2.80182910e+00
+  2.19280529e+00  1.05606747e+01  2.94065785e+00  1.69049454e+00
+  5.48146868e+00  4.31994724e+00  9.06744099e+00  1.15592277e+00
+ -7.79310703e-01  1.04373407e+00  8.86706924e+00  4.28514481e+00
+  1.81781006e+00  5.78969526e+00  5.54994345e+00  2.30405951e+00
+  5.54053879e+00  2.74468279e+00  2.27062321e+00  4.07878542e+00
+  2.84625888e+00  2.04214787e+00  8.94879723e+00  6.88817441e-01
+  2.71495771e+00  3.84625363e+00  2.55016398e+00  2.09636283e+00
+  7.99209976e+00  3.07564521e+00  1.11745620e+00  5.30355263e+00
+  9.93744850e-01  2.74349833e+00  8.41612911e+00  4.34795761e+00
+  6.55439472e+00  6.15104818e+00  5.19303381e-01  6.36637783e+00
+  8.49066544e+00  8.24014544e-01  6.90668011e+00  7.08179665e+00
+  9.01312637e+00  3.36554408e+00  2.87336349e+00  6.86589861e+00
+ -2.01100767e-01  7.31349230e+00  8.66450596e+00  4.29815626e+00
+  3.38823771e+00  3.01338983e+00  8.08154404e-01  1.78297210e+00
+  9.61242580e+00  8.81327534e+00  2.97019339e+00  8.63016319e+00
+  3.02107668e+00  2.72670150e+00  2.13139439e+00  8.94742870e+00
+  9.83511925e+00  3.19685555e+00  6.81030130e+00  3.50014639e+00
+  1.05297625e+00  4.07330465e+00  5.53509521e+00  1.18256664e+00
+  8.23826122e+00  5.53470898e+00  2.24809480e+00  5.40734196e+00
+  7.84483671e+00  2.75392199e+00  7.62425852e+00  4.27786589e+00
+  9.72611332e+00  8.83753872e+00  3.43726850e+00  1.27960294e-01
+  7.29834032e+00  2.04023504e+00  1.30689442e+00  9.04135704e+00
+  1.00866823e+01  2.58009624e+00  3.01804805e+00  1.68803823e+00
+  4.80738878e+00  8.68211079e+00  6.73749733e+00  8.63989162e+00
+  2.21114421e+00  7.04848576e+00  9.34753704e+00  2.76184368e+00
+  6.90854836e+00  4.05415773e+00  3.81649780e+00  9.40583229e+00
+  4.05083704e+00  8.92635822e-01  3.82358503e+00  4.43289518e+00
+  7.26910877e+00  8.82122993e+00  8.22476578e+00  9.33980370e+00
+  4.71105146e+00  6.95373154e+00  3.06833911e+00 -4.22824502e-01
+  3.65492988e+00  6.86570597e+00  2.05108023e+00  8.74809170e+00
+  8.31052685e+00  1.87380075e+00  2.81262565e+00  8.66123104e+00
+  3.31760716e+00  3.31471944e+00  3.48811197e+00  7.28613329e+00
+ -9.66772735e-02 -7.69796014e-01  6.32836771e+00  3.86802888e+00
+  5.99920893e+00  2.40654874e+00  9.12174988e+00  8.34914875e+00
+  7.07096219e-01  7.57762194e+00  9.58280849e+00  8.65084171e+00
+  6.67687321e+00  1.21811235e+00  5.86707783e+00  3.30112028e+00
+  1.01402960e+01  7.17766523e+00  5.74374008e+00  6.99432039e+00
+  4.40368319e+00  2.86542940e+00  9.42987251e+00  3.30265784e+00
+  3.83230895e-01  4.20491457e+00  8.71614361e+00  7.57816601e+00
+  9.77553654e+00  6.46106720e-01  9.44217777e+00  4.46305180e+00
+  4.83198547e+00  3.06845570e+00  1.06641746e+00  4.49923372e+00
+  7.57343435e+00  5.86748123e-03  1.58664107e+00  5.31323195e-01
+  8.55088329e+00  6.48872995e+00  1.54820132e+00  7.71537733e+00
+  8.20388412e+00  9.80402565e+00  9.79537868e+00 -8.38677704e-01
+  5.94942427e+00  2.88661289e+00  5.26643085e+00  3.18921828e+00
+  7.79481411e-01  4.42821693e+00  5.33531380e+00  9.32881355e+00
+  2.65765786e-02  3.08747840e+00  8.52437019e+00  6.85948515e+00
+  8.21984768e+00  6.24451685e+00  7.30141687e+00  4.90936804e+00
+  2.20824790e+00  8.48395348e+00  5.67844057e+00  1.24840343e+00
+  8.05260468e+00  9.64081573e+00  3.07099938e+00  3.18240905e+00
+  9.12044704e-01  5.96499348e+00  9.19813156e+00  3.36040854e-01
+  4.73263264e+00  1.30067658e+00  5.19609153e-01  6.70743704e+00
+  8.23411751e+00  3.52812862e+00  8.22581482e+00  1.19572031e+00
+  2.63071656e+00  9.79853821e+00  4.98861170e+00  6.00117397e+00
+  3.19664389e-01  1.32244027e+00  6.05848253e-01  7.35753870e+00
+  1.13696325e+00  8.69066429e+00  3.58892393e+00  7.88068628e+00
+  3.04448676e+00  2.65313506e+00  9.56735551e-01  2.75976801e+00
+  4.98727465e+00  7.08365965e+00  5.05365181e+00  9.17652988e+00
+  5.92350817e+00  1.26345801e+00  3.95679140e+00  7.46081781e+00
+  2.64605379e+00  6.97033882e+00  5.93741179e+00  1.01776525e-01
+  7.47330189e+00  5.93837404e+00  8.12254488e-01  3.60206747e+00
+  3.23938537e+00  8.24193764e+00  3.56294060e+00  9.41426849e+00
+  5.64243269e+00  2.11869121e+00  8.28666019e+00  6.44191980e+00]
+Epoch 1/1000

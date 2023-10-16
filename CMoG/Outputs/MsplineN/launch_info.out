@@ -85,3 +85,60 @@ Launched with PID 41255
 Launching run RUN_NUMBER=9 on device VISIBLE_DEVICES=2
 Script string: nohup python c_Main_MsplineN.py --visible_devices 2 >> ../../Outputs/MsplineN/run_gpu_2_replica_9.out 2>&1 &
 Launched with PID 41799
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_1.out 2>&1 &
+Launched with PID 59918
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_1.out 2>&1 &
+Launched with PID 60012
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_2.out 2>&1 &
+Launched with PID 60077
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_2.out 2>&1 &
+Launched with PID 60136
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN_teogpu01.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_1.out 2>&1 &
+Launched with PID 60680
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN_teogpu01.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_1.out 2>&1 &
+Launched with PID 61003
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN_teogpu01.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_2.out 2>&1 &
+Launched with PID 61283
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN_teogpu01.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_2.out 2>&1 &
+Launched with PID 61553
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN_teogpu01.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_1.out 2>&1 &
+Launched with PID 62635
+Launching run RUN_NUMBER=2 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN_teogpu01.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_2.out 2>&1 &
+Launched with PID 63457
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 01 >> ../../Outputs/MsplineN/run_gpu_01_replica_1.out 2>&1 &
+Launched with PID 14122
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=12
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 12 >> ../../Outputs/MsplineN/run_gpu_12_replica_1.out 2>&1 &
+Launched with PID 14392
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=23
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 23 >> ../../Outputs/MsplineN/run_gpu_23_replica_1.out 2>&1 &
+Launched with PID 14698
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=01
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 01 >> ../../Outputs/MsplineN/run_teogpu02_01_replica_1.out 2>&1 &
+Launched with PID 14979
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=12
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 12 >> ../../Outputs/MsplineN/run_teogpu02_12_replica_1.out 2>&1 &
+Launched with PID 15852
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=23
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 23 >> ../../Outputs/MsplineN/run_teogpu02_23_replica_1.out 2>&1 &
+Launched with PID 16986
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=03
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 03 >> ../../Outputs/MsplineN/run_teogpu02_03_replica_1.out 2>&1 &
+Launched with PID 20097
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=13
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 13 >> ../../Outputs/MsplineN/run_teogpu02_13_replica_1.out 2>&1 &
+Launched with PID 20970
+Launching run RUN_NUMBER=1 on device VISIBLE_DEVICES=23
+Script string: nohup python c_Main_MsplineN_teogpu02.py --visible_devices 23 >> ../../Outputs/MsplineN/run_teogpu02_23_replica_1.out 2>&1 &
+Launched with PID 22052
