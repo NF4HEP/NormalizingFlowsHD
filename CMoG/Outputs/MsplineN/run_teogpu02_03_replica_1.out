@@ -11109,3 +11109,94 @@ Epoch 200/1000
 Epoch 200: val_loss did not improve from 391.64355
 196/196 - 39s - loss: 391.1227 - MinusLogProbMetric: 391.1227 - val_loss: 393.2490 - val_MinusLogProbMetric: 393.2490 - lr: 0.0010 - 39s/epoch - 197ms/step
 Epoch 201/1000
+2023-10-18 08:36:06.421 
+Epoch 201/1000 
+	 loss: 391.0413, MinusLogProbMetric: 391.0413, val_loss: 392.3398, val_MinusLogProbMetric: 392.3398
+
+Epoch 201: val_loss did not improve from 391.64355
+196/196 - 41s - loss: 391.0413 - MinusLogProbMetric: 391.0413 - val_loss: 392.3398 - val_MinusLogProbMetric: 392.3398 - lr: 0.0010 - 41s/epoch - 209ms/step
+Epoch 202/1000
+2023-10-18 08:36:45.522 
+Epoch 202/1000 
+	 loss: 391.1449, MinusLogProbMetric: 391.1449, val_loss: 395.7122, val_MinusLogProbMetric: 395.7122
+
+Epoch 202: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 391.1449 - MinusLogProbMetric: 391.1449 - val_loss: 395.7122 - val_MinusLogProbMetric: 395.7122 - lr: 0.0010 - 39s/epoch - 200ms/step
+Epoch 203/1000
+2023-10-18 08:37:24.886 
+Epoch 203/1000 
+	 loss: 391.2305, MinusLogProbMetric: 391.2305, val_loss: 394.8813, val_MinusLogProbMetric: 394.8813
+
+Epoch 203: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 391.2305 - MinusLogProbMetric: 391.2305 - val_loss: 394.8813 - val_MinusLogProbMetric: 394.8813 - lr: 0.0010 - 39s/epoch - 201ms/step
+Epoch 204/1000
+2023-10-18 08:38:04.268 
+Epoch 204/1000 
+	 loss: 390.7860, MinusLogProbMetric: 390.7860, val_loss: 393.7250, val_MinusLogProbMetric: 393.7250
+
+Epoch 204: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 390.7860 - MinusLogProbMetric: 390.7860 - val_loss: 393.7250 - val_MinusLogProbMetric: 393.7250 - lr: 0.0010 - 39s/epoch - 201ms/step
+Epoch 205/1000
+2023-10-18 08:38:43.569 
+Epoch 205/1000 
+	 loss: 391.2032, MinusLogProbMetric: 391.2032, val_loss: 392.1671, val_MinusLogProbMetric: 392.1671
+
+Epoch 205: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 391.2032 - MinusLogProbMetric: 391.2032 - val_loss: 392.1671 - val_MinusLogProbMetric: 392.1671 - lr: 0.0010 - 39s/epoch - 200ms/step
+Epoch 206/1000
+2023-10-18 08:39:23.021 
+Epoch 206/1000 
+	 loss: 391.2552, MinusLogProbMetric: 391.2552, val_loss: 392.2133, val_MinusLogProbMetric: 392.2133
+
+Epoch 206: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 391.2552 - MinusLogProbMetric: 391.2552 - val_loss: 392.2133 - val_MinusLogProbMetric: 392.2133 - lr: 0.0010 - 39s/epoch - 201ms/step
+Epoch 207/1000
+2023-10-18 08:40:02.276 
+Epoch 207/1000 
+	 loss: 390.8717, MinusLogProbMetric: 390.8717, val_loss: 394.3461, val_MinusLogProbMetric: 394.3461
+
+Epoch 207: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 390.8717 - MinusLogProbMetric: 390.8717 - val_loss: 394.3461 - val_MinusLogProbMetric: 394.3461 - lr: 0.0010 - 39s/epoch - 200ms/step
+Epoch 208/1000
+2023-10-18 08:40:41.746 
+Epoch 208/1000 
+	 loss: 390.7387, MinusLogProbMetric: 390.7387, val_loss: 393.4495, val_MinusLogProbMetric: 393.4495
+
+Epoch 208: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 390.7387 - MinusLogProbMetric: 390.7387 - val_loss: 393.4495 - val_MinusLogProbMetric: 393.4495 - lr: 0.0010 - 39s/epoch - 201ms/step
+Epoch 209/1000
+2023-10-18 08:41:21.107 
+Epoch 209/1000 
+	 loss: 391.5717, MinusLogProbMetric: 391.5717, val_loss: 392.4397, val_MinusLogProbMetric: 392.4397
+
+Epoch 209: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 391.5717 - MinusLogProbMetric: 391.5717 - val_loss: 392.4397 - val_MinusLogProbMetric: 392.4397 - lr: 0.0010 - 39s/epoch - 201ms/step
+Epoch 210/1000
+2023-10-18 08:42:00.619 
+Epoch 210/1000 
+	 loss: 390.6764, MinusLogProbMetric: 390.6764, val_loss: 392.9513, val_MinusLogProbMetric: 392.9513
+
+Epoch 210: val_loss did not improve from 391.64355
+196/196 - 40s - loss: 390.6764 - MinusLogProbMetric: 390.6764 - val_loss: 392.9513 - val_MinusLogProbMetric: 392.9513 - lr: 0.0010 - 40s/epoch - 202ms/step
+Epoch 211/1000
+2023-10-18 08:42:39.827 
+Epoch 211/1000 
+	 loss: 390.7873, MinusLogProbMetric: 390.7873, val_loss: 393.7238, val_MinusLogProbMetric: 393.7238
+
+Epoch 211: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 390.7873 - MinusLogProbMetric: 390.7873 - val_loss: 393.7238 - val_MinusLogProbMetric: 393.7238 - lr: 0.0010 - 39s/epoch - 200ms/step
+Epoch 212/1000
+2023-10-18 08:43:19.268 
+Epoch 212/1000 
+	 loss: 391.1068, MinusLogProbMetric: 391.1068, val_loss: 394.1957, val_MinusLogProbMetric: 394.1957
+
+Epoch 212: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 391.1068 - MinusLogProbMetric: 391.1068 - val_loss: 394.1957 - val_MinusLogProbMetric: 394.1957 - lr: 0.0010 - 39s/epoch - 201ms/step
+Epoch 213/1000
+2023-10-18 08:43:58.602 
+Epoch 213/1000 
+	 loss: 391.0282, MinusLogProbMetric: 391.0282, val_loss: 392.1576, val_MinusLogProbMetric: 392.1576
+
+Epoch 213: val_loss did not improve from 391.64355
+196/196 - 39s - loss: 391.0282 - MinusLogProbMetric: 391.0282 - val_loss: 392.1576 - val_MinusLogProbMetric: 392.1576 - lr: 0.0010 - 39s/epoch - 201ms/step
+Epoch 214/1000
