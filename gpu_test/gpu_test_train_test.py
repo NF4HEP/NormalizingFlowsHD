@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 
 # Load the data from the local npz file
-with np.load('mnist.npz') as f:
+with np.load('/leonardo/home/userexternal/rtorre00/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/gpu_test/mnist.npz') as f:
     x_train, y_train = f['x_train'], f['y_train']
     x_test, y_test = f['x_test'], f['y_test']
 

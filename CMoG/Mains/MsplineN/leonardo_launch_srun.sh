@@ -39,6 +39,23 @@ done
 
 echo "Everything launched!"
 
-salloc -A inf23_test_2 -p boost_usr_prod --time=24:00:00 --gres=gpu:2
+salloc -A inf23_test_2 -p boost_usr_prod --time=02:00:00 --gpus=2
+salloc -A inf23_test_2 -p boost_usr_prod --time=00:10:00 --gpus=2
+
+salloc -A inf23_test_2 -p g100_usr_interactive --time=00:10:00 --gpus=2
+
+
+
 conda activate tf2_9_source
 srun python /leonardo/home/userexternal/rtorre00/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/Mains/MsplineN/c_Main_MsplineN_leonardo.py --visible_devices 01 >> /leonardo/home/userexternal/rtorre00/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/Outputs/MsplineN/leonardo_run_gpus_0-1_replica_1.out 2>&1 &
+
+srun python -c "import tensorflow as tf; print('Built with CUDA:', tf.test.is_built_with_cuda()); print('Built with GPU support:', tf.test.is_built_with_gpu_support()); print('CUDA Version: ', tf.sysconfig.get_build_info()['cuda_version']);print('cuDNN Version: ', tf.sysconfig.get_build_info()['cudnn_version'])"
+
+srun python -c "import tensorflow as tf; print(tf.compat.v1.ConfigProto().gpu_options.allocator_type)"
+
+
+import tensorflow as tf
+print("CUDA Version: ", tf.sysconfig.get_build_info()['cuda_version'])
+
+import tensorflow as tf
+print("cuDNN Version: ", tf.sysconfig.get_build_info()['cudnn_version'])
