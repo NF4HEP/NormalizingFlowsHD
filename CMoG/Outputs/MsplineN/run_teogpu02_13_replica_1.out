@@ -16728,3 +16728,54 @@ niter = 10
 batch_size = 100000
 The dist_1_num tensor is empty. Batches will be generated 'on-the-fly' from dist_1_symb.
 The dist_2_num tensor is empty. Batches will be generated 'on-the-fly' from dist_2_symb.
+SWD metric calculation completed in 23337.239407191984 seconds.
+
+------------------------------------------
+Starting FN metric calculation...
+Running TF FN calculation...
+niter = 10
+batch_size = 100000
+The dist_1_num tensor is empty. Batches will be generated 'on-the-fly' from dist_1_symb.
+The dist_2_num tensor is empty. Batches will be generated 'on-the-fly' from dist_2_symb.
+nchunks = 10
+Iterating from 0 to 1 out of 10 .
+Iterating from 1 to 2 out of 10 .
+Iterating from 2 to 3 out of 10 .
+Iterating from 3 to 4 out of 10 .
+Iterating from 4 to 5 out of 10 .
+Iterating from 5 to 6 out of 10 .
+Iterating from 6 to 7 out of 10 .
+Iterating from 7 to 8 out of 10 .
+Iterating from 8 to 9 out of 10 .
+Iterating from 9 to 10 out of 10 .
+FN metric calculation completed in 22789.15944504598 seconds.
+Training succeeded with seed 187.
+Model trained in 14492.08 s.
+
+===========
+Computing predictions
+===========
+
+Computing metrics...
+Metrics computed in 70155.31 s.
+                ===========
+                print("===========
+Failed to plot
+===========
+")
+                Exception type: FileNotFoundError
+                Exception message: [Errno 2] No such file or directory: '../../results/MsplineN_new/run_325//loss_plot.pdf'
+                Stack trace: ['File : /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/Mains/MsplineN/c_Main_MsplineN_teogpu02.py , Line : 476, Func.Name : prediction_function, Message : ', 'File : /mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/Mains/MsplineN/../../../code/Plotters.py , Line : 69, Func.Name : train_plotter, Message : ', 'File : /local_data/scratch/rtorre/anaconda3/envs/tf2_12/lib/python3.10/site-packages/matplotlib/pyplot.py , Line : 1023, Func.Name : savefig, Message : res = fig.savefig(*args, **kwargs)', 'File : /local_data/scratch/rtorre/anaconda3/envs/tf2_12/lib/python3.10/site-packages/matplotlib/figure.py , Line : 3343, Func.Name : savefig, Message : self.canvas.print_figure(fname, **kwargs)', 'File : /local_data/scratch/rtorre/anaconda3/envs/tf2_12/lib/python3.10/site-packages/matplotlib/backend_bases.py , Line : 2366, Func.Name : print_figure, Message : result = print_method(', 'File : /local_data/scratch/rtorre/anaconda3/envs/tf2_12/lib/python3.10/site-packages/matplotlib/backend_bases.py , Line : 2232, Func.Name : <lambda>, Message : print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(', 'File : /local_data/scratch/rtorre/anaconda3/envs/tf2_12/lib/python3.10/site-packages/matplotlib/backends/backend_pdf.py , Line : 2808, Func.Name : print_pdf, Message : file = PdfFile(filename, metadata=metadata)', 'File : /local_data/scratch/rtorre/anaconda3/envs/tf2_12/lib/python3.10/site-packages/matplotlib/backends/backend_pdf.py , Line : 713, Func.Name : __init__, Message : fh, opened = cbook.to_filehandle(filename, "wb", return_opened=True)', 'File : /local_data/scratch/rtorre/anaconda3/envs/tf2_12/lib/python3.10/site-packages/matplotlib/cbook/__init__.py , Line : 489, Func.Name : to_filehandle, Message : fh = open(fname, flag, encoding=encoding)']
+                ===========
+
+Traceback (most recent call last):
+  File "/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/Mains/MsplineN/c_Main_MsplineN_teogpu02.py", line 698, in <module>
+  File "/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/Mains/MsplineN/../../../code/Utils.py", line 314, in save_results_current_run_txt
+FileNotFoundError: [Errno 2] No such file or directory: '../../results/MsplineN_new/run_325/results.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/Mains/MsplineN/c_Main_MsplineN_teogpu02.py", line 739, in <module>
+  File "/mnt/project_mnt/teo_fs/rtorre/cernbox/git/GitHub/NormalizingFlows/NF4HEP/NormalizingFlowsHD/CMoG/Mains/MsplineN/../../../code/Utils.py", line 314, in save_results_current_run_txt
+FileNotFoundError: [Errno 2] No such file or directory: '../../results/MsplineN_new/run_325/results.txt'

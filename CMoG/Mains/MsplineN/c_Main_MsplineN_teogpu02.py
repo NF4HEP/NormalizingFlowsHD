@@ -2,7 +2,7 @@
 ######################################### Initialize #########################################
 ##############################################################################################
 
-visible_devices = [0,1]
+visible_devices = [0]
 import datetime
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")+":", "Importing os...")
 import os
@@ -292,7 +292,7 @@ def train_function(seeds: List[int],
         Utils.save_hyperparams_dict(path_to_results, hyperparams_dict)
         print(f"Training model with initial learning rate {lr}...")
         print("Train first sample:", X_data_train[0]) # type: ignore
-        NFObject.train()
+        #NFObject.train()
         training_time: float = NFObject.training_time # type: ignore
         loss_history = list(NFObject.history['loss'])
         if np.isnan(loss_history).any():
@@ -633,8 +633,10 @@ for ndims in ndims_list:
                     path_to_results: str
                     to_run: bool
                     path_to_results, to_run = Utils.define_run_dir(mother_output_dir+'run_'+str(run_number)+'/',
-                                                                   force = "skip",
+                                                                   force = "continue",
                                                                    bkp = False)
+                    if run_number < 310:
+                        to_run = False
                     if to_run:
                         try:
                             dummy_file_path: str = os.path.join(path_to_results,'running.txt')

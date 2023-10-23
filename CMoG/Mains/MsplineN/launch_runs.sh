@@ -4,7 +4,8 @@
 declare -a machine_name=("teogpu02")
 
 # Declare an array of visible devices you'd like to use
-declare -a visible_devices_list=("03" "13" "23")
+#declare -a visible_devices_list=("03" "13" "23")
+declare -a visible_devices_list=("0" "1" "2" "3")
 
 # Declare an array of run numbers
 declare -a run_numbers=("1")
