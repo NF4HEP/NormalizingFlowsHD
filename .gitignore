@@ -17,6 +17,4 @@ UMoG/Outputs
 *.h5
 *weights*
 *checkpoin*
-post-processing/toys
-ZplusJets*
 *leonardo*
