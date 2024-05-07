@@ -1,4 +1,0 @@
-run_n,seed_train,seed_test,ndims,nsamples,correlation,nbijectors,bijector,activation,spline_knots,range_min,eps_regulariser,regulariser,ks_mean,ks_std,ad_mean,ad_std,wd_mean,wd_std,swd_mean,swd_std,fn_mean,fn_std,hidden_layers,batch_size,epochs_input,epochs_output,training_time,prediction_time,total_time,training_device
-1,0,0,12,100000,,5,MAFN,relu,8,-5,0,l1,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,128-128-128,512,50,nan,nan,nan,nan,Tesla V100-PCIE-32GB
-2,0,0,12,100000,,5,MAFN,relu,8,-5,0,l1,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,128-128-128,512,50,nan,nan,nan,nan,Tesla V100-PCIE-32GB
-3,0,0,12,100000,,5,MAFN,relu,8,-5,0,l1,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,128-128-128,512,50,nan,nan,nan,nan,Tesla V100-PCIE-32GB
