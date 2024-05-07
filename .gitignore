@@ -1,4 +1,4 @@
-.mypy_cache
+*.mypy_cache*
 .vscode
 .VSCodeCounter
 .DS_Store
@@ -19,3 +19,4 @@ UMoG/Outputs
 *checkpoin*
 post-processing/toys
 ZplusJets*
+*leonardo*
