@@ -1,2 +1,0 @@
-run_n,run_seed,ndims,nsamples,correlation,nbijectors,bijector,activation,spline_knots,range_min,eps_regulariser,regulariser,kl_divergence,ks_test_mean,ks_test_median,ad_test_mean,ad_test_median,Wasserstein_median,Wasserstein_mean,frob_norm,hidden_layers,batch_size,epochs_input,epochs_output,time
-2,0,4,100000,corr,5,CsplineN,relu,8,-16,0,None,-1,0.44912941610535956,0.4374014892093611,0.21285823419330496,0.21500972641122043,0.020311778285477984,0.020311778285477984,0.05003550256121279,256-256-256,512,1000,399,8840.973891073372
