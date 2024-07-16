@@ -108,7 +108,7 @@ def train_plotter(t_losses,v_losses,path_to_plots,yscale='log'):
 #    plt.show()
 #    plt.close()  
 
-def cornerplotter(target_test_data,nf_dist,path_to_plots,ndims,rot=None,norm=False,max_dim=32, n_bins=50):
+def cornerplotter(target_test_data,nf_dist,path_to_plots,ndims,rot=None,norm=False,max_dim=32,n_bins=50):
     # Define the two samples (target and nf)
     shape = target_test_data.shape
     target_samples=target_test_data
